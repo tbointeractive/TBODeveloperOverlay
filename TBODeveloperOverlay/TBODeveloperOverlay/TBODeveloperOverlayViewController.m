@@ -8,26 +8,22 @@
 
 #import "TBODeveloperOverlayViewController.h"
 
-@interface TBODeveloperOverlayViewController () <UITableViewDelegate, UITableViewDataSource>
-
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-
-@end
-
 @implementation TBODeveloperOverlayViewController
 
 static NSArray <NSDictionary *> *plugins = nil;
 
++ (UINavigationController *)navigationControllerWithDeveloperOverlay {
+    TBODeveloperOverlayViewController *developerOverlay = [[TBODeveloperOverlayViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:developerOverlay];
+    navigationController.navigationBar.topItem.title = @"Developer Overlay";
+    return navigationController;
+}
+
 + (void)registerPluginClass:(Class)pluginClass withTitle:(NSString *)title {
-    if (!plugins) {
-        plugins = [NSArray new];
-    }
-    NSMutableArray *tempPlugins = plugins.mutableCopy;
+    NSMutableArray *tempPlugins = [self.class plugins].mutableCopy;
     [tempPlugins addObject:@{@"class": pluginClass, @"title": title}];
     plugins = tempPlugins.copy;
 }
-
-#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -44,12 +40,16 @@ static NSArray <NSDictionary *> *plugins = nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (self.presentedViewController) {
-        [self dismissViewControllerAnimated:self.presentedViewController completion:nil];
-    }
     Class pluginClass = plugins[indexPath.row][@"class"];
     UIViewController *pluginViewController = [[pluginClass alloc] init];
-    [self presentViewController:pluginViewController animated:NO completion:nil];
+    [self.navigationController pushViewController:pluginViewController animated:YES];
+}
+
++ (NSArray <NSDictionary *> *)plugins {
+    if (!plugins) {
+        plugins = [NSArray new];
+    }
+    return plugins;
 }
 
 @end

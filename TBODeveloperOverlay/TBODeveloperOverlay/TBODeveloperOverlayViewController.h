@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TBODeveloperOverlayViewController : UIViewController
+@interface TBODeveloperOverlayViewController : UITableViewController
 
++ (UINavigationController *)navigationControllerWithDeveloperOverlay;
 + (void)registerPluginClass:(Class)pluginClass withTitle:(NSString *)title;
 
 @end

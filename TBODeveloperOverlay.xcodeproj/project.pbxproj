@@ -15,12 +15,11 @@
 		75629A311CD351AC00E72F7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75629A2F1CD351AC00E72F7B /* LaunchScreen.storyboard */; };
 		75629A3C1CD351AC00E72F7B /* TBODeveloperOverlayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A3B1CD351AC00E72F7B /* TBODeveloperOverlayTests.m */; };
 		75629A471CD351AC00E72F7B /* TBODeveloperOverlayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A461CD351AC00E72F7B /* TBODeveloperOverlayUITests.m */; };
-		9E82634F1CD35B8C0033743E /* TBODummyPlugin1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E82634D1CD35B8C0033743E /* TBODummyPlugin1ViewController.m */; };
-		9E8263501CD35B8C0033743E /* TBODummyPlugin1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E82634E1CD35B8C0033743E /* TBODummyPlugin1ViewController.xib */; };
-		9E8263541CD35B9D0033743E /* TBODummyPlugin2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8263521CD35B9D0033743E /* TBODummyPlugin2ViewController.m */; };
-		9E8263551CD35B9D0033743E /* TBODummyPlugin2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E8263531CD35B9D0033743E /* TBODummyPlugin2ViewController.xib */; };
 		9E8263591CD35ED30033743E /* TBODeveloperOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8263571CD35ED30033743E /* TBODeveloperOverlayViewController.m */; };
-		9E82635A1CD35ED30033743E /* TBODeveloperOverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E8263581CD35ED30033743E /* TBODeveloperOverlayViewController.xib */; };
+		9E8263671CD392CB0033743E /* TBODummyPlugin1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8263621CD392CB0033743E /* TBODummyPlugin1ViewController.m */; };
+		9E8263681CD392CB0033743E /* TBODummyPlugin1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E8263631CD392CB0033743E /* TBODummyPlugin1ViewController.xib */; };
+		9E8263691CD392CB0033743E /* TBODummyPlugin2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8263651CD392CB0033743E /* TBODummyPlugin2ViewController.m */; };
+		9E82636A1CD392CB0033743E /* TBODummyPlugin2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E8263661CD392CB0033743E /* TBODummyPlugin2ViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,15 +56,14 @@
 		75629A421CD351AC00E72F7B /* TBODeveloperOverlayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBODeveloperOverlayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75629A461CD351AC00E72F7B /* TBODeveloperOverlayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayUITests.m; sourceTree = "<group>"; };
 		75629A481CD351AC00E72F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E82634C1CD35B8C0033743E /* TBODummyPlugin1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODummyPlugin1ViewController.h; sourceTree = "<group>"; };
-		9E82634D1CD35B8C0033743E /* TBODummyPlugin1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODummyPlugin1ViewController.m; sourceTree = "<group>"; };
-		9E82634E1CD35B8C0033743E /* TBODummyPlugin1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBODummyPlugin1ViewController.xib; sourceTree = "<group>"; };
-		9E8263511CD35B9D0033743E /* TBODummyPlugin2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODummyPlugin2ViewController.h; sourceTree = "<group>"; };
-		9E8263521CD35B9D0033743E /* TBODummyPlugin2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODummyPlugin2ViewController.m; sourceTree = "<group>"; };
-		9E8263531CD35B9D0033743E /* TBODummyPlugin2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBODummyPlugin2ViewController.xib; sourceTree = "<group>"; };
 		9E8263561CD35ED30033743E /* TBODeveloperOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayViewController.h; sourceTree = "<group>"; };
 		9E8263571CD35ED30033743E /* TBODeveloperOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayViewController.m; sourceTree = "<group>"; };
-		9E8263581CD35ED30033743E /* TBODeveloperOverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBODeveloperOverlayViewController.xib; sourceTree = "<group>"; };
+		9E8263611CD392CB0033743E /* TBODummyPlugin1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODummyPlugin1ViewController.h; sourceTree = "<group>"; };
+		9E8263621CD392CB0033743E /* TBODummyPlugin1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODummyPlugin1ViewController.m; sourceTree = "<group>"; };
+		9E8263631CD392CB0033743E /* TBODummyPlugin1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBODummyPlugin1ViewController.xib; sourceTree = "<group>"; };
+		9E8263641CD392CB0033743E /* TBODummyPlugin2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODummyPlugin2ViewController.h; sourceTree = "<group>"; };
+		9E8263651CD392CB0033743E /* TBODummyPlugin2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODummyPlugin2ViewController.m; sourceTree = "<group>"; };
+		9E8263661CD392CB0033743E /* TBODummyPlugin2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBODummyPlugin2ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +114,7 @@
 		75629A201CD351AB00E72F7B /* TBODeveloperOverlay */ = {
 			isa = PBXGroup;
 			children = (
+				9E8263601CD392CB0033743E /* Dummies */,
 				75629A561CD352AB00E72F7B /* TBODeveloperOverlay */,
 				75629A571CD352AB00E72F7B /* TBODeveloperOverlayKVDebugger */,
 				75629A241CD351AC00E72F7B /* AppDelegate.h */,
@@ -162,13 +161,6 @@
 			children = (
 				9E8263561CD35ED30033743E /* TBODeveloperOverlayViewController.h */,
 				9E8263571CD35ED30033743E /* TBODeveloperOverlayViewController.m */,
-				9E8263581CD35ED30033743E /* TBODeveloperOverlayViewController.xib */,
-				9E82634C1CD35B8C0033743E /* TBODummyPlugin1ViewController.h */,
-				9E82634D1CD35B8C0033743E /* TBODummyPlugin1ViewController.m */,
-				9E82634E1CD35B8C0033743E /* TBODummyPlugin1ViewController.xib */,
-				9E8263511CD35B9D0033743E /* TBODummyPlugin2ViewController.h */,
-				9E8263521CD35B9D0033743E /* TBODummyPlugin2ViewController.m */,
-				9E8263531CD35B9D0033743E /* TBODummyPlugin2ViewController.xib */,
 			);
 			path = TBODeveloperOverlay;
 			sourceTree = "<group>";
@@ -178,6 +170,19 @@
 			children = (
 			);
 			path = TBODeveloperOverlayKVDebugger;
+			sourceTree = "<group>";
+		};
+		9E8263601CD392CB0033743E /* Dummies */ = {
+			isa = PBXGroup;
+			children = (
+				9E8263611CD392CB0033743E /* TBODummyPlugin1ViewController.h */,
+				9E8263621CD392CB0033743E /* TBODummyPlugin1ViewController.m */,
+				9E8263631CD392CB0033743E /* TBODummyPlugin1ViewController.xib */,
+				9E8263641CD392CB0033743E /* TBODummyPlugin2ViewController.h */,
+				9E8263651CD392CB0033743E /* TBODummyPlugin2ViewController.m */,
+				9E8263661CD392CB0033743E /* TBODummyPlugin2ViewController.xib */,
+			);
+			path = Dummies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,10 +289,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				75629A311CD351AC00E72F7B /* LaunchScreen.storyboard in Resources */,
-				9E8263501CD35B8C0033743E /* TBODummyPlugin1ViewController.xib in Resources */,
-				9E8263551CD35B9D0033743E /* TBODummyPlugin2ViewController.xib in Resources */,
+				9E8263681CD392CB0033743E /* TBODummyPlugin1ViewController.xib in Resources */,
 				75629A2E1CD351AC00E72F7B /* Assets.xcassets in Resources */,
-				9E82635A1CD35ED30033743E /* TBODeveloperOverlayViewController.xib in Resources */,
+				9E82636A1CD392CB0033743E /* TBODummyPlugin2ViewController.xib in Resources */,
 				75629A2C1CD351AC00E72F7B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,10 +318,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E8263591CD35ED30033743E /* TBODeveloperOverlayViewController.m in Sources */,
+				9E8263671CD392CB0033743E /* TBODummyPlugin1ViewController.m in Sources */,
 				75629A291CD351AC00E72F7B /* ViewController.m in Sources */,
-				9E82634F1CD35B8C0033743E /* TBODummyPlugin1ViewController.m in Sources */,
+				9E8263691CD392CB0033743E /* TBODummyPlugin2ViewController.m in Sources */,
 				75629A261CD351AC00E72F7B /* AppDelegate.m in Sources */,
-				9E8263541CD35B9D0033743E /* TBODummyPlugin2ViewController.m in Sources */,
 				75629A231CD351AB00E72F7B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
