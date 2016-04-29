@@ -25,6 +25,11 @@ static NSArray <NSDictionary *> *plugins = nil;
     plugins = tempPlugins.copy;
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"pluginCell"];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
@@ -34,7 +39,7 @@ static NSArray <NSDictionary *> *plugins = nil;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [UITableViewCell new];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pluginCell" forIndexPath:indexPath];
     cell.textLabel.text = plugins[indexPath.row][@"title"];
     return cell;
 }
