@@ -16,7 +16,7 @@
 
 @implementation TBODeveloperOverlayViewController
 
-static NSArray <NSDictionary *> *plugins = nil;
+static NSArray <Class> *pluginClasses = nil;
 
 + (UINavigationController *)navigationControllerWithDeveloperOverlay {
     TBODeveloperOverlayViewController *developerOverlay = [[TBODeveloperOverlayViewController alloc] init];
@@ -26,15 +26,9 @@ static NSArray <NSDictionary *> *plugins = nil;
 }
 
 + (void)registerPluginClass:(Class)pluginClass {
-    NSMutableArray *tempPlugins = [self.class plugins].mutableCopy;
-    NSString *title;
-    if ([pluginClass respondsToSelector:@selector(title)]) {
-        title = [pluginClass performSelector:@selector(title)];
-    } else {
-        title = NSStringFromClass(pluginClass);
-    }
-    [tempPlugins addObject:@{@"class": pluginClass, @"title": title}];
-    plugins = tempPlugins.copy;
+    NSMutableArray *tempPluginClasses = [self.class pluginClasses].mutableCopy;
+    [tempPluginClasses addObject:pluginClass];
+    pluginClasses = tempPluginClasses.copy;
 }
 
 - (void)viewDidLoad {
@@ -47,17 +41,22 @@ static NSArray <NSDictionary *> *plugins = nil;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return plugins.count;
+    return pluginClasses.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pluginCell" forIndexPath:indexPath];
-    cell.textLabel.text = plugins[indexPath.row][@"title"];
+    Class pluginClass = pluginClasses[indexPath.row];
+    if ([pluginClass respondsToSelector:@selector(title)]) {
+        cell.textLabel.text = [pluginClass performSelector:@selector(title)];
+    } else {
+        cell.textLabel.text = NSStringFromClass(pluginClass);
+    }
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Class pluginClass = plugins[indexPath.row][@"class"];
+    Class pluginClass = pluginClasses[indexPath.row];
     UIViewController *pluginViewController = [[pluginClass alloc] init];
     if (self.navigationController) {
         [self.navigationController pushViewController:pluginViewController animated:YES];
@@ -71,12 +70,12 @@ static NSArray <NSDictionary *> *plugins = nil;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-+ (NSArray <NSDictionary *> *)plugins {
++ (NSArray <Class> *)pluginClasses {
     static dispatch_once_t pluginsOnceToken;
     dispatch_once(&pluginsOnceToken, ^{
-        plugins = [NSArray new];
+        pluginClasses = [NSArray new];
     });
-    return plugins;
+    return pluginClasses;
 }
 
 - (UIButton *)doneButton {
