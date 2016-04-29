@@ -8,6 +8,10 @@
 
 #import "ViewController.h"
 
+#import "TBODeveloperOverlayViewController.h"
+#import "TBODummyPlugin1ViewController.h"
+#import "TBODummyPlugin2ViewController.h"
+
 @interface ViewController ()
 
 @end
@@ -16,12 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    TBODeveloperOverlayViewController *developerOverlay = [[TBODeveloperOverlayViewController alloc] init];
+    [self addChildViewController:developerOverlay];
+    [self.view addSubview:developerOverlay.view];
+    [TBODeveloperOverlayViewController registerPluginClass:[TBODummyPlugin1ViewController class] withTitle:@"Plugin 1"];
+    [TBODeveloperOverlayViewController registerPluginClass:[TBODummyPlugin2ViewController class] withTitle:@"Plugin 2"];
 }
 
 @end
