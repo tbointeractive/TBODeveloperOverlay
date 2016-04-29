@@ -10,16 +10,24 @@
 
 @protocol TBODeveloperOverlayKVDebuggerDatasource <NSObject>
 
--(NSString*)titleForSection:(NSInteger)section;
--(NSInteger)numberOfsections;
--(NSInteger)numberOfItemsInSection:(NSInteger)section;
--(id)keyForIndexPath:(NSIndexPath*)indexPath;
--(id)valueForIndexPath:(NSIndexPath*)indexPath;
--(BOOL)isEditableForIndexPath:(NSIndexPath*)indexPath;
--(void)didChangeValue:(id)value atIndexPath:(NSIndexPath*)indexPath;
+- (NSString *)titleForSection:(NSInteger)section;
+- (NSInteger)numberOfSections;
+- (NSInteger)numberOfItemsInSection:(NSInteger)section;
+- (id)keyForIndexPath:(NSIndexPath *)indexPath;
+- (id)valueForIndexPath:(NSIndexPath *)indexPath;
+- (BOOL)isEditableForIndexPath:(NSIndexPath *)indexPath;
+- (void)didChangeValue:(id)value atIndexPath:(NSIndexPath *)indexPath;
 
 @end
 
 @interface TBODeveloperOverlayKVDebugger : UITableViewController
+
+/**
+ *  Register the class of your datasource.
+ *  The datasource has to implement the TBODeveloperOverlayKVDebuggerDatasource protocol.
+ *
+ *  @param class
+ */
++ (void)registerDatasourceClass:(Class)class;
 
 @end
