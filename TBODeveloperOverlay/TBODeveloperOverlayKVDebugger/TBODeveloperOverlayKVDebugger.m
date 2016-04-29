@@ -7,6 +7,7 @@
 //
 
 #import "TBODeveloperOverlayKVDebugger.h"
+#import "TBODeveloperOverlayKVDebuggerSimpleCell.h"
 
 @interface TBODeveloperOverlayKVDebugger ()
 
@@ -32,11 +33,7 @@ static Class datasourceClass = nil;
         self.datasource = [[datasourceClass alloc]init];
     }
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"plainCell"];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self.tableView registerNib:[UINib nibWithNibName:@"TBODeveloperOverlayKVDebuggerSimpleCell" bundle:nil ] forCellReuseIdentifier:@"simpleCell"];
 }
 
 #pragma mark - Table view data source
@@ -61,13 +58,19 @@ static Class datasourceClass = nil;
         cell.textLabel.text = @"no datasource provided";
         return cell;
     }
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"plainCell" forIndexPath:indexPath];
-    cell.textLabel.text = [self.datasource keyForIndexPath:indexPath];
     
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"simpleCell" forIndexPath:indexPath];
+    cell.textLabel.text = [self.datasource keyForIndexPath:indexPath];
+    id value = [self.datasource valueForIndexPath:indexPath];
+    if ([value isKindOfClass:[NSString class]]) {
+        cell.detailTextLabel.text = (NSString *)value;
+    } else if ([NSStringFromClass([value class]) isEqualToString:@"__NSCFBoolean"]) {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", ((NSNumber *)value).boolValue ? @"YES" : @"NO"];
+    } else if ([value isKindOfClass:[NSNumber class]]) {
+        cell.detailTextLabel.text = ((NSNumber *)value).stringValue;
+    }
     
     return cell;
-    
-    
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {

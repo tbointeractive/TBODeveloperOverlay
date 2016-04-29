@@ -27,7 +27,17 @@
 }
 
 - (id)valueForIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    switch (indexPath.row) {
+        case 0:
+            return @"some String";
+        case 1:
+            return [NSNumber numberWithBool:YES];
+        case 2:
+            return @42;
+            
+        default:
+            return nil;
+    }
 }
 
 - (BOOL)isEditableForIndexPath:(NSIndexPath *)indexPath {
