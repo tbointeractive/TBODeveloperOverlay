@@ -81,7 +81,7 @@ static NSArray <NSDictionary *> *plugins = nil;
 
 - (UIButton *)doneButton {
     if (!_doneButton) {
-        _doneButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 80 - 20, 40, 80, 30)];
+        _doneButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 80 - 20, 40, 70, 30)];
         [_doneButton setTitle:@"DONE" forState:UIControlStateNormal];
         [_doneButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         _doneButton.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
