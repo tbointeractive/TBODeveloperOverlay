@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TBODeveloperOverlayKVDebuggerSimpleCell : UITableViewCell
+@interface TBODeveloperOverlayKVDebuggerTitleDetailCell : UITableViewCell
 
 @end

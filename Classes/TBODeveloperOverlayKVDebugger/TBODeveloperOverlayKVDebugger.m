@@ -7,7 +7,7 @@
 //
 
 #import "TBODeveloperOverlayKVDebugger.h"
-#import "TBODeveloperOverlayKVDebuggerSimpleCell.h"
+#import "TBODeveloperOverlayKVDebuggerTitleDetailCell.h"
 
 @interface TBODeveloperOverlayKVDebugger ()
 
@@ -23,7 +23,7 @@
 
 static Class datasourceClass = nil;
 
-+ (void)registerDatasourceClass:(Class)class {
++ (void)registerDatasourceClass:(Class<TBODeveloperOverlayKVDebuggerDatasource>)class {
     datasourceClass = class;
 }
 
@@ -32,8 +32,10 @@ static Class datasourceClass = nil;
     if (datasourceClass) {
         self.datasource = [[datasourceClass alloc]init];
     }
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"plainCell"];
-    [self.tableView registerNib:[UINib nibWithNibName:@"TBODeveloperOverlayKVDebuggerSimpleCell" bundle:nil ] forCellReuseIdentifier:@"simpleCell"];
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 60.0;
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TBODeveloperOverlayKVDebuggerTitleDetailCell" bundle:nil ] forCellReuseIdentifier:@"titleDetailCell"];
 }
 
 #pragma mark - Table view data source
@@ -54,12 +56,13 @@ static Class datasourceClass = nil;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (!self.datasource) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"plainCell" forIndexPath:indexPath];
-        cell.textLabel.text = @"no datasource provided";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.text = @"No Datasource provided. \n - Create a class that implements TBODeveloperOverlayKVDebuggerDatasource protocol \n - Register this class in ApplicationDidFinishLaunching unsing TBODeveloperOverlayKVDebugger+registerDatasourceClass:";
         return cell;
     }
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"simpleCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"titleDetailCell" forIndexPath:indexPath];
     cell.textLabel.text = [self.datasource keyForIndexPath:indexPath];
     id value = [self.datasource valueForIndexPath:indexPath];
     if ([value isKindOfClass:[NSString class]]) {

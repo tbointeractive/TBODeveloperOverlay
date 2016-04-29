@@ -18,8 +18,8 @@
 		7593D8E61CD399D400EFFA49 /* TBODebugDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8DD1CD399D400EFFA49 /* TBODebugDatasource.m */; };
 		7593D8E71CD399D400EFFA49 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8DF1CD399D400EFFA49 /* ViewController.m */; };
 		7593D8F01CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8EC1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m */; };
-		7593D8F11CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerSimpleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8EE1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerSimpleCell.m */; };
-		7593D8F21CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerSimpleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerSimpleCell.xib */; };
+		7593D8F11CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerTitleDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8EE1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerTitleDetailCell.m */; };
+		7593D8F21CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerTitleDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerTitleDetailCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		750C58A51CD39B6F00D60E6B /* TBODeveloperOverlayKVDebuggerDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebuggerDatasource.h; sourceTree = "<group>"; };
 		75629A1E1CD351AB00E72F7B /* TBODeveloperOverlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBODeveloperOverlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75629A371CD351AC00E72F7B /* TBODeveloperOverlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBODeveloperOverlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75629A3B1CD351AC00E72F7B /* TBODeveloperOverlayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayTests.m; sourceTree = "<group>"; };
@@ -60,9 +61,9 @@
 		7593D8DF1CD399D400EFFA49 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7593D8EB1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebugger.h; sourceTree = "<group>"; };
 		7593D8EC1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayKVDebugger.m; sourceTree = "<group>"; };
-		7593D8ED1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerSimpleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebuggerSimpleCell.h; sourceTree = "<group>"; };
-		7593D8EE1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerSimpleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayKVDebuggerSimpleCell.m; sourceTree = "<group>"; };
-		7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerSimpleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBODeveloperOverlayKVDebuggerSimpleCell.xib; sourceTree = "<group>"; };
+		7593D8ED1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerTitleDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebuggerTitleDetailCell.h; sourceTree = "<group>"; };
+		7593D8EE1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerTitleDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayKVDebuggerTitleDetailCell.m; sourceTree = "<group>"; };
+		7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerTitleDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBODeveloperOverlayKVDebuggerTitleDetailCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,9 +169,10 @@
 			children = (
 				7593D8EB1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.h */,
 				7593D8EC1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m */,
-				7593D8ED1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerSimpleCell.h */,
-				7593D8EE1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerSimpleCell.m */,
-				7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerSimpleCell.xib */,
+				7593D8ED1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerTitleDetailCell.h */,
+				7593D8EE1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerTitleDetailCell.m */,
+				7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerTitleDetailCell.xib */,
+				750C58A51CD39B6F00D60E6B /* TBODeveloperOverlayKVDebuggerDatasource.h */,
 			);
 			path = TBODeveloperOverlayKVDebugger;
 			sourceTree = "<group>";
@@ -281,7 +283,7 @@
 				7593D8E41CD399D400EFFA49 /* Info.plist in Resources */,
 				7593D8E31CD399D400EFFA49 /* Main.storyboard in Resources */,
 				7593D8E11CD399D400EFFA49 /* Assets.xcassets in Resources */,
-				7593D8F21CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerSimpleCell.xib in Resources */,
+				7593D8F21CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerTitleDetailCell.xib in Resources */,
 				7593D8E21CD399D400EFFA49 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +312,7 @@
 				7593D8F01CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m in Sources */,
 				7593D8E61CD399D400EFFA49 /* TBODebugDatasource.m in Sources */,
 				7593D8E51CD399D400EFFA49 /* main.m in Sources */,
-				7593D8F11CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerSimpleCell.m in Sources */,
+				7593D8F11CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerTitleDetailCell.m in Sources */,
 				7593D8E71CD399D400EFFA49 /* ViewController.m in Sources */,
 				7593D8E01CD399D400EFFA49 /* AppDelegate.m in Sources */,
 			);
