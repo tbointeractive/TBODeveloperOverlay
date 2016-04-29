@@ -16,6 +16,7 @@
 		75629A3C1CD351AC00E72F7B /* TBODeveloperOverlayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A3B1CD351AC00E72F7B /* TBODeveloperOverlayTests.m */; };
 		75629A471CD351AC00E72F7B /* TBODeveloperOverlayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A461CD351AC00E72F7B /* TBODeveloperOverlayUITests.m */; };
 		75629A5A1CD3550A00E72F7B /* TBODeveloperOverlayKVDebugger.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A591CD3550A00E72F7B /* TBODeveloperOverlayKVDebugger.m */; };
+		7593D88D1CD3633800EFFA49 /* TBODebugDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D88C1CD3633800EFFA49 /* TBODebugDatasource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		75629A481CD351AC00E72F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75629A581CD3550A00E72F7B /* TBODeveloperOverlayKVDebugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebugger.h; sourceTree = "<group>"; };
 		75629A591CD3550A00E72F7B /* TBODeveloperOverlayKVDebugger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayKVDebugger.m; sourceTree = "<group>"; };
+		7593D88B1CD3633800EFFA49 /* TBODebugDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODebugDatasource.h; sourceTree = "<group>"; };
+		7593D88C1CD3633800EFFA49 /* TBODebugDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODebugDatasource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				75629A251CD351AC00E72F7B /* AppDelegate.m */,
 				75629A271CD351AC00E72F7B /* ViewController.h */,
 				75629A281CD351AC00E72F7B /* ViewController.m */,
+				7593D88B1CD3633800EFFA49 /* TBODebugDatasource.h */,
+				7593D88C1CD3633800EFFA49 /* TBODebugDatasource.m */,
 				75629A2A1CD351AC00E72F7B /* Main.storyboard */,
 				75629A2D1CD351AC00E72F7B /* Assets.xcassets */,
 				75629A2F1CD351AC00E72F7B /* LaunchScreen.storyboard */,
@@ -293,6 +298,7 @@
 			files = (
 				75629A291CD351AC00E72F7B /* ViewController.m in Sources */,
 				75629A5A1CD3550A00E72F7B /* TBODeveloperOverlayKVDebugger.m in Sources */,
+				7593D88D1CD3633800EFFA49 /* TBODebugDatasource.m in Sources */,
 				75629A261CD351AC00E72F7B /* AppDelegate.m in Sources */,
 				75629A231CD351AB00E72F7B /* main.m in Sources */,
 			);
