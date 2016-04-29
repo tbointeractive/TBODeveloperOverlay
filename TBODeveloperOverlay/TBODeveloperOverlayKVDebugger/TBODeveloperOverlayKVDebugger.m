@@ -64,12 +64,11 @@ static Class datasourceClass = nil;
     id value = [self.datasource valueForIndexPath:indexPath];
     if ([value isKindOfClass:[NSString class]]) {
         cell.detailTextLabel.text = (NSString *)value;
-    } else if ([NSStringFromClass([value class]) isEqualToString:@"__NSCFBoolean"]) {
+    } else if (value == (void *)kCFBooleanFalse || value == (void *)kCFBooleanTrue) {
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", ((NSNumber *)value).boolValue ? @"YES" : @"NO"];
     } else if ([value isKindOfClass:[NSNumber class]]) {
         cell.detailTextLabel.text = ((NSNumber *)value).stringValue;
     }
-    
     return cell;
 }
 

@@ -31,9 +31,9 @@
         case 0:
             return @"some String";
         case 1:
-            return [NSNumber numberWithBool:YES];
+            return @YES;
         case 2:
-            return @42;
+            return @1;
             
         default:
             return nil;
