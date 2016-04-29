@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		75629A231CD351AB00E72F7B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A221CD351AB00E72F7B /* main.m */; };
-		75629A261CD351AC00E72F7B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A251CD351AC00E72F7B /* AppDelegate.m */; };
-		75629A291CD351AC00E72F7B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A281CD351AC00E72F7B /* ViewController.m */; };
-		75629A2C1CD351AC00E72F7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75629A2A1CD351AC00E72F7B /* Main.storyboard */; };
-		75629A2E1CD351AC00E72F7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75629A2D1CD351AC00E72F7B /* Assets.xcassets */; };
-		75629A311CD351AC00E72F7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75629A2F1CD351AC00E72F7B /* LaunchScreen.storyboard */; };
 		75629A3C1CD351AC00E72F7B /* TBODeveloperOverlayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A3B1CD351AC00E72F7B /* TBODeveloperOverlayTests.m */; };
 		75629A471CD351AC00E72F7B /* TBODeveloperOverlayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A461CD351AC00E72F7B /* TBODeveloperOverlayUITests.m */; };
+		7593D8E01CD399D400EFFA49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8D41CD399D400EFFA49 /* AppDelegate.m */; };
+		7593D8E11CD399D400EFFA49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7593D8D51CD399D400EFFA49 /* Assets.xcassets */; };
+		7593D8E21CD399D400EFFA49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7593D8D61CD399D400EFFA49 /* LaunchScreen.storyboard */; };
+		7593D8E31CD399D400EFFA49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7593D8D81CD399D400EFFA49 /* Main.storyboard */; };
+		7593D8E41CD399D400EFFA49 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7593D8DA1CD399D400EFFA49 /* Info.plist */; };
+		7593D8E51CD399D400EFFA49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8DB1CD399D400EFFA49 /* main.m */; };
+		7593D8E61CD399D400EFFA49 /* TBODebugDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8DD1CD399D400EFFA49 /* TBODebugDatasource.m */; };
+		7593D8E71CD399D400EFFA49 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8DF1CD399D400EFFA49 /* ViewController.m */; };
+		7593D8F01CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8EC1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m */; };
+		7593D8F11CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8EE1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m */; };
+		7593D8F21CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,22 +40,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		750C58A51CD39B6F00D60E6B /* TBODeveloperOverlayKVDebuggerDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebuggerDatasource.h; sourceTree = "<group>"; };
 		75629A1E1CD351AB00E72F7B /* TBODeveloperOverlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBODeveloperOverlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		75629A221CD351AB00E72F7B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		75629A241CD351AC00E72F7B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		75629A251CD351AC00E72F7B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		75629A271CD351AC00E72F7B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		75629A281CD351AC00E72F7B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		75629A2B1CD351AC00E72F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		75629A2D1CD351AC00E72F7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		75629A301CD351AC00E72F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		75629A321CD351AC00E72F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75629A371CD351AC00E72F7B /* TBODeveloperOverlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBODeveloperOverlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75629A3B1CD351AC00E72F7B /* TBODeveloperOverlayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayTests.m; sourceTree = "<group>"; };
 		75629A3D1CD351AC00E72F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75629A421CD351AC00E72F7B /* TBODeveloperOverlayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBODeveloperOverlayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75629A461CD351AC00E72F7B /* TBODeveloperOverlayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayUITests.m; sourceTree = "<group>"; };
 		75629A481CD351AC00E72F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7593D8D31CD399D400EFFA49 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7593D8D41CD399D400EFFA49 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7593D8D51CD399D400EFFA49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7593D8D71CD399D400EFFA49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7593D8D91CD399D400EFFA49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7593D8DA1CD399D400EFFA49 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7593D8DB1CD399D400EFFA49 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7593D8DC1CD399D400EFFA49 /* TBODebugDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODebugDatasource.h; sourceTree = "<group>"; };
+		7593D8DD1CD399D400EFFA49 /* TBODebugDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODebugDatasource.m; sourceTree = "<group>"; };
+		7593D8DE1CD399D400EFFA49 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7593D8DF1CD399D400EFFA49 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7593D8EB1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebugger.h; sourceTree = "<group>"; };
+		7593D8EC1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayKVDebugger.m; sourceTree = "<group>"; };
+		7593D8ED1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h; sourceTree = "<group>"; };
+		7593D8EE1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m; sourceTree = "<group>"; };
+		7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +94,8 @@
 		75629A151CD351AB00E72F7B = {
 			isa = PBXGroup;
 			children = (
-				75629A201CD351AB00E72F7B /* TBODeveloperOverlay */,
+				7593D8E81CD399DD00EFFA49 /* Classes */,
+				7593D8D21CD399D400EFFA49 /* Example */,
 				75629A3A1CD351AC00E72F7B /* TBODeveloperOverlayTests */,
 				75629A451CD351AC00E72F7B /* TBODeveloperOverlayUITests */,
 				75629A1F1CD351AB00E72F7B /* Products */,
@@ -96,32 +110,6 @@
 				75629A421CD351AC00E72F7B /* TBODeveloperOverlayUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		75629A201CD351AB00E72F7B /* TBODeveloperOverlay */ = {
-			isa = PBXGroup;
-			children = (
-				75629A561CD352AB00E72F7B /* TBODeveloperOverlay */,
-				75629A571CD352AB00E72F7B /* TBODeveloperOverlayKVDebugger */,
-				75629A241CD351AC00E72F7B /* AppDelegate.h */,
-				75629A251CD351AC00E72F7B /* AppDelegate.m */,
-				75629A271CD351AC00E72F7B /* ViewController.h */,
-				75629A281CD351AC00E72F7B /* ViewController.m */,
-				75629A2A1CD351AC00E72F7B /* Main.storyboard */,
-				75629A2D1CD351AC00E72F7B /* Assets.xcassets */,
-				75629A2F1CD351AC00E72F7B /* LaunchScreen.storyboard */,
-				75629A321CD351AC00E72F7B /* Info.plist */,
-				75629A211CD351AB00E72F7B /* Supporting Files */,
-			);
-			path = TBODeveloperOverlay;
-			sourceTree = "<group>";
-		};
-		75629A211CD351AB00E72F7B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				75629A221CD351AB00E72F7B /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		75629A3A1CD351AC00E72F7B /* TBODeveloperOverlayTests */ = {
@@ -142,16 +130,49 @@
 			path = TBODeveloperOverlayUITests;
 			sourceTree = "<group>";
 		};
-		75629A561CD352AB00E72F7B /* TBODeveloperOverlay */ = {
+		7593D8D21CD399D400EFFA49 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				7593D8D31CD399D400EFFA49 /* AppDelegate.h */,
+				7593D8D41CD399D400EFFA49 /* AppDelegate.m */,
+				7593D8D51CD399D400EFFA49 /* Assets.xcassets */,
+				7593D8D61CD399D400EFFA49 /* LaunchScreen.storyboard */,
+				7593D8D81CD399D400EFFA49 /* Main.storyboard */,
+				7593D8DA1CD399D400EFFA49 /* Info.plist */,
+				7593D8DB1CD399D400EFFA49 /* main.m */,
+				7593D8DC1CD399D400EFFA49 /* TBODebugDatasource.h */,
+				7593D8DD1CD399D400EFFA49 /* TBODebugDatasource.m */,
+				7593D8DE1CD399D400EFFA49 /* ViewController.h */,
+				7593D8DF1CD399D400EFFA49 /* ViewController.m */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		7593D8E81CD399DD00EFFA49 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7593D8E91CD399DD00EFFA49 /* TBODeveloperOverlay */,
+				7593D8EA1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		7593D8E91CD399DD00EFFA49 /* TBODeveloperOverlay */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = TBODeveloperOverlay;
 			sourceTree = "<group>";
 		};
-		75629A571CD352AB00E72F7B /* TBODeveloperOverlayKVDebugger */ = {
+		7593D8EA1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger */ = {
 			isa = PBXGroup;
 			children = (
+				750C58A51CD39B6F00D60E6B /* TBODeveloperOverlayKVDebuggerDatasource.h */,
+				7593D8EB1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.h */,
+				7593D8EC1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m */,
+				7593D8ED1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h */,
+				7593D8EE1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m */,
+				7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib */,
 			);
 			path = TBODeveloperOverlayKVDebugger;
 			sourceTree = "<group>";
@@ -259,9 +280,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75629A311CD351AC00E72F7B /* LaunchScreen.storyboard in Resources */,
-				75629A2E1CD351AC00E72F7B /* Assets.xcassets in Resources */,
-				75629A2C1CD351AC00E72F7B /* Main.storyboard in Resources */,
+				7593D8E41CD399D400EFFA49 /* Info.plist in Resources */,
+				7593D8E31CD399D400EFFA49 /* Main.storyboard in Resources */,
+				7593D8E11CD399D400EFFA49 /* Assets.xcassets in Resources */,
+				7593D8F21CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib in Resources */,
+				7593D8E21CD399D400EFFA49 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,9 +309,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75629A291CD351AC00E72F7B /* ViewController.m in Sources */,
-				75629A261CD351AC00E72F7B /* AppDelegate.m in Sources */,
-				75629A231CD351AB00E72F7B /* main.m in Sources */,
+				7593D8F01CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m in Sources */,
+				7593D8E61CD399D400EFFA49 /* TBODebugDatasource.m in Sources */,
+				7593D8E51CD399D400EFFA49 /* main.m in Sources */,
+				7593D8F11CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m in Sources */,
+				7593D8E71CD399D400EFFA49 /* ViewController.m in Sources */,
+				7593D8E01CD399D400EFFA49 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,20 +350,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		75629A2A1CD351AC00E72F7B /* Main.storyboard */ = {
+		7593D8D61CD399D400EFFA49 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				75629A2B1CD351AC00E72F7B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		75629A2F1CD351AC00E72F7B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				75629A301CD351AC00E72F7B /* Base */,
+				7593D8D71CD399D400EFFA49 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7593D8D81CD399D400EFFA49 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7593D8D91CD399D400EFFA49 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -380,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -418,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -429,10 +455,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TBODeveloperOverlay/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbointeractive.TBODeveloperOverlay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -440,10 +468,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = TBODeveloperOverlay/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tbointeractive.TBODeveloperOverlay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
