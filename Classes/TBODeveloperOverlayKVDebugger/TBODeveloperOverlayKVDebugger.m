@@ -84,4 +84,8 @@ static Class datasourceClass = nil;
     return [self.datasource titleForSection:section];
 }
 
++ (NSString *)title {
+    return @"KVDebugger";
+}
+
 @end
