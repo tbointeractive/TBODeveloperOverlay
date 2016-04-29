@@ -24,18 +24,18 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "git@git.tbointeractive.com:tbopodspecs/TBODeveloperOverlay.git", :commit => "55cd3226" }
+  s.source       = { :git => "git@git.tbointeractive.com:tbopodspecs/TBODeveloperOverlay.git", :commit => "bae5a4c8" }
 
  # s.source       = { :git => "http://git.tbointeractive.com/root/TBODeveloperOverlay", :tag => s.version.to_s }
 
-  # s.subspec 'Core' do |sp|
-  #   sp.source_files = "TBODeveloperOverlay/TBODeveloperOverlay/*.{h,m}"
-  # end
+  s.subspec 'Core' do |sp|
+    sp.source_files = "TBODeveloperOverlay/TBODeveloperOverlay/*.{h,m}"
+  end
 
   s.subspec 'KVDebugger' do |sp|
     sp.source_files = "Classes/TBODeveloperOverlayKVDebugger/*.{h,m}"
   end
 
-  s.default_subspecs =  'KVDebugger' #,'Core'
+  s.default_subspecs =  'KVDebugger' ,'Core'
 
 end
