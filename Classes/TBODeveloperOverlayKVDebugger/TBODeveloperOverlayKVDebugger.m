@@ -86,7 +86,7 @@ static Class datasourceClass = nil;
 }
 
 + (NSString *)title {
-    return @"KVDebugger";
+    return @"Key-Value-Debugger";
 }
 
 @end
