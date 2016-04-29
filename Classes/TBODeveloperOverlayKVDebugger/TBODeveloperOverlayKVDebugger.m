@@ -7,7 +7,7 @@
 //
 
 #import "TBODeveloperOverlayKVDebugger.h"
-#import "TBODeveloperOverlayKVDebuggerTitleDetailCell.h"
+#import "TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h"
 
 @interface TBODeveloperOverlayKVDebugger ()
 
@@ -18,6 +18,7 @@
 @implementation TBODeveloperOverlayKVDebugger
 
 + (void)load {
+#warning register me
     // register at developer overlay if available
 }
 
@@ -25,6 +26,7 @@ static Class datasourceClass = nil;
 
 + (void)registerDatasourceClass:(Class<TBODeveloperOverlayKVDebuggerDatasource>)class {
     datasourceClass = class;
+#warning register me (instead of in load)
 }
 
 - (void)viewDidLoad {
@@ -34,8 +36,8 @@ static Class datasourceClass = nil;
     }
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 60.0;
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-    [self.tableView registerNib:[UINib nibWithNibName:@"TBODeveloperOverlayKVDebuggerTitleDetailCell" bundle:nil ] forCellReuseIdentifier:@"titleDetailCell"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"SetupExplanationCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TBODeveloperOverlayKVDebuggerReadOnlyKVCell" bundle:nil ] forCellReuseIdentifier:@"TBODeveloperOverlayKVDebuggerReadOnlyKVCell"];
 }
 
 #pragma mark - Table view data source
@@ -56,13 +58,13 @@ static Class datasourceClass = nil;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (!self.datasource) {
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SetupExplanationCell" forIndexPath:indexPath];
         cell.textLabel.numberOfLines = 0;
         cell.textLabel.text = @"No Datasource provided. \n - Create a class that implements TBODeveloperOverlayKVDebuggerDatasource protocol \n - Register this class in ApplicationDidFinishLaunching unsing TBODeveloperOverlayKVDebugger+registerDatasourceClass:";
         return cell;
     }
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"titleDetailCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TBODeveloperOverlayKVDebuggerReadOnlyKVCell" forIndexPath:indexPath];
     cell.textLabel.text = [self.datasource keyForIndexPath:indexPath];
     id value = [self.datasource valueForIndexPath:indexPath];
     if ([value isKindOfClass:[NSString class]]) {

@@ -6,9 +6,9 @@
 //  Copyright © 2016 TBO INTERACTIVE. All rights reserved.
 //
 
-#import "TBODeveloperOverlayKVDebuggerTitleDetailCell.h"
+#import "TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h"
 
-@implementation TBODeveloperOverlayKVDebuggerTitleDetailCell
+@implementation TBODeveloperOverlayKVDebuggerReadOnlyKVCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
