@@ -17,16 +17,17 @@
 
 @implementation TBODeveloperOverlayKVDebugger
 
-+ (void)load {
-#warning register me
-    // register at developer overlay if available
-}
-
 static Class datasourceClass = nil;
 
 + (void)registerDatasourceClass:(Class<TBODeveloperOverlayKVDebuggerDatasource>)class {
     datasourceClass = class;
-#warning register me (instead of in load)
+    if (NSClassFromString(@"TBODeveloperOverlayViewController")) {
+        Class overlayClass = NSClassFromString(@"TBODeveloperOverlayViewController");
+        SEL registerSelector = NSSelectorFromString(@"registerPluginClass:");
+        if ([overlayClass respondsToSelector:registerSelector]) {
+            [overlayClass performSelector:registerSelector withObject:self];
+        }
+    }
 }
 
 - (void)viewDidLoad {
@@ -82,6 +83,10 @@ static Class datasourceClass = nil;
         return nil;
     }
     return [self.datasource titleForSection:section];
+}
+
++ (NSString *)title {
+    return @"Key-Value-Debugger";
 }
 
 @end

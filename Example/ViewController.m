@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "TBODeveloperOverlayKVDebugger.h"
 
+#import "TBODeveloperOverlayViewController.h"
+
 @interface ViewController ()
 
 @end
@@ -17,15 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    TBODeveloperOverlayKVDebugger *kvdebugger = [[TBODeveloperOverlayKVDebugger alloc] init];
-    [self addChildViewController:kvdebugger];
-    [self.view addSubview:kvdebugger.view];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    UINavigationController *developerOverlay = [TBODeveloperOverlayViewController navigationControllerWithDeveloperOverlay];
+    [self addChildViewController:developerOverlay];
+    [self.view addSubview:developerOverlay.view];
 }
 
 @end

@@ -20,6 +20,7 @@
 		7593D8F01CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8EC1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m */; };
 		7593D8F11CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8EE1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m */; };
 		7593D8F21CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib */; };
+		9E82636D1CD3AC410033743E /* TBODeveloperOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E82636C1CD3AC410033743E /* TBODeveloperOverlayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		7593D8ED1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h; sourceTree = "<group>"; };
 		7593D8EE1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m; sourceTree = "<group>"; };
 		7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib; sourceTree = "<group>"; };
+		9E82636B1CD3AC410033743E /* TBODeveloperOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayViewController.h; path = TBODeveloperOverlay/TBODeveloperOverlay/TBODeveloperOverlayViewController.h; sourceTree = SOURCE_ROOT; };
+		9E82636C1CD3AC410033743E /* TBODeveloperOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayViewController.m; path = TBODeveloperOverlay/TBODeveloperOverlay/TBODeveloperOverlayViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,8 @@
 		7593D8E91CD399DD00EFFA49 /* TBODeveloperOverlay */ = {
 			isa = PBXGroup;
 			children = (
+				9E82636B1CD3AC410033743E /* TBODeveloperOverlayViewController.h */,
+				9E82636C1CD3AC410033743E /* TBODeveloperOverlayViewController.m */,
 			);
 			path = TBODeveloperOverlay;
 			sourceTree = "<group>";
@@ -309,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E82636D1CD3AC410033743E /* TBODeveloperOverlayViewController.m in Sources */,
 				7593D8F01CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m in Sources */,
 				7593D8E61CD399D400EFFA49 /* TBODebugDatasource.m in Sources */,
 				7593D8E51CD399D400EFFA49 /* main.m in Sources */,
