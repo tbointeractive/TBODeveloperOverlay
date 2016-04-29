@@ -15,7 +15,7 @@ static NSArray <NSDictionary *> *plugins = nil;
 + (UINavigationController *)navigationControllerWithDeveloperOverlay {
     TBODeveloperOverlayViewController *developerOverlay = [[TBODeveloperOverlayViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:developerOverlay];
-    navigationController.navigationBar.topItem.title = @"Developer Overlay";
+    navigationController.navigationBar.topItem.title = @"Developer";
     return navigationController;
 }
 
@@ -57,9 +57,10 @@ static NSArray <NSDictionary *> *plugins = nil;
 }
 
 + (NSArray <NSDictionary *> *)plugins {
-    if (!plugins) {
+    static dispatch_once_t pluginsOnceToken;
+    dispatch_once(&pluginsOnceToken, ^{
         plugins = [NSArray new];
-    }
+    });
     return plugins;
 }
 
