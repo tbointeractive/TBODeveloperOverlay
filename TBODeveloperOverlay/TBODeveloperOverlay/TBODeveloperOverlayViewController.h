@@ -11,6 +11,6 @@
 @interface TBODeveloperOverlayViewController : UITableViewController
 
 + (UINavigationController *)navigationControllerWithDeveloperOverlay;
-+ (void)registerPluginClass:(Class)pluginClass withTitle:(NSString *)title;
++ (void)registerPluginClass:(Class)pluginClass;
 
 @end

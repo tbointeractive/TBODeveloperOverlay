@@ -19,8 +19,14 @@ static NSArray <NSDictionary *> *plugins = nil;
     return navigationController;
 }
 
-+ (void)registerPluginClass:(Class)pluginClass withTitle:(NSString *)title {
++ (void)registerPluginClass:(Class)pluginClass {
     NSMutableArray *tempPlugins = [self.class plugins].mutableCopy;
+    NSString *title;
+    if ([pluginClass respondsToSelector:@selector(title)]) {
+        title = [pluginClass performSelector:@selector(title)];
+    } else {
+        title = NSStringFromClass(pluginClass);
+    }
     [tempPlugins addObject:@{@"class": pluginClass, @"title": title}];
     plugins = tempPlugins.copy;
 }

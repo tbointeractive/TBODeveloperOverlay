@@ -20,8 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [TBODeveloperOverlayViewController registerPluginClass:[TBODummyPlugin1ViewController class] withTitle:@"Plugin 1"];
-    [TBODeveloperOverlayViewController registerPluginClass:[TBODummyPlugin2ViewController class] withTitle:@"Plugin 2"];
+    [TBODeveloperOverlayViewController registerPluginClass:[TBODummyPlugin1ViewController class]];
+    [TBODeveloperOverlayViewController registerPluginClass:[TBODummyPlugin2ViewController class]];
     UINavigationController *developerOverlay = [TBODeveloperOverlayViewController navigationControllerWithDeveloperOverlay];
     [self addChildViewController:developerOverlay];
     [self.view addSubview:developerOverlay.view];
