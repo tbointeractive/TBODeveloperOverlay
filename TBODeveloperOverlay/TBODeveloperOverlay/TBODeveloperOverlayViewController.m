@@ -8,6 +8,12 @@
 
 #import "TBODeveloperOverlayViewController.h"
 
+@interface TBODeveloperOverlayViewController ()
+
+@property (strong, nonatomic, readwrite) UIButton *doneButton;
+
+@end
+
 @implementation TBODeveloperOverlayViewController
 
 static NSArray <NSDictionary *> *plugins = nil;
@@ -53,7 +59,16 @@ static NSArray <NSDictionary *> *plugins = nil;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     Class pluginClass = plugins[indexPath.row][@"class"];
     UIViewController *pluginViewController = [[pluginClass alloc] init];
-    [self.navigationController pushViewController:pluginViewController animated:YES];
+    if (self.navigationController) {
+        [self.navigationController pushViewController:pluginViewController animated:YES];
+    } else {
+        [pluginViewController.view addSubview:self.doneButton];
+        [self presentViewController:pluginViewController animated:YES completion:nil];
+    }
+}
+
+- (void)doneButtonTapped {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 + (NSArray <NSDictionary *> *)plugins {
@@ -62,6 +77,17 @@ static NSArray <NSDictionary *> *plugins = nil;
         plugins = [NSArray new];
     });
     return plugins;
+}
+
+- (UIButton *)doneButton {
+    if (!_doneButton) {
+        _doneButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 80 - 20, 40, 80, 30)];
+        [_doneButton setTitle:@"DONE" forState:UIControlStateNormal];
+        [_doneButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _doneButton.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
+        [_doneButton addTarget:self action:@selector(doneButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _doneButton;
 }
 
 @end
