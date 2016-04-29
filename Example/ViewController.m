@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [TBODeveloperOverlayViewController registerPluginClass:[TBODeveloperOverlayKVDebugger class]];
+    //[TBODeveloperOverlayViewController registerPluginClass:[TBODeveloperOverlayKVDebugger class]];
     UINavigationController *developerOverlay = [TBODeveloperOverlayViewController navigationControllerWithDeveloperOverlay];
     [self addChildViewController:developerOverlay];
     [self.view addSubview:developerOverlay.view];
