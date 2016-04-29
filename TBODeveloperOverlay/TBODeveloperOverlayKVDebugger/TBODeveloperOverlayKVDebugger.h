@@ -13,7 +13,7 @@
 - (NSString *)titleForSection:(NSInteger)section;
 - (NSInteger)numberOfSections;
 - (NSInteger)numberOfItemsInSection:(NSInteger)section;
-- (id)keyForIndexPath:(NSIndexPath *)indexPath;
+- (NSString *)keyForIndexPath:(NSIndexPath *)indexPath;
 - (id)valueForIndexPath:(NSIndexPath *)indexPath;
 - (BOOL)isEditableForIndexPath:(NSIndexPath *)indexPath;
 - (void)didChangeValue:(id)value atIndexPath:(NSIndexPath *)indexPath;

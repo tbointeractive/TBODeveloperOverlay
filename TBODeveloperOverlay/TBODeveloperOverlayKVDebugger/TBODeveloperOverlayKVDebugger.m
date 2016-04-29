@@ -61,11 +61,20 @@ static Class datasourceClass = nil;
         cell.textLabel.text = @"no datasource provided";
         return cell;
     }
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"plainCell" forIndexPath:indexPath];
+    cell.textLabel.text = [self.datasource keyForIndexPath:indexPath];
     
     
-    return nil;
+    return cell;
     
     
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (!self.datasource) {
+        return nil;
+    }
+    return [self.datasource titleForSection:section];
 }
 
 @end
