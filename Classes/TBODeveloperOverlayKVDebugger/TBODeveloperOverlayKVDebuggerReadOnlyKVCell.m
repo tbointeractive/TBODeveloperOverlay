@@ -6,9 +6,9 @@
 //  Copyright © 2016 TBO INTERACTIVE. All rights reserved.
 //
 
-#import "TBODeveloperOverlayKVDebuggerSimpleCell.h"
+#import "TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h"
 
-@implementation TBODeveloperOverlayKVDebuggerSimpleCell
+@implementation TBODeveloperOverlayKVDebuggerReadOnlyKVCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -17,7 +17,7 @@
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
+    
     // Configure the view for the selected state
 }
 
