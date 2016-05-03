@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TBODeveloperOverlay"
-  s.version      = "0.0.1"
+  s.version      = "1.0.1"
   s.summary      = "A Developer Overlay for Debugging."
 
   s.description  = <<-DESC
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "git@git.tbointeractive.com:tbopodspecs/TBODeveloperOverlay.git", :commit => "bae5a4c8" }
+  s.source       = { :git => "git@git.tbointeractive.com:tbopodspecs/TBODeveloperOverlay.git", :tag => '1.0.1' }
 
  # s.source       = { :git => "http://git.tbointeractive.com/root/TBODeveloperOverlay", :tag => s.version.to_s }
 
@@ -34,6 +34,10 @@ Pod::Spec.new do |s|
 
   s.subspec 'KVDebugger' do |sp|
     sp.source_files = "Classes/TBODeveloperOverlayKVDebugger/*.{h,m}"
+    sp.resources = ['Classes/TBODeveloperOverlayKVDebugger/*.xib']
+    sp.resource_bundles = {
+        'KVDebugger' => ['Classes/TBODeveloperOverlayKVDebugger/*.xib']
+    }
   end
 
   s.default_subspecs =  'KVDebugger' ,'Core'

@@ -38,7 +38,7 @@ static Class datasourceClass = nil;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 60.0;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"SetupExplanationCell"];
-    [self.tableView registerNib:[UINib nibWithNibName:@"TBODeveloperOverlayKVDebuggerReadOnlyKVCell" bundle:nil ] forCellReuseIdentifier:@"TBODeveloperOverlayKVDebuggerReadOnlyKVCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TBODeveloperOverlayKVDebuggerReadOnlyKVCell" bundle:[NSBundle bundleForClass:self.class]] forCellReuseIdentifier:@"TBODeveloperOverlayKVDebuggerReadOnlyKVCell"];
 }
 
 #pragma mark - Table view data source
