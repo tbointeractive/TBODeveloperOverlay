@@ -10,7 +10,7 @@
 
 @interface TBODeveloperOverlayViewController ()
 
-@property (strong, nonatomic, readwrite) UIButton *doneButton;
+@property (strong, nonatomic, readwrite) UIBarButtonItem *doneButton;
 
 @end
 
@@ -21,6 +21,7 @@ static NSArray <Class> *pluginClasses = nil;
 + (UINavigationController *)navigationControllerWithDeveloperOverlay {
     TBODeveloperOverlayViewController *developerOverlay = [[TBODeveloperOverlayViewController alloc] init];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:developerOverlay];
+    navigationController.modalPresentationStyle = UIModalPresentationFormSheet;
     navigationController.navigationBar.topItem.title = @"Developer";
     return navigationController;
 }
@@ -34,6 +35,7 @@ static NSArray <Class> *pluginClasses = nil;
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"pluginCell"];
+    self.navigationItem.rightBarButtonItem = self.doneButton;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -61,7 +63,6 @@ static NSArray <Class> *pluginClasses = nil;
     if (self.navigationController) {
         [self.navigationController pushViewController:pluginViewController animated:YES];
     } else {
-        [pluginViewController.view addSubview:self.doneButton];
         [self presentViewController:pluginViewController animated:YES completion:nil];
     }
 }
@@ -78,13 +79,9 @@ static NSArray <Class> *pluginClasses = nil;
     return pluginClasses;
 }
 
-- (UIButton *)doneButton {
+- (UIBarButtonItem *)doneButton {
     if (!_doneButton) {
-        _doneButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 80 - 20, 40, 70, 30)];
-        [_doneButton setTitle:@"DONE" forState:UIControlStateNormal];
-        [_doneButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        _doneButton.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.5];
-        [_doneButton addTarget:self action:@selector(doneButtonTapped) forControlEvents:UIControlEventTouchUpInside];
+        _doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonTapped)];
     }
     return _doneButton;
 }

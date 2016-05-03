@@ -7,8 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "TBODeveloperOverlayKVDebugger.h"
-
 #import "TBODeveloperOverlayViewController.h"
 
 @interface ViewController ()
@@ -19,9 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     UINavigationController *developerOverlay = [TBODeveloperOverlayViewController navigationControllerWithDeveloperOverlay];
-    [self addChildViewController:developerOverlay];
-    [self.view addSubview:developerOverlay.view];
+    [self presentViewController:developerOverlay animated:YES completion:nil];
 }
 
 @end
