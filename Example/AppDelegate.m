@@ -19,6 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [TBODeveloperOverlayKVDebugger registerDatasourceClass:NSClassFromString(@"TBODebugDatasource")];
+    [[NSUserDefaults standardUserDefaults] setObject:@"testvalue" forKey:@"testkey"];
     return YES;
 }
 

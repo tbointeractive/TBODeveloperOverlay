@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F7B1BBF1CDCEA8B007B1AD3 /* TBODeveloperOverlayNSUserdefaultInspectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7B1BBE1CDCEA8B007B1AD3 /* TBODeveloperOverlayNSUserdefaultInspectorViewController.m */; };
+		1F7B1BC21CDCEAD0007B1AD3 /* TBODeveloperOverlayNSUserDefaultsDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7B1BC11CDCEAD0007B1AD3 /* TBODeveloperOverlayNSUserDefaultsDatasource.m */; };
 		75629A3C1CD351AC00E72F7B /* TBODeveloperOverlayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A3B1CD351AC00E72F7B /* TBODeveloperOverlayTests.m */; };
 		75629A471CD351AC00E72F7B /* TBODeveloperOverlayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A461CD351AC00E72F7B /* TBODeveloperOverlayUITests.m */; };
 		7593D8E01CD399D400EFFA49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8D41CD399D400EFFA49 /* AppDelegate.m */; };
@@ -41,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F7B1BBD1CDCEA8B007B1AD3 /* TBODeveloperOverlayNSUserdefaultInspectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayNSUserdefaultInspectorViewController.h; path = TBODeveloperOverlayNSUserdefaultInspector/TBODeveloperOverlayNSUserdefaultInspectorViewController.h; sourceTree = "<group>"; };
+		1F7B1BBE1CDCEA8B007B1AD3 /* TBODeveloperOverlayNSUserdefaultInspectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayNSUserdefaultInspectorViewController.m; path = TBODeveloperOverlayNSUserdefaultInspector/TBODeveloperOverlayNSUserdefaultInspectorViewController.m; sourceTree = "<group>"; };
+		1F7B1BC01CDCEAD0007B1AD3 /* TBODeveloperOverlayNSUserDefaultsDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayNSUserDefaultsDatasource.h; path = TBODeveloperOverlayNSUserdefaultInspector/TBODeveloperOverlayNSUserDefaultsDatasource.h; sourceTree = "<group>"; };
+		1F7B1BC11CDCEAD0007B1AD3 /* TBODeveloperOverlayNSUserDefaultsDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayNSUserDefaultsDatasource.m; path = TBODeveloperOverlayNSUserdefaultInspector/TBODeveloperOverlayNSUserDefaultsDatasource.m; sourceTree = "<group>"; };
 		750C58A51CD39B6F00D60E6B /* TBODeveloperOverlayKVDebuggerDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebuggerDatasource.h; sourceTree = "<group>"; };
 		75629A1E1CD351AB00E72F7B /* TBODeveloperOverlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBODeveloperOverlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75629A371CD351AC00E72F7B /* TBODeveloperOverlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBODeveloperOverlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +100,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F7B1BBC1CDCEA25007B1AD3 /* TBODeveloperOverlayNSUserdefaultInspector */ = {
+			isa = PBXGroup;
+			children = (
+				1F7B1BBD1CDCEA8B007B1AD3 /* TBODeveloperOverlayNSUserdefaultInspectorViewController.h */,
+				1F7B1BBE1CDCEA8B007B1AD3 /* TBODeveloperOverlayNSUserdefaultInspectorViewController.m */,
+				1F7B1BC01CDCEAD0007B1AD3 /* TBODeveloperOverlayNSUserDefaultsDatasource.h */,
+				1F7B1BC11CDCEAD0007B1AD3 /* TBODeveloperOverlayNSUserDefaultsDatasource.m */,
+			);
+			name = TBODeveloperOverlayNSUserdefaultInspector;
+			sourceTree = "<group>";
+		};
 		75629A151CD351AB00E72F7B = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +171,7 @@
 		7593D8E81CD399DD00EFFA49 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1F7B1BBC1CDCEA25007B1AD3 /* TBODeveloperOverlayNSUserdefaultInspector */,
 				7593D8E91CD399DD00EFFA49 /* TBODeveloperOverlay */,
 				7593D8EA1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger */,
 			);
@@ -318,6 +336,8 @@
 				7593D8F01CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m in Sources */,
 				7593D8E61CD399D400EFFA49 /* TBODebugDatasource.m in Sources */,
 				7593D8E51CD399D400EFFA49 /* main.m in Sources */,
+				1F7B1BC21CDCEAD0007B1AD3 /* TBODeveloperOverlayNSUserDefaultsDatasource.m in Sources */,
+				1F7B1BBF1CDCEA8B007B1AD3 /* TBODeveloperOverlayNSUserdefaultInspectorViewController.m in Sources */,
 				7593D8F11CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m in Sources */,
 				7593D8E71CD399D400EFFA49 /* ViewController.m in Sources */,
 				7593D8E01CD399D400EFFA49 /* AppDelegate.m in Sources */,
