@@ -74,6 +74,8 @@ static Class datasourceClass = nil;
         cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", ((NSNumber *)value).boolValue ? @"YES" : @"NO"];
     } else if ([value isKindOfClass:[NSNumber class]]) {
         cell.detailTextLabel.text = ((NSNumber *)value).stringValue;
+    } else {
+        cell.detailTextLabel.text = [value description];
     }
     return cell;
 }
