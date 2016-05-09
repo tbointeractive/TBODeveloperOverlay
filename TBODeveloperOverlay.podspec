@@ -53,7 +53,11 @@ Pod::Spec.new do |s|
     sp.dependency 'CocoaLumberjack', '~> 2.3'
   end
 
+  s.subspec 'FileInspector' do |sp|
+    sp.source_files = "Classes/TBODeveloperOverlayFileInspector/*.{h,m}"
+  end
 
-  s.default_subspecs =  'KVDebugger' ,'Core', 'NSUserdefaultInspector', 'LoggerOverlay'
+
+  s.default_subspecs =  'KVDebugger' ,'Core', 'NSUserdefaultInspector', 'LoggerOverlay', 'FileInspector'
 
 end
