@@ -1,0 +1,24 @@
+PODS:
+  - CocoaLumberjack (2.3.0):
+    - CocoaLumberjack/Default (= 2.3.0)
+    - CocoaLumberjack/Extensions (= 2.3.0)
+  - CocoaLumberjack/Core (2.3.0)
+  - CocoaLumberjack/Default (2.3.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.3.0):
+    - CocoaLumberjack/Default
+  - TBOSetupHelper (1.0.0):
+    - CocoaLumberjack (~> 2.2)
+    - TBOSetupHelper/Logger (= 1.0.0)
+  - TBOSetupHelper/Logger (1.0.0):
+    - CocoaLumberjack (~> 2.2)
+
+DEPENDENCIES:
+  - CocoaLumberjack (~> 2.3)
+  - TBOSetupHelper
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 97fab7ee5f507fe54445cca7ea80f926729cfd15
+  TBOSetupHelper: 6ae2745e4e7cb08c29d1f95a64eee882ff9dc218
+
+COCOAPODS: 0.39.0

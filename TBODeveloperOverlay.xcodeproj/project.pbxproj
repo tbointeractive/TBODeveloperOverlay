@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F5D922C1CE0915B0017508E /* TBODeveloperOverlayLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D922B1CE0915B0017508E /* TBODeveloperOverlayLogger.m */; };
+		1F5D92301CE0942F0017508E /* TBODeveloperOverlayLogger.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5D922F1CE0942F0017508E /* TBODeveloperOverlayLogger.xib */; };
+		1F708E0A869F1D0A2C7C05B0 /* libPods-TBODeveloperOverlay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1232FB3035CFBB628DD3A1 /* libPods-TBODeveloperOverlay.a */; };
 		1F7B1BBF1CDCEA8B007B1AD3 /* TBODeveloperOverlayNSUserdefaultInspectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7B1BBE1CDCEA8B007B1AD3 /* TBODeveloperOverlayNSUserdefaultInspectorViewController.m */; };
 		1F7B1BC21CDCEAD0007B1AD3 /* TBODeveloperOverlayNSUserDefaultsDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7B1BC11CDCEAD0007B1AD3 /* TBODeveloperOverlayNSUserDefaultsDatasource.m */; };
 		75629A3C1CD351AC00E72F7B /* TBODeveloperOverlayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A3B1CD351AC00E72F7B /* TBODeveloperOverlayTests.m */; };
@@ -43,10 +46,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B502B768D5284FDD769CD89 /* Pods-TBODeveloperOverlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBODeveloperOverlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay.release.xcconfig"; sourceTree = "<group>"; };
+		1F5D922A1CE0915B0017508E /* TBODeveloperOverlayLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayLogger.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLogger.h; sourceTree = "<group>"; };
+		1F5D922B1CE0915B0017508E /* TBODeveloperOverlayLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayLogger.m; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLogger.m; sourceTree = "<group>"; };
+		1F5D922F1CE0942F0017508E /* TBODeveloperOverlayLogger.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TBODeveloperOverlayLogger.xib; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLogger.xib; sourceTree = "<group>"; };
 		1F7B1BBD1CDCEA8B007B1AD3 /* TBODeveloperOverlayNSUserdefaultInspectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayNSUserdefaultInspectorViewController.h; path = TBODeveloperOverlayNSUserdefaultInspector/TBODeveloperOverlayNSUserdefaultInspectorViewController.h; sourceTree = "<group>"; };
 		1F7B1BBE1CDCEA8B007B1AD3 /* TBODeveloperOverlayNSUserdefaultInspectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayNSUserdefaultInspectorViewController.m; path = TBODeveloperOverlayNSUserdefaultInspector/TBODeveloperOverlayNSUserdefaultInspectorViewController.m; sourceTree = "<group>"; };
 		1F7B1BC01CDCEAD0007B1AD3 /* TBODeveloperOverlayNSUserDefaultsDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayNSUserDefaultsDatasource.h; path = TBODeveloperOverlayNSUserdefaultInspector/TBODeveloperOverlayNSUserDefaultsDatasource.h; sourceTree = "<group>"; };
 		1F7B1BC11CDCEAD0007B1AD3 /* TBODeveloperOverlayNSUserDefaultsDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayNSUserDefaultsDatasource.m; path = TBODeveloperOverlayNSUserdefaultInspector/TBODeveloperOverlayNSUserDefaultsDatasource.m; sourceTree = "<group>"; };
+		49339F4923F7F6BCE5A09135 /* Pods-TBODeveloperOverlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBODeveloperOverlay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay.debug.xcconfig"; sourceTree = "<group>"; };
 		750C58A51CD39B6F00D60E6B /* TBODeveloperOverlayKVDebuggerDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebuggerDatasource.h; sourceTree = "<group>"; };
 		75629A1E1CD351AB00E72F7B /* TBODeveloperOverlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBODeveloperOverlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75629A371CD351AC00E72F7B /* TBODeveloperOverlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBODeveloperOverlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +81,7 @@
 		7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib; sourceTree = "<group>"; };
 		9E82636B1CD3AC410033743E /* TBODeveloperOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayViewController.h; path = TBODeveloperOverlay/TBODeveloperOverlay/TBODeveloperOverlayViewController.h; sourceTree = SOURCE_ROOT; };
 		9E82636C1CD3AC410033743E /* TBODeveloperOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayViewController.m; path = TBODeveloperOverlay/TBODeveloperOverlay/TBODeveloperOverlayViewController.m; sourceTree = SOURCE_ROOT; };
+		EB1232FB3035CFBB628DD3A1 /* libPods-TBODeveloperOverlay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TBODeveloperOverlay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F708E0A869F1D0A2C7C05B0 /* libPods-TBODeveloperOverlay.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +110,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03F957F4CA3966F0AE21EEE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49339F4923F7F6BCE5A09135 /* Pods-TBODeveloperOverlay.debug.xcconfig */,
+				1B502B768D5284FDD769CD89 /* Pods-TBODeveloperOverlay.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1C13406058FB8925AD3BB1AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB1232FB3035CFBB628DD3A1 /* libPods-TBODeveloperOverlay.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F5D92291CE0913B0017508E /* TBODeveloperOverlayLogger */ = {
+			isa = PBXGroup;
+			children = (
+				1F5D922A1CE0915B0017508E /* TBODeveloperOverlayLogger.h */,
+				1F5D922B1CE0915B0017508E /* TBODeveloperOverlayLogger.m */,
+				1F5D922F1CE0942F0017508E /* TBODeveloperOverlayLogger.xib */,
+			);
+			name = TBODeveloperOverlayLogger;
+			sourceTree = "<group>";
+		};
 		1F7B1BBC1CDCEA25007B1AD3 /* TBODeveloperOverlayNSUserdefaultInspector */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +156,8 @@
 				75629A3A1CD351AC00E72F7B /* TBODeveloperOverlayTests */,
 				75629A451CD351AC00E72F7B /* TBODeveloperOverlayUITests */,
 				75629A1F1CD351AB00E72F7B /* Products */,
+				03F957F4CA3966F0AE21EEE4 /* Pods */,
+				1C13406058FB8925AD3BB1AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +210,7 @@
 		7593D8E81CD399DD00EFFA49 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1F5D92291CE0913B0017508E /* TBODeveloperOverlayLogger */,
 				1F7B1BBC1CDCEA25007B1AD3 /* TBODeveloperOverlayNSUserdefaultInspector */,
 				7593D8E91CD399DD00EFFA49 /* TBODeveloperOverlay */,
 				7593D8EA1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger */,
@@ -207,9 +247,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75629A4B1CD351AC00E72F7B /* Build configuration list for PBXNativeTarget "TBODeveloperOverlay" */;
 			buildPhases = (
+				F278B313BFDB6525245EB4F7 /* Check Pods Manifest.lock */,
 				75629A1A1CD351AB00E72F7B /* Sources */,
 				75629A1B1CD351AB00E72F7B /* Frameworks */,
 				75629A1C1CD351AB00E72F7B /* Resources */,
+				10C20EEC53E12FCFDE683C3E /* Embed Pods Frameworks */,
+				7F8B7F60A6FA31233ADF2677 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -304,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7593D8E41CD399D400EFFA49 /* Info.plist in Resources */,
+				1F5D92301CE0942F0017508E /* TBODeveloperOverlayLogger.xib in Resources */,
 				7593D8E31CD399D400EFFA49 /* Main.storyboard in Resources */,
 				7593D8E11CD399D400EFFA49 /* Assets.xcassets in Resources */,
 				7593D8F21CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib in Resources */,
@@ -327,6 +371,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10C20EEC53E12FCFDE683C3E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F8B7F60A6FA31233ADF2677 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F278B313BFDB6525245EB4F7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		75629A1A1CD351AB00E72F7B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -335,6 +427,7 @@
 				9E82636D1CD3AC410033743E /* TBODeveloperOverlayViewController.m in Sources */,
 				7593D8F01CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m in Sources */,
 				7593D8E61CD399D400EFFA49 /* TBODebugDatasource.m in Sources */,
+				1F5D922C1CE0915B0017508E /* TBODeveloperOverlayLogger.m in Sources */,
 				7593D8E51CD399D400EFFA49 /* main.m in Sources */,
 				1F7B1BC21CDCEAD0007B1AD3 /* TBODeveloperOverlayNSUserDefaultsDatasource.m in Sources */,
 				1F7B1BBF1CDCEA8B007B1AD3 /* TBODeveloperOverlayNSUserdefaultInspectorViewController.m in Sources */,
@@ -479,6 +572,7 @@
 		};
 		75629A4C1CD351AC00E72F7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49339F4923F7F6BCE5A09135 /* Pods-TBODeveloperOverlay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
@@ -492,6 +586,7 @@
 		};
 		75629A4D1CD351AC00E72F7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B502B768D5284FDD769CD89 /* Pods-TBODeveloperOverlay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";

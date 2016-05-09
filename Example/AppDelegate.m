@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TBODeveloperOverlayKVDebugger.h"
+#import "TBOLoggerSetupHelper.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +18,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [TBOLoggerSetupHelper setup];
+    DDLogVerbose(@"application:didFinishLaunchingWithOptions:");
     [TBODeveloperOverlayKVDebugger registerDatasourceClass:NSClassFromString(@"TBODebugDatasource")];
     [[NSUserDefaults standardUserDefaults] setObject:@"testvalue" forKey:@"testkey"];
     [[NSUserDefaults standardUserDefaults] setObject:@[@"testvalue"] forKey:@"testkey"];

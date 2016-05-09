@@ -44,6 +44,16 @@ Pod::Spec.new do |s|
     sp.source_files = "Classes/TBODeveloperOverlayNSUserdefaultInspector/*.{h,m}"
   end
 
-  s.default_subspecs =  'KVDebugger' ,'Core', 'NSUserdefaultInspector'
+  s.subspec 'LoggerOverlay' do |sp|
+    sp.source_files = "Classes/TBODeveloperOverlayLogger/*.{h,m}"
+    sp.resources = ['Classes/TBODeveloperOverlayLogger/*.xib']
+    sp.resource_bundles = {
+        'LoggerOverlay' => ['Classes/TBODeveloperOverlayLogger/*.xib']
+    }
+    sp.dependency 'CocoaLumberjack', '~> 2.3'
+  end
+
+
+  s.default_subspecs =  'KVDebugger' ,'Core', 'NSUserdefaultInspector', 'LoggerOverlay'
 
 end
