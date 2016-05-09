@@ -8,10 +8,11 @@
 
 #import "TBODeveloperOverlayFileInspectorViewController.h"
 
-@interface TBODeveloperOverlayFileInspectorViewController ()
+@interface TBODeveloperOverlayFileInspectorViewController () <UIDocumentInteractionControllerDelegate>
 
 @property (copy, nonatomic, readwrite) NSURL *baseUrl;
 @property (strong, nonatomic, readwrite) NSArray *filesAndFolders;
+@property (strong, nonatomic, readwrite) UIDocumentInteractionController *documentInteractionViewController;
 
 @end
 
@@ -74,11 +75,20 @@
     NSURL *fileOrFolder = self.filesAndFolders[indexPath.row];
     BOOL isFolder;
     [[NSFileManager defaultManager] fileExistsAtPath:fileOrFolder.path isDirectory:&isFolder];
-    if (!isFolder) {
-        return;
+    if (isFolder) {
+        TBODeveloperOverlayFileInspectorViewController *fileInspector = [[TBODeveloperOverlayFileInspectorViewController alloc] initWithBaseUrl:fileOrFolder];
+        [self.navigationController pushViewController:fileInspector animated:YES];
+    } else {
+        self.documentInteractionViewController = [UIDocumentInteractionController interactionControllerWithURL:fileOrFolder];
+        [self.documentInteractionViewController setDelegate:self];
+        [self.documentInteractionViewController presentPreviewAnimated:YES];
     }
-    TBODeveloperOverlayFileInspectorViewController *fileInspector = [[TBODeveloperOverlayFileInspectorViewController alloc]initWithBaseUrl:fileOrFolder];
-    [self.navigationController pushViewController:fileInspector animated:YES];
+}
+
+#pragma mark
+
+- (UIViewController *)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *)controller {
+    return self;
 }
 
 #pragma mark lazy instantiation
@@ -87,7 +97,7 @@
     if (!_filesAndFolders) {
         NSMutableArray *filesAndFolders = [NSMutableArray new];
         NSFileManager *fileManager = [NSFileManager new];
-        NSDirectoryEnumerator *direnum = [fileManager enumeratorAtURL:self.baseUrl includingPropertiesForKeys:nil options:0 errorHandler:^BOOL (NSURL *_Nonnull url, NSError *_Nonnull error) {
+        NSDirectoryEnumerator *direnum = [fileManager enumeratorAtURL:self.baseUrl includingPropertiesForKeys:nil options:NSDirectoryEnumerationSkipsSubdirectoryDescendants errorHandler:^BOOL (NSURL *_Nonnull url, NSError *_Nonnull error) {
             return YES;
         }];
         NSString *filename;
