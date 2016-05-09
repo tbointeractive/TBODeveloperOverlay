@@ -31,7 +31,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.textView.text = [self.class lastLogMessagesWithLimitedCharacters:500];
+    self.textView.text = [self.class lastLogMessagesWithLimitedCharacters:50000];
 }
 
 #pragma mark helper
