@@ -40,8 +40,17 @@
     }
 }
 
+- (NSString *)descriptionForIndexPath:(NSIndexPath *)indexPath {
+    return [NSString stringWithFormat:@"Description for %@", indexPath ];
+}
+
 - (BOOL)isEditableForIndexPath:(NSIndexPath *)indexPath {
-    return NO;
+    switch (indexPath.section) {
+        case 2:
+            return YES;
+        default:
+            return NO;
+    }
 }
 
 - (void)didChangeValue:(id)value atIndexPath:(NSIndexPath *)indexPath {
