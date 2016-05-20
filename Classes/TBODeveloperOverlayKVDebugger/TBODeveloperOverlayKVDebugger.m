@@ -8,6 +8,7 @@
 
 #import "TBODeveloperOverlayKVDebugger.h"
 #import "TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h"
+#import "TBODeveloperOverlayKVDebuggerDetailViewController.h"
 
 @interface TBODeveloperOverlayKVDebugger ()
 
@@ -78,6 +79,11 @@ static Class datasourceClass = nil;
         cell.detailTextLabel.text = [value description];
     }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    TBODeveloperOverlayKVDebuggerDetailViewController *detailViewController = [[TBODeveloperOverlayKVDebuggerDetailViewController alloc] initWithDatasource:self.datasource andIndexPath:indexPath];
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
