@@ -15,11 +15,13 @@ typedef enum {
     ValueTypeBool
 } ValueType;
 
-@interface TBODeveloperOverlayKVDebuggerDetailViewController ()
+@interface TBODeveloperOverlayKVDebuggerDetailViewController ()<UITextViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UISwitch *valueSwitch;
 @property (weak, nonatomic) IBOutlet UITextView *valueTextView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet UITextField *valueTextField;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewToDescriptionLabelConstraint;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -78,6 +80,11 @@ typedef enum {
     }
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    [self recalculateTextViewHeight];
+}
+
 - (void)saveButtonTapped {
     id newValue = [self currentValueFromInput];
     [self.datasource didChangeValue:newValue atIndexPath:self.indexPath];
@@ -98,6 +105,19 @@ typedef enum {
         default:
             return self.valueTextView.text;
     }
+}
+
+- (void)recalculateTextViewHeight {
+    CGSize size = [self.valueTextView sizeThatFits:CGSizeMake(self.valueTextView.frame.size.width, FLT_MAX)];
+    self.textViewHeightConstraint.constant = size.height;
+    [self.valueTextView layoutIfNeeded];
+    [self.valueTextView scrollRangeToVisible:NSMakeRange(0, 1)];
+}
+
+#pragma mark UITextViewDelegate
+
+- (void)textViewDidChange:(UITextView *)textView {
+    [self recalculateTextViewHeight];
 }
 
 #pragma mark TextField Delegate
