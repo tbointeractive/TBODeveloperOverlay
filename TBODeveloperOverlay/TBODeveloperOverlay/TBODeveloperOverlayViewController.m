@@ -7,10 +7,10 @@
 //
 
 #import "TBODeveloperOverlayViewController.h"
+#import "TBOModalNavigationController.h"
 
 @interface TBODeveloperOverlayViewController ()
 
-@property (strong, nonatomic, readwrite) UIBarButtonItem *doneButton;
 
 @end
 
@@ -19,10 +19,16 @@
 static NSArray <Class> *pluginClasses = nil;
 
 + (UINavigationController *)navigationControllerWithDeveloperOverlay {
-    TBODeveloperOverlayViewController *developerOverlay = [[TBODeveloperOverlayViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:developerOverlay];
+    UIViewController *containedViewController;
+    if (pluginClasses.count == 1) {
+        Class pluginClass = pluginClasses[0];
+        containedViewController = [[pluginClass alloc] init];
+    } else {
+        containedViewController = [[TBODeveloperOverlayViewController alloc] init];
+    }
+    
+    TBOModalNavigationController *navigationController = [[TBOModalNavigationController alloc] initWithRootViewController:containedViewController];
     navigationController.modalPresentationStyle = UIModalPresentationFormSheet;
-    navigationController.navigationBar.topItem.title = @"Developer";
     return navigationController;
 }
 
@@ -34,8 +40,8 @@ static NSArray <Class> *pluginClasses = nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Developer";
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"pluginCell"];
-    self.navigationItem.rightBarButtonItem = self.doneButton;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -67,23 +73,12 @@ static NSArray <Class> *pluginClasses = nil;
     }
 }
 
-- (void)doneButtonTapped {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
 + (NSArray <Class> *)pluginClasses {
     static dispatch_once_t pluginsOnceToken;
     dispatch_once(&pluginsOnceToken, ^{
         pluginClasses = [NSArray new];
     });
     return pluginClasses;
-}
-
-- (UIBarButtonItem *)doneButton {
-    if (!_doneButton) {
-        _doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneButtonTapped)];
-    }
-    return _doneButton;
 }
 
 @end

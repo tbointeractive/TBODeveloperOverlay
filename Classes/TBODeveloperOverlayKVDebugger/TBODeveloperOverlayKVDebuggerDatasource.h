@@ -11,12 +11,16 @@
 
 @protocol TBODeveloperOverlayKVDebuggerDatasource <NSObject>
 
-- (NSString *)titleForSection:(NSInteger)section;
 - (NSInteger)numberOfSections;
 - (NSInteger)numberOfItemsInSection:(NSInteger)section;
+
+- (NSString *)titleForSection:(NSInteger)section;
+
 - (NSString *)keyForIndexPath:(NSIndexPath *)indexPath;
 - (id)valueForIndexPath:(NSIndexPath *)indexPath;
+- (NSString *)descriptionForIndexPath:(NSIndexPath *)indexPath;
 - (BOOL)isEditableForIndexPath:(NSIndexPath *)indexPath;
+
 - (void)didChangeValue:(id)value atIndexPath:(NSIndexPath *)indexPath;
 
 @end

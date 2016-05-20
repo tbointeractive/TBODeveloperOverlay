@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TBODeveloperOverlay"
-  s.version      = "1.1.0"
+  s.version      = "1.2.0"
   s.summary      = "A Developer Overlay for Debugging."
 
   s.description  = <<-DESC
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "git@git.tbointeractive.com:tbopodspecs/TBODeveloperOverlay.git", :tag => '1.1.0' }
+  s.source       = { :git => "git@git.tbointeractive.com:tbopodspecs/TBODeveloperOverlay.git", :tag => '1.2.0' }
 
  # s.source       = { :git => "http://git.tbointeractive.com/root/TBODeveloperOverlay", :tag => s.version.to_s }
 

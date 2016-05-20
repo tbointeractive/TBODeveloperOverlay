@@ -8,6 +8,7 @@
 
 #import "TBODeveloperOverlayKVDebugger.h"
 #import "TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h"
+#import "TBODeveloperOverlayKVDebuggerDetailViewController.h"
 
 @interface TBODeveloperOverlayKVDebugger ()
 
@@ -39,6 +40,11 @@ static Class datasourceClass = nil;
     self.tableView.estimatedRowHeight = 60.0;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"SetupExplanationCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"TBODeveloperOverlayKVDebuggerReadOnlyKVCell" bundle:[NSBundle bundleForClass:self.class]] forCellReuseIdentifier:@"TBODeveloperOverlayKVDebuggerReadOnlyKVCell"];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -78,6 +84,11 @@ static Class datasourceClass = nil;
         cell.detailTextLabel.text = [value description];
     }
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    TBODeveloperOverlayKVDebuggerDetailViewController *detailViewController = [[TBODeveloperOverlayKVDebuggerDetailViewController alloc] initWithDatasource:self.datasource andIndexPath:indexPath];
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
