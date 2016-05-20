@@ -21,6 +21,8 @@ typedef enum {
 @property (weak, nonatomic) IBOutlet UISwitch *valueSwitch;
 @property (weak, nonatomic) IBOutlet UITextView *valueTextView;
 @property (weak, nonatomic) IBOutlet UITextField *valueTextField;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *textViewToDescriptionLabelConstraint;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @property (strong, nonatomic, readwrite) UIBarButtonItem *saveButton;
 
@@ -61,11 +63,13 @@ typedef enum {
         [self.valueSwitch setOn:((NSNumber *)value).boolValue];
         self.valueSwitch.hidden = NO;
         self.valueSwitch.enabled = isEditable;
+        [self.scrollView removeConstraint:self.textViewToDescriptionLabelConstraint];
         self.valueType = ValueTypeBool;
     } else if ([value isKindOfClass:[NSNumber class]]) {
         self.valueTextField.text = ((NSNumber *)value).stringValue;
         self.valueTextField.hidden = NO;
         self.valueTextField.enabled = isEditable;
+        [self.scrollView removeConstraint:self.textViewToDescriptionLabelConstraint];
         self.valueType = ValueTypeNumber;
     } else {
         self.valueTextView.text = [value description];
@@ -114,6 +118,14 @@ typedef enum {
         _saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveButtonTapped)];
     }
     return _saveButton;
+}
+
+- (void)setValueTextView:(UITextView *)valueTextView {
+    _valueTextView = valueTextView;
+    _valueTextView.layer.borderColor = [UIColor colorWithWhite:0.8 alpha:1.0].CGColor;
+    _valueTextView.layer.borderWidth = 0.5;
+    _valueTextView.layer.cornerRadius = 6.0;
+    
 }
 
 @end

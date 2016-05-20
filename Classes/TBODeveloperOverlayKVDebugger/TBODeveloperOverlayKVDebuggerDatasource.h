@@ -11,7 +11,6 @@
 
 @protocol TBODeveloperOverlayKVDebuggerDatasource <NSObject>
 
-
 - (NSInteger)numberOfSections;
 - (NSInteger)numberOfItemsInSection:(NSInteger)section;
 
