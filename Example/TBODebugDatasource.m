@@ -8,18 +8,36 @@
 
 #import "TBODebugDatasource.h"
 
+
+@interface TBODebugDatasource ()
+
+@property (nonatomic, strong) NSArray <NSMutableArray *> *dataArray;
+
+@end
+
 @implementation TBODebugDatasource
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        NSMutableArray *firstArray = [NSMutableArray arrayWithObjects:@"first String", nil];
+        NSMutableArray *secondArray = [NSMutableArray arrayWithObjects:@"second String", @YES, nil];
+        NSMutableArray *thirddArray = [NSMutableArray arrayWithObjects:@"third String", @YES, @42, nil];
+        self.dataArray = @[firstArray, secondArray, thirddArray];
+    }
+    return self;
+}
 
 - (NSString *)titleForSection:(NSInteger)section {
     return [NSString stringWithFormat:@"Section: %ld", (long)section];
 }
 
 - (NSInteger)numberOfSections {
-    return 3;
+    return self.dataArray.count;
 }
 
 - (NSInteger)numberOfItemsInSection:(NSInteger)section {
-    return section+1;
+    return self.dataArray[section].count;
 }
 
 - (NSString *)keyForIndexPath:(NSIndexPath *)indexPath {
@@ -27,17 +45,7 @@
 }
 
 - (id)valueForIndexPath:(NSIndexPath *)indexPath {
-    switch (indexPath.row) {
-        case 0:
-            return @"some String";
-        case 1:
-            return @YES;
-        case 2:
-            return @1;
-            
-        default:
-            return nil;
-    }
+    return self.dataArray[indexPath.section][indexPath.row];
 }
 
 - (NSString *)descriptionForIndexPath:(NSIndexPath *)indexPath {
@@ -55,6 +63,7 @@
 
 - (void)didChangeValue:(id)value atIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"Did Change Value: %@ at %@", value, indexPath);
+    self.dataArray[indexPath.section][indexPath.row] = value;
 }
 
 @end
