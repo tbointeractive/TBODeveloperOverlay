@@ -49,7 +49,6 @@ typedef enum {
     if (isEditable) {
         self.navigationItem.rightBarButtonItem = self.saveButton;
     }
-    self.title = [self.datasource keyForIndexPath:self.indexPath];
     self.titleLabel.text = [self.datasource keyForIndexPath:self.indexPath];
     self.descriptionLabel.text = [self.datasource descriptionForIndexPath:self.indexPath] ? : @"no description available";
     
