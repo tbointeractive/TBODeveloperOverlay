@@ -12,8 +12,7 @@
 #import "TBODebugDatasource.h"
 #import "TBODeveloperOverlayNSUserdefaultInspectorViewController.h"
 #import "TBODeveloperOverlayLogger.h"
-
-
+#import "TBODeveloperOverlayFileInspectorViewController.h"
 
 @interface ViewController ()
 
@@ -38,9 +37,11 @@
     TBODeveloperOverlayLogger *logger = [TBODeveloperOverlayLogger new];
     
     // init file inspector
+    // set baseURL to nil to get application directory
+    TBODeveloperOverlayFileInspectorViewController *fileInspector = [[TBODeveloperOverlayFileInspectorViewController alloc] initWithBaseUrl:nil];
     
     // init and present developer overlay
-    TBODeveloperOverlayViewController *developerOverlay = [[TBODeveloperOverlayViewController alloc] initWithPlugins:@[kvDebuggerViewController, userDefaultsInspector, logger]];
+    TBODeveloperOverlayViewController *developerOverlay = [[TBODeveloperOverlayViewController alloc] initWithPlugins:@[kvDebuggerViewController, userDefaultsInspector, logger, fileInspector]];
     [self presentViewController:developerOverlay animated:YES completion:nil];
 }
 

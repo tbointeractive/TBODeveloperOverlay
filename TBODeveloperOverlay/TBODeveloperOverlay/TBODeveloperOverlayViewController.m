@@ -19,7 +19,7 @@
 @implementation TBODeveloperOverlayViewController
 
 - (instancetype)initWithPlugins:(NSArray *)plugins {
-    self = [super init];
+    self = [self init];
     if (self) {
         self.plugins = plugins;
         UIViewController *containedViewController;
