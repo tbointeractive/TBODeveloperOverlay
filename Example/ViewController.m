@@ -10,6 +10,9 @@
 #import "TBODeveloperOverlayViewController.h"
 #import "TBODeveloperOverlayKVDebugger.h"
 #import "TBODebugDatasource.h"
+#import "TBODeveloperOverlayNSUserdefaultInspectorViewController.h"
+#import "TBODeveloperOverlayLogger.h"
+
 
 
 @interface ViewController ()
@@ -28,8 +31,16 @@
     TBODebugDatasource *kvDetasource = [TBODebugDatasource new];
     TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:kvDetasource];
     
+    // init User Defaults Inspector
+    TBODeveloperOverlayNSUserdefaultInspectorViewController *userDefaultsInspector = [TBODeveloperOverlayNSUserdefaultInspectorViewController new];
+    
+    // init logger
+    TBODeveloperOverlayLogger *logger = [TBODeveloperOverlayLogger new];
+    
+    // init file inspector
+    
     // init and present developer overlay
-    TBODeveloperOverlayViewController *developerOverlay = [[TBODeveloperOverlayViewController alloc] initWithPlugins:@[kvDebuggerViewController]];
+    TBODeveloperOverlayViewController *developerOverlay = [[TBODeveloperOverlayViewController alloc] initWithPlugins:@[kvDebuggerViewController, userDefaultsInspector, logger]];
     [self presentViewController:developerOverlay animated:YES completion:nil];
 }
 

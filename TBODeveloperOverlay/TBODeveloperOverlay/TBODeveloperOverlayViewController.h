@@ -9,9 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TBODeveloperOverlayViewController : UIViewController
-//
-//+ (UINavigationController *)navigationControllerWithDeveloperOverlay;
-//+ (void)registerPluginClass:(Class)pluginClass;
+
 - (instancetype)initWithPlugins:(NSArray *)plugins;
 
 @end
