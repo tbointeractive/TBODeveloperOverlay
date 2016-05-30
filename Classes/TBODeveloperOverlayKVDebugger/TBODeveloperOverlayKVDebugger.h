@@ -17,7 +17,10 @@
  *
  *  @param class
  */
-+ (void)registerDatasourceClass:(Class<TBODeveloperOverlayKVDebuggerDatasource>)class;
-+ (NSString *)title;
+//+ (void)registerDatasourceClass:(Class<TBODeveloperOverlayKVDebuggerDatasource>)class;
+//+ (NSString *)title;
+
+- (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasource>)datasource;
+
 
 @end

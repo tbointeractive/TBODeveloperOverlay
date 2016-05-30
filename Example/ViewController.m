@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "TBODeveloperOverlayViewController.h"
 #import "TBODeveloperOverlayKVDebugger.h"
+#import "TBODebugDatasource.h"
 
 
 @interface ViewController ()
@@ -23,7 +24,11 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] init];
+    // init Key-Value Debugger
+    TBODebugDatasource *kvDetasource = [TBODebugDatasource new];
+    TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:kvDetasource];
+    
+    // init and present developer overlay
     TBODeveloperOverlayViewController *developerOverlay = [[TBODeveloperOverlayViewController alloc] initWithPlugins:@[kvDebuggerViewController]];
     [self presentViewController:developerOverlay animated:YES completion:nil];
 }

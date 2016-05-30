@@ -20,15 +20,24 @@
 
 static Class datasourceClass = nil;
 
-+ (void)registerDatasourceClass:(Class<TBODeveloperOverlayKVDebuggerDatasource>)class {
-    datasourceClass = class;
-    if (NSClassFromString(@"TBODeveloperOverlayViewController")) {
-        Class overlayClass = NSClassFromString(@"TBODeveloperOverlayViewController");
-        SEL registerSelector = NSSelectorFromString(@"registerPluginClass:");
-        if ([overlayClass respondsToSelector:registerSelector]) {
-            [overlayClass performSelector:registerSelector withObject:self];
-        }
+//+ (void)registerDatasourceClass:(Class<TBODeveloperOverlayKVDebuggerDatasource>)class {
+//    datasourceClass = class;
+//    if (NSClassFromString(@"TBODeveloperOverlayViewController")) {
+//        Class overlayClass = NSClassFromString(@"TBODeveloperOverlayViewController");
+//        SEL registerSelector = NSSelectorFromString(@"registerPluginClass:");
+//        if ([overlayClass respondsToSelector:registerSelector]) {
+//            [overlayClass performSelector:registerSelector withObject:self];
+//        }
+//    }
+//}
+
+- (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasource>)datasource {
+    self = [super init];
+    if (self) {
+        self.datasource = datasource;
+        self.title = @"Key-Value Inspector";
     }
+    return self;
 }
 
 - (void)viewDidLoad {
@@ -96,10 +105,6 @@ static Class datasourceClass = nil;
         return nil;
     }
     return [self.datasource titleForSection:section];
-}
-
-+ (NSString *)title {
-    return @"Key-Value Inspector";
 }
 
 @end
