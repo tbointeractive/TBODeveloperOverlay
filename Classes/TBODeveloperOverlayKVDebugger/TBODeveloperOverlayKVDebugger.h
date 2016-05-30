@@ -9,16 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TBODeveloperOverlayKVDebuggerDatasource.h"
 
-@interface TBODeveloperOverlayKVDebugger : UITableViewController
-
-/**
- *  Register the class of your datasource.
- *  The datasource has to implement the TBODeveloperOverlayKVDebuggerDatasource protocol.
- *
- *  @param class
- */
-//+ (void)registerDatasourceClass:(Class<TBODeveloperOverlayKVDebuggerDatasource>)class;
-//+ (NSString *)title;
+@interface TBODeveloperOverlayKVDebugger : UITableViewControllers
 
 - (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasource>)datasource;
 
