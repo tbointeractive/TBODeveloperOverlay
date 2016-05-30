@@ -7,12 +7,13 @@
 //
 
 #import "ViewController.h"
-#import "TBODeveloperOverlayViewController.h"
 #import "TBODeveloperOverlayKVDebugger.h"
 #import "TBODebugDatasource.h"
 #import "TBODeveloperOverlayNSUserdefaultInspectorViewController.h"
 #import "TBODeveloperOverlayLogger.h"
 #import "TBODeveloperOverlayFileInspectorViewController.h"
+#import "TBODeveloperOverlayPluginListViewController.h"
+#import "TBOModalNavigationController.h"
 
 @interface ViewController ()
 
@@ -40,8 +41,15 @@
     // set baseURL to nil to get application directory
     TBODeveloperOverlayFileInspectorViewController *fileInspector = [[TBODeveloperOverlayFileInspectorViewController alloc] initWithBaseUrl:nil];
     
+    NSArray *plugins = @[kvDebuggerViewController, userDefaultsInspector, logger, fileInspector];
+    UIViewController *containedViewController;
+    if (plugins.count == 1) {
+        containedViewController = plugins[0];
+    } else {
+        containedViewController = [[TBODeveloperOverlayPluginListViewController alloc] initWithPlugins:plugins];
+    }
     // init and present developer overlay
-    TBODeveloperOverlayViewController *developerOverlay = [[TBODeveloperOverlayViewController alloc] initWithPlugins:@[kvDebuggerViewController, userDefaultsInspector, logger, fileInspector]];
+    TBOModalNavigationController *developerOverlay = [[TBOModalNavigationController alloc] initWithRootViewController:containedViewController];
     [self presentViewController:developerOverlay animated:YES completion:nil];
 }
 

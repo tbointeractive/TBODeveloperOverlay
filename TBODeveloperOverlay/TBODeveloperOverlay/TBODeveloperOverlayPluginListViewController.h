@@ -1,14 +1,14 @@
 //
-//  TBODeveloperOverlayViewController.h
+//  UIDeveloperOverlayTableViewController.h
 //  TBODeveloperOverlay
 //
-//  Created by Bernhard Eiling on 29.04.16.
+//  Created by Thorsten Stark on 30.05.16.
 //  Copyright © 2016 TBO INTERACTIVE. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface TBODeveloperOverlayViewController : UIViewController
+@interface TBODeveloperOverlayPluginListViewController : UITableViewController
 
 - (instancetype)initWithPlugins:(NSArray *)plugins;
 

@@ -6,15 +6,15 @@
 //  Copyright © 2016 TBO INTERACTIVE. All rights reserved.
 //
 
-#import "TBODeveloperOverlayTableViewController.h"
+#import "TBODeveloperOverlayPluginListViewController.h"
 
-@interface TBODeveloperOverlayTableViewController ()
+@interface TBODeveloperOverlayPluginListViewController ()
 
 @property (nonatomic, strong) NSArray *plugins;
 
 @end
 
-@implementation TBODeveloperOverlayTableViewController
+@implementation TBODeveloperOverlayPluginListViewController
 
 - (instancetype)initWithPlugins:(NSArray *)plugins {
     self = [super init];
