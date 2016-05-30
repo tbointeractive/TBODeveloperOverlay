@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "TBODeveloperOverlayViewController.h"
+#import "TBODeveloperOverlayKVDebugger.h"
+
 
 @interface ViewController ()
 
@@ -21,7 +23,8 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    UINavigationController *developerOverlay = [TBODeveloperOverlayViewController navigationControllerWithDeveloperOverlay];
+    TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] init];
+    TBODeveloperOverlayViewController *developerOverlay = [[TBODeveloperOverlayViewController alloc] initWithPlugins:@[kvDebuggerViewController]];
     [self presentViewController:developerOverlay animated:YES completion:nil];
 }
 
