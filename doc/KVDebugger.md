@@ -1,6 +1,7 @@
 # KVDebugger
-Das KVDebugger-Plugin ist Teil des TBODeveloperOverlay und dient zur Beobachtung und Manipulation von ausgewählten Werten in der App.
-Diese Werte werden durch eine Datasource definiert.
+Das KVDebugger-Plugin ist Teil des TBODeveloperOverlay und dient zur Beobachtung und Manipulation von ausgewählten Werten in der App. 
+Diese Werte werden durch eine Datasource definiert. Diese Datasource muss dem `TBODeveloperOverlayKVDebuggerDatasource`-Protokoll entsprechen. Für jeden anzuzeigenden Wert kann dort definiert werden ob dieser Wert readwrite oder readonly ist. Per Default sind alle Werte readonly.
+Zusätzlich kann man für jeden Wert noch eine Beschreibung hinzufügen, die dann in der Detailansicht angezeigt wird.
 
 ## Installation (Cocoapods)
 KVDebugger kann einzeln oder in Kombination mit dem TBODeveloperOverlay verwendet werden.
@@ -14,30 +15,11 @@ Um KVDebugger verwenden zu können muss zunächst eine Datasource implementiert 
 
 ```objc
 // init Key-Value Debugger
-    TBODebugDatasource *myKVDatasource = [TBODebugDatasource new];
-    TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] myKVDatasource];
-    
-    // init and present developer overlay
-    TBODeveloperOverlayViewController *developerOverlay = [[TBODeveloperOverlayViewController alloc] initWithPlugins:@[kvDebuggerViewController]];
-    [self presentViewController:developerOverlay animated:YES completion:nil];
+MyKVDebugDatasource *myKVDatasource = [MyKVDebugDatasource new]; // conforms to TBODeveloperOverlayKVDebuggerDatasource protocol
+TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] myKVDatasource];
+
+// init and present developer overlay
+TBODeveloperOverlayViewController *developerOverlay = [[TBODeveloperOverlayViewController alloc] initWithPlugins:@[kvDebuggerViewController]];
+[self presentViewController:developerOverlay animated:YES completion:nil];
 ```
 
-## TBODeveloperOverlayKVDebuggerDatasource
-Das Protokoll ist folgendermaßen definiert:
-```objc
-@protocol TBODeveloperOverlayKVDebuggerDatasource <NSObject>
-
-- (NSInteger)numberOfSections;
-- (NSInteger)numberOfItemsInSection:(NSInteger)section;
-
-- (NSString *)titleForSection:(NSInteger)section;
-
-- (NSString *)keyForIndexPath:(NSIndexPath *)indexPath;
-- (id)valueForIndexPath:(NSIndexPath *)indexPath;
-- (NSString *)descriptionForIndexPath:(NSIndexPath *)indexPath;
-- (BOOL)isEditableForIndexPath:(NSIndexPath *)indexPath;
-
-- (void)didChangeValue:(id)value atIndexPath:(NSIndexPath *)indexPath;
-
-@end
-```	
