@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TBODeveloperOverlayKVDebuggerDatasource.h"
 
-@interface TBODeveloperOverlayKVDebugger : UITableViewControllers
+@interface TBODeveloperOverlayKVDebugger : UITableViewController
 
 - (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasource>)datasource;
 
