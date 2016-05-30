@@ -8,77 +8,70 @@
 
 #import "TBODeveloperOverlayViewController.h"
 #import "TBOModalNavigationController.h"
+#import "TBODeveloperOverlayTableViewController.h"
 
 @interface TBODeveloperOverlayViewController ()
 
+@property (nonatomic, strong) NSArray *plugins;
 
 @end
 
 @implementation TBODeveloperOverlayViewController
 
-static NSArray <Class> *pluginClasses = nil;
+//static NSArray <Class> *pluginClasses = nil;
 
-+ (UINavigationController *)navigationControllerWithDeveloperOverlay {
-    UIViewController *containedViewController;
-    if (pluginClasses.count == 1) {
-        Class pluginClass = pluginClasses[0];
-        containedViewController = [[pluginClass alloc] init];
-    } else {
-        containedViewController = [[TBODeveloperOverlayViewController alloc] init];
+//+ (UINavigationController *)navigationControllerWithDeveloperOverlay {
+//    UIViewController *containedViewController;
+//    if (pluginClasses.count == 1) {
+//        Class pluginClass = pluginClasses[0];
+//        containedViewController = [[pluginClass alloc] init];
+//    } else {
+//        containedViewController = [[TBODeveloperOverlayViewController alloc] init];
+//    }
+//
+//    TBOModalNavigationController *navigationController = [[TBOModalNavigationController alloc] initWithRootViewController:containedViewController];
+//    navigationController.modalPresentationStyle = UIModalPresentationFormSheet;
+//    return navigationController;
+//}
+//
+//+ (void)registerPluginClass:(Class)pluginClass {
+//    NSMutableArray *tempPluginClasses = [self.class pluginClasses].mutableCopy;
+//    [tempPluginClasses addObject:pluginClass];
+//    pluginClasses = tempPluginClasses.copy;
+//}
+
+- (instancetype)initWithPlugins:(NSArray *)plugins {
+    self = [super init];
+    if (self) {
+        self.plugins = plugins;
+        UIViewController *containedViewController;
+        if (plugins.count == 1) {
+            containedViewController = plugins[0];
+        } else {
+            containedViewController = [[TBODeveloperOverlayTableViewController alloc] init];
+        }
+        
+        TBOModalNavigationController *navigationController = [[TBOModalNavigationController alloc] initWithRootViewController:containedViewController];
+        navigationController.modalPresentationStyle = UIModalPresentationFormSheet;
+        [self addChildViewController:navigationController];
+        [self.view addSubview:navigationController.view];
+        [navigationController didMoveToParentViewController:self];
     }
-    
-    TBOModalNavigationController *navigationController = [[TBOModalNavigationController alloc] initWithRootViewController:containedViewController];
-    navigationController.modalPresentationStyle = UIModalPresentationFormSheet;
-    return navigationController;
+    return self;
 }
 
-+ (void)registerPluginClass:(Class)pluginClass {
-    NSMutableArray *tempPluginClasses = [self.class pluginClasses].mutableCopy;
-    [tempPluginClasses addObject:pluginClass];
-    pluginClasses = tempPluginClasses.copy;
+- (void)registerPlugins:(NSArray *)plugins {
+    self.plugins = plugins;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.title = @"Developer";
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"pluginCell"];
-}
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return pluginClasses.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"pluginCell" forIndexPath:indexPath];
-    Class pluginClass = pluginClasses[indexPath.row];
-    if ([pluginClass respondsToSelector:@selector(title)]) {
-        cell.textLabel.text = [pluginClass performSelector:@selector(title)];
-    } else {
-        cell.textLabel.text = NSStringFromClass(pluginClass);
-    }
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Class pluginClass = pluginClasses[indexPath.row];
-    UIViewController *pluginViewController = [[pluginClass alloc] init];
-    if (self.navigationController) {
-        [self.navigationController pushViewController:pluginViewController animated:YES];
-    } else {
-        [self presentViewController:pluginViewController animated:YES completion:nil];
-    }
-}
-
-+ (NSArray <Class> *)pluginClasses {
-    static dispatch_once_t pluginsOnceToken;
-    dispatch_once(&pluginsOnceToken, ^{
-        pluginClasses = [NSArray new];
-    });
-    return pluginClasses;
-}
+//+ (NSArray <Class> *)pluginClasses {
+//    static dispatch_once_t pluginsOnceToken;
+//    dispatch_once(&pluginsOnceToken, ^{
+//        pluginClasses = [NSArray new];
+//    });
+//    return pluginClasses;
+//}
 
 @end
