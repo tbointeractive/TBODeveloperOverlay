@@ -27,6 +27,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
     // init Key-Value Debugger
     TBODebugDatasource *kvDetasource = [TBODebugDatasource new];
     TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:kvDetasource];
@@ -41,14 +42,17 @@
     // set baseURL to nil to get application directory
     TBODeveloperOverlayFileInspectorViewController *fileInspector = [[TBODeveloperOverlayFileInspectorViewController alloc] initWithBaseUrl:nil];
     
+    // init and present developer overlay
     NSArray *plugins = @[kvDebuggerViewController, userDefaultsInspector, logger, fileInspector];
     UIViewController *containedViewController;
     if (plugins.count == 1) {
+        // When there is only one plugin to display it doesn't make sense to use the PluginListViewController.
+        // Instead consider displying the plugin as rootViewController of the NavigationController
         containedViewController = plugins[0];
     } else {
         containedViewController = [[TBODeveloperOverlayPluginListViewController alloc] initWithPlugins:plugins];
     }
-    // init and present developer overlay
+    
     TBOModalNavigationController *developerOverlay = [[TBOModalNavigationController alloc] initWithRootViewController:containedViewController];
     [self presentViewController:developerOverlay animated:YES completion:nil];
 }
