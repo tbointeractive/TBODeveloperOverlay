@@ -17,15 +17,12 @@
 
 @implementation TBODeveloperOverlayNSUserdefaultInspectorViewController
 
-
-+ (void)load {
-    if (NSClassFromString(@"TBODeveloperOverlayViewController")) {
-        Class overlayClass = NSClassFromString(@"TBODeveloperOverlayViewController");
-        SEL registerSelector = NSSelectorFromString(@"registerPluginClass:");
-        if ([overlayClass respondsToSelector:registerSelector]) {
-            [overlayClass performSelector:registerSelector withObject:self];
-        }
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.title = @"NSUserDefaults Inspector";
     }
+    return self;
 }
 
 - (id<TBODeveloperOverlayKVDebuggerDatasource>)datasource {
@@ -33,10 +30,6 @@
         _datasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
     }
     return _datasource;
-}
-
-+ (NSString *)title {
-    return @"NSUserDefaults Inspector";
 }
 
 @end

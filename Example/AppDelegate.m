@@ -20,7 +20,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [TBOLoggerSetupHelper setup];
     DDLogVerbose(@"application:didFinishLaunchingWithOptions:");
-    [TBODeveloperOverlayKVDebugger registerDatasourceClass:NSClassFromString(@"TBODebugDatasource")];
     [[NSUserDefaults standardUserDefaults] setObject:@"testvalue" forKey:@"testkey"];
     [[NSUserDefaults standardUserDefaults] setObject:@[@"testvalue"] forKey:@"testkey"];
     return YES;
