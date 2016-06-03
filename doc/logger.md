@@ -1,9 +1,18 @@
 #Logger
-Das Logger Plugin dient zum anzeigen des App Logs.
-###Verwendung
-Beim Aufruf des Loggers werden die letzten 50000 verfügbaren chars des Logs angezeigt.
-Die einzelnen Log Einträge sind chronlologisch aufsteigend, ähnlich wie in Xcode, geordnet.
-Refreshed wird duch erneutes aufrufen des Loggers.
+The logger adds the possibility to display a log.
 
-###Anmerkungen
-Der Logger hat eine Dependency auf das [CocoaLumberjack Pod](https://cocoapods.org/pods/CocoaLumberjack)
+## Usage
+The logger needs a datasource to access the data to display. The `TBODeveloperOverlayLogger` plugin offers an existing datasource for [CocoaLumberjack](https://github.com/CocoaLumberjack).
+
+```
+    // init logger
+    TBODeveloperOverlayLoggerCocoaluberjackDatasource *loggerDatasource = [TBODeveloperOverlayLoggerCocoaluberjackDatasource new];
+    TBODeveloperOverlayLogger *logger = [[TBODeveloperOverlayLogger alloc] initWithDatasource:loggerDatasource];
+```
+
+Per default only the last 50,000 characters are displayed in the log.
+
+## Todos
+
+* add the possibility to share the displayed log
+* add a way to filter the log (either by matching substrings or by filtering the log level)
