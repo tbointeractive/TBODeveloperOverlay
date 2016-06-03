@@ -4,12 +4,12 @@ Diese Werte werden durch eine Datasource definiert. Diese Datasource muss dem `T
 Zusätzlich kann man für jeden Wert noch eine Beschreibung hinzufügen, die dann in der Detailansicht angezeigt wird.
 
 ## Verwendung
-Um KVDebugger verwenden zu können muss zunächst eine Datasource implementiert werden. Diese muss das `TBODeveloperOverlayKVDebuggerDatasource`Protokoll implementieren. 
+Um KVDebugger verwenden zu können muss zunächst eine Datasource implementiert werden. Diese muss das `TBODeveloperOverlayKVDebuggerDatasource`-Protokoll implementieren. 
 
 ```objc
 // init Key-Value Debugger
 MyKVDebugDatasource *myKVDatasource = [MyKVDebugDatasource new]; // conforms to TBODeveloperOverlayKVDebuggerDatasource protocol
-TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] myKVDatasource];
+TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:myKVDatasource];
 
 // init and present developer overlay
 TBODeveloperOverlayPluginListViewController *listViewController = [[TBODeveloperOverlayPluginListViewController alloc] initWithPlugins:@[kvDebuggerViewController]];
@@ -17,3 +17,9 @@ TBOModalNavigationController *developerOverlay = [[TBOModalNavigationController 
 [self presentViewController:developerOverlay animated:YES completion:nil];
 ```
 
+### NSUserDefaults
+Um die NSUserDefaults auszulesen wird mit `TBODeveloperOverlayNSUserDefaultsDatasource` bereits eine passende Datasource mitgeliefert.
+```objc
+TBODeveloperOverlayNSUserDefaultsDatasource *userDefaultsDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
+TBODeveloperOverlayKVDebugger *userDefaultsInspector = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:userDefaultsDatasource];
+```
