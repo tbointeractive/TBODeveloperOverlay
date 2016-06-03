@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TBODeveloperOverlay"
-  s.version      = "1.2.0"
+  s.version      = "1.3.0"
   s.summary      = "A Developer Overlay for Debugging."
 
   s.description  = <<-DESC
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "git@git.tbointeractive.com:tbopodspecs/TBODeveloperOverlay.git", :tag => '1.2.0' }
+  s.source       = { :git => "git@git.tbointeractive.com:tbopodspecs/TBODeveloperOverlay.git", :tag => '1.3.0' }
 
  # s.source       = { :git => "http://git.tbointeractive.com/root/TBODeveloperOverlay", :tag => s.version.to_s }
 
@@ -40,10 +40,6 @@ Pod::Spec.new do |s|
     }
   end
 
-  s.subspec 'NSUserdefaultInspector' do |sp|
-    sp.source_files = "Classes/TBODeveloperOverlayNSUserdefaultInspector/*.{h,m}"
-  end
-
   s.subspec 'LoggerOverlay' do |sp|
     sp.source_files = "Classes/TBODeveloperOverlayLogger/*.{h,m}"
     sp.resources = ['Classes/TBODeveloperOverlayLogger/*.xib']
@@ -57,7 +53,6 @@ Pod::Spec.new do |s|
     sp.source_files = "Classes/TBODeveloperOverlayFileInspector/*.{h,m}"
   end
 
-
-  s.default_subspecs =  'KVDebugger' ,'Core', 'NSUserdefaultInspector', 'LoggerOverlay', 'FileInspector'
+  s.default_subspecs =  'KVDebugger' ,'Core', 'LoggerOverlay', 'FileInspector'
 
 end
