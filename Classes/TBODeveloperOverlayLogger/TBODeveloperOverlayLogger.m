@@ -46,6 +46,9 @@
         return @"Datasource doesn't implement the lastLogMessagesLimitedToCharacterCount: method";
     }
     NSString *log = [self.datasource lastLogMessagesLimitedToCharacterCount:self.maxDisplayedCharacters];
+    if (!log) {
+        return @"";
+    }
     if (![log isKindOfClass:[NSString class]]) {
         return [NSString stringWithFormat:@"Datasource should return NSString, but actual return type is %@", NSStringFromClass(log.class)];
     }

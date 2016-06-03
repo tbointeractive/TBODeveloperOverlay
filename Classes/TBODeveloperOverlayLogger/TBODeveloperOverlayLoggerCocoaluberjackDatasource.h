@@ -17,6 +17,6 @@
  *  If no file logger is given, the first DDFileLogger in
  *  [DDLog allLoggers] is used
  */
-@property (weak, nonatomic, readwrite) DDFileLogger *fileLogger;
+@property (weak, nonatomic, readwrite) DDFileLogger *_Nullable fileLogger;
 
 @end

@@ -11,7 +11,7 @@
 
 @protocol TBODeveloperOverlayLoggerDatasourceProtocol <NSObject>
 
-- (NSString *)lastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount;
+- (NSString *_Nullable)lastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount;
 
 @optional
 

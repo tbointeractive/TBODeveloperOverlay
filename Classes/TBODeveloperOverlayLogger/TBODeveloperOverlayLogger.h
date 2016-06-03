@@ -17,6 +17,6 @@
  */
 @property (nonatomic, readwrite) NSUInteger maxDisplayedCharacters;
 
-- (instancetype)initWithDatasource:(id<TBODeveloperOverlayLoggerDatasourceProtocol>)datasource;
+- (instancetype _Nullable)initWithDatasource:(_Nullable id <TBODeveloperOverlayLoggerDatasourceProtocol>)datasource;
 
 @end
