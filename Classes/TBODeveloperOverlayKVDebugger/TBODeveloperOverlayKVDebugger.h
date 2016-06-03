@@ -11,13 +11,7 @@
 
 @interface TBODeveloperOverlayKVDebugger : UITableViewController
 
-/**
- *  Register the class of your datasource.
- *  The datasource has to implement the TBODeveloperOverlayKVDebuggerDatasource protocol.
- *
- *  @param class
- */
-+ (void)registerDatasourceClass:(Class<TBODeveloperOverlayKVDebuggerDatasource>)class;
-+ (NSString *)title;
+- (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasource>)datasource;
+
 
 @end

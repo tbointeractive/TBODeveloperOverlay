@@ -18,22 +18,20 @@
 
 @implementation TBODeveloperOverlayFileInspectorViewController
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.title = @"File Inspector";
+    }
+    return self;
+}
+
 - (instancetype)initWithBaseUrl:(NSURL *)baseUrl {
     self = [self init];
     if (self) {
         self.baseUrl = baseUrl;
     }
     return self;
-}
-
-+ (void)load {
-    if (NSClassFromString(@"TBODeveloperOverlayViewController")) {
-        Class overlayClass = NSClassFromString(@"TBODeveloperOverlayViewController");
-        SEL registerSelector = NSSelectorFromString(@"registerPluginClass:");
-        if ([overlayClass respondsToSelector:registerSelector]) {
-            [overlayClass performSelector:registerSelector withObject:self];
-        }
-    }
 }
 
 - (void)viewDidLoad {

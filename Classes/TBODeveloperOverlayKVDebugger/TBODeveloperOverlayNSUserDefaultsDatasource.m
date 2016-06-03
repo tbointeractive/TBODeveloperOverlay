@@ -45,4 +45,8 @@
 - (void)didChangeValue:(id)value atIndexPath:(NSIndexPath *)indexPath {
 }
 
+- (NSString *)descriptionForIndexPath:(NSIndexPath *)indexPath {
+    return @"";
+}
+
 @end
