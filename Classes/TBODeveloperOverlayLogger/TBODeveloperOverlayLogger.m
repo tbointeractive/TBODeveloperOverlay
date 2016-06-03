@@ -7,64 +7,49 @@
 //
 
 #import "TBODeveloperOverlayLogger.h"
-#import <CocoaLumberjack/CocoaLumberjack.h>
-
 
 @interface TBODeveloperOverlayLogger ()
 
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic, readwrite) id<TBODeveloperOverlayLoggerDatasourceProtocol> datasource;
 
 @end
 
-
 @implementation TBODeveloperOverlayLogger
 
-+ (void)load {
-    if (NSClassFromString(@"TBODeveloperOverlayViewController")) {
-        Class overlayClass = NSClassFromString(@"TBODeveloperOverlayViewController");
-        SEL registerSelector = NSSelectorFromString(@"registerPluginClass:");
-        if ([overlayClass respondsToSelector:registerSelector]) {
-            [overlayClass performSelector:registerSelector withObject:self];
-        }
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.maxDisplayedCharacters = 50000;
     }
+    return self;
+}
+
+- (instancetype)initWithDatasource:(id<TBODeveloperOverlayLoggerDatasourceProtocol>)datasource {
+    self = [self init];
+    if (self) {
+        self.datasource = datasource;
+    }
+    return self;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.textView.text = [self.class lastLogMessagesWithLimitedCharacters:50000];
+    self.textView.text = [self logString];
 }
 
-#pragma mark helper
-
-+ (NSString *)lastLogMessagesWithLimitedCharacters:(NSInteger)maxSize {
-    NSMutableString *logMessages = [NSMutableString string];
-    NSFileManager *fileManager = [NSFileManager new];
-    
-    NSArray<NSString *> *sortedLogFilePaths = [[self.fileLogger logFileManager] sortedLogFilePaths];
-    for (NSString *logFilePath in [sortedLogFilePaths reverseObjectEnumerator]) {
-        NSData *logData = [fileManager contentsAtPath:logFilePath];
-        if (logData.length > 0) {
-            NSString *logString = [[NSString alloc] initWithBytes:logData.bytes length:logData.length encoding:NSUTF8StringEncoding];
-            [logMessages insertString:logString atIndex:0];
-        }
-        if (logMessages.length >= maxSize) {
-            break;
-        }
+- (NSString *)logString {
+    if (!self.datasource) {
+        return @"No Datasource given";
     }
-    
-    if ([logMessages length] > maxSize) {
-        logMessages = (NSMutableString *)[logMessages substringWithRange:NSMakeRange([logMessages length]-maxSize-1, maxSize)];
+    if (![self.datasource respondsToSelector:@selector(lastLogMessagesLimitedToCharacterCount:)]) {
+        return @"Datasource doesn't implement the lastLogMessagesLimitedToCharacterCount: method";
     }
-    return logMessages;
-}
-
-+ (DDFileLogger *)fileLogger {
-    for (id <DDLogger> logger in [DDLog allLoggers]) {
-        if ([logger isKindOfClass:[DDFileLogger class]]) {
-            return logger;
-        }
+    NSString *log = [self.datasource lastLogMessagesLimitedToCharacterCount:self.maxDisplayedCharacters];
+    if (![log isKindOfClass:[NSString class]]) {
+        return [NSString stringWithFormat:@"Datasource should return NSString, but actual return type is %@", NSStringFromClass(log.class)];
     }
-    return nil;
+    return log;
 }
 
 @end

@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TBODeveloperOverlayLoggerDatasourceProtocol.h"
 
 @interface TBODeveloperOverlayLogger : UIViewController
+
+/**
+ *  Defines the maximum amount of displayed characters
+ *  The default is 50000 characters
+ */
+@property (nonatomic, readwrite) NSUInteger maxDisplayedCharacters;
+
+- (instancetype)initWithDatasource:(id<TBODeveloperOverlayLoggerDatasourceProtocol>)datasource;
 
 @end

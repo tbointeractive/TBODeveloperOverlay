@@ -14,6 +14,7 @@
 #import "TBODeveloperOverlayFileInspectorViewController.h"
 #import "TBODeveloperOverlayPluginListViewController.h"
 #import "TBOModalNavigationController.h"
+#import "TBODeveloperOverlayLoggerCocoaluberjackDatasource.h"
 
 @interface ViewController ()
 
@@ -36,9 +37,10 @@
     TBODeveloperOverlayNSUserDefaultsDatasource *userDefaultsDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
     TBODeveloperOverlayKVDebugger *userDefaultsInspector = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:userDefaultsDatasource];
     userDefaultsInspector.title = @"UserDefaults Inspector";
-
+    
     // init logger
-    TBODeveloperOverlayLogger *logger = [TBODeveloperOverlayLogger new];
+    TBODeveloperOverlayLoggerCocoaluberjackDatasource *loggerDatasource = [TBODeveloperOverlayLoggerCocoaluberjackDatasource new];
+    TBODeveloperOverlayLogger *logger = [[TBODeveloperOverlayLogger alloc] initWithDatasource:loggerDatasource];
     
     // init file inspector
     // set baseURL to nil to get application directory
