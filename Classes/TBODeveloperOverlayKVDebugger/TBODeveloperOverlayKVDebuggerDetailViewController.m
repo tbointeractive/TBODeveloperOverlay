@@ -52,7 +52,9 @@ typedef enum {
         self.navigationItem.rightBarButtonItem = self.saveButton;
     }
     self.titleLabel.text = [self.datasource keyForIndexPath:self.indexPath];
-    self.descriptionLabel.text = [self.datasource descriptionForIndexPath:self.indexPath] ? : @"no description available";
+    if ([self.datasource respondsToSelector:@selector(descriptionForIndexPath:)]) {
+        self.descriptionLabel.text = [self.datasource descriptionForIndexPath:self.indexPath];
+    }
     
     id value = [self.datasource valueForIndexPath:self.indexPath];
     if ([value isKindOfClass:[NSString class]]) {
