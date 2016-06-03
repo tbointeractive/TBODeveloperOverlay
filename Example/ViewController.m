@@ -8,8 +8,8 @@
 
 #import "ViewController.h"
 #import "TBODeveloperOverlayKVDebugger.h"
+#import "TBODeveloperOverlayNSUserDefaultsDatasource.h"
 #import "TBODebugDatasource.h"
-#import "TBODeveloperOverlayNSUserdefaultInspectorViewController.h"
 #import "TBODeveloperOverlayLogger.h"
 #import "TBODeveloperOverlayFileInspectorViewController.h"
 #import "TBODeveloperOverlayPluginListViewController.h"
@@ -29,12 +29,14 @@
     [super viewDidAppear:animated];
     
     // init Key-Value Debugger
-    TBODebugDatasource *kvDetasource = [TBODebugDatasource new];
-    TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:kvDetasource];
+    TBODebugDatasource *kvDatasource = [TBODebugDatasource new];
+    TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:kvDatasource];
     
     // init User Defaults Inspector
-    TBODeveloperOverlayNSUserdefaultInspectorViewController *userDefaultsInspector = [TBODeveloperOverlayNSUserdefaultInspectorViewController new];
-    
+    TBODeveloperOverlayNSUserDefaultsDatasource *userDefaultsDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
+    TBODeveloperOverlayKVDebugger *userDefaultsInspector = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:userDefaultsDatasource];
+    userDefaultsInspector.title = @"UserDefaults Inspector";
+
     // init logger
     TBODeveloperOverlayLogger *logger = [TBODeveloperOverlayLogger new];
     
