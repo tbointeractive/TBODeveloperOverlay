@@ -1,11 +1,12 @@
-#TBODeveloperOverlay
-Das TBODeveloperOverlay ist ein Entwicklungs und Debugging Tool, dass verschiedene Plugins einbindet die bei der Entwicklung und der Fehlersuche helfen.
+# TBODeveloperOverlay
+Das TBODeveloperOverlay ist ein Entwicklungs- und Debugging-Tool, das verschiedene Plugins einbindet, die bei der Entwicklung und der Fehlersuche helfen.
 
-##Verwendung
-Das Developer Overlay kann in der Development, Live und anderen Versionen einer App eingebunden werden.
-Gerade in der Live Version soll der Zugriff auf das Overlay gut versteckt werden, z.B. sieben mal tappen einer View etc.
+## Hinweise
+Das DeveloperOverlay kann in der Development-, Live- und anderen Versionen einer App eingebunden werden.
+Gerade in der Live-Version soll der Zugriff auf das Overlay gut versteckt werden, z.B. mehrmaliges Tappen einer View etc.
 
-Das Developer Overlay wird innerhalb eines modalen `UINavigationController` angezeigt.
+## Verwendung
+Das DeveloperOverlay sollte innerhalb eines `UINavigationController` angezeigt werden. Dies ist sowohl für einige Plugins Voraussetzung als auch spätestens dann notwendig, wenn man mehr als ein Plugin einbinden möchte. 
 
 ```
 UINavigationController *developerOverlay = [TBODeveloperOverlayViewController navigationControllerWithDeveloperOverlay];
