@@ -1,5 +1,5 @@
 //
-//  TBODeveloperOverlayLoggerCocoalumberjackDatasource.h
+//  TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h
 //  TBODeveloperOverlay
 //
 //  Created by Cornelius Horstmann on 03.06.16.
@@ -11,7 +11,7 @@
 
 @class DDFileLogger;
 
-@interface TBODeveloperOverlayLoggerCocoalumberjackDatasource : NSObject<TBODeveloperOverlayLoggerDatasourceProtocol>
+@interface TBODeveloperOverlayLoggerCocoaLumberjackDatasource : NSObject<TBODeveloperOverlayLoggerDatasourceProtocol>
 
 /**
  *  If no file logger is given, the first DDFileLogger in
