@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F0E65CA1CEF8BBF007AF08F /* TBOModalNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E65C91CEF8BBF007AF08F /* TBOModalNavigationController.m */; };
-		1F51AE881D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaluberjackDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F51AE871D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaluberjackDatasource.m */; };
+		1F51AE881D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoalumberjackDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F51AE871D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoalumberjackDatasource.m */; };
 		1F5D922C1CE0915B0017508E /* TBODeveloperOverlayLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D922B1CE0915B0017508E /* TBODeveloperOverlayLogger.m */; };
 		1F5D92301CE0942F0017508E /* TBODeveloperOverlayLogger.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5D922F1CE0942F0017508E /* TBODeveloperOverlayLogger.xib */; };
 		1F5D92351CE096EA0017508E /* TBODeveloperOverlayFileInspectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D92331CE096EA0017508E /* TBODeveloperOverlayFileInspectorViewController.m */; };
@@ -53,8 +53,8 @@
 		1B502B768D5284FDD769CD89 /* Pods-TBODeveloperOverlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBODeveloperOverlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay.release.xcconfig"; sourceTree = "<group>"; };
 		1F0E65C81CEF8BBF007AF08F /* TBOModalNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBOModalNavigationController.h; path = TBODeveloperOverlay/TBODeveloperOverlay/TBOModalNavigationController.h; sourceTree = SOURCE_ROOT; };
 		1F0E65C91CEF8BBF007AF08F /* TBOModalNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBOModalNavigationController.m; path = TBODeveloperOverlay/TBODeveloperOverlay/TBOModalNavigationController.m; sourceTree = SOURCE_ROOT; };
-		1F51AE861D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaluberjackDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayLoggerCocoaluberjackDatasource.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLoggerCocoaluberjackDatasource.h; sourceTree = "<group>"; };
-		1F51AE871D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaluberjackDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayLoggerCocoaluberjackDatasource.m; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLoggerCocoaluberjackDatasource.m; sourceTree = "<group>"; };
+		1F51AE861D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoalumberjackDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayLoggerCocoalumberjackDatasource.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLoggerCocoalumberjackDatasource.h; sourceTree = "<group>"; };
+		1F51AE871D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoalumberjackDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayLoggerCocoalumberjackDatasource.m; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLoggerCocoalumberjackDatasource.m; sourceTree = "<group>"; };
 		1F5D922A1CE0915B0017508E /* TBODeveloperOverlayLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayLogger.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLogger.h; sourceTree = "<group>"; };
 		1F5D922B1CE0915B0017508E /* TBODeveloperOverlayLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayLogger.m; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLogger.m; sourceTree = "<group>"; };
 		1F5D922F1CE0942F0017508E /* TBODeveloperOverlayLogger.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TBODeveloperOverlayLogger.xib; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLogger.xib; sourceTree = "<group>"; };
@@ -146,8 +146,8 @@
 				1F5D922B1CE0915B0017508E /* TBODeveloperOverlayLogger.m */,
 				1F5D922F1CE0942F0017508E /* TBODeveloperOverlayLogger.xib */,
 				1F5D92561D01DAF20017508E /* TBODeveloperOverlayLoggerDatasourceProtocol.h */,
-				1F51AE861D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaluberjackDatasource.h */,
-				1F51AE871D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaluberjackDatasource.m */,
+				1F51AE861D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoalumberjackDatasource.h */,
+				1F51AE871D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoalumberjackDatasource.m */,
 			);
 			name = TBODeveloperOverlayLogger;
 			sourceTree = "<group>";
@@ -447,7 +447,7 @@
 			files = (
 				7593D8F01CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m in Sources */,
 				7593D8E61CD399D400EFFA49 /* TBODebugDatasource.m in Sources */,
-				1F51AE881D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaluberjackDatasource.m in Sources */,
+				1F51AE881D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoalumberjackDatasource.m in Sources */,
 				1F5D922C1CE0915B0017508E /* TBODeveloperOverlayLogger.m in Sources */,
 				7593D8E51CD399D400EFFA49 /* main.m in Sources */,
 				7554B66B1CFC7B4500FD6CD3 /* TBODeveloperOverlayPluginListViewController.m in Sources */,

@@ -6,7 +6,7 @@ The logger needs a datasource to access the data to display. The `TBODeveloperOv
 
 ```
     // init logger
-    TBODeveloperOverlayLoggerCocoaluberjackDatasource *loggerDatasource = [TBODeveloperOverlayLoggerCocoaluberjackDatasource new];
+    TBODeveloperOverlayLoggerCocoalumberjackDatasource *loggerDatasource = [TBODeveloperOverlayLoggerCocoalumberjackDatasource new];
     TBODeveloperOverlayLogger *logger = [[TBODeveloperOverlayLogger alloc] initWithDatasource:loggerDatasource];
 ```
 

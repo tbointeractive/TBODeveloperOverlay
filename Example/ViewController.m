@@ -14,7 +14,7 @@
 #import "TBODeveloperOverlayFileInspectorViewController.h"
 #import "TBODeveloperOverlayPluginListViewController.h"
 #import "TBOModalNavigationController.h"
-#import "TBODeveloperOverlayLoggerCocoaluberjackDatasource.h"
+#import "TBODeveloperOverlayLoggerCocoalumberjackDatasource.h"
 
 @interface ViewController ()
 
@@ -39,7 +39,7 @@
     userDefaultsInspector.title = @"UserDefaults Inspector";
     
     // init logger
-    TBODeveloperOverlayLoggerCocoaluberjackDatasource *loggerDatasource = [TBODeveloperOverlayLoggerCocoaluberjackDatasource new];
+    TBODeveloperOverlayLoggerCocoalumberjackDatasource *loggerDatasource = [TBODeveloperOverlayLoggerCocoalumberjackDatasource new];
     TBODeveloperOverlayLogger *logger = [[TBODeveloperOverlayLogger alloc] initWithDatasource:loggerDatasource];
     
     // init file inspector

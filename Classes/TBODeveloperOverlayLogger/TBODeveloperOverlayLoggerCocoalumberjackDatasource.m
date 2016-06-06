@@ -1,15 +1,15 @@
 //
-//  TBODeveloperOverlayLoggerCocoaluberjackDatasource.m
+//  TBODeveloperOverlayLoggerCocoalumberjackDatasource.m
 //  TBODeveloperOverlay
 //
 //  Created by Cornelius Horstmann on 03.06.16.
 //  Copyright © 2016 TBO INTERACTIVE. All rights reserved.
 //
 
-#import "TBODeveloperOverlayLoggerCocoaluberjackDatasource.h"
+#import "TBODeveloperOverlayLoggerCocoalumberjackDatasource.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
-@implementation TBODeveloperOverlayLoggerCocoaluberjackDatasource
+@implementation TBODeveloperOverlayLoggerCocoalumberjackDatasource
 
 - (NSString *)lastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount {
     NSMutableString *logMessages = [NSMutableString string];
