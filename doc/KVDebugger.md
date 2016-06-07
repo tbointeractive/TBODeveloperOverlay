@@ -1,25 +1,15 @@
 # KVDebugger
-Das KVDebugger-Plugin ist Teil des TBODeveloperOverlay und dient zur Beobachtung und Manipulation von ausgewählten Werten in der App. 
-Diese Werte werden durch eine Datasource definiert. Diese Datasource muss dem `TBODeveloperOverlayKVDebuggerDatasource`-Protokoll entsprechen. Für jeden anzuzeigenden Wert kann dort definiert werden ob dieser Wert readwrite oder readonly ist. Per Default sind alle Werte readonly.
-Zusätzlich kann man für jeden Wert noch eine Beschreibung hinzufügen, die dann in der Detailansicht angezeigt wird.
+The KVDebugger can be used to inspect system variables and, for some cases, modify them. 
 
-## Verwendung
-Um KVDebugger verwenden zu können muss zunächst eine Datasource implementiert werden. Diese muss das `TBODeveloperOverlayKVDebuggerDatasource`-Protokoll implementieren. 
+## Usage
+The `KVDebugger` needs a datasource to access the date to display. This datasource has to implement the `TBODeveloperOverlayKVDebuggerDatasourceProtocol` protocol. For further information please check the `TBODeveloperOverlayKVDebuggerDatasourceProtocol.h`. 
 
-```objc
-// init Key-Value Debugger
-MyKVDebugDatasource *myKVDatasource = [MyKVDebugDatasource new]; // conforms to TBODeveloperOverlayKVDebuggerDatasource protocol
-TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:myKVDatasource];
+The `TBODeveloperOverlayNSUserDefaultsDatasource` is an already existing plugin to inspect but not edit the `NSUserDefaults`.
 
-// init and present developer overlay
-TBODeveloperOverlayPluginListViewController *listViewController = [[TBODeveloperOverlayPluginListViewController alloc] initWithPlugins:@[kvDebuggerViewController]];
-TBOModalNavigationController *developerOverlay = [[TBOModalNavigationController alloc] initWithRootViewController:listViewController];
-[self presentViewController:developerOverlay animated:YES completion:nil];
+```
+    TBODeveloperOverlayNSUserDefaultsDatasource *kvDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
+    TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:kvDatasource];
 ```
 
-### NSUserDefaults
-Um die NSUserDefaults auszulesen wird mit `TBODeveloperOverlayNSUserDefaultsDatasource` bereits eine passende Datasource mitgeliefert.
-```objc
-TBODeveloperOverlayNSUserDefaultsDatasource *userDefaultsDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
-TBODeveloperOverlayKVDebugger *userDefaultsInspector = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:userDefaultsDatasource];
-```
+### Editing
+To enable editing values use the `-isEditableForIndexPath:` and `-didChangeValue:atIndexPath:` in the protocol. The `KVDebugger` currently supports editing of Bools, Numbers, and Strings.
