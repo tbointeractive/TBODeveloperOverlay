@@ -7,7 +7,7 @@
 //
 
 #ifndef TBODeveloperOverlayKVDebuggerDatasourceProtocol_h
-#define TTBODeveloperOverlayKVDebuggerDatasourceProtocol_h
+#define TBODeveloperOverlayKVDebuggerDatasourceProtocol_h
 
 @protocol TBODeveloperOverlayKVDebuggerDatasourceProtocol <NSObject>
 /**
@@ -15,7 +15,7 @@
  *
  *  @return number of sections
  */
-- (_Nonnull NSInteger)numberOfSections;
+- (NSInteger)numberOfSections;
 
 /**
  *  Returns the number of items in the given section
@@ -24,7 +24,7 @@
  *
  *  @return number of items in the given section
  */
-- (_Nonnull NSInteger)numberOfItemsInSection:(_Nonnull NSInteger)section;
+- (NSInteger)numberOfItemsInSection:(NSInteger)section;
 /**
  *  The key/name for the value at the given indexpath
  *
@@ -32,7 +32,7 @@
  *
  *  @return string value containing name or key for the corresponding value
  */
-- (_Nonnull NSString *)keyForIndexPath:(_Nonnull NSIndexPath *)indexPath;
+- (NSString *_Nonnull)keyForIndexPath:(NSIndexPath *_Nonnull)indexPath;
 
 /**
  *  The value that should be displayed.
@@ -42,7 +42,7 @@
  *
  *  @return the vlaue that should be displayed
  */
-- (_Nullable id)valueForIndexPath:(_Nonnull NSIndexPath *)indexPath;
+- (_Nullable id)valueForIndexPath:(NSIndexPath *_Nonnull)indexPath;
 
 @optional
 
@@ -53,7 +53,7 @@
  *
  *  @return string value to display in the header for the given section
  */
-- (_Nullable NSString *)titleForSection:(_Nonnull NSInteger)section;
+- (NSString *_Nullable)titleForSection:(NSInteger)section;
 
 /**
  *  An optional description that is shown in the detail view
@@ -62,7 +62,7 @@
  *
  *  @return string containting the description
  */
-- (_Nullable NSString *)descriptionForIndexPath:(_Nonnull NSIndexPath *)indexPath;
+- (NSString *_Nullable)descriptionForIndexPath:(NSIndexPath *_Nonnull)indexPath;
 
 /**
  *  defines whether the value at this indexpath ist editable or not
@@ -71,7 +71,7 @@
  *
  *  @return Bool value (YES = isEditable, NO = is not editable)
  */
-- (BOOL)isEditableForIndexPath:(_Nonnull NSIndexPath *)indexPath;
+- (BOOL)isEditableForIndexPath:(NSIndexPath *_Nonnull)indexPath;
 
 /**
  *  called when an editable value was changed
@@ -79,7 +79,7 @@
  *  @param value     the new value
  *  @param indexPath indexpath of the value
  */
-- (void)didChangeValue:(_Nullable id)value atIndexPath:(_Nonnull NSIndexPath *)indexPath;
+- (void)didChangeValue:(_Nullable id)value atIndexPath:(NSIndexPath *_Nonnull)indexPath;
 
 @end
 
