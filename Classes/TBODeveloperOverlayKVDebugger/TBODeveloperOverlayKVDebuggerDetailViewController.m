@@ -29,14 +29,14 @@ typedef enum {
 @property (strong, nonatomic, readwrite) UIBarButtonItem *saveButton;
 
 @property (strong, nonatomic, readwrite) NSIndexPath *indexPath;
-@property (nonatomic, strong) id<TBODeveloperOverlayKVDebuggerDatasource> datasource;
+@property (nonatomic, strong) id<TBODeveloperOverlayKVDebuggerDatasourceProtocol> datasource;
 
 @property ValueType valueType;
 @end
 
 @implementation TBODeveloperOverlayKVDebuggerDetailViewController
 
-- (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasource>)datasource andIndexPath:(NSIndexPath *)indexPath {
+- (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasourceProtocol>)datasource andIndexPath:(NSIndexPath *)indexPath {
     self = [super init];
     if (self) {
         self.indexPath = indexPath;

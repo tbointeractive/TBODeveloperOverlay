@@ -1,15 +1,15 @@
 //
-//  TBODeveloperOverlayKVDebuggerDatasource.h
+//  TBODeveloperOverlayKVDebuggerDatasourceProtocol.h
 //  TBODeveloperOverlay
 //
 //  Created by Thorsten Stark on 29.04.16.
 //  Copyright © 2016 TBO INTERACTIVE. All rights reserved.
 //
 
-#ifndef TBODeveloperOverlayKVDebuggerDatasource_h
-#define TBODeveloperOverlayKVDebuggerDatasource_h
+#ifndef TBODeveloperOverlayKVDebuggerDatasourceProtocol_h
+#define TTBODeveloperOverlayKVDebuggerDatasourceProtocol_h
 
-@protocol TBODeveloperOverlayKVDebuggerDatasource <NSObject>
+@protocol TBODeveloperOverlayKVDebuggerDatasourceProtocol <NSObject>
 /**
  *  Returns the number of sections
  *
@@ -83,4 +83,4 @@
 
 @end
 
-#endif /* TBODeveloperOverlayKVDebuggerDatasource_h */
+#endif /* TBODeveloperOverlayKVDebuggerDatasourceProtocol_h */
