@@ -25,16 +25,6 @@
  *  @return number of items in the given section
  */
 - (_Nonnull NSInteger)numberOfItemsInSection:(_Nonnull NSInteger)section;
-
-/**
- *  A title displayed in the header of the given section
- *
- *  @param section
- *
- *  @return string value to display in the header for the given section
- */
-- (_Nonnull NSString *)titleForSection:(_Nonnull NSInteger)section;
-
 /**
  *  The key/name for the value at the given indexpath
  *
@@ -55,6 +45,16 @@
 - (_Nullable id)valueForIndexPath:(_Nonnull NSIndexPath *)indexPath;
 
 @optional
+
+/**
+ *  A title displayed in the header of the given section
+ *
+ *  @param section
+ *
+ *  @return string value to display in the header for the given section
+ */
+- (_Nullable NSString *)titleForSection:(_Nonnull NSInteger)section;
+
 /**
  *  An optional description that is shown in the detail view
  *
@@ -62,7 +62,7 @@
  *
  *  @return string containting the description
  */
-- (_Nonnull NSString *)descriptionForIndexPath:(_Nonnull NSIndexPath *)indexPath;
+- (_Nullable NSString *)descriptionForIndexPath:(_Nonnull NSIndexPath *)indexPath;
 
 /**
  *  defines whether the value at this indexpath ist editable or not
