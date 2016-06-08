@@ -86,29 +86,22 @@
     }
 }
 
-#pragma mark
-
 - (UIViewController *)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *)controller {
     return self;
 }
 
-#pragma mark lazy instantiation
-
 - (NSArray<NSURL *> *)filesAndFoldersInFolder:(NSURL *)baseUrl {
-    if (!_filesAndFolders) {
-        NSMutableArray *filesAndFolders = [NSMutableArray new];
-        NSFileManager *fileManager = [NSFileManager new];
-        NSDirectoryEnumerator *direnum = [fileManager enumeratorAtURL:baseUrl includingPropertiesForKeys:nil options:NSDirectoryEnumerationSkipsSubdirectoryDescendants errorHandler:^BOOL (NSURL *_Nonnull url, NSError *_Nonnull error) {
-            return YES;
-        }];
-        NSString *filename;
-        
-        while ((filename = [direnum nextObject])) {
-            [filesAndFolders addObject:filename];
-        }
-        _filesAndFolders = filesAndFolders;
+    NSMutableArray *filesAndFolders = [NSMutableArray new];
+    NSFileManager *fileManager = [NSFileManager new];
+    NSDirectoryEnumerator *direnum = [fileManager enumeratorAtURL:baseUrl includingPropertiesForKeys:nil options:NSDirectoryEnumerationSkipsSubdirectoryDescendants errorHandler:^BOOL (NSURL *_Nonnull url, NSError *_Nonnull error) {
+        return YES;
+    }];
+    NSString *filename;
+    
+    while ((filename = [direnum nextObject])) {
+        [filesAndFolders addObject:filename];
     }
-    return _filesAndFolders;
+    return filesAndFolders;
 }
 
 @end
