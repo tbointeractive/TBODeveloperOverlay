@@ -1,21 +1,26 @@
 # TBODeveloperOverlay
-Das TBODeveloperOverlay ist ein Entwicklungs- und Debugging-Tool, das verschiedene Plugins einbindet, die bei der Entwicklung und der Fehlersuche helfen.
+The TBODeveloperOverlay is a toolset to integrate a suit of plugins to your application for debugging and development purposes. It can be integrated in any version of your app. Even in your live version. Just make sure that your users won't find it. (think tapping a view seven times to bring it up, etc.)
 
-## Hinweise
-Das DeveloperOverlay kann in der Development-, Live- und anderen Versionen einer App eingebunden werden.
-Gerade in der Live-Version soll der Zugriff auf das Overlay gut versteckt werden, z.B. mehrmaliges Tappen einer View etc.
+## Plugins
+Plugins are what gives the TBODeveloperOverlay its functionality. With the overlay comes a range of plugins that can be individualy added and configured for your needs.
+Some plugins require you to implement a datasource to adjust it to your application.
+You can find more information on the plugins in their documentation in the respective folders.
 
-## Verwendung
-Das DeveloperOverlay sollte innerhalb eines `UINavigationController` angezeigt werden. Dies ist sowohl für einige Plugins Voraussetzung als auch spätestens dann notwendig, wenn man mehr als ein Plugin einbinden möchte. 
-Ein `TBOModalNavigationController` liegt dem DeveloperOverlay bei. Dieser ist dafür gedacht, wenn das DeveloperOverlay modal angezeigt werden soll. Dann gibt es oben rechts immer einen Done-Button, der das Overlay wieder schließt. Der Buttons kann natürlich von einzelnen Plugins auch überschrieben werden, bspw. zum Speichern einer Änderung.
+## Usage
+You can initialize a plugin and present it in a `TBOModalNavigationController` just like that:
 
 ```
-NSArray *plugins = @[kvDebuggerViewController, userDefaultsInspector, logger, fileInspector];
-TBODeveloperOverlayPluginListViewController *listViewController = [[TBODeveloperOverlayPluginListViewController alloc] initWithPlugins:plugins];
-    
-TBOModalNavigationController *developerOverlay = [[TBOModalNavigationController alloc] initWithRootViewController:listViewController];
+TBODeveloperOverlayLogger *loggerPlugin = [TBODeveloperOverlayLogger new];
+TBOModalNavigationController *developerOverlay = [[TBOModalNavigationController alloc] initWithRootViewController:loggerPlugin];
 [self presentViewController:developerOverlay animated:YES completion:nil];
 ```
+If you want to integrate more than one plugin you can initialize a `TBODeveloperOverlayPluginListViewController` with an array of plugins this way:
 
-
-(Hier einen Block über die Einbindung der Plugins einfügen)
+```
+TBODeveloperOverlayLogger *loggerPlugin = [TBODeveloperOverlayLogger new];
+TBODeveloperOverlayFileInspectorViewController *fileInspectorPlugin = [[TBODeveloperOverlayFileInspectorViewController alloc] initWithBaseUrl:nil];
+NSArray *plugins = @[loggerPlugin, fileInspectorPlugin];
+TBODeveloperOverlayPluginListViewController pluginListViewController = [[TBODeveloperOverlayPluginListViewController alloc] initWithPlugins:plugins];
+TBOModalNavigationController *modalDeveloperOverlay = [[TBOModalNavigationController alloc] initWithRootViewController:containedViewController];
+[self presentViewController:modalDeveloperOverlay animated:YES completion:nil];
+```
