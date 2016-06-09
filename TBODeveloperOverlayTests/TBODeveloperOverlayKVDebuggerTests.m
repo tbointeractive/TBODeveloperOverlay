@@ -31,7 +31,7 @@
     XCTAssert([kvdebugger tableView:nil titleForHeaderInSection:0] == nil);
 }
 
-- (void)testInitWithDebugDatasource{
+- (void)testInitWithDebugDatasource {
     TBODebugDatasource *kvDatasource = [TBODebugDatasource new];
     TBODeveloperOverlayKVDebugger *kvdebugger = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:kvDatasource];
     XCTAssert([kvdebugger numberOfSectionsInTableView:nil] == 3);
@@ -39,7 +39,8 @@
     XCTAssertEqualObjects([kvdebugger tableView:nil titleForHeaderInSection:1], @"Section: 1");
 }
 
-- (void)testUserDefaultsDatasource{
+- (void)testUserDefaultsDatasource {
+    [[NSUserDefaults standardUserDefaults] setObject:@"some object" forKey:@"kvDebuggerTestSomeObject"];
     NSDictionary *userdefaults = [NSUserDefaults standardUserDefaults].dictionaryRepresentation;
     TBODeveloperOverlayNSUserDefaultsDatasource *userDefaultsDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
     TBODeveloperOverlayKVDebugger *kvdebugger = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:userDefaultsDatasource];
