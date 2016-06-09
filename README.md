@@ -6,17 +6,30 @@ Plugins are what gives the TBODeveloperOverlay its functionality. With the overl
 Some plugins require you to implement a datasource to adjust it to your application.
 You can find more information on the plugins in their documentation in the respective folders.
 
+## Installation
+The installation via CocoaPods is recommended.
+Add `git@git.tbointeractive.com:tbopodspecs/tbopodspecs.git` as additional source in your Podfile. 
+Install TBODeveloperOverlay with all Plugins:
+```ruby
+pod 'TBODeveloperOverlay'
+```
+For only selected Plugins install the Core pod and add the desired Plugins. For example:
+```ruby
+pod 'TBODeveloperOverlay/Core'
+pod 'TBODeveloperOverlay/KVDebugger'
+```
+
 ## Usage
 You can initialize a plugin and present it in a `TBOModalNavigationController` just like that:
 
-```
+```objc
 TBODeveloperOverlayLogger *loggerPlugin = [TBODeveloperOverlayLogger new];
 TBOModalNavigationController *developerOverlay = [[TBOModalNavigationController alloc] initWithRootViewController:loggerPlugin];
 [self presentViewController:developerOverlay animated:YES completion:nil];
 ```
 If you want to integrate more than one plugin you can initialize a `TBODeveloperOverlayPluginListViewController` with an array of plugins this way:
 
-```
+```objc
 TBODeveloperOverlayLogger *loggerPlugin = [TBODeveloperOverlayLogger new];
 TBODeveloperOverlayFileInspectorViewController *fileInspectorPlugin = [[TBODeveloperOverlayFileInspectorViewController alloc] initWithBaseUrl:nil];
 NSArray *plugins = @[loggerPlugin, fileInspectorPlugin];
