@@ -2,9 +2,9 @@
 The KVDebugger can be used to inspect system variables and, for some cases, modify them. 
 
 ## Usage
-The `KVDebugger` needs a datasource to access the date to display. This datasource has to implement the `TBODeveloperOverlayKVDebuggerDatasourceProtocol` protocol. For further information please check the `TBODeveloperOverlayKVDebuggerDatasourceProtocol.h`. 
+The `KVDebugger` needs a datasource to access the data to display. This datasource has to implement the `TBODeveloperOverlayKVDebuggerDatasourceProtocol` protocol. For further information please check the `TBODeveloperOverlayKVDebuggerDatasourceProtocol.h`. 
 
-The `TBODeveloperOverlayNSUserDefaultsDatasource` is an already existing plugin to inspect but not edit the `NSUserDefaults`.
+The `TBODeveloperOverlayNSUserDefaultsDatasource` is an already existing Datasource to inspect but not edit the `NSUserDefaults`.
 
 ```
     TBODeveloperOverlayNSUserDefaultsDatasource *kvDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
