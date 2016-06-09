@@ -6,6 +6,11 @@ Plugins are what gives the TBODeveloperOverlay its functionality. With the overl
 Some plugins require you to implement a datasource to adjust it to your application.
 You can find more information on the plugins in their documentation in the respective folders.
 
+Available Plugins are:
+* TBODeveloperOverlayKVDebugger - inspect system variables and, for some cases, modify them
+* TBODeveloperOverlayLogger - display in your logfiles
+* TBODeveloperOverlayFileInspector - displays a folder structure to inspect files that are locally saved
+
 ## Installation
 The installation via CocoaPods is recommended.
 Add `git@git.tbointeractive.com:tbopodspecs/tbopodspecs.git` as additional source in your Podfile. 
