@@ -37,5 +37,7 @@
 	<true/>
 	<key>--index-desc</key>
 	<string>README.md</string>
+	<key>--templates</key>
+	<string>appledoc/templates</string>
 </dict>
 </plist>
