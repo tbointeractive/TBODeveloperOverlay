@@ -32,6 +32,7 @@
 		75A8C7471D0996890055F9E1 /* TBODeveloperOverlayKVDebuggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A8C7461D0996890055F9E1 /* TBODeveloperOverlayKVDebuggerTests.m */; };
 		D943645FC2DDAF2C6014DADF /* StubDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D9436179B002E8DA5B8F050E /* StubDatasource.m */; };
 		D94364DD4F909F3EDF092BA3 /* StubDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D9436179B002E8DA5B8F050E /* StubDatasource.m */; };
+		D943695D65FE6BC4173BC606 /* TBODeveloperOverlayNSUserDefaultsDatasourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D94360D0A1643FC8B61E0675 /* TBODeveloperOverlayNSUserDefaultsDatasourceTests.m */; };
 		D9436E507AD9ACA639A77CF8 /* TBODeveloperOverlayNSUserDefaultsDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D943619F6C316203554F70E6 /* TBODeveloperOverlayNSUserDefaultsDatasource.m */; };
 /* End PBXBuildFile section */
 
@@ -73,7 +74,7 @@
 		7554B66A1CFC7B4500FD6CD3 /* TBODeveloperOverlayPluginListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayPluginListViewController.m; path = TBODeveloperOverlay/TBODeveloperOverlay/TBODeveloperOverlayPluginListViewController.m; sourceTree = SOURCE_ROOT; };
 		75629A1E1CD351AB00E72F7B /* TBODeveloperOverlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBODeveloperOverlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75629A371CD351AC00E72F7B /* TBODeveloperOverlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBODeveloperOverlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		75629A3B1CD351AC00E72F7B /* TBODeveloperOverlayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayTests.m; sourceTree = "<group>"; };
+		75629A3B1CD351AC00E72F7B /* TBODeveloperOverlayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayTests.m; sourceTree = "<group>"; };
 		75629A3D1CD351AC00E72F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75629A421CD351AC00E72F7B /* TBODeveloperOverlayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBODeveloperOverlayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75629A461CD351AC00E72F7B /* TBODeveloperOverlayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayUITests.m; sourceTree = "<group>"; };
@@ -95,6 +96,7 @@
 		7593D8EE1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m; sourceTree = "<group>"; };
 		7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib; sourceTree = "<group>"; };
 		75A8C7461D0996890055F9E1 /* TBODeveloperOverlayKVDebuggerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayKVDebuggerTests.m; sourceTree = "<group>"; };
+		D94360D0A1643FC8B61E0675 /* TBODeveloperOverlayNSUserDefaultsDatasourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayNSUserDefaultsDatasourceTests.m; sourceTree = "<group>"; };
 		D9436179B002E8DA5B8F050E /* StubDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubDatasource.m; sourceTree = "<group>"; };
 		D943619F6C316203554F70E6 /* TBODeveloperOverlayNSUserDefaultsDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayNSUserDefaultsDatasource.m; sourceTree = "<group>"; };
 		D94361C5C0D14DD0E82919C8 /* StubDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StubDatasource.h; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				75629A3D1CD351AC00E72F7B /* Info.plist */,
 				75A8C7461D0996890055F9E1 /* TBODeveloperOverlayKVDebuggerTests.m */,
 				D9436C2CB08D5E25DAE8E1CE /* Supporting Files */,
+				D94360D0A1643FC8B61E0675 /* TBODeveloperOverlayNSUserDefaultsDatasourceTests.m */,
 			);
 			path = TBODeveloperOverlayTests;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				75629A3C1CD351AC00E72F7B /* TBODeveloperOverlayTests.m in Sources */,
 				75A8C7471D0996890055F9E1 /* TBODeveloperOverlayKVDebuggerTests.m in Sources */,
 				D94364DD4F909F3EDF092BA3 /* StubDatasource.m in Sources */,
+				D943695D65FE6BC4173BC606 /* TBODeveloperOverlayNSUserDefaultsDatasourceTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
