@@ -12,7 +12,7 @@
 
 @interface TBODeveloperOverlayKVDebugger ()
 
-@property (nonatomic, strong) id<TBODeveloperOverlayKVDebuggerDatasource> datasource;
+@property (nonatomic, strong) id<TBODeveloperOverlayKVDebuggerDatasourceProtocol> datasource;
 
 @end
 
@@ -20,7 +20,7 @@
 
 static Class datasourceClass = nil;
 
-- (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasource>)datasource {
+- (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasourceProtocol>)datasource {
     self = [self init];
     if (self) {
         self.datasource = datasource;
@@ -65,7 +65,7 @@ static Class datasourceClass = nil;
     if (!self.datasource) {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SetupExplanationCell" forIndexPath:indexPath];
         cell.textLabel.numberOfLines = 0;
-        cell.textLabel.text = @"No Datasource provided. \n - Create a class that implements TBODeveloperOverlayKVDebuggerDatasource protocol \n - Register this class in ApplicationDidFinishLaunching unsing TBODeveloperOverlayKVDebugger+registerDatasourceClass:";
+        cell.textLabel.text = @"No Datasource provided. \n - Create a class that implements TBODeveloperOverlayKVDebuggerDatasourceProtocol protocol \n - Register this class in ApplicationDidFinishLaunching unsing TBODeveloperOverlayKVDebugger+registerDatasourceClass:";
         return cell;
     }
     

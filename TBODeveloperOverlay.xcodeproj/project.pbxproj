@@ -62,7 +62,7 @@
 		1F5D92331CE096EA0017508E /* TBODeveloperOverlayFileInspectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayFileInspectorViewController.m; path = TBODeveloperOverlayFileInspector/TBODeveloperOverlayFileInspectorViewController.m; sourceTree = "<group>"; };
 		1F5D92561D01DAF20017508E /* TBODeveloperOverlayLoggerDatasourceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayLoggerDatasourceProtocol.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLoggerDatasourceProtocol.h; sourceTree = "<group>"; };
 		49339F4923F7F6BCE5A09135 /* Pods-TBODeveloperOverlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBODeveloperOverlay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay.debug.xcconfig"; sourceTree = "<group>"; };
-		750C58A51CD39B6F00D60E6B /* TBODeveloperOverlayKVDebuggerDatasource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebuggerDatasource.h; sourceTree = "<group>"; };
+		750C58A51CD39B6F00D60E6B /* TBODeveloperOverlayKVDebuggerDatasourceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebuggerDatasourceProtocol.h; sourceTree = "<group>"; };
 		7517A83F1CEF1F5F00700CBF /* TBODeveloperOverlayKVDebuggerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebuggerDetailViewController.h; sourceTree = "<group>"; };
 		7517A8401CEF1F5F00700CBF /* TBODeveloperOverlayKVDebuggerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayKVDebuggerDetailViewController.m; sourceTree = "<group>"; };
 		7517A8411CEF1F5F00700CBF /* TBODeveloperOverlayKVDebuggerDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBODeveloperOverlayKVDebuggerDetailViewController.xib; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 		7593D8EA1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger */ = {
 			isa = PBXGroup;
 			children = (
-				750C58A51CD39B6F00D60E6B /* TBODeveloperOverlayKVDebuggerDatasource.h */,
+				750C58A51CD39B6F00D60E6B /* TBODeveloperOverlayKVDebuggerDatasourceProtocol.h */,
 				7593D8EB1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.h */,
 				7593D8EC1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m */,
 				7593D8ED1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h */,
