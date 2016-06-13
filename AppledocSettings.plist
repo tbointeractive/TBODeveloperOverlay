@@ -30,8 +30,9 @@
 	<array>
 		<string>Pods</string>
 		<string>Example</string>
-		<string>TBODeveloperOverlay</string>
 		<string>DerivedData</string>
+		<string>TBODeveloperOverlayTests</string>
+		<string>TBODeveloperOverlayUITests</string>
 	</array>
 	<key>--keep-undocumented-objects</key>
 	<true/>
