@@ -8,12 +8,11 @@
 
 #import <XCTest/XCTest.h>
 #import "TBODeveloperOverlayKVDebugger.h"
-#import "TBODebugDatasource.h"
-#import "TBODeveloperOverlayNSUserDefaultsDatasource.h"
+#import "StubDatasource.h"
 
 @interface TBODeveloperOverlayKVDebugger ()
 
-@property (nonatomic, strong) id<TBODeveloperOverlayKVDebuggerDatasource> datasource;
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
@@ -23,34 +22,26 @@
 
 @implementation TBODeveloperOverlayKVDebuggerTests
 
-
 - (void)testInitWithNilDatasource {
-    TBODeveloperOverlayKVDebugger *kvdebugger = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:nil];
-    XCTAssert([kvdebugger numberOfSectionsInTableView:nil] == 1);
-    XCTAssert([kvdebugger tableView:nil numberOfRowsInSection:0] == 1);
-    XCTAssert([kvdebugger tableView:nil titleForHeaderInSection:0] == nil);
+    TBODeveloperOverlayKVDebugger *kvDebugger = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:nil];
+    XCTAssert([kvDebugger numberOfSectionsInTableView:nil] == 1);
+    XCTAssert([kvDebugger tableView:nil numberOfRowsInSection:0] == 1);
+    XCTAssert([kvDebugger tableView:nil titleForHeaderInSection:0] == nil);
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    UITableViewCell *instructionCell = [kvDebugger tableView:kvDebugger.tableView cellForRowAtIndexPath:indexPath];
+    XCTAssertEqualObjects(instructionCell.reuseIdentifier, @"SetupExplanationCell");
 }
 
 - (void)testInitWithDebugDatasource {
-    TBODebugDatasource *kvDatasource = [TBODebugDatasource new];
-    TBODeveloperOverlayKVDebugger *kvdebugger = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:kvDatasource];
-    XCTAssert([kvdebugger numberOfSectionsInTableView:nil] == 3);
-    XCTAssert([kvdebugger tableView:nil numberOfRowsInSection:2] == 3);
-    XCTAssertEqualObjects([kvdebugger tableView:nil titleForHeaderInSection:1], @"Section: 1");
-}
-
-- (void)testUserDefaultsDatasource {
-    [[NSUserDefaults standardUserDefaults] setObject:@"some object" forKey:@"kvDebuggerTestSomeObject"];
-    NSDictionary *userdefaults = [NSUserDefaults standardUserDefaults].dictionaryRepresentation;
-    TBODeveloperOverlayNSUserDefaultsDatasource *userDefaultsDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
-    TBODeveloperOverlayKVDebugger *kvdebugger = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:userDefaultsDatasource];
-    XCTAssert([kvdebugger numberOfSectionsInTableView:nil] == 1);
-    XCTAssert([kvdebugger tableView:nil numberOfRowsInSection:0] == userdefaults.count);
-    XCTAssertEqualObjects([kvdebugger tableView:nil titleForHeaderInSection:1], @"NSUserDefaults");
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0    inSection:0];
-    id value = [kvdebugger.datasource valueForIndexPath:indexPath];
-    NSString *key = [userdefaults.allKeys sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)][0];
-    XCTAssertEqualObjects(value, [userdefaults valueForKey:key]);
+    StubDatasource *kvDatasource = [[StubDatasource alloc] initWithNumberOfSections:3 andItemsPerSection:5];
+    TBODeveloperOverlayKVDebugger *kvDebugger = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:kvDatasource];
+    UITableView *tableView = kvDebugger.tableView;
+    XCTAssert(tableView.numberOfSections == 3);
+    XCTAssert([tableView numberOfRowsInSection:2] == 5);
+    XCTAssert([tableView numberOfRowsInSection:0] == 5);
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    UITableViewCell *instructionCell = [kvDebugger tableView:kvDebugger.tableView cellForRowAtIndexPath:indexPath];
+    XCTAssertEqualObjects(instructionCell.reuseIdentifier, @"TBODeveloperOverlayKVDebuggerReadOnlyKVCell");
 }
 
 @end
