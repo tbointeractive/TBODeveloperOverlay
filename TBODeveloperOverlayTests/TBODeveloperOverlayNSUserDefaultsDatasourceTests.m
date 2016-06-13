@@ -33,6 +33,8 @@
     id value = [userDefaultsDatasource valueForIndexPath:indexPath];
     NSString *key = [userDefaults.allKeys sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)][0];
     XCTAssertEqualObjects(value, [userDefaults valueForKey:key]);
+    NSIndexPath *indexPathTooLarge = [NSIndexPath indexPathForRow:42 inSection:1001];
+    XCTAssertNil([userDefaultsDatasource valueForIndexPath:indexPathTooLarge]);
 }
 
 @end

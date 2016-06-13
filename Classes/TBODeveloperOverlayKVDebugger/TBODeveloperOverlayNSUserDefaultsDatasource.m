@@ -35,7 +35,7 @@
     if (key && key.length > 0) {
         return [[NSUserDefaults standardUserDefaults] valueForKey:key];
     }
-    return @"";
+    return nil;
 }
 
 - (BOOL)isEditableForIndexPath:(NSIndexPath *)indexPath {
