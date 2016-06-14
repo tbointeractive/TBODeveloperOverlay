@@ -1,4 +1,4 @@
-# TBODeveloperOverlay
+## Description
 The TBODeveloperOverlay is a toolset to integrate a suit of plugins to your application for debugging and development purposes. It can be integrated in any version of your app. Even in your live version. Just make sure that your users won't find it. (think tapping a view seven times to bring it up, etc.)
 
 ## Plugins
@@ -43,9 +43,4 @@ TBODeveloperOverlayPluginListViewController pluginListViewController = [[TBODeve
 TBOModalNavigationController *modalDeveloperOverlay = [[TBOModalNavigationController alloc] initWithRootViewController:containedViewController];
 [self presentViewController:modalDeveloperOverlay animated:YES completion:nil];
 ```
-
-
-=======
-#TBODeveloperTools
-TODO: Write proper description
 
