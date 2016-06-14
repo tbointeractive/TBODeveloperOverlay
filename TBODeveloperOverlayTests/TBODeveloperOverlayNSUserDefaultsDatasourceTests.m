@@ -18,23 +18,38 @@
 
 @interface TBODeveloperOverlayNSUserDefaultsDatasourceTests : XCTestCase
 
+@property (nonatomic, strong) TBODeveloperOverlayNSUserDefaultsDatasource *userDefaultsDatasource;
+
 @end
 
 @implementation TBODeveloperOverlayNSUserDefaultsDatasourceTests
 
-- (void)testUserDefaultsDatasource {
-    [[NSUserDefaults standardUserDefaults] setObject:@"some object" forKey:@"kvDebuggerTestSomeObject"]; // to make sure we have at minimum one item in user dafaults
+- (void)setUp {
+    [super setUp];
+    [[NSUserDefaults standardUserDefaults] setObject:@"some object" forKey:@"kvDebuggerTestSomeObject"];
+    self.userDefaultsDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
+}
+
+- (void)testValidBehavior {
     NSDictionary *userDefaults = [NSUserDefaults standardUserDefaults].dictionaryRepresentation;
-    TBODeveloperOverlayNSUserDefaultsDatasource *userDefaultsDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
-    XCTAssert([userDefaultsDatasource numberOfSections] == 1);
-    XCTAssert([userDefaultsDatasource numberOfItemsInSection:0] == userDefaults.count);
-    XCTAssertEqualObjects([userDefaultsDatasource titleForSection:0], @"NSUserDefaults");
+    XCTAssert([self.userDefaultsDatasource numberOfSections] == 1);
+    XCTAssert([self.userDefaultsDatasource numberOfItemsInSection:0] == userDefaults.count);
+    XCTAssertEqualObjects([self.userDefaultsDatasource titleForSection:0], @"NSUserDefaults");
+    XCTAssertEqual([self.userDefaultsDatasource isEditableForIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]], NO);
+}
+
+- (void)testValueForInvalidIndexPath {
+    NSIndexPath *indexPathTooLarge = [NSIndexPath indexPathForRow:42 inSection:1001];
+    XCTAssertNil([self.userDefaultsDatasource valueForIndexPath:indexPathTooLarge]);
+}
+
+- (void)testValueForValidKeyPath {
+    NSDictionary *userDefaults = [NSUserDefaults standardUserDefaults].dictionaryRepresentation;
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    id value = [userDefaultsDatasource valueForIndexPath:indexPath];
+    id value = [self.userDefaultsDatasource valueForIndexPath:indexPath];
     NSString *key = [userDefaults.allKeys sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)][0];
     XCTAssertEqualObjects(value, [userDefaults valueForKey:key]);
-    NSIndexPath *indexPathTooLarge = [NSIndexPath indexPathForRow:42 inSection:1001];
-    XCTAssertNil([userDefaultsDatasource valueForIndexPath:indexPathTooLarge]);
 }
+
 
 @end
