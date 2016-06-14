@@ -12,7 +12,7 @@
 
 @interface TBODeveloperOverlayNSUserDefaultsDatasource ()
 
-@property (nonatomic, strong) id <TBODeveloperOverlayKVDebuggerDatasource> datasource;
+@property (nonatomic, strong) id <TBODeveloperOverlayKVDebuggerDatasourceProtocol> datasource;
 
 @end
 

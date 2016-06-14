@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>--project-company</key>
+	<string>TBO INTERACTIVE</string>
+	<key>--company-id</key>
+	<string>com.tbointeractive</string>
+	<key>--create-docset</key>
+	<true/>
+	<key>--install-docset</key>
+	<false/>
+	<key>--create-html</key>
+	<true/>
+	<key>--verbose</key>
+	<string>3</string>
+	<key>--logformat</key>
+	<integer>1</integer>
+	<key>--project-name</key>
+	<string>TBODeveloperTools</string>
+	<key>--output</key>
+	<string>doc</string>
+	<key>--input</key>
+	<array>
+		<string>README.md</string>
+	</array>
+	<key>--keep-intermediate-files</key>
+	<true/>
+	<key>--ignore</key>
+	<array>
+		<string>Pods</string>
+		<string>Example</string>
+		<string>DerivedData</string>
+		<string>TBODeveloperOverlayTests</string>
+		<string>TBODeveloperOverlayUITests</string>
+	</array>
+	<key>--keep-undocumented-objects</key>
+	<true/>
+	<key>--index-desc</key>
+	<string>README.md</string>
+	<key>--templates</key>
+	<string>appledoc/templates</string>
+</dict>
+</plist>

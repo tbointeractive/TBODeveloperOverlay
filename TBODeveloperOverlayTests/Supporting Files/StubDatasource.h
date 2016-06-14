@@ -5,9 +5,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TBODeveloperOverlayKVDebuggerDatasource.h"
+#import "TBODeveloperOverlayKVDebuggerDatasourceProtocol.h"
 
-@interface StubDatasource : NSObject <TBODeveloperOverlayKVDebuggerDatasource>
+@interface StubDatasource : NSObject <TBODeveloperOverlayKVDebuggerDatasourceProtocol>
 
 -(instancetype)initWithNumberOfSections:(NSInteger)numSections andItemsPerSection:(NSInteger)numItems;
 
