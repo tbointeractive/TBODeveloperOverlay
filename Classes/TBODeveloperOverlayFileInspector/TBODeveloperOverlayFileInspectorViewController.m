@@ -10,7 +10,6 @@
 
 @interface TBODeveloperOverlayFileInspectorViewController () <UIDocumentInteractionControllerDelegate>
 
-@property (copy, nonatomic, readwrite) NSURL *baseUrl;
 @property (strong, nonatomic, readwrite) NSArray *filesAndFolders;
 @property (strong, nonatomic, readwrite) UIDocumentInteractionController *documentInteractionViewController;
 
@@ -29,7 +28,16 @@
 - (instancetype)initWithBaseUrl:(NSURL *)baseUrl {
     self = [self init];
     if (self) {
-        self.baseUrl = baseUrl;
+        self.filesAndFolders = [self filesAndFoldersInFolder:baseUrl];
+        self.title = baseUrl.lastPathComponent;
+    }
+    return self;
+}
+
+- (instancetype)initWithBaseUrls:(NSArray<NSURL *> *)baseUrls {
+    self = [self init];
+    if (self) {
+        self.filesAndFolders = baseUrls;
     }
     return self;
 }
@@ -39,7 +47,6 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 60.0;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"FileOrFolderCell"];
-    self.title = self.baseUrl.lastPathComponent;
 }
 
 #pragma mark - Table view data source
@@ -65,10 +72,6 @@
     return cell;
 }
 
-+ (NSString *)title {
-    return @"File Inspector";
-}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSURL *fileOrFolder = self.filesAndFolders[indexPath.row];
     BOOL isFolder;
@@ -83,36 +86,22 @@
     }
 }
 
-#pragma mark
-
 - (UIViewController *)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *)controller {
     return self;
 }
 
-#pragma mark lazy instantiation
-
-- (NSArray *)filesAndFolders {
-    if (!_filesAndFolders) {
-        NSMutableArray *filesAndFolders = [NSMutableArray new];
-        NSFileManager *fileManager = [NSFileManager new];
-        NSDirectoryEnumerator *direnum = [fileManager enumeratorAtURL:self.baseUrl includingPropertiesForKeys:nil options:NSDirectoryEnumerationSkipsSubdirectoryDescendants errorHandler:^BOOL (NSURL *_Nonnull url, NSError *_Nonnull error) {
-            return YES;
-        }];
-        NSString *filename;
-        
-        while ((filename = [direnum nextObject])) {
-            [filesAndFolders addObject:filename];
-        }
-        _filesAndFolders = filesAndFolders;
+- (NSArray<NSURL *> *)filesAndFoldersInFolder:(NSURL *)baseUrl {
+    NSMutableArray *filesAndFolders = [NSMutableArray new];
+    NSFileManager *fileManager = [NSFileManager new];
+    NSDirectoryEnumerator *direnum = [fileManager enumeratorAtURL:baseUrl includingPropertiesForKeys:nil options:NSDirectoryEnumerationSkipsSubdirectoryDescendants errorHandler:^BOOL (NSURL *_Nonnull url, NSError *_Nonnull error) {
+        return YES;
+    }];
+    NSString *filename;
+    
+    while ((filename = [direnum nextObject])) {
+        [filesAndFolders addObject:filename];
     }
-    return _filesAndFolders;
-}
-
-- (NSURL *)baseUrl {
-    if (!_baseUrl) {
-        _baseUrl = [[NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject]] URLByDeletingLastPathComponent];
-    }
-    return _baseUrl;
+    return filesAndFolders;
 }
 
 @end

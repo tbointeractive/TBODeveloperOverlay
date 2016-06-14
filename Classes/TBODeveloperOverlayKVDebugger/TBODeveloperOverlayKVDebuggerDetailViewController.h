@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TBODeveloperOverlayKVDebuggerDatasource.h"
+#import "TBODeveloperOverlayKVDebuggerDatasourceProtocol.h"
 
 @interface TBODeveloperOverlayKVDebuggerDetailViewController : UIViewController
 
-- (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasource>)datasource andIndexPath:(NSIndexPath *)indexPath;
+- (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasourceProtocol>)datasource andIndexPath:(NSIndexPath *)indexPath;
 
 @end
