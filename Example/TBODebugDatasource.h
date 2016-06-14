@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "TBODeveloperOverlayKVDebugger.h"
 
-@interface TBODebugDatasource : NSObject <TBODeveloperOverlayKVDebuggerDatasource>
+@interface TBODebugDatasource : NSObject <TBODeveloperOverlayKVDebuggerDatasourceProtocol>
 
 @end

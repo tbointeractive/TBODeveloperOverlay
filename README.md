@@ -32,6 +32,7 @@ TBODeveloperOverlayLogger *loggerPlugin = [TBODeveloperOverlayLogger new];
 TBOModalNavigationController *developerOverlay = [[TBOModalNavigationController alloc] initWithRootViewController:loggerPlugin];
 [self presentViewController:developerOverlay animated:YES completion:nil];
 ```
+
 If you want to integrate more than one plugin you can initialize a `TBODeveloperOverlayPluginListViewController` with an array of plugins this way:
 
 ```objc
@@ -42,3 +43,9 @@ TBODeveloperOverlayPluginListViewController pluginListViewController = [[TBODeve
 TBOModalNavigationController *modalDeveloperOverlay = [[TBOModalNavigationController alloc] initWithRootViewController:containedViewController];
 [self presentViewController:modalDeveloperOverlay animated:YES completion:nil];
 ```
+
+
+=======
+#TBODeveloperTools
+TODO: Write proper description
+

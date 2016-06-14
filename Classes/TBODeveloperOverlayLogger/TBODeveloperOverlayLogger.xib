@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -7,7 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TBODeveloperOverlayLogger">
             <connections>
+                <outlet property="logLevelTagList" destination="BgU-Et-kzm" id="06a-GS-psJ"/>
+                <outlet property="searchField" destination="sQe-Dc-3N1" id="2fp-fQ-Icx"/>
                 <outlet property="textView" destination="dlC-UW-419" id="iwD-UX-IaZ"/>
+                <outlet property="textViewBottomConstraint" destination="NQw-bw-5Mw" id="ZVq-Kp-SP7"/>
                 <outlet property="view" destination="iN0-l3-epB" id="HTF-l7-gDJ"/>
             </connections>
         </placeholder>
@@ -16,20 +19,42 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="BgU-Et-kzm" userLabel="Log Level Button Wrapper" customClass="TBODeveloperOverlayTaglist">
+                    <rect key="frame" x="8" y="8" width="584" height="0.0"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Log" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sQe-Dc-3N1">
+                    <rect key="frame" x="8" y="17" width="584" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="webSearch" returnKeyType="search" enablesReturnKeyAutomatically="YES"/>
+                    <connections>
+                        <action selector="searchFieldDidChange:" destination="-1" eventType="editingChanged" id="LUD-4b-fid"/>
+                        <action selector="searchFieldDidChange:" destination="-1" eventType="valueChanged" id="c6g-ac-dyX"/>
+                    </connections>
+                </textField>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dlC-UW-419">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <rect key="frame" x="4" y="55" width="592" height="545"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="VO1-nb-ejR"/>
+                    </connections>
                 </textView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="dlC-UW-419" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="M3O-Ze-hDK"/>
+                <constraint firstItem="sQe-Dc-3N1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="9nz-6Q-aoS"/>
+                <constraint firstAttribute="trailing" secondItem="BgU-Et-kzm" secondAttribute="trailing" constant="8" id="C6p-SK-peo"/>
+                <constraint firstAttribute="trailing" secondItem="sQe-Dc-3N1" secondAttribute="trailing" constant="8" id="KWx-K4-9tq"/>
+                <constraint firstItem="sQe-Dc-3N1" firstAttribute="top" secondItem="BgU-Et-kzm" secondAttribute="bottom" constant="9" id="NHS-PQ-8ma"/>
                 <constraint firstAttribute="bottom" secondItem="dlC-UW-419" secondAttribute="bottom" id="NQw-bw-5Mw"/>
-                <constraint firstAttribute="trailing" secondItem="dlC-UW-419" secondAttribute="trailing" id="dA7-k5-GZg"/>
-                <constraint firstItem="dlC-UW-419" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="fun-RA-e1I"/>
+                <constraint firstItem="BgU-Et-kzm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Y2l-c6-YpT"/>
+                <constraint firstAttribute="trailing" secondItem="dlC-UW-419" secondAttribute="trailing" constant="4" id="dA7-k5-GZg"/>
+                <constraint firstItem="dlC-UW-419" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="fun-RA-e1I"/>
+                <constraint firstItem="BgU-Et-kzm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ucG-wB-3Vj"/>
+                <constraint firstItem="dlC-UW-419" firstAttribute="top" secondItem="sQe-Dc-3N1" secondAttribute="bottom" constant="8" id="yK2-6b-EWl"/>
             </constraints>
         </view>
     </objects>

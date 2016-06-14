@@ -14,6 +14,7 @@
 #import "TBODeveloperOverlayFileInspectorViewController.h"
 #import "TBODeveloperOverlayPluginListViewController.h"
 #import "TBOModalNavigationController.h"
+#import "TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h"
 
 @interface ViewController ()
 
@@ -36,14 +37,15 @@
     TBODeveloperOverlayNSUserDefaultsDatasource *userDefaultsDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
     TBODeveloperOverlayKVDebugger *userDefaultsInspector = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:userDefaultsDatasource];
     userDefaultsInspector.title = @"UserDefaults Inspector";
-
+    
     // init logger
-    TBODeveloperOverlayLogger *logger = [TBODeveloperOverlayLogger new];
+    TBODeveloperOverlayLoggerCocoaLumberjackDatasource *loggerDatasource = [TBODeveloperOverlayLoggerCocoaLumberjackDatasource new];
+    TBODeveloperOverlayLogger *logger = [[TBODeveloperOverlayLogger alloc] initWithDatasource:loggerDatasource];
     
     // init file inspector
-    // set baseURL to nil to get application directory
-    TBODeveloperOverlayFileInspectorViewController *fileInspector = [[TBODeveloperOverlayFileInspectorViewController alloc] initWithBaseUrl:nil];
-    
+    TBODeveloperOverlayFileInspectorViewController *fileInspector = [[TBODeveloperOverlayFileInspectorViewController alloc] initWithBaseUrl:[[NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject]] URLByDeletingLastPathComponent]];
+    fileInspector.title = @"File Inspector";
+
     // init and present developer overlay
     NSArray *plugins = @[kvDebuggerViewController, userDefaultsInspector, logger, fileInspector];
     UIViewController *containedViewController;
