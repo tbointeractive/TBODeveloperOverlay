@@ -56,22 +56,4 @@
     return self.dataArray[indexPath.section][indexPath.row];
 }
 
-//- (NSString *)descriptionForIndexPath:(NSIndexPath *)indexPath {
-//    return [NSString stringWithFormat:@"Description for %@", indexPath ];
-//}
-//
-//- (BOOL)isEditableForIndexPath:(NSIndexPath *)indexPath {
-//    switch (indexPath.section) {
-//        case 2:
-//            return YES;
-//        default:
-//            return NO;
-//    }
-//}
-//
-//- (void)didChangeValue:(id)value atIndexPath:(NSIndexPath *)indexPath {
-//    NSLog(@"Did Change Value: %@ at %@", value, indexPath);
-//    self.dataArray[indexPath.section][indexPath.row] = value;
-//}
-
 @end

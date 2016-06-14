@@ -43,13 +43,12 @@
     XCTAssertNil([self.userDefaultsDatasource valueForIndexPath:indexPathTooLarge]);
 }
 
-- (void)testValueForValidKeyPath {
+- (void)testValueForValidIndexPath {
     NSDictionary *userDefaults = [NSUserDefaults standardUserDefaults].dictionaryRepresentation;
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     id value = [self.userDefaultsDatasource valueForIndexPath:indexPath];
     NSString *key = [userDefaults.allKeys sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)][0];
     XCTAssertEqualObjects(value, [userDefaults valueForKey:key]);
 }
-
 
 @end
