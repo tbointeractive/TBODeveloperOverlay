@@ -11,9 +11,13 @@
 @implementation DDFileLogger (Sublog)
 
 - (NSString *)lastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount {
+    NSArray<NSString *> *sortedLogFilePaths = [[self logFileManager] sortedLogFilePaths];
+    return [self lastLogMessagesLimitedToCharacterCount:maxCharacterCount fromFilePaths:sortedLogFilePaths];
+}
+
+- (NSString *)lastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount fromFilePaths:(NSArray<NSString *> *)sortedLogFilePaths  {
     NSMutableString *logMessages = [NSMutableString string];
     NSFileManager *fileManager = [NSFileManager new];
-    NSArray<NSString *> *sortedLogFilePaths = [[self logFileManager] sortedLogFilePaths];
     for (NSString *logFilePath in [sortedLogFilePaths reverseObjectEnumerator]) {
         NSData *logData = [fileManager contentsAtPath:logFilePath];
         if (logData.length > 0) {
