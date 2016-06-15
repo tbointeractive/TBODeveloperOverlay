@@ -10,18 +10,12 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>01AF5E07646C0E7DFC409A9F7745CAD3</key>
+		<key>05B28BA3D643F75F448620EFBBD377DF</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>67A227C93E7B62C837DB56477E2A704E</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-TBODeveloperOverlay-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>05BCD33A93C626516F479F56D2116E49</key>
 		<dict>
@@ -35,6 +29,27 @@
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
+		</dict>
+		<key>08B9D16E5A9D4E14631D41C437CC1C91</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5D2A72CC680D5ED1B2A5D37799837824</string>
+				<string>37949952A0955DFEE46FA18F2B16A923</string>
+				<string>2ECBE05F60FCA980B5FE281C095D5CCA</string>
+				<string>BCDC980101DFD4F04EB1F0A1620FD761</string>
+				<string>53FDBF7A554040E00945D89D0962FD5D</string>
+				<string>A2544E10F8773D91200A6E5D05A4D289</string>
+				<string>D5F58EA718B6797B36A3A16D1A75CB03</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-TBODeveloperOverlay</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-TBODeveloperOverlay</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>0A2A25A7CE79C75A177549DE8BD4DF94</key>
 		<dict>
@@ -59,7 +74,7 @@
 			<key>productName</key>
 			<string>Pods-TBODeveloperOverlay</string>
 			<key>productReference</key>
-			<string>F1138FE909C8238D5E0560EE34CEAAFA</string>
+			<string>6704D1B9FE1E759FB89225E6F3FE158E</string>
 			<key>productType</key>
 			<string>com.apple.product-type.library.static</string>
 		</dict>
@@ -78,20 +93,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>0E944A33F5FAEA8BE7D0886ADB3F7706</key>
+		<key>0BE9E7077444E4F0C49EA99A348AC5FC</key>
 		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
+			<key>children</key>
+			<array>
+				<string>08B9D16E5A9D4E14631D41C437CC1C91</string>
+				<string>9C12F137A9C1F9D3AC7CE1A328CDB023</string>
+			</array>
 			<key>isa</key>
-			<string>PBXFileReference</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>libTBOSetupHelper.a</string>
-			<key>path</key>
-			<string>libTBOSetupHelper.a</string>
+			<string>Targets Support Files</string>
 			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>0EF8760FD0FD5E41874F3B00B429144D</key>
 		<dict>
@@ -105,6 +119,19 @@
 			<string>DDTTYLogger.m</string>
 			<key>path</key>
 			<string>Classes/DDTTYLogger.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0FF5E2A901D507F8AEEC01EC8661EF3C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-TBODeveloperOverlayTests-acknowledgements.markdown</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -142,7 +169,7 @@
 			<key>productName</key>
 			<string>CocoaLumberjack</string>
 			<key>productReference</key>
-			<string>E4CA515BF30BA3A3A9B9C53B97A9F304</string>
+			<string>EE2D846C96A360F737555DEC38EB22DD</string>
 			<key>productType</key>
 			<string>com.apple.product-type.library.static</string>
 		</dict>
@@ -158,19 +185,6 @@
 			<string>DDTTYLogger.h</string>
 			<key>path</key>
 			<string>Classes/DDTTYLogger.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>185D33582F519F307E23068F9009619C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-TBODeveloperOverlay.release.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -250,10 +264,23 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>22874FFB9C85FF817CB2A2A9FB4C8273</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-TBODeveloperOverlayTests-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>237804E3722CC42C537DC36A16C448F7</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>185D33582F519F307E23068F9009619C</string>
+			<string>D5F58EA718B6797B36A3A16D1A75CB03</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
@@ -281,6 +308,19 @@
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
 			<string>Release</string>
+		</dict>
+		<key>24248A80F2C823C20CB947B905977448</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-TBODeveloperOverlayTests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>2B187C06868D3A6ED9EC2B380A8AAA52</key>
 		<dict>
@@ -332,7 +372,7 @@
 		<key>2E986DB3114B4C798E785A92CBA43B12</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>9F57FE9DD1F9533FFDB804A9C6B70EE7</string>
+			<string>A2544E10F8773D91200A6E5D05A4D289</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
@@ -361,10 +401,23 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
+		<key>2ECBE05F60FCA980B5FE281C095D5CCA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-TBODeveloperOverlay-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>324F6B8170BF8822F223F1BB3359F422</key>
 		<dict>
 			<key>fileRef</key>
-			<string>67B302D1869445744A2227C1816ABF58</string>
+			<string>2ECBE05F60FCA980B5FE281C095D5CCA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -418,6 +471,19 @@
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
 			<string>Release</string>
+		</dict>
+		<key>37949952A0955DFEE46FA18F2B16A923</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-TBODeveloperOverlay-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>3BC523456D230E0563C609551E54B0A2</key>
 		<dict>
@@ -473,6 +539,38 @@
 				</array>
 			</dict>
 		</dict>
+		<key>3DF3856BCEA2536DE5668CB1BE43B813</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>443E65B757AEACC7AC82DAF98DEB6B05</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
 		<key>3E4E89230EF59BC255123B67864ACF77</key>
 		<dict>
 			<key>isa</key>
@@ -524,6 +622,19 @@
 			<string>PBXGroup</string>
 			<key>name</key>
 			<string>Logger</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>443E65B757AEACC7AC82DAF98DEB6B05</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-TBODeveloperOverlayTests.debug.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -588,16 +699,16 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>50933F0CA6FFED1059C1078CDC19F933</key>
+		<key>4FF6EB3BEA5B4261E4FD3A7556D3A09D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
+			<string>text.plist.xml</string>
 			<key>path</key>
-			<string>Pods-TBODeveloperOverlay-resources.sh</string>
+			<string>Pods-TBODeveloperOverlayTests-acknowledgements.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -613,6 +724,19 @@
 			<string>DDLog.h</string>
 			<key>path</key>
 			<string>Classes/DDLog.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>53FDBF7A554040E00945D89D0962FD5D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-TBODeveloperOverlay-resources.sh</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -645,6 +769,19 @@
 				</array>
 			</dict>
 		</dict>
+		<key>58B1FFA512E1A83AE62D85E11C7BE931</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>05B28BA3D643F75F448620EFBBD377DF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>5A81BE27FEF48474FFECAF51239CA54F</key>
 		<dict>
 			<key>children</key>
@@ -656,6 +793,19 @@
 			<string>PBXGroup</string>
 			<key>name</key>
 			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5A9DAFD06662CB4B35C6DB9BEEECF4BF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-TBODeveloperOverlayTests-resources.sh</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -687,6 +837,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>5D2A72CC680D5ED1B2A5D37799837824</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-TBODeveloperOverlay-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>5DCBA219BC81D9190F11EE56F93BB908</key>
 		<dict>
 			<key>fileRef</key>
@@ -713,19 +876,6 @@
 			<string>DDAssertMacros.h</string>
 			<key>path</key>
 			<string>Classes/DDAssertMacros.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5FEA13A00DEFB5835156F3BED988D568</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-TBODeveloperOverlay-acknowledgements.markdown</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -788,6 +938,19 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
+		<key>644C6355C6B80DA7D962BA71F3CEE8DB</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>648E1060BB1B1156BDC3CF791ED55711</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 		<key>6475050C8BA464772209BD6AF03F1EB1</key>
 		<dict>
 			<key>fileRef</key>
@@ -802,20 +965,12 @@
 				</array>
 			</dict>
 		</dict>
-		<key>648D2BAF13430C43D8E870F58AE479E1</key>
+		<key>648E1060BB1B1156BDC3CF791ED55711</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>E4CA515BF30BA3A3A9B9C53B97A9F304</string>
-				<string>F1138FE909C8238D5E0560EE34CEAAFA</string>
-				<string>0E944A33F5FAEA8BE7D0886ADB3F7706</string>
-			</array>
+			<key>fileRef</key>
+			<string>3E4E89230EF59BC255123B67864ACF77</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>656479029A5A15463E080FD25F8903B2</key>
 		<dict>
@@ -842,7 +997,22 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>67B302D1869445744A2227C1816ABF58</key>
+		<key>6704D1B9FE1E759FB89225E6F3FE158E</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods-TBODeveloperOverlay.a</string>
+			<key>path</key>
+			<string>libPods-TBODeveloperOverlay.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>67A227C93E7B62C837DB56477E2A704E</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -851,7 +1021,7 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>Pods-TBODeveloperOverlay-dummy.m</string>
+			<string>Pods-TBODeveloperOverlayTests-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -923,6 +1093,38 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
+		<key>7635B2FF323376D2387DC1BDB9D899A4</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>24248A80F2C823C20CB947B905977448</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
 		<key>7716C6484F8B0BD2914940BE81693B74</key>
 		<dict>
 			<key>isa</key>
@@ -934,27 +1136,6 @@
 			<key>targetProxy</key>
 			<string>6B306FBD032EB44C8992E5FB4B395AC8</string>
 		</dict>
-		<key>782730559A4C0E9AD3DC5E58CDA0D7F7</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5FEA13A00DEFB5835156F3BED988D568</string>
-				<string>01AF5E07646C0E7DFC409A9F7745CAD3</string>
-				<string>67B302D1869445744A2227C1816ABF58</string>
-				<string>A8BB19926FA49433FB75C0E7DB60DF89</string>
-				<string>50933F0CA6FFED1059C1078CDC19F933</string>
-				<string>9F57FE9DD1F9533FFDB804A9C6B70EE7</string>
-				<string>185D33582F519F307E23068F9009619C</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-TBODeveloperOverlay</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-TBODeveloperOverlay</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>7DB346D0F39D3F0E887471402A8071AB</key>
 		<dict>
 			<key>children</key>
@@ -962,8 +1143,8 @@
 				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
 				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
 				<string>5A81BE27FEF48474FFECAF51239CA54F</string>
-				<string>648D2BAF13430C43D8E870F58AE479E1</string>
-				<string>F002527172929C29DAFD2968CD3BE0F5</string>
+				<string>ECF2B0470DCCD412F8A66413818BC3E7</string>
+				<string>0BE9E7077444E4F0C49EA99A348AC5FC</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -1085,6 +1266,20 @@
 			<string>Classes/Extensions/DDDispatchQueueLogFormatter.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8F2681BCF726245726BBA29295988F9C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>3DF3856BCEA2536DE5668CB1BE43B813</string>
+				<string>7635B2FF323376D2387DC1BDB9D899A4</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
 		</dict>
 		<key>8F9158C74BE429D7404E040E9136DA63</key>
 		<dict>
@@ -1220,6 +1415,27 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>9C12F137A9C1F9D3AC7CE1A328CDB023</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0FF5E2A901D507F8AEEC01EC8661EF3C</string>
+				<string>4FF6EB3BEA5B4261E4FD3A7556D3A09D</string>
+				<string>67A227C93E7B62C837DB56477E2A704E</string>
+				<string>22874FFB9C85FF817CB2A2A9FB4C8273</string>
+				<string>5A9DAFD06662CB4B35C6DB9BEEECF4BF</string>
+				<string>443E65B757AEACC7AC82DAF98DEB6B05</string>
+				<string>24248A80F2C823C20CB947B905977448</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-TBODeveloperOverlayTests</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-TBODeveloperOverlayTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>9DDBAE6DD9567A92090EC60A7C7FEE99</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -1245,7 +1461,7 @@
 				<string>-DOS_OBJECT_USE_OBJC=0</string>
 			</dict>
 		</dict>
-		<key>9F57FE9DD1F9533FFDB804A9C6B70EE7</key>
+		<key>A2544E10F8773D91200A6E5D05A4D289</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1399,19 +1615,6 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>A8BB19926FA49433FB75C0E7DB60DF89</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-TBODeveloperOverlay-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>AAB7EC6CF4CFFA005D5D5BA531CF59C6</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1450,6 +1653,32 @@
 			<string>Classes/DDFileLogger.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B3812D71539C71BF693225EC0C491E2A</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>8F2681BCF726245726BBA29295988F9C</string>
+			<key>buildPhases</key>
+			<array>
+				<string>58B1FFA512E1A83AE62D85E11C7BE931</string>
+				<string>644C6355C6B80DA7D962BA71F3CEE8DB</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>F2F3CC286895A6D428ED767866750C49</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-TBODeveloperOverlayTests</string>
+			<key>productName</key>
+			<string>Pods-TBODeveloperOverlayTests</string>
+			<key>productReference</key>
+			<string>FA7B478A799C935990BABC6B0502FB3C</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
 		</dict>
 		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
 		<dict>
@@ -1495,6 +1724,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>BCDC980101DFD4F04EB1F0A1620FD761</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-TBODeveloperOverlay-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>BF525D162B9ABC5DFA69FB7A8779F76E</key>
 		<dict>
 			<key>fileRef</key>
@@ -1519,6 +1761,19 @@
 			<string>iOS</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C206CDA0667FC64C9D5D54153320857C</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>12E2BC28C62976C425F4B71C2723F0B1</string>
+			<key>remoteInfo</key>
+			<string>CocoaLumberjack</string>
 		</dict>
 		<key>C515A390D549AF8A16A76DD72388BD2C</key>
 		<dict>
@@ -1637,7 +1892,7 @@
 			<key>mainGroup</key>
 			<string>7DB346D0F39D3F0E887471402A8071AB</string>
 			<key>productRefGroup</key>
-			<string>648D2BAF13430C43D8E870F58AE479E1</string>
+			<string>ECF2B0470DCCD412F8A66413818BC3E7</string>
 			<key>projectDirPath</key>
 			<string></string>
 			<key>projectReferences</key>
@@ -1648,8 +1903,22 @@
 			<array>
 				<string>12E2BC28C62976C425F4B71C2723F0B1</string>
 				<string>0A2A25A7CE79C75A177549DE8BD4DF94</string>
+				<string>B3812D71539C71BF693225EC0C491E2A</string>
 				<string>F7C218D067C187E48E085E8BFA7728BB</string>
 			</array>
+		</dict>
+		<key>D5F58EA718B6797B36A3A16D1A75CB03</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-TBODeveloperOverlay.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D6CC35930F38E1F5C45B60F4350F0EA9</key>
 		<dict>
@@ -1769,7 +2038,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E4CA515BF30BA3A3A9B9C53B97A9F304</key>
+		<key>E5EC92AD3714DD919A7DBFC838A2224A</key>
 		<dict>
 			<key>explicitFileType</key>
 			<string>archive.ar</string>
@@ -1778,9 +2047,9 @@
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>libCocoaLumberjack.a</string>
+			<string>libTBOSetupHelper.a</string>
 			<key>path</key>
-			<string>libCocoaLumberjack.a</string>
+			<string>libTBOSetupHelper.a</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
@@ -1805,6 +2074,37 @@
 			<string>AAB7EC6CF4CFFA005D5D5BA531CF59C6</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>ECF2B0470DCCD412F8A66413818BC3E7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EE2D846C96A360F737555DEC38EB22DD</string>
+				<string>6704D1B9FE1E759FB89225E6F3FE158E</string>
+				<string>FA7B478A799C935990BABC6B0502FB3C</string>
+				<string>E5EC92AD3714DD919A7DBFC838A2224A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EE2D846C96A360F737555DEC38EB22DD</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libCocoaLumberjack.a</string>
+			<key>path</key>
+			<string>libCocoaLumberjack.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>EED53CAEA257714F99D239C2A0190D5A</key>
 		<dict>
@@ -1848,19 +2148,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F002527172929C29DAFD2968CD3BE0F5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>782730559A4C0E9AD3DC5E58CDA0D7F7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>F08668F54E80626196975B2735E601BF</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1876,20 +2163,16 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F1138FE909C8238D5E0560EE34CEAAFA</key>
+		<key>F2F3CC286895A6D428ED767866750C49</key>
 		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
+			<string>PBXTargetDependency</string>
 			<key>name</key>
-			<string>libPods-TBODeveloperOverlay.a</string>
-			<key>path</key>
-			<string>libPods-TBODeveloperOverlay.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
+			<string>CocoaLumberjack</string>
+			<key>target</key>
+			<string>12E2BC28C62976C425F4B71C2723F0B1</string>
+			<key>targetProxy</key>
+			<string>C206CDA0667FC64C9D5D54153320857C</string>
 		</dict>
 		<key>F60EE8A287068DB3BA40B047CC3CCF04</key>
 		<dict>
@@ -1927,9 +2210,24 @@
 			<key>productName</key>
 			<string>TBOSetupHelper</string>
 			<key>productReference</key>
-			<string>0E944A33F5FAEA8BE7D0886ADB3F7706</string>
+			<string>E5EC92AD3714DD919A7DBFC838A2224A</string>
 			<key>productType</key>
 			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>FA7B478A799C935990BABC6B0502FB3C</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods-TBODeveloperOverlayTests.a</string>
+			<key>path</key>
+			<string>libPods-TBODeveloperOverlayTests.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>FB45FFD90572718D82AB9092B750F0CA</key>
 		<dict>

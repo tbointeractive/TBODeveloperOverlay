@@ -1,749 +1,2096 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		1F0E65CA1CEF8BBF007AF08F /* TBOModalNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E65C91CEF8BBF007AF08F /* TBOModalNavigationController.m */; };
-		1F51AE881D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F51AE871D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m */; };
-		1F5D922C1CE0915B0017508E /* TBODeveloperOverlayLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D922B1CE0915B0017508E /* TBODeveloperOverlayLogger.m */; };
-		1F5D92301CE0942F0017508E /* TBODeveloperOverlayLogger.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5D922F1CE0942F0017508E /* TBODeveloperOverlayLogger.xib */; };
-		1F5D92351CE096EA0017508E /* TBODeveloperOverlayFileInspectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D92331CE096EA0017508E /* TBODeveloperOverlayFileInspectorViewController.m */; };
-		1F708E0A869F1D0A2C7C05B0 /* libPods-TBODeveloperOverlay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1232FB3035CFBB628DD3A1 /* libPods-TBODeveloperOverlay.a */; };
-		1F83D1771D0EFA9300DF5198 /* NSMutableAttributedString+RegexMatches.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F83D1761D0EFA9300DF5198 /* NSMutableAttributedString+RegexMatches.m */; };
-		1F83D17A1D0F000E00DF5198 /* DDFileLogger+Sublog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F83D1791D0F000E00DF5198 /* DDFileLogger+Sublog.m */; };
-		1F83D17D1D0F02C500DF5198 /* TBODeveloperOverlayTaglist.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F83D17C1D0F02C500DF5198 /* TBODeveloperOverlayTaglist.m */; };
-		7517A8421CEF1F5F00700CBF /* TBODeveloperOverlayKVDebuggerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7517A8401CEF1F5F00700CBF /* TBODeveloperOverlayKVDebuggerDetailViewController.m */; };
-		7517A8431CEF1F5F00700CBF /* TBODeveloperOverlayKVDebuggerDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7517A8411CEF1F5F00700CBF /* TBODeveloperOverlayKVDebuggerDetailViewController.xib */; };
-		7554B66B1CFC7B4500FD6CD3 /* TBODeveloperOverlayPluginListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7554B66A1CFC7B4500FD6CD3 /* TBODeveloperOverlayPluginListViewController.m */; };
-		75629A3C1CD351AC00E72F7B /* TBODeveloperOverlayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A3B1CD351AC00E72F7B /* TBODeveloperOverlayTests.m */; };
-		75629A471CD351AC00E72F7B /* TBODeveloperOverlayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A461CD351AC00E72F7B /* TBODeveloperOverlayUITests.m */; };
-		7593D8E01CD399D400EFFA49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8D41CD399D400EFFA49 /* AppDelegate.m */; };
-		7593D8E11CD399D400EFFA49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7593D8D51CD399D400EFFA49 /* Assets.xcassets */; };
-		7593D8E21CD399D400EFFA49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7593D8D61CD399D400EFFA49 /* LaunchScreen.storyboard */; };
-		7593D8E31CD399D400EFFA49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7593D8D81CD399D400EFFA49 /* Main.storyboard */; };
-		7593D8E41CD399D400EFFA49 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7593D8DA1CD399D400EFFA49 /* Info.plist */; };
-		7593D8E51CD399D400EFFA49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8DB1CD399D400EFFA49 /* main.m */; };
-		7593D8E61CD399D400EFFA49 /* TBODebugDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8DD1CD399D400EFFA49 /* TBODebugDatasource.m */; };
-		7593D8E71CD399D400EFFA49 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8DF1CD399D400EFFA49 /* ViewController.m */; };
-		7593D8F01CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8EC1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m */; };
-		7593D8F11CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8EE1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m */; };
-		7593D8F21CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib */; };
-		9EB5B2CA1D0ED4EA00942EA4 /* NSString+RegexMatches.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5B2C91D0ED4EA00942EA4 /* NSString+RegexMatches.m */; };
-		9EC1864B1D1049FA00B7E445 /* NSMutableAttributedString+RegexMatchesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC1864A1D1049FA00B7E445 /* NSMutableAttributedString+RegexMatchesTests.m */; };
-		9EC1864D1D1053CE00B7E445 /* NSString+RegexMatchesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC1864C1D1053CE00B7E445 /* NSString+RegexMatchesTests.m */; };
-		9EC1864F1D1059FE00B7E445 /* DDFileLogger+SublogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC1864E1D1059FE00B7E445 /* DDFileLogger+SublogTests.m */; };
-		D9436E507AD9ACA639A77CF8 /* TBODeveloperOverlayNSUserDefaultsDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D943619F6C316203554F70E6 /* TBODeveloperOverlayNSUserDefaultsDatasource.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		75629A381CD351AC00E72F7B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 75629A161CD351AB00E72F7B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 75629A1D1CD351AB00E72F7B;
-			remoteInfo = TBODeveloperOverlay;
-		};
-		75629A431CD351AC00E72F7B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 75629A161CD351AB00E72F7B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 75629A1D1CD351AB00E72F7B;
-			remoteInfo = TBODeveloperOverlay;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		1B502B768D5284FDD769CD89 /* Pods-TBODeveloperOverlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBODeveloperOverlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay.release.xcconfig"; sourceTree = "<group>"; };
-		1F0E65C81CEF8BBF007AF08F /* TBOModalNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBOModalNavigationController.h; path = TBODeveloperOverlay/TBODeveloperOverlay/TBOModalNavigationController.h; sourceTree = SOURCE_ROOT; };
-		1F0E65C91CEF8BBF007AF08F /* TBOModalNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBOModalNavigationController.m; path = TBODeveloperOverlay/TBODeveloperOverlay/TBOModalNavigationController.m; sourceTree = SOURCE_ROOT; };
-		1F51AE861D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h; sourceTree = "<group>"; };
-		1F51AE871D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m; sourceTree = "<group>"; };
-		1F5D922A1CE0915B0017508E /* TBODeveloperOverlayLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayLogger.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLogger.h; sourceTree = "<group>"; };
-		1F5D922B1CE0915B0017508E /* TBODeveloperOverlayLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayLogger.m; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLogger.m; sourceTree = "<group>"; };
-		1F5D922F1CE0942F0017508E /* TBODeveloperOverlayLogger.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TBODeveloperOverlayLogger.xib; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLogger.xib; sourceTree = "<group>"; };
-		1F5D92321CE096EA0017508E /* TBODeveloperOverlayFileInspectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayFileInspectorViewController.h; path = TBODeveloperOverlayFileInspector/TBODeveloperOverlayFileInspectorViewController.h; sourceTree = "<group>"; };
-		1F5D92331CE096EA0017508E /* TBODeveloperOverlayFileInspectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayFileInspectorViewController.m; path = TBODeveloperOverlayFileInspector/TBODeveloperOverlayFileInspectorViewController.m; sourceTree = "<group>"; };
-		1F5D92561D01DAF20017508E /* TBODeveloperOverlayLoggerDatasourceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayLoggerDatasourceProtocol.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLoggerDatasourceProtocol.h; sourceTree = "<group>"; };
-		1F83D1751D0EFA9300DF5198 /* NSMutableAttributedString+RegexMatches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableAttributedString+RegexMatches.h"; path = "TBODeveloperOverlayLogger/NSMutableAttributedString+RegexMatches.h"; sourceTree = "<group>"; };
-		1F83D1761D0EFA9300DF5198 /* NSMutableAttributedString+RegexMatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableAttributedString+RegexMatches.m"; path = "TBODeveloperOverlayLogger/NSMutableAttributedString+RegexMatches.m"; sourceTree = "<group>"; };
-		1F83D1781D0F000E00DF5198 /* DDFileLogger+Sublog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DDFileLogger+Sublog.h"; path = "TBODeveloperOverlayLogger/DDFileLogger+Sublog.h"; sourceTree = "<group>"; };
-		1F83D1791D0F000E00DF5198 /* DDFileLogger+Sublog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DDFileLogger+Sublog.m"; path = "TBODeveloperOverlayLogger/DDFileLogger+Sublog.m"; sourceTree = "<group>"; };
-		1F83D17B1D0F02C500DF5198 /* TBODeveloperOverlayTaglist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayTaglist.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayTaglist.h; sourceTree = "<group>"; };
-		1F83D17C1D0F02C500DF5198 /* TBODeveloperOverlayTaglist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayTaglist.m; path = TBODeveloperOverlayLogger/TBODeveloperOverlayTaglist.m; sourceTree = "<group>"; };
-		49339F4923F7F6BCE5A09135 /* Pods-TBODeveloperOverlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBODeveloperOverlay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay.debug.xcconfig"; sourceTree = "<group>"; };
-		750C58A51CD39B6F00D60E6B /* TBODeveloperOverlayKVDebuggerDatasourceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebuggerDatasourceProtocol.h; sourceTree = "<group>"; };
-		7517A83F1CEF1F5F00700CBF /* TBODeveloperOverlayKVDebuggerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebuggerDetailViewController.h; sourceTree = "<group>"; };
-		7517A8401CEF1F5F00700CBF /* TBODeveloperOverlayKVDebuggerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayKVDebuggerDetailViewController.m; sourceTree = "<group>"; };
-		7517A8411CEF1F5F00700CBF /* TBODeveloperOverlayKVDebuggerDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBODeveloperOverlayKVDebuggerDetailViewController.xib; sourceTree = "<group>"; };
-		7554B6691CFC7B4500FD6CD3 /* TBODeveloperOverlayPluginListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayPluginListViewController.h; path = TBODeveloperOverlay/TBODeveloperOverlay/TBODeveloperOverlayPluginListViewController.h; sourceTree = SOURCE_ROOT; };
-		7554B66A1CFC7B4500FD6CD3 /* TBODeveloperOverlayPluginListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayPluginListViewController.m; path = TBODeveloperOverlay/TBODeveloperOverlay/TBODeveloperOverlayPluginListViewController.m; sourceTree = SOURCE_ROOT; };
-		75629A1E1CD351AB00E72F7B /* TBODeveloperOverlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBODeveloperOverlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		75629A371CD351AC00E72F7B /* TBODeveloperOverlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBODeveloperOverlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		75629A3B1CD351AC00E72F7B /* TBODeveloperOverlayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayTests.m; sourceTree = "<group>"; };
-		75629A3D1CD351AC00E72F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75629A421CD351AC00E72F7B /* TBODeveloperOverlayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBODeveloperOverlayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		75629A461CD351AC00E72F7B /* TBODeveloperOverlayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayUITests.m; sourceTree = "<group>"; };
-		75629A481CD351AC00E72F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7593D8D31CD399D400EFFA49 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		7593D8D41CD399D400EFFA49 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7593D8D51CD399D400EFFA49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7593D8D71CD399D400EFFA49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7593D8D91CD399D400EFFA49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7593D8DA1CD399D400EFFA49 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7593D8DB1CD399D400EFFA49 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7593D8DC1CD399D400EFFA49 /* TBODebugDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODebugDatasource.h; sourceTree = "<group>"; };
-		7593D8DD1CD399D400EFFA49 /* TBODebugDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODebugDatasource.m; sourceTree = "<group>"; };
-		7593D8DE1CD399D400EFFA49 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7593D8DF1CD399D400EFFA49 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		7593D8EB1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebugger.h; sourceTree = "<group>"; };
-		7593D8EC1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayKVDebugger.m; sourceTree = "<group>"; };
-		7593D8ED1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h; sourceTree = "<group>"; };
-		7593D8EE1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m; sourceTree = "<group>"; };
-		7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib; sourceTree = "<group>"; };
-		9EB5B2C81D0ED4EA00942EA4 /* NSString+RegexMatches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+RegexMatches.h"; path = "TBODeveloperOverlayLogger/NSString+RegexMatches.h"; sourceTree = "<group>"; };
-		9EB5B2C91D0ED4EA00942EA4 /* NSString+RegexMatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+RegexMatches.m"; path = "TBODeveloperOverlayLogger/NSString+RegexMatches.m"; sourceTree = "<group>"; };
-		9EC1864A1D1049FA00B7E445 /* NSMutableAttributedString+RegexMatchesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+RegexMatchesTests.m"; sourceTree = "<group>"; };
-		9EC1864C1D1053CE00B7E445 /* NSString+RegexMatchesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RegexMatchesTests.m"; sourceTree = "<group>"; };
-		9EC1864E1D1059FE00B7E445 /* DDFileLogger+SublogTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDFileLogger+SublogTests.m"; sourceTree = "<group>"; };
-		D943619F6C316203554F70E6 /* TBODeveloperOverlayNSUserDefaultsDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayNSUserDefaultsDatasource.m; sourceTree = "<group>"; };
-		D9436A7221BE407F7D049092 /* TBODeveloperOverlayNSUserDefaultsDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayNSUserDefaultsDatasource.h; sourceTree = "<group>"; };
-		EB1232FB3035CFBB628DD3A1 /* libPods-TBODeveloperOverlay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TBODeveloperOverlay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		75629A1B1CD351AB00E72F7B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1F708E0A869F1D0A2C7C05B0 /* libPods-TBODeveloperOverlay.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		75629A341CD351AC00E72F7B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		75629A3F1CD351AC00E72F7B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		03F957F4CA3966F0AE21EEE4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				49339F4923F7F6BCE5A09135 /* Pods-TBODeveloperOverlay.debug.xcconfig */,
-				1B502B768D5284FDD769CD89 /* Pods-TBODeveloperOverlay.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		1C13406058FB8925AD3BB1AC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				EB1232FB3035CFBB628DD3A1 /* libPods-TBODeveloperOverlay.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1F5D92291CE0913B0017508E /* TBODeveloperOverlayLogger */ = {
-			isa = PBXGroup;
-			children = (
-				1F5D922A1CE0915B0017508E /* TBODeveloperOverlayLogger.h */,
-				1F5D922B1CE0915B0017508E /* TBODeveloperOverlayLogger.m */,
-				1F5D922F1CE0942F0017508E /* TBODeveloperOverlayLogger.xib */,
-				1F5D92561D01DAF20017508E /* TBODeveloperOverlayLoggerDatasourceProtocol.h */,
-				1F51AE861D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h */,
-				1F51AE871D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m */,
-				9EB5B2C81D0ED4EA00942EA4 /* NSString+RegexMatches.h */,
-				9EB5B2C91D0ED4EA00942EA4 /* NSString+RegexMatches.m */,
-				1F83D1751D0EFA9300DF5198 /* NSMutableAttributedString+RegexMatches.h */,
-				1F83D1761D0EFA9300DF5198 /* NSMutableAttributedString+RegexMatches.m */,
-				1F83D1781D0F000E00DF5198 /* DDFileLogger+Sublog.h */,
-				1F83D1791D0F000E00DF5198 /* DDFileLogger+Sublog.m */,
-				1F83D17B1D0F02C500DF5198 /* TBODeveloperOverlayTaglist.h */,
-				1F83D17C1D0F02C500DF5198 /* TBODeveloperOverlayTaglist.m */,
-			);
-			name = TBODeveloperOverlayLogger;
-			sourceTree = "<group>";
-		};
-		1F5D92311CE096BC0017508E /* TBODeveloperOverlayFileInspector */ = {
-			isa = PBXGroup;
-			children = (
-				1F5D92321CE096EA0017508E /* TBODeveloperOverlayFileInspectorViewController.h */,
-				1F5D92331CE096EA0017508E /* TBODeveloperOverlayFileInspectorViewController.m */,
-			);
-			name = TBODeveloperOverlayFileInspector;
-			sourceTree = "<group>";
-		};
-		75629A151CD351AB00E72F7B = {
-			isa = PBXGroup;
-			children = (
-				7593D8E81CD399DD00EFFA49 /* Classes */,
-				7593D8D21CD399D400EFFA49 /* Example */,
-				75629A3A1CD351AC00E72F7B /* TBODeveloperOverlayTests */,
-				75629A451CD351AC00E72F7B /* TBODeveloperOverlayUITests */,
-				75629A1F1CD351AB00E72F7B /* Products */,
-				03F957F4CA3966F0AE21EEE4 /* Pods */,
-				1C13406058FB8925AD3BB1AC /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		75629A1F1CD351AB00E72F7B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				75629A1E1CD351AB00E72F7B /* TBODeveloperOverlay.app */,
-				75629A371CD351AC00E72F7B /* TBODeveloperOverlayTests.xctest */,
-				75629A421CD351AC00E72F7B /* TBODeveloperOverlayUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		75629A3A1CD351AC00E72F7B /* TBODeveloperOverlayTests */ = {
-			isa = PBXGroup;
-			children = (
-				75629A3B1CD351AC00E72F7B /* TBODeveloperOverlayTests.m */,
-				75629A3D1CD351AC00E72F7B /* Info.plist */,
-				9EC1864A1D1049FA00B7E445 /* NSMutableAttributedString+RegexMatchesTests.m */,
-				9EC1864C1D1053CE00B7E445 /* NSString+RegexMatchesTests.m */,
-				9EC1864E1D1059FE00B7E445 /* DDFileLogger+SublogTests.m */,
-			);
-			path = TBODeveloperOverlayTests;
-			sourceTree = "<group>";
-		};
-		75629A451CD351AC00E72F7B /* TBODeveloperOverlayUITests */ = {
-			isa = PBXGroup;
-			children = (
-				75629A461CD351AC00E72F7B /* TBODeveloperOverlayUITests.m */,
-				75629A481CD351AC00E72F7B /* Info.plist */,
-			);
-			path = TBODeveloperOverlayUITests;
-			sourceTree = "<group>";
-		};
-		7593D8D21CD399D400EFFA49 /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				7593D8D31CD399D400EFFA49 /* AppDelegate.h */,
-				7593D8D41CD399D400EFFA49 /* AppDelegate.m */,
-				7593D8D51CD399D400EFFA49 /* Assets.xcassets */,
-				7593D8D61CD399D400EFFA49 /* LaunchScreen.storyboard */,
-				7593D8D81CD399D400EFFA49 /* Main.storyboard */,
-				7593D8DA1CD399D400EFFA49 /* Info.plist */,
-				7593D8DB1CD399D400EFFA49 /* main.m */,
-				7593D8DC1CD399D400EFFA49 /* TBODebugDatasource.h */,
-				7593D8DD1CD399D400EFFA49 /* TBODebugDatasource.m */,
-				7593D8DE1CD399D400EFFA49 /* ViewController.h */,
-				7593D8DF1CD399D400EFFA49 /* ViewController.m */,
-			);
-			path = Example;
-			sourceTree = "<group>";
-		};
-		7593D8E81CD399DD00EFFA49 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				1F5D92311CE096BC0017508E /* TBODeveloperOverlayFileInspector */,
-				1F5D92291CE0913B0017508E /* TBODeveloperOverlayLogger */,
-				7593D8E91CD399DD00EFFA49 /* TBODeveloperOverlay */,
-				7593D8EA1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		7593D8E91CD399DD00EFFA49 /* TBODeveloperOverlay */ = {
-			isa = PBXGroup;
-			children = (
-				1F0E65C81CEF8BBF007AF08F /* TBOModalNavigationController.h */,
-				1F0E65C91CEF8BBF007AF08F /* TBOModalNavigationController.m */,
-				7554B6691CFC7B4500FD6CD3 /* TBODeveloperOverlayPluginListViewController.h */,
-				7554B66A1CFC7B4500FD6CD3 /* TBODeveloperOverlayPluginListViewController.m */,
-			);
-			path = TBODeveloperOverlay;
-			sourceTree = "<group>";
-		};
-		7593D8EA1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger */ = {
-			isa = PBXGroup;
-			children = (
-				750C58A51CD39B6F00D60E6B /* TBODeveloperOverlayKVDebuggerDatasourceProtocol.h */,
-				7593D8EB1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.h */,
-				7593D8EC1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m */,
-				7593D8ED1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h */,
-				7593D8EE1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m */,
-				7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib */,
-				7517A83F1CEF1F5F00700CBF /* TBODeveloperOverlayKVDebuggerDetailViewController.h */,
-				7517A8401CEF1F5F00700CBF /* TBODeveloperOverlayKVDebuggerDetailViewController.m */,
-				7517A8411CEF1F5F00700CBF /* TBODeveloperOverlayKVDebuggerDetailViewController.xib */,
-				D943619F6C316203554F70E6 /* TBODeveloperOverlayNSUserDefaultsDatasource.m */,
-				D9436A7221BE407F7D049092 /* TBODeveloperOverlayNSUserDefaultsDatasource.h */,
-			);
-			path = TBODeveloperOverlayKVDebugger;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		75629A1D1CD351AB00E72F7B /* TBODeveloperOverlay */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 75629A4B1CD351AC00E72F7B /* Build configuration list for PBXNativeTarget "TBODeveloperOverlay" */;
-			buildPhases = (
-				F278B313BFDB6525245EB4F7 /* Check Pods Manifest.lock */,
-				75629A1A1CD351AB00E72F7B /* Sources */,
-				75629A1B1CD351AB00E72F7B /* Frameworks */,
-				75629A1C1CD351AB00E72F7B /* Resources */,
-				10C20EEC53E12FCFDE683C3E /* Embed Pods Frameworks */,
-				7F8B7F60A6FA31233ADF2677 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TBODeveloperOverlay;
-			productName = TBODeveloperOverlay;
-			productReference = 75629A1E1CD351AB00E72F7B /* TBODeveloperOverlay.app */;
-			productType = "com.apple.product-type.application";
-		};
-		75629A361CD351AC00E72F7B /* TBODeveloperOverlayTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 75629A4E1CD351AC00E72F7B /* Build configuration list for PBXNativeTarget "TBODeveloperOverlayTests" */;
-			buildPhases = (
-				75629A331CD351AC00E72F7B /* Sources */,
-				75629A341CD351AC00E72F7B /* Frameworks */,
-				75629A351CD351AC00E72F7B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				75629A391CD351AC00E72F7B /* PBXTargetDependency */,
-			);
-			name = TBODeveloperOverlayTests;
-			productName = TBODeveloperOverlayTests;
-			productReference = 75629A371CD351AC00E72F7B /* TBODeveloperOverlayTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		75629A411CD351AC00E72F7B /* TBODeveloperOverlayUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 75629A511CD351AC00E72F7B /* Build configuration list for PBXNativeTarget "TBODeveloperOverlayUITests" */;
-			buildPhases = (
-				75629A3E1CD351AC00E72F7B /* Sources */,
-				75629A3F1CD351AC00E72F7B /* Frameworks */,
-				75629A401CD351AC00E72F7B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				75629A441CD351AC00E72F7B /* PBXTargetDependency */,
-			);
-			name = TBODeveloperOverlayUITests;
-			productName = TBODeveloperOverlayUITests;
-			productReference = 75629A421CD351AC00E72F7B /* TBODeveloperOverlayUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		75629A161CD351AB00E72F7B /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = "TBO INTERACTIVE";
-				TargetAttributes = {
-					75629A1D1CD351AB00E72F7B = {
-						CreatedOnToolsVersion = 7.3;
-					};
-					75629A361CD351AC00E72F7B = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = 75629A1D1CD351AB00E72F7B;
-					};
-					75629A411CD351AC00E72F7B = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = 75629A1D1CD351AB00E72F7B;
-					};
-				};
-			};
-			buildConfigurationList = 75629A191CD351AB00E72F7B /* Build configuration list for PBXProject "TBODeveloperOverlay" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 75629A151CD351AB00E72F7B;
-			productRefGroup = 75629A1F1CD351AB00E72F7B /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				75629A1D1CD351AB00E72F7B /* TBODeveloperOverlay */,
-				75629A361CD351AC00E72F7B /* TBODeveloperOverlayTests */,
-				75629A411CD351AC00E72F7B /* TBODeveloperOverlayUITests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		75629A1C1CD351AB00E72F7B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7517A8431CEF1F5F00700CBF /* TBODeveloperOverlayKVDebuggerDetailViewController.xib in Resources */,
-				7593D8E41CD399D400EFFA49 /* Info.plist in Resources */,
-				1F5D92301CE0942F0017508E /* TBODeveloperOverlayLogger.xib in Resources */,
-				7593D8E31CD399D400EFFA49 /* Main.storyboard in Resources */,
-				7593D8E11CD399D400EFFA49 /* Assets.xcassets in Resources */,
-				7593D8F21CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib in Resources */,
-				7593D8E21CD399D400EFFA49 /* LaunchScreen.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		75629A351CD351AC00E72F7B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		75629A401CD351AC00E72F7B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		10C20EEC53E12FCFDE683C3E /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7F8B7F60A6FA31233ADF2677 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F278B313BFDB6525245EB4F7 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		75629A1A1CD351AB00E72F7B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7593D8F01CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m in Sources */,
-				7593D8E61CD399D400EFFA49 /* TBODebugDatasource.m in Sources */,
-				1F51AE881D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m in Sources */,
-				1F5D922C1CE0915B0017508E /* TBODeveloperOverlayLogger.m in Sources */,
-				7593D8E51CD399D400EFFA49 /* main.m in Sources */,
-				7554B66B1CFC7B4500FD6CD3 /* TBODeveloperOverlayPluginListViewController.m in Sources */,
-				1F5D92351CE096EA0017508E /* TBODeveloperOverlayFileInspectorViewController.m in Sources */,
-				1F83D1771D0EFA9300DF5198 /* NSMutableAttributedString+RegexMatches.m in Sources */,
-				1F0E65CA1CEF8BBF007AF08F /* TBOModalNavigationController.m in Sources */,
-				7593D8F11CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m in Sources */,
-				7593D8E71CD399D400EFFA49 /* ViewController.m in Sources */,
-				7593D8E01CD399D400EFFA49 /* AppDelegate.m in Sources */,
-				7517A8421CEF1F5F00700CBF /* TBODeveloperOverlayKVDebuggerDetailViewController.m in Sources */,
-				D9436E507AD9ACA639A77CF8 /* TBODeveloperOverlayNSUserDefaultsDatasource.m in Sources */,
-				1F83D17D1D0F02C500DF5198 /* TBODeveloperOverlayTaglist.m in Sources */,
-				9EB5B2CA1D0ED4EA00942EA4 /* NSString+RegexMatches.m in Sources */,
-				1F83D17A1D0F000E00DF5198 /* DDFileLogger+Sublog.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		75629A331CD351AC00E72F7B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9EC1864D1D1053CE00B7E445 /* NSString+RegexMatchesTests.m in Sources */,
-				9EC1864B1D1049FA00B7E445 /* NSMutableAttributedString+RegexMatchesTests.m in Sources */,
-				75629A3C1CD351AC00E72F7B /* TBODeveloperOverlayTests.m in Sources */,
-				9EC1864F1D1059FE00B7E445 /* DDFileLogger+SublogTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		75629A3E1CD351AC00E72F7B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				75629A471CD351AC00E72F7B /* TBODeveloperOverlayUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		75629A391CD351AC00E72F7B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 75629A1D1CD351AB00E72F7B /* TBODeveloperOverlay */;
-			targetProxy = 75629A381CD351AC00E72F7B /* PBXContainerItemProxy */;
-		};
-		75629A441CD351AC00E72F7B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 75629A1D1CD351AB00E72F7B /* TBODeveloperOverlay */;
-			targetProxy = 75629A431CD351AC00E72F7B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		7593D8D61CD399D400EFFA49 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7593D8D71CD399D400EFFA49 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		7593D8D81CD399D400EFFA49 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7593D8D91CD399D400EFFA49 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		75629A491CD351AC00E72F7B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		75629A4A1CD351AC00E72F7B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		75629A4C1CD351AC00E72F7B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49339F4923F7F6BCE5A09135 /* Pods-TBODeveloperOverlay.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tbointeractive.TBODeveloperOverlay;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		75629A4D1CD351AC00E72F7B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B502B768D5284FDD769CD89 /* Pods-TBODeveloperOverlay.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "$(SRCROOT)/Example/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tbointeractive.TBODeveloperOverlay;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		75629A4F1CD351AC00E72F7B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = TBODeveloperOverlayTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tbointeractive.TBODeveloperOverlayTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TBODeveloperOverlay.app/TBODeveloperOverlay";
-			};
-			name = Debug;
-		};
-		75629A501CD351AC00E72F7B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = TBODeveloperOverlayTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tbointeractive.TBODeveloperOverlayTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TBODeveloperOverlay.app/TBODeveloperOverlay";
-			};
-			name = Release;
-		};
-		75629A521CD351AC00E72F7B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = TBODeveloperOverlayUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tbointeractive.TBODeveloperOverlayUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = TBODeveloperOverlay;
-			};
-			name = Debug;
-		};
-		75629A531CD351AC00E72F7B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = TBODeveloperOverlayUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tbointeractive.TBODeveloperOverlayUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = TBODeveloperOverlay;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		75629A191CD351AB00E72F7B /* Build configuration list for PBXProject "TBODeveloperOverlay" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				75629A491CD351AC00E72F7B /* Debug */,
-				75629A4A1CD351AC00E72F7B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		75629A4B1CD351AC00E72F7B /* Build configuration list for PBXNativeTarget "TBODeveloperOverlay" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				75629A4C1CD351AC00E72F7B /* Debug */,
-				75629A4D1CD351AC00E72F7B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		75629A4E1CD351AC00E72F7B /* Build configuration list for PBXNativeTarget "TBODeveloperOverlayTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				75629A4F1CD351AC00E72F7B /* Debug */,
-				75629A501CD351AC00E72F7B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		75629A511CD351AC00E72F7B /* Build configuration list for PBXNativeTarget "TBODeveloperOverlayUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				75629A521CD351AC00E72F7B /* Debug */,
-				75629A531CD351AC00E72F7B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 75629A161CD351AB00E72F7B /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>03F957F4CA3966F0AE21EEE4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>49339F4923F7F6BCE5A09135</string>
+				<string>1B502B768D5284FDD769CD89</string>
+				<string>6048FC358C9E08843AF59ABD</string>
+				<string>B9674A97347C8472AA5D3544</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>10C20EEC53E12FCFDE683C3E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>1B502B768D5284FDD769CD89</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-TBODeveloperOverlay.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C13406058FB8925AD3BB1AC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EB1232FB3035CFBB628DD3A1</string>
+				<string>AB464703CA413BB244D33A64</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F0E65C81CEF8BBF007AF08F</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TBOModalNavigationController.h</string>
+			<key>path</key>
+			<string>TBODeveloperOverlay/TBODeveloperOverlay/TBOModalNavigationController.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>1F0E65C91CEF8BBF007AF08F</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TBOModalNavigationController.m</string>
+			<key>path</key>
+			<string>TBODeveloperOverlay/TBODeveloperOverlay/TBOModalNavigationController.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>1F0E65CA1CEF8BBF007AF08F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1F0E65C91CEF8BBF007AF08F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1F4C2704E2E9CC5559993A61</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>1F51AE861D01DC9400281F0F</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayLogger/TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F51AE871D01DC9400281F0F</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayLogger/TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F51AE881D01DC9400281F0F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1F51AE871D01DC9400281F0F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1F5D92291CE0913B0017508E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1F5D922A1CE0915B0017508E</string>
+				<string>1F5D922B1CE0915B0017508E</string>
+				<string>1F5D922F1CE0942F0017508E</string>
+				<string>1F5D92561D01DAF20017508E</string>
+				<string>1F51AE861D01DC9400281F0F</string>
+				<string>1F51AE871D01DC9400281F0F</string>
+				<string>9EB5B2C81D0ED4EA00942EA4</string>
+				<string>9EB5B2C91D0ED4EA00942EA4</string>
+				<string>1F83D1751D0EFA9300DF5198</string>
+				<string>1F83D1761D0EFA9300DF5198</string>
+				<string>1F83D1781D0F000E00DF5198</string>
+				<string>1F83D1791D0F000E00DF5198</string>
+				<string>1F83D17B1D0F02C500DF5198</string>
+				<string>1F83D17C1D0F02C500DF5198</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>TBODeveloperOverlayLogger</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F5D922A1CE0915B0017508E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TBODeveloperOverlayLogger.h</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayLogger/TBODeveloperOverlayLogger.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F5D922B1CE0915B0017508E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TBODeveloperOverlayLogger.m</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayLogger/TBODeveloperOverlayLogger.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F5D922C1CE0915B0017508E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1F5D922B1CE0915B0017508E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1F5D922F1CE0942F0017508E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>name</key>
+			<string>TBODeveloperOverlayLogger.xib</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayLogger/TBODeveloperOverlayLogger.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F5D92301CE0942F0017508E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1F5D922F1CE0942F0017508E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1F5D92311CE096BC0017508E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1F5D92321CE096EA0017508E</string>
+				<string>1F5D92331CE096EA0017508E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>TBODeveloperOverlayFileInspector</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F5D92321CE096EA0017508E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TBODeveloperOverlayFileInspectorViewController.h</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayFileInspector/TBODeveloperOverlayFileInspectorViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F5D92331CE096EA0017508E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TBODeveloperOverlayFileInspectorViewController.m</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayFileInspector/TBODeveloperOverlayFileInspectorViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F5D92351CE096EA0017508E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1F5D92331CE096EA0017508E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1F5D92561D01DAF20017508E</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TBODeveloperOverlayLoggerDatasourceProtocol.h</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayLogger/TBODeveloperOverlayLoggerDatasourceProtocol.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F708E0A869F1D0A2C7C05B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EB1232FB3035CFBB628DD3A1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1F83D1751D0EFA9300DF5198</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSMutableAttributedString+RegexMatches.h</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayLogger/NSMutableAttributedString+RegexMatches.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F83D1761D0EFA9300DF5198</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSMutableAttributedString+RegexMatches.m</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayLogger/NSMutableAttributedString+RegexMatches.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F83D1771D0EFA9300DF5198</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1F83D1761D0EFA9300DF5198</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1F83D1781D0F000E00DF5198</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DDFileLogger+Sublog.h</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayLogger/DDFileLogger+Sublog.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F83D1791D0F000E00DF5198</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>DDFileLogger+Sublog.m</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayLogger/DDFileLogger+Sublog.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F83D17A1D0F000E00DF5198</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1F83D1791D0F000E00DF5198</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1F83D17B1D0F02C500DF5198</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TBODeveloperOverlayTaglist.h</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayLogger/TBODeveloperOverlayTaglist.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F83D17C1D0F02C500DF5198</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TBODeveloperOverlayTaglist.m</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayLogger/TBODeveloperOverlayTaglist.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F83D17D1D0F02C500DF5198</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1F83D17C1D0F02C500DF5198</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>49339F4923F7F6BCE5A09135</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-TBODeveloperOverlay.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6048FC358C9E08843AF59ABD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-TBODeveloperOverlayTests.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-TBODeveloperOverlayTests/Pods-TBODeveloperOverlayTests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>750C58A51CD39B6F00D60E6B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayKVDebuggerDatasourceProtocol.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7517A83F1CEF1F5F00700CBF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayKVDebuggerDetailViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7517A8401CEF1F5F00700CBF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayKVDebuggerDetailViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7517A8411CEF1F5F00700CBF</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayKVDebuggerDetailViewController.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7517A8421CEF1F5F00700CBF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7517A8401CEF1F5F00700CBF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7517A8431CEF1F5F00700CBF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7517A8411CEF1F5F00700CBF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7554B6691CFC7B4500FD6CD3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>TBODeveloperOverlayPluginListViewController.h</string>
+			<key>path</key>
+			<string>TBODeveloperOverlay/TBODeveloperOverlay/TBODeveloperOverlayPluginListViewController.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>7554B66A1CFC7B4500FD6CD3</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>TBODeveloperOverlayPluginListViewController.m</string>
+			<key>path</key>
+			<string>TBODeveloperOverlay/TBODeveloperOverlay/TBODeveloperOverlayPluginListViewController.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>7554B66B1CFC7B4500FD6CD3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7554B66A1CFC7B4500FD6CD3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>75629A151CD351AB00E72F7B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7593D8E81CD399DD00EFFA49</string>
+				<string>7593D8D21CD399D400EFFA49</string>
+				<string>75629A3A1CD351AC00E72F7B</string>
+				<string>75629A451CD351AC00E72F7B</string>
+				<string>75629A1F1CD351AB00E72F7B</string>
+				<string>03F957F4CA3966F0AE21EEE4</string>
+				<string>1C13406058FB8925AD3BB1AC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>75629A161CD351AB00E72F7B</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0730</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>TBO INTERACTIVE</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>75629A1D1CD351AB00E72F7B</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+					</dict>
+					<key>75629A361CD351AC00E72F7B</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>TestTargetID</key>
+						<string>75629A1D1CD351AB00E72F7B</string>
+					</dict>
+					<key>75629A411CD351AC00E72F7B</key>
+					<dict>
+						<key>CreatedOnToolsVersion</key>
+						<string>7.3</string>
+						<key>TestTargetID</key>
+						<string>75629A1D1CD351AB00E72F7B</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>75629A191CD351AB00E72F7B</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>75629A151CD351AB00E72F7B</string>
+			<key>productRefGroup</key>
+			<string>75629A1F1CD351AB00E72F7B</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>75629A1D1CD351AB00E72F7B</string>
+				<string>75629A361CD351AC00E72F7B</string>
+				<string>75629A411CD351AC00E72F7B</string>
+			</array>
+		</dict>
+		<key>75629A191CD351AB00E72F7B</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>75629A491CD351AC00E72F7B</string>
+				<string>75629A4A1CD351AC00E72F7B</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>75629A1A1CD351AB00E72F7B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>7593D8F01CD399DD00EFFA49</string>
+				<string>7593D8E61CD399D400EFFA49</string>
+				<string>1F51AE881D01DC9400281F0F</string>
+				<string>1F5D922C1CE0915B0017508E</string>
+				<string>7593D8E51CD399D400EFFA49</string>
+				<string>7554B66B1CFC7B4500FD6CD3</string>
+				<string>1F5D92351CE096EA0017508E</string>
+				<string>1F83D1771D0EFA9300DF5198</string>
+				<string>1F0E65CA1CEF8BBF007AF08F</string>
+				<string>7593D8F11CD399DD00EFFA49</string>
+				<string>7593D8E71CD399D400EFFA49</string>
+				<string>7593D8E01CD399D400EFFA49</string>
+				<string>7517A8421CEF1F5F00700CBF</string>
+				<string>D9436E507AD9ACA639A77CF8</string>
+				<string>1F83D17D1D0F02C500DF5198</string>
+				<string>9EB5B2CA1D0ED4EA00942EA4</string>
+				<string>1F83D17A1D0F000E00DF5198</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>75629A1B1CD351AB00E72F7B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>1F708E0A869F1D0A2C7C05B0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>75629A1C1CD351AB00E72F7B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>7517A8431CEF1F5F00700CBF</string>
+				<string>7593D8E41CD399D400EFFA49</string>
+				<string>1F5D92301CE0942F0017508E</string>
+				<string>7593D8E31CD399D400EFFA49</string>
+				<string>7593D8E11CD399D400EFFA49</string>
+				<string>7593D8F21CD399DD00EFFA49</string>
+				<string>7593D8E21CD399D400EFFA49</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>75629A1D1CD351AB00E72F7B</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>75629A4B1CD351AC00E72F7B</string>
+			<key>buildPhases</key>
+			<array>
+				<string>F278B313BFDB6525245EB4F7</string>
+				<string>75629A1A1CD351AB00E72F7B</string>
+				<string>75629A1B1CD351AB00E72F7B</string>
+				<string>75629A1C1CD351AB00E72F7B</string>
+				<string>10C20EEC53E12FCFDE683C3E</string>
+				<string>7F8B7F60A6FA31233ADF2677</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>TBODeveloperOverlay</string>
+			<key>productName</key>
+			<string>TBODeveloperOverlay</string>
+			<key>productReference</key>
+			<string>75629A1E1CD351AB00E72F7B</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>75629A1E1CD351AB00E72F7B</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>TBODeveloperOverlay.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>75629A1F1CD351AB00E72F7B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>75629A1E1CD351AB00E72F7B</string>
+				<string>75629A371CD351AC00E72F7B</string>
+				<string>75629A421CD351AC00E72F7B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>75629A331CD351AC00E72F7B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>9EC1864D1D1053CE00B7E445</string>
+				<string>9EC1864B1D1049FA00B7E445</string>
+				<string>75629A3C1CD351AC00E72F7B</string>
+				<string>9EC1864F1D1059FE00B7E445</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>75629A341CD351AC00E72F7B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A0A1554147D678C553A52C42</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>75629A351CD351AC00E72F7B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>75629A361CD351AC00E72F7B</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>75629A4E1CD351AC00E72F7B</string>
+			<key>buildPhases</key>
+			<array>
+				<string>1F4C2704E2E9CC5559993A61</string>
+				<string>75629A331CD351AC00E72F7B</string>
+				<string>75629A341CD351AC00E72F7B</string>
+				<string>75629A351CD351AC00E72F7B</string>
+				<string>9FB61A144F40C42AC08F5C87</string>
+				<string>C25C05D72C38863300178B4E</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>75629A391CD351AC00E72F7B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>TBODeveloperOverlayTests</string>
+			<key>productName</key>
+			<string>TBODeveloperOverlayTests</string>
+			<key>productReference</key>
+			<string>75629A371CD351AC00E72F7B</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>75629A371CD351AC00E72F7B</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>75629A381CD351AC00E72F7B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>75629A161CD351AB00E72F7B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>75629A1D1CD351AB00E72F7B</string>
+			<key>remoteInfo</key>
+			<string>TBODeveloperOverlay</string>
+		</dict>
+		<key>75629A391CD351AC00E72F7B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>75629A1D1CD351AB00E72F7B</string>
+			<key>targetProxy</key>
+			<string>75629A381CD351AC00E72F7B</string>
+		</dict>
+		<key>75629A3A1CD351AC00E72F7B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>75629A3B1CD351AC00E72F7B</string>
+				<string>75629A3D1CD351AC00E72F7B</string>
+				<string>9EC1864A1D1049FA00B7E445</string>
+				<string>9EC1864C1D1053CE00B7E445</string>
+				<string>9EC1864E1D1059FE00B7E445</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>75629A3B1CD351AC00E72F7B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>75629A3C1CD351AC00E72F7B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>75629A3B1CD351AC00E72F7B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>75629A3D1CD351AC00E72F7B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>75629A3E1CD351AC00E72F7B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>75629A471CD351AC00E72F7B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>75629A3F1CD351AC00E72F7B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>75629A401CD351AC00E72F7B</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>75629A411CD351AC00E72F7B</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>75629A511CD351AC00E72F7B</string>
+			<key>buildPhases</key>
+			<array>
+				<string>75629A3E1CD351AC00E72F7B</string>
+				<string>75629A3F1CD351AC00E72F7B</string>
+				<string>75629A401CD351AC00E72F7B</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>75629A441CD351AC00E72F7B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>TBODeveloperOverlayUITests</string>
+			<key>productName</key>
+			<string>TBODeveloperOverlayUITests</string>
+			<key>productReference</key>
+			<string>75629A421CD351AC00E72F7B</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.ui-testing</string>
+		</dict>
+		<key>75629A421CD351AC00E72F7B</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayUITests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>75629A431CD351AC00E72F7B</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>75629A161CD351AB00E72F7B</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>75629A1D1CD351AB00E72F7B</string>
+			<key>remoteInfo</key>
+			<string>TBODeveloperOverlay</string>
+		</dict>
+		<key>75629A441CD351AC00E72F7B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>75629A1D1CD351AB00E72F7B</string>
+			<key>targetProxy</key>
+			<string>75629A431CD351AC00E72F7B</string>
+		</dict>
+		<key>75629A451CD351AC00E72F7B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>75629A461CD351AC00E72F7B</string>
+				<string>75629A481CD351AC00E72F7B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayUITests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>75629A461CD351AC00E72F7B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayUITests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>75629A471CD351AC00E72F7B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>75629A461CD351AC00E72F7B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>75629A481CD351AC00E72F7B</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>75629A491CD351AC00E72F7B</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>75629A4A1CD351AC00E72F7B</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>75629A4B1CD351AC00E72F7B</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>75629A4C1CD351AC00E72F7B</string>
+				<string>75629A4D1CD351AC00E72F7B</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>75629A4C1CD351AC00E72F7B</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>49339F4923F7F6BCE5A09135</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>$(SRCROOT)/Example/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.tbointeractive.TBODeveloperOverlay</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>75629A4D1CD351AC00E72F7B</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>1B502B768D5284FDD769CD89</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>INFOPLIST_FILE</key>
+				<string>$(SRCROOT)/Example/Info.plist</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.tbointeractive.TBODeveloperOverlay</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>75629A4E1CD351AC00E72F7B</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>75629A4F1CD351AC00E72F7B</string>
+				<string>75629A501CD351AC00E72F7B</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>75629A4F1CD351AC00E72F7B</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>6048FC358C9E08843AF59ABD</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>TBODeveloperOverlayTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.tbointeractive.TBODeveloperOverlayTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/TBODeveloperOverlay.app/TBODeveloperOverlay</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>75629A501CD351AC00E72F7B</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>B9674A97347C8472AA5D3544</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(TEST_HOST)</string>
+				<key>INFOPLIST_FILE</key>
+				<string>TBODeveloperOverlayTests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.tbointeractive.TBODeveloperOverlayTests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUILT_PRODUCTS_DIR)/TBODeveloperOverlay.app/TBODeveloperOverlay</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>75629A511CD351AC00E72F7B</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>75629A521CD351AC00E72F7B</string>
+				<string>75629A531CD351AC00E72F7B</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>75629A521CD351AC00E72F7B</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>INFOPLIST_FILE</key>
+				<string>TBODeveloperOverlayUITests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.tbointeractive.TBODeveloperOverlayUITests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_TARGET_NAME</key>
+				<string>TBODeveloperOverlay</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>75629A531CD351AC00E72F7B</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>INFOPLIST_FILE</key>
+				<string>TBODeveloperOverlayUITests/Info.plist</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>com.tbointeractive.TBODeveloperOverlayUITests</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_TARGET_NAME</key>
+				<string>TBODeveloperOverlay</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>7593D8D21CD399D400EFFA49</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7593D8D31CD399D400EFFA49</string>
+				<string>7593D8D41CD399D400EFFA49</string>
+				<string>7593D8D51CD399D400EFFA49</string>
+				<string>7593D8D61CD399D400EFFA49</string>
+				<string>7593D8D81CD399D400EFFA49</string>
+				<string>7593D8DA1CD399D400EFFA49</string>
+				<string>7593D8DB1CD399D400EFFA49</string>
+				<string>7593D8DC1CD399D400EFFA49</string>
+				<string>7593D8DD1CD399D400EFFA49</string>
+				<string>7593D8DE1CD399D400EFFA49</string>
+				<string>7593D8DF1CD399D400EFFA49</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Example</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8D31CD399D400EFFA49</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8D41CD399D400EFFA49</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8D51CD399D400EFFA49</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Assets.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8D61CD399D400EFFA49</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7593D8D71CD399D400EFFA49</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8D71CD399D400EFFA49</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/LaunchScreen.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8D81CD399D400EFFA49</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>7593D8D91CD399D400EFFA49</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8D91CD399D400EFFA49</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8DA1CD399D400EFFA49</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8DB1CD399D400EFFA49</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8DC1CD399D400EFFA49</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TBODebugDatasource.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8DD1CD399D400EFFA49</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TBODebugDatasource.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8DE1CD399D400EFFA49</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>ViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8DF1CD399D400EFFA49</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>ViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8E01CD399D400EFFA49</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7593D8D41CD399D400EFFA49</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7593D8E11CD399D400EFFA49</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7593D8D51CD399D400EFFA49</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7593D8E21CD399D400EFFA49</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7593D8D61CD399D400EFFA49</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7593D8E31CD399D400EFFA49</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7593D8D81CD399D400EFFA49</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7593D8E41CD399D400EFFA49</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7593D8DA1CD399D400EFFA49</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7593D8E51CD399D400EFFA49</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7593D8DB1CD399D400EFFA49</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7593D8E61CD399D400EFFA49</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7593D8DD1CD399D400EFFA49</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7593D8E71CD399D400EFFA49</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7593D8DF1CD399D400EFFA49</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7593D8E81CD399DD00EFFA49</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1F5D92311CE096BC0017508E</string>
+				<string>1F5D92291CE0913B0017508E</string>
+				<string>7593D8E91CD399DD00EFFA49</string>
+				<string>7593D8EA1CD399DD00EFFA49</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Classes</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8E91CD399DD00EFFA49</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1F0E65C81CEF8BBF007AF08F</string>
+				<string>1F0E65C91CEF8BBF007AF08F</string>
+				<string>7554B6691CFC7B4500FD6CD3</string>
+				<string>7554B66A1CFC7B4500FD6CD3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>TBODeveloperOverlay</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8EA1CD399DD00EFFA49</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>750C58A51CD39B6F00D60E6B</string>
+				<string>7593D8EB1CD399DD00EFFA49</string>
+				<string>7593D8EC1CD399DD00EFFA49</string>
+				<string>7593D8ED1CD399DD00EFFA49</string>
+				<string>7593D8EE1CD399DD00EFFA49</string>
+				<string>7593D8EF1CD399DD00EFFA49</string>
+				<string>7517A83F1CEF1F5F00700CBF</string>
+				<string>7517A8401CEF1F5F00700CBF</string>
+				<string>7517A8411CEF1F5F00700CBF</string>
+				<string>D943619F6C316203554F70E6</string>
+				<string>D9436A7221BE407F7D049092</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayKVDebugger</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8EB1CD399DD00EFFA49</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayKVDebugger.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8EC1CD399DD00EFFA49</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayKVDebugger.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8ED1CD399DD00EFFA49</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8EE1CD399DD00EFFA49</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8EF1CD399DD00EFFA49</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7593D8F01CD399DD00EFFA49</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7593D8EC1CD399DD00EFFA49</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7593D8F11CD399DD00EFFA49</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7593D8EE1CD399DD00EFFA49</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7593D8F21CD399DD00EFFA49</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7593D8EF1CD399DD00EFFA49</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7F8B7F60A6FA31233ADF2677</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>9EB5B2C81D0ED4EA00942EA4</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSString+RegexMatches.h</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayLogger/NSString+RegexMatches.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9EB5B2C91D0ED4EA00942EA4</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSString+RegexMatches.m</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayLogger/NSString+RegexMatches.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9EB5B2CA1D0ED4EA00942EA4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9EB5B2C91D0ED4EA00942EA4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9EC1864A1D1049FA00B7E445</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSMutableAttributedString+RegexMatchesTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9EC1864B1D1049FA00B7E445</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9EC1864A1D1049FA00B7E445</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9EC1864C1D1053CE00B7E445</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSString+RegexMatchesTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9EC1864D1D1053CE00B7E445</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9EC1864C1D1053CE00B7E445</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9EC1864E1D1059FE00B7E445</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>DDFileLogger+SublogTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9EC1864F1D1059FE00B7E445</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9EC1864E1D1059FE00B7E445</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9FB61A144F40C42AC08F5C87</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-TBODeveloperOverlayTests/Pods-TBODeveloperOverlayTests-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>A0A1554147D678C553A52C42</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AB464703CA413BB244D33A64</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AB464703CA413BB244D33A64</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-TBODeveloperOverlayTests.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>B9674A97347C8472AA5D3544</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-TBODeveloperOverlayTests.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-TBODeveloperOverlayTests/Pods-TBODeveloperOverlayTests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C25C05D72C38863300178B4E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-TBODeveloperOverlayTests/Pods-TBODeveloperOverlayTests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>D943619F6C316203554F70E6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayNSUserDefaultsDatasource.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D9436A7221BE407F7D049092</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>TBODeveloperOverlayNSUserDefaultsDatasource.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D9436E507AD9ACA639A77CF8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D943619F6C316203554F70E6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>EB1232FB3035CFBB628DD3A1</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-TBODeveloperOverlay.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>F278B313BFDB6525245EB4F7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>75629A161CD351AB00E72F7B</string>
+</dict>
+</plist>

@@ -12,7 +12,7 @@ target 'TBODeveloperOverlay' do
 end
 
 target 'TBODeveloperOverlayTests' do
-
+  pod 'CocoaLumberjack', '~> 2.3'
 end
 
 target 'TBODeveloperOverlayUITests' do
