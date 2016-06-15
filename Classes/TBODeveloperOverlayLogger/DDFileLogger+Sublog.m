@@ -29,7 +29,7 @@
         }
     }
     if ([logMessages length] > maxCharacterCount) {
-        logMessages = (NSMutableString *)[logMessages substringWithRange:NSMakeRange([logMessages length]-maxCharacterCount-1, maxCharacterCount)];
+        logMessages = (NSMutableString *)[logMessages substringWithRange:NSMakeRange([logMessages length]-maxCharacterCount, maxCharacterCount)];
     }
     return logMessages;
 }
