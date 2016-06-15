@@ -10,6 +10,13 @@
 
 @interface DDFileLogger (Sublog)
 
+/**
+ *
+ *  @param maxCharacterCount Maximum number of characters the returned string contains.
+ *
+ *  @return A NSString containing the last given number of characters from the DDFileLogger.
+ */
+
 - (NSString *)lastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount;
 
 @end
