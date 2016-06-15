@@ -25,11 +25,19 @@
     self.attributes = @{NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)};
 }
 
-- (void)testMatchingRegex {
+- (void)testAttributesOnMatchingRegex {
     NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:@"attributed string" options:kNilOptions error:nil];
     [self.testString addAttributes:self.attributes toMatchesOfRegex:regularExpression];
     NSDictionary *retrievedAttributes = [self.testString attributesAtIndex:11 effectiveRange:nil];
     XCTAssertEqualObjects(self.attributes, retrievedAttributes);
+}
+
+- (void)testAttributesNotOnNotMatchingRegex {
+    NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:@"attributed string" options:kNilOptions error:nil];
+    [self.testString addAttributes:self.attributes toMatchesOfRegex:regularExpression];
+    NSRange range = NSMakeRange(0, 10);
+    NSDictionary *retrievedAttributes = [self.testString attributesAtIndex:0 effectiveRange:&range];
+    XCTAssertEqualObjects([NSDictionary new], retrievedAttributes);
 }
 
 - (void)testNotMatchingRegex {
