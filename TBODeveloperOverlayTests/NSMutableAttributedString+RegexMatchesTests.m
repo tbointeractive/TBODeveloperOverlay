@@ -37,7 +37,6 @@
     [self.testString addAttributes:self.attributes toMatchesOfRegex:regularExpression];
     NSDictionary *retrievedAttributes = [self.testString attributesAtIndex:11 effectiveRange:nil];
     XCTAssertNotEqualObjects(self.attributes, retrievedAttributes);
-    XCTAssertNotEqualObjects(self.attributes, retrievedAttributes);
 }
 
 - (void)testSetAttributesOnEmptyString {
@@ -45,8 +44,7 @@
     NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:@"not matching" options:kNilOptions error:nil];
     [emptyString addAttributes:self.attributes toMatchesOfRegex:regularExpression];
     NSDictionary *retrievedAttributes = [self.testString attributesAtIndex:0 effectiveRange:nil];
-    XCTAssertEqual(retrievedAttributes.allKeys.count, 0);
-    XCTAssertEqual(retrievedAttributes.allValues.count, 0);
+    XCTAssertEqual(retrievedAttributes.count, 0);
 }
 
 @end
