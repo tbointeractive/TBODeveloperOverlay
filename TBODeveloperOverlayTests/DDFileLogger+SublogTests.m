@@ -48,7 +48,7 @@
     }];
 }
 
-- (void)testGettingLogString {
+- (void)testGettingCompleteLogString {
     NSString *retrievedLogs = [self.fileLogger lastLogMessagesLimitedToCharacterCount:5000 fromFilePaths:self.filePaths];
     XCTAssertEqualObjects(@"start first log contentsecond log contentthird log content end", retrievedLogs);
 }
@@ -56,6 +56,11 @@
 - (void)testGettinglLast10Chars {
     NSString *retrievedLogs = [self.fileLogger lastLogMessagesLimitedToCharacterCount:10 fromFilePaths:self.filePaths];
     XCTAssertEqualObjects(@"ontent end", retrievedLogs);
+}
+
+- (void)testGettinglLast0Chars {
+    NSString *retrievedLogs = [self.fileLogger lastLogMessagesLimitedToCharacterCount:0 fromFilePaths:self.filePaths];
+    XCTAssertEqualObjects(@"", retrievedLogs);
 }
 
 @end
