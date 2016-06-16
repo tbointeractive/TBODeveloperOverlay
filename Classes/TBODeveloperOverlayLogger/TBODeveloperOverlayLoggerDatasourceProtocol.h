@@ -18,6 +18,10 @@
 /**
  *  This method can be implemented to show certain search results and such or
  *    to display some lines of text in a certain way (errors red, ...)
+ *
+ * @property maxCharacterCount
+ *
+ * @return Returns a non-null String if any log messages are found; Returns a nil string if there is something wrong with the configuration of the datasource
  */
 - (NSAttributedString *_Nullable)attributedLastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount;
 
