@@ -18,7 +18,7 @@
 - (NSString *)lastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount fromFilePaths:(NSArray<NSString *> *)sortedLogFilePaths  {
     NSMutableString *logMessages = [NSMutableString string];
     NSFileManager *fileManager = [NSFileManager new];
-    for (NSString *logFilePath in [sortedLogFilePaths reverseObjectEnumerator]) {
+    for (NSString *logFilePath in [sortedLogFilePaths objectEnumerator]) {
         NSData *logData = [fileManager contentsAtPath:logFilePath];
         if (logData.length > 0) {
             NSString *logString = [[NSString alloc] initWithBytes:logData.bytes length:logData.length encoding:NSUTF8StringEncoding];
