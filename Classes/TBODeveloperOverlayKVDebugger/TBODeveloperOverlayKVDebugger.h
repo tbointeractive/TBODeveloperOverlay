@@ -18,8 +18,10 @@
  *
  * The `TBODeveloperOverlayNSUserDefaultsDatasource` is an already existing Datasource to inspect but not edit the `NSUserDefaults`.
  *
- *     TBODeveloperOverlayNSUserDefaultsDatasource *kvDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
- *     TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:kvDatasource];
+ * ```
+ * TBODeveloperOverlayNSUserDefaultsDatasource *kvDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
+ * TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:kvDatasource];`
+ * ```
  *
  * ## Editing
  * To enable editing values use the methods [TBODeveloperOverlayKVDebuggerDatasourceProtocol isEditableForIndexPath:] and [TBODeveloperOverlayKVDebuggerDatasourceProtocol didChangeValue:atIndexPath:].

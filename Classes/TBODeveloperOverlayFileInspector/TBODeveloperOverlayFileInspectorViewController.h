@@ -18,10 +18,12 @@
  * Per default the title is the last path component of the one baseurl. To use another title you can override the `title`-property.
  *
  * ## Example
- *     NSURL baseUrl = [[NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject]] URLByDeletingLastPathComponent];
- *     TBODeveloperOverlayFileInspectorViewController *fileInspector = [[TBODeveloperOverlayFileInspectorViewController alloc] initWithBaseUrl:baseUrl];
- *     fileInspector.title = @"File Inspector";
  *
+ * ```
+ * NSURL baseUrl = [[NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject]] URLByDeletingLastPathComponent];
+ * TBODeveloperOverlayFileInspectorViewController *fileInspector = [[TBODeveloperOverlayFileInspectorViewController alloc] initWithBaseUrl:baseUrl];
+ * fileInspector.title = @"File Inspector";
+ * ```
  */
 @interface TBODeveloperOverlayFileInspectorViewController : UITableViewController
 

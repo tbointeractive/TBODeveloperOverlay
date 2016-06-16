@@ -14,10 +14,10 @@
  * ## Usage
  * TBOModalNavigationController can be handled like a normal UINavigationController:
  *
- * `
- * TBOModlNavigationController *developerOverlay = [[TBOModalNavigationController alloc] initWithRootViewController:aRootViewController];
+ * ```
+ * TBOModalNavigationController *developerOverlay = [[` alloc] initWithRootViewController:aRootViewController];
  * [self presentViewController:developerOverlay animated:YES completion:nil];
- * `
+ * ```
  */
 
 @interface TBOModalNavigationController : UINavigationController
