@@ -37,7 +37,7 @@
 		9EB5B2CA1D0ED4EA00942EA4 /* NSString+RegexMatches.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5B2C91D0ED4EA00942EA4 /* NSString+RegexMatches.m */; };
 		9EC1864B1D1049FA00B7E445 /* NSMutableAttributedString+RegexMatchesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC1864A1D1049FA00B7E445 /* NSMutableAttributedString+RegexMatchesTests.m */; };
 		9EC1864D1D1053CE00B7E445 /* NSString+RegexMatchesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC1864C1D1053CE00B7E445 /* NSString+RegexMatchesTests.m */; };
-		9EC1864F1D1059FE00B7E445 /* DDFileLogger+SublogTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC1864E1D1059FE00B7E445 /* DDFileLogger+SublogTests.m */; };
+		9EC1864F1D1059FE00B7E445 /* TBODeveloperOverlayLogFileReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC1864E1D1059FE00B7E445 /* TBODeveloperOverlayLogFileReaderTests.m */; };
 		D9436E507AD9ACA639A77CF8 /* TBODeveloperOverlayNSUserDefaultsDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D943619F6C316203554F70E6 /* TBODeveloperOverlayNSUserDefaultsDatasource.m */; };
 /* End PBXBuildFile section */
 
@@ -115,7 +115,7 @@
 		9EB5B2C91D0ED4EA00942EA4 /* NSString+RegexMatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+RegexMatches.m"; path = "TBODeveloperOverlayLogger/NSString+RegexMatches.m"; sourceTree = "<group>"; };
 		9EC1864A1D1049FA00B7E445 /* NSMutableAttributedString+RegexMatchesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+RegexMatchesTests.m"; sourceTree = "<group>"; };
 		9EC1864C1D1053CE00B7E445 /* NSString+RegexMatchesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RegexMatchesTests.m"; sourceTree = "<group>"; };
-		9EC1864E1D1059FE00B7E445 /* DDFileLogger+SublogTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DDFileLogger+SublogTests.m"; sourceTree = "<group>"; };
+		9EC1864E1D1059FE00B7E445 /* TBODeveloperOverlayLogFileReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayLogFileReaderTests.m; sourceTree = "<group>"; };
 		D1AB76FABB4F4C88E5480ADB /* libPods-TBODeveloperOverlayUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TBODeveloperOverlayUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D943619F6C316203554F70E6 /* TBODeveloperOverlayNSUserDefaultsDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayNSUserDefaultsDatasource.m; sourceTree = "<group>"; };
 		D9436A7221BE407F7D049092 /* TBODeveloperOverlayNSUserDefaultsDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayNSUserDefaultsDatasource.h; sourceTree = "<group>"; };
@@ -235,7 +235,7 @@
 				75629A3D1CD351AC00E72F7B /* Info.plist */,
 				9EC1864A1D1049FA00B7E445 /* NSMutableAttributedString+RegexMatchesTests.m */,
 				9EC1864C1D1053CE00B7E445 /* NSString+RegexMatchesTests.m */,
-				9EC1864E1D1059FE00B7E445 /* DDFileLogger+SublogTests.m */,
+				9EC1864E1D1059FE00B7E445 /* TBODeveloperOverlayLogFileReaderTests.m */,
 			);
 			path = TBODeveloperOverlayTests;
 			sourceTree = "<group>";
@@ -599,7 +599,7 @@
 				9EC1864D1D1053CE00B7E445 /* NSString+RegexMatchesTests.m in Sources */,
 				9EC1864B1D1049FA00B7E445 /* NSMutableAttributedString+RegexMatchesTests.m in Sources */,
 				75629A3C1CD351AC00E72F7B /* TBODeveloperOverlayTests.m in Sources */,
-				9EC1864F1D1059FE00B7E445 /* DDFileLogger+SublogTests.m in Sources */,
+				9EC1864F1D1059FE00B7E445 /* TBODeveloperOverlayLogFileReaderTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
