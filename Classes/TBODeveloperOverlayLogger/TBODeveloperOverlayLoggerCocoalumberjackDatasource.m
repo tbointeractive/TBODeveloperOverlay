@@ -25,11 +25,17 @@
 @implementation TBODeveloperOverlayLoggerCocoaLumberjackDatasource
 
 - (NSString *)lastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount {
+    if (!self.fileLogger){
+        return @"No FileLogger found.";
+    }
     NSString *fullLog = [[self fileLogger] lastLogMessagesLimitedToCharacterCount:maxCharacterCount];
     return [self filteredLog:fullLog];
 }
 
 - (NSAttributedString *)attributedLastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount {
+    if (!self.fileLogger){
+        return [[NSAttributedString alloc] initWithString:@"No FileLogger found."];
+    }
     NSString *filteredLog = [self lastLogMessagesLimitedToCharacterCount:maxCharacterCount];
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:filteredLog];
     if (self.searchString) {
