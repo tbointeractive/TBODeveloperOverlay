@@ -16,12 +16,12 @@
 @optional
 
 /**
- *  This method can be implemented to show certain search results and such or
+ * This method can be implemented to show certain search results and such or
  *    to display some lines of text in a certain way (errors red, ...)
  *
- * @property maxCharacterCount
+ *  @property maxCharacterCount
  *
- * @return Returns a non-null String if any log messages are found; Returns a nil string if there is something wrong with the configuration of the datasource
+ *  @return Returns a non-null String if any log messages are found; Returns a nil string if there is something wrong with the configuration of the datasource
  */
 - (NSAttributedString *_Nullable)attributedLastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount;
 
@@ -35,6 +35,8 @@
  *  so the user can enable or disable certain log levels
  *
  * Per default all log levels are enabled
+ *
+ *  @return The existing log levels to be displayed
  */
 - (NSSet <NSString *> *_Nullable)existingLogLevels;
 
@@ -42,6 +44,10 @@
  * The Logger Overlay will call this method to enable or disable displaying certain log levels
  *  after enabling or disabling the overlay will call -lastLogMessagesLimitedToCharacterCount: to
  *  refresh the interface
+ *
+ *  @param logLevel The log level to be set
+ *
+ *  @param on Bool to activate / decctivate the given log level.
  */
 - (void)setLogLevel:(NSString *_Nonnull)logLevel toOn:(BOOL)on;
 
@@ -51,6 +57,8 @@
  *
  * After calling this method, the overlay will call the -lastLogMessagesLimitedToCharacterCount: method
  *  to refresh the content being displayed
+ *
+ *  @param searchString The search string to filter the log.
  */
 - (void)setSearchString:(NSString *_Nullable)searchString;
 
