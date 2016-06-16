@@ -34,6 +34,7 @@
 		7593D8F21CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib */; };
 		75A8C7471D0996890055F9E1 /* TBODeveloperOverlayKVDebuggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A8C7461D0996890055F9E1 /* TBODeveloperOverlayKVDebuggerTests.m */; };
 		9EB5B2CA1D0ED4EA00942EA4 /* NSString+RegexMatches.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5B2C91D0ED4EA00942EA4 /* NSString+RegexMatches.m */; };
+		9EC2F9A21D12F372002F9E40 /* TBODeveloperOverlayCococaLumberjackLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2F9A11D12F372002F9E40 /* TBODeveloperOverlayCococaLumberjackLogFormatter.m */; };
 		D943645FC2DDAF2C6014DADF /* StubDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D9436179B002E8DA5B8F050E /* StubDatasource.m */; };
 		D94364DD4F909F3EDF092BA3 /* StubDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D9436179B002E8DA5B8F050E /* StubDatasource.m */; };
 		D943695D65FE6BC4173BC606 /* TBODeveloperOverlayNSUserDefaultsDatasourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D94360D0A1643FC8B61E0675 /* TBODeveloperOverlayNSUserDefaultsDatasourceTests.m */; };
@@ -108,6 +109,9 @@
 		75A8C7461D0996890055F9E1 /* TBODeveloperOverlayKVDebuggerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayKVDebuggerTests.m; sourceTree = "<group>"; };
 		9EB5B2C81D0ED4EA00942EA4 /* NSString+RegexMatches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+RegexMatches.h"; path = "TBODeveloperOverlayLogger/NSString+RegexMatches.h"; sourceTree = "<group>"; };
 		9EB5B2C91D0ED4EA00942EA4 /* NSString+RegexMatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+RegexMatches.m"; path = "TBODeveloperOverlayLogger/NSString+RegexMatches.m"; sourceTree = "<group>"; };
+		9EC2F99F1D12F25B002F9E40 /* TBODeveloperOverlayFilterableLogFormaterProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayFilterableLogFormaterProtocol.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayFilterableLogFormaterProtocol.h; sourceTree = "<group>"; };
+		9EC2F9A01D12F372002F9E40 /* TBODeveloperOverlayCococaLumberjackLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayCococaLumberjackLogFormatter.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayCococaLumberjackLogFormatter.h; sourceTree = "<group>"; };
+		9EC2F9A11D12F372002F9E40 /* TBODeveloperOverlayCococaLumberjackLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayCococaLumberjackLogFormatter.m; path = TBODeveloperOverlayLogger/TBODeveloperOverlayCococaLumberjackLogFormatter.m; sourceTree = "<group>"; };
 		D94360D0A1643FC8B61E0675 /* TBODeveloperOverlayNSUserDefaultsDatasourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayNSUserDefaultsDatasourceTests.m; sourceTree = "<group>"; };
 		D9436179B002E8DA5B8F050E /* StubDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubDatasource.m; sourceTree = "<group>"; };
 		D943619F6C316203554F70E6 /* TBODeveloperOverlayNSUserDefaultsDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayNSUserDefaultsDatasource.m; sourceTree = "<group>"; };
@@ -176,6 +180,9 @@
 				1F83D1791D0F000E00DF5198 /* DDFileLogger+Sublog.m */,
 				1F83D17B1D0F02C500DF5198 /* TBODeveloperOverlayTaglist.h */,
 				1F83D17C1D0F02C500DF5198 /* TBODeveloperOverlayTaglist.m */,
+				9EC2F99F1D12F25B002F9E40 /* TBODeveloperOverlayFilterableLogFormaterProtocol.h */,
+				9EC2F9A01D12F372002F9E40 /* TBODeveloperOverlayCococaLumberjackLogFormatter.h */,
+				9EC2F9A11D12F372002F9E40 /* TBODeveloperOverlayCococaLumberjackLogFormatter.m */,
 			);
 			name = TBODeveloperOverlayLogger;
 			sourceTree = "<group>";
@@ -488,6 +495,7 @@
 				7593D8F01CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m in Sources */,
 				7593D8E61CD399D400EFFA49 /* TBODebugDatasource.m in Sources */,
 				1F51AE881D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m in Sources */,
+				9EC2F9A21D12F372002F9E40 /* TBODeveloperOverlayCococaLumberjackLogFormatter.m in Sources */,
 				1F5D922C1CE0915B0017508E /* TBODeveloperOverlayLogger.m in Sources */,
 				7593D8E51CD399D400EFFA49 /* main.m in Sources */,
 				7554B66B1CFC7B4500FD6CD3 /* TBODeveloperOverlayPluginListViewController.m in Sources */,

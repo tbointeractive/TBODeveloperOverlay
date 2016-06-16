@@ -39,24 +39,20 @@
     return attributedString;
 }
 
-#pragma mark filter
-
-- (NSDictionary *)logLevels {
-    return @{
-             @"Error": [NSRegularExpression regularExpressionWithPattern:@".*\\[E\\].*" options:kNilOptions error:nil],
-             @"Warning": [NSRegularExpression regularExpressionWithPattern:@".*\\[W\\].*" options:kNilOptions error:nil],
-             @"Verbose": [NSRegularExpression regularExpressionWithPattern:@".*\\[V\\].*" options:kNilOptions error:nil],
-             @"Debug": [NSRegularExpression regularExpressionWithPattern:@".*\\[D\\].*" options:kNilOptions error:nil],
-             };
-}
+#pragma mark logLevels
 
 - (NSArray <NSString *> *_Nullable)existingLogLevels {
-    return [self logLevels].allKeys;
+    if ([[[self fileLogger] logFormatter] respondsToSelector:@selector(logLevels)]) {
+        return [[[self fileLogger] logFormatter] performSelector:@selector(logLevels)];
+    }
+    return nil;
 }
 
 - (void)setLogLevel:(NSString *_Nonnull)logLevel toOn:(BOOL)on {
-    NSRegularExpression *regularExpression = [[self logLevels] objectForKey:logLevel];
-    if (!regularExpression) {
+    NSRegularExpression *regularExpression;
+    if ([[[self fileLogger] logFormatter] respondsToSelector:@selector(regularExpressionForLogLevel:)]) {
+        regularExpression = [[[self fileLogger] logFormatter] performSelector:@selector(regularExpressionForLogLevel:) withObject:logLevel];
+    } else {
         return;
     }
     if (on) {
