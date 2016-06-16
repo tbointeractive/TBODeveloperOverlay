@@ -23,7 +23,7 @@
 }
 
 - (NSString *)keyForIndexPath:(NSIndexPath *)indexPath {
-    NSArray *allKeys = [NSUserDefaults standardUserDefaults].dictionaryRepresentation.allKeys;
+    NSArray *allKeys = [[NSUserDefaults standardUserDefaults].dictionaryRepresentation.allKeys sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
     if (allKeys.count < indexPath.row) {
         return @"";
     }
@@ -31,11 +31,11 @@
 }
 
 - (id)valueForIndexPath:(NSIndexPath *)indexPath {
-    NSArray *allValues = [NSUserDefaults standardUserDefaults].dictionaryRepresentation.allValues;
-    if (allValues.count < indexPath.row) {
-        return @"";
+    NSString *key = [self keyForIndexPath:indexPath];
+    if (key && key.length > 0) {
+        return [[NSUserDefaults standardUserDefaults] valueForKey:key];
     }
-    return allValues[indexPath.row];
+    return nil;
 }
 
 - (BOOL)isEditableForIndexPath:(NSIndexPath *)indexPath {
