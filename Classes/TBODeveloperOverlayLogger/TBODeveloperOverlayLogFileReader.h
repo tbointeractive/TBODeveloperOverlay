@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CocoaLumberjack/CocoaLumberjack.h>
+
+@class DDFileLogger;
 
 @interface TBODeveloperOverlayLogFileReader : NSObject
 

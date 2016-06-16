@@ -7,6 +7,7 @@
 //
 
 #import "TBODeveloperOverlayLogFileReader.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 @implementation TBODeveloperOverlayLogFileReader
 
