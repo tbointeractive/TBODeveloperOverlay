@@ -8,7 +8,6 @@ source 'git@git.tbointeractive.com:tbopodspecs/tbopodspecs.git'
 
 target 'TBODeveloperOverlay' do
   pod 'CocoaLumberjack', '~> 2.3'
-  pod 'TBOSetupHelper'
 end
 
 target 'TBODeveloperOverlayTests' do
