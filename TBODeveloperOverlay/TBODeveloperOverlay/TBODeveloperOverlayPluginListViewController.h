@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 /**
- * The TBODeveloperOverlayPluginListViewController gives an overview of all plugins it is initiated with.
+ * The TBODeveloperOverlayPluginListViewController gives an overview of all plugins it is initialized with.
  *
  * ## Usage
  * TBODeveloperOverlayPluginListViewController has to be instantiated with an array of plugins. Then it can be set as the RootViewController of TBOModalNavigationController or another UINavigationController.

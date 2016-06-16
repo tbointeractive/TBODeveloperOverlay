@@ -19,7 +19,7 @@
  * * NSString
  *
  * ## Usage
- * The TBODeveloperOverlayKVDebuggerDetailViewController has to be initalized with a datasource conforming to TBODeveloperOverlayKVDebuggerDatasourceProtocol. By default this is done by TBODeveloperOverlayKVDebugger autmaotically.
+ * The TBODeveloperOverlayKVDebuggerDetailViewController has to be initalized with a datasource conforming to TBODeveloperOverlayKVDebuggerDatasourceProtocol. By default this is done by TBODeveloperOverlayKVDebugger automatically.
  */
 
 @interface TBODeveloperOverlayKVDebuggerDetailViewController : UIViewController
