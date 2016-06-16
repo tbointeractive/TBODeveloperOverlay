@@ -1,14 +1,15 @@
 //
-//  DDFileLogger+Sublog.h
+//  TBODeveloperOverlayLogFileReader.h
 //  TBODeveloperOverlay
 //
-//  Created by Cornelius Horstmann on 13.06.16.
+//  Created by Cornelius Horstmann on 16.06.16.
 //  Copyright © 2016 TBO INTERACTIVE. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
-@interface DDFileLogger (Sublog)
+@interface TBODeveloperOverlayLogFileReader : NSObject
 
 /**
  *
@@ -19,6 +20,6 @@
  *  @return A NSString containing the last given number of characters from the DDFileLogger.
  */
 
-- (NSString *)lastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount;
++ (NSString *)lastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount inFilelogger:(DDFileLogger *)fileLogger;
 
 @end

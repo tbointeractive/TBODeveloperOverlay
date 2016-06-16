@@ -26,7 +26,15 @@
 
 - (void)setUp {
     [super setUp];
-    self.fileLogger = [DDFileLogger new];
+    Class mainFileLogger = [[NSBundle mainBundle] classNamed:@"DDFileLogger"];
+    //    for (id <DDLogger> logger in [DDLog allLoggers]) {
+    //        if ([logger isKindOfClass:[DDFileLogger class]]) {
+    //            self.fileLogger = logger;
+    //        }
+    //    }
+    //    [NSBundle bundleForClass:[DDFileLogger class]]
+    
+    self.fileLogger = [[[NSBundle mainBundle] classNamed:@"DDFileLogger"] new];
     self.filePaths = [NSMutableArray new];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSArray <NSData *> *testLogs = @[[@"start first log content" dataUsingEncoding:NSUTF8StringEncoding],

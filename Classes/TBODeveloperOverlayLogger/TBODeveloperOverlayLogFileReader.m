@@ -1,21 +1,21 @@
 //
-//  DDFileLogger+Sublog.m
+//  TBODeveloperOverlayLogFileReader.m
 //  TBODeveloperOverlay
 //
-//  Created by Cornelius Horstmann on 13.06.16.
+//  Created by Cornelius Horstmann on 16.06.16.
 //  Copyright © 2016 TBO INTERACTIVE. All rights reserved.
 //
 
-#import "DDFileLogger+Sublog.h"
+#import "TBODeveloperOverlayLogFileReader.h"
 
-@implementation DDFileLogger (Sublog)
+@implementation TBODeveloperOverlayLogFileReader
 
-- (NSString *)lastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount {
-    NSArray<NSString *> *sortedLogFilePaths = [[self logFileManager] sortedLogFilePaths];
++ (NSString *)lastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount inFilelogger:(DDFileLogger *)fileLogger {
+    NSArray<NSString *> *sortedLogFilePaths = [[fileLogger logFileManager] sortedLogFilePaths];
     return [self lastLogMessagesLimitedToCharacterCount:maxCharacterCount fromFilePaths:sortedLogFilePaths];
 }
 
-- (NSString *)lastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount fromFilePaths:(NSArray<NSString *> *)sortedLogFilePaths  {
++ (NSString *)lastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount fromFilePaths:(NSArray<NSString *> *)sortedLogFilePaths  {
     NSMutableString *logMessages = [NSMutableString string];
     NSFileManager *fileManager = [NSFileManager new];
     for (NSString *logFilePath in [sortedLogFilePaths objectEnumerator]) {
