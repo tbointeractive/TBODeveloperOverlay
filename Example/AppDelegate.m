@@ -8,7 +8,9 @@
 
 #import "AppDelegate.h"
 #import "TBODeveloperOverlayKVDebugger.h"
-#import "TBOLoggerSetupHelper.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
+
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose; // everything
 
 @interface AppDelegate ()
 
@@ -18,7 +20,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [TBOLoggerSetupHelper setup];
+    [self setupLogging];
     DDLogVerbose(@"application:didFinishLaunchingWithOptions:");
     [[NSUserDefaults standardUserDefaults] setObject:@"testvalue" forKey:@"testkey"];
     [[NSUserDefaults standardUserDefaults] setObject:@[@"testvalue"] forKey:@"testkey"];
@@ -45,6 +47,15 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)setupLogging {
+    [DDLog removeAllLoggers];
+    
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
+    [DDLog addLogger:fileLogger];
 }
 
 @end
