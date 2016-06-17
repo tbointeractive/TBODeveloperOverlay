@@ -22,6 +22,9 @@
 
 - (BOOL)matchesAnyRegex:(NSArray <NSRegularExpression *> *)regexes {
     for (NSRegularExpression *regex in regexes) {
+        if (![regex isKindOfClass:[NSRegularExpression class]]) {
+            return NO;
+        }
         if ([self matchesRegex:regex]) {
             return YES;
         }

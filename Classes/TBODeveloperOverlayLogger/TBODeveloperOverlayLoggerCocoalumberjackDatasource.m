@@ -11,9 +11,9 @@
 #import <UIKit/UIKit.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
+#import "TBODeveloperOverlayLogFileReader.h"
 #import "NSString+RegexMatches.h"
 #import "NSMutableAttributedString+RegexMatches.h"
-#import "DDFileLogger+Sublog.h"
 
 @interface TBODeveloperOverlayLoggerCocoaLumberjackDatasource ()
 
@@ -28,7 +28,7 @@
     if (!self.fileLogger){
         return nil;
     }
-    NSString *fullLog = [[self fileLogger] lastLogMessagesLimitedToCharacterCount:maxCharacterCount];
+    NSString *fullLog = [TBODeveloperOverlayLogFileReader lastLogMessagesLimitedToCharacterCount:maxCharacterCount inFilelogger:[self fileLogger]];
     return [self filteredLog:fullLog];
 }
 
