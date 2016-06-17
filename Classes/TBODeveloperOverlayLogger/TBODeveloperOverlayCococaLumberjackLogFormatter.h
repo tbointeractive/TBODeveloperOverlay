@@ -7,9 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TBODeveloperOverlayFilterableLogFormaterProtocol.h"
+#import "TBODeveloperOverlayFilterableLogFormatterProtocol.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
+/**
+ * TBODeveloperOverlayCococaLumberjackLogFormatter is a predefined LogFormatter for CocoaLumberjack to conform to TBODeveloperOverlayFilterableLogFormatterProtocol.
+ *
+ * ## Usage
+ *
+ * ```
+ * TBODeveloperOverlayCococaLumberjackLogFormatter *logFormatter = [TBODeveloperOverlayCococaLumberjackLogFormatter new];
+ * aFileLogger.logFormatter = logFormatter;
+ * ```
+ */
 
-@interface TBODeveloperOverlayCococaLumberjackLogFormatter : NSObject <TBODeveloperOverlayFilterableLogFormaterProtocol, DDLogFormatter>
+@interface TBODeveloperOverlayCococaLumberjackLogFormatter : NSObject <TBODeveloperOverlayFilterableLogFormatterProtocol, DDLogFormatter>
 
 @end
