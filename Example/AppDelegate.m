@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TBODeveloperOverlayKVDebugger.h"
+#import "TBODeveloperOverlayCococaLumberjackLogFormatter.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
 static const DDLogLevel ddLogLevel = DDLogLevelVerbose; // everything
@@ -21,7 +22,6 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose; // everything
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupLogging];
-    DDLogVerbose(@"application:didFinishLaunchingWithOptions:");
     [[NSUserDefaults standardUserDefaults] setObject:@"testvalue" forKey:@"testkey"];
     [[NSUserDefaults standardUserDefaults] setObject:@[@"testvalue"] forKey:@"testkey"];
     return YES;
@@ -54,8 +54,13 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose; // everything
     
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [DDLog addLogger:[DDASLLogger sharedInstance]];
-    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
+    DDFileLogger *fileLogger = [DDFileLogger new];
     [DDLog addLogger:fileLogger];
+    
+    TBODeveloperOverlayCococaLumberjackLogFormatter *logFormatter = [TBODeveloperOverlayCococaLumberjackLogFormatter new];
+    [DDTTYLogger sharedInstance].logFormatter = logFormatter;
+    [DDASLLogger sharedInstance].logFormatter = logFormatter;
+    fileLogger.logFormatter = logFormatter;
 }
 
 @end

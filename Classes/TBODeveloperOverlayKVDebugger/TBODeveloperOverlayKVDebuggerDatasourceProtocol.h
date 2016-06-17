@@ -8,8 +8,12 @@
 
 #ifndef TBODeveloperOverlayKVDebuggerDatasourceProtocol_h
 #define TBODeveloperOverlayKVDebuggerDatasourceProtocol_h
+/**
+ * The TBODeveloperOverlayKVDebuggerDatasourceProtocol must be implemented by every custom datasource you will use with TBODeveloperOverlayKVDebugger.
+ */
 
 @protocol TBODeveloperOverlayKVDebuggerDatasourceProtocol <NSObject>
+
 /**
  *  Returns the number of sections
  *
