@@ -25,11 +25,17 @@
 @implementation TBODeveloperOverlayLoggerCocoaLumberjackDatasource
 
 - (NSString *)lastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount {
+    if (!self.fileLogger){
+        return nil;
+    }
     NSString *fullLog = [TBODeveloperOverlayLogFileReader lastLogMessagesLimitedToCharacterCount:maxCharacterCount inFilelogger:[self fileLogger]];
     return [self filteredLog:fullLog];
 }
 
 - (NSAttributedString *)attributedLastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount {
+    if (!self.fileLogger){
+        return nil;
+    }
     NSString *filteredLog = [self lastLogMessagesLimitedToCharacterCount:maxCharacterCount];
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:filteredLog];
     if (self.searchString) {

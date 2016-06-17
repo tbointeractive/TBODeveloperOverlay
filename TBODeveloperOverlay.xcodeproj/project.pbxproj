@@ -22,6 +22,7 @@
 		7554B66B1CFC7B4500FD6CD3 /* TBODeveloperOverlayPluginListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7554B66A1CFC7B4500FD6CD3 /* TBODeveloperOverlayPluginListViewController.m */; };
 		75629A3C1CD351AC00E72F7B /* TBODeveloperOverlayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A3B1CD351AC00E72F7B /* TBODeveloperOverlayTests.m */; };
 		75629A471CD351AC00E72F7B /* TBODeveloperOverlayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A461CD351AC00E72F7B /* TBODeveloperOverlayUITests.m */; };
+		759174701D141E1D007A5CBC /* TBODeveloperOverlayLoggerCocoaLumberjackDatasourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591746F1D141E1D007A5CBC /* TBODeveloperOverlayLoggerCocoaLumberjackDatasourceTests.m */; };
 		7593D8E01CD399D400EFFA49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8D41CD399D400EFFA49 /* AppDelegate.m */; };
 		7593D8E11CD399D400EFFA49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7593D8D51CD399D400EFFA49 /* Assets.xcassets */; };
 		7593D8E21CD399D400EFFA49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7593D8D61CD399D400EFFA49 /* LaunchScreen.storyboard */; };
@@ -101,6 +102,7 @@
 		75629A421CD351AC00E72F7B /* TBODeveloperOverlayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBODeveloperOverlayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75629A461CD351AC00E72F7B /* TBODeveloperOverlayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayUITests.m; sourceTree = "<group>"; };
 		75629A481CD351AC00E72F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7591746F1D141E1D007A5CBC /* TBODeveloperOverlayLoggerCocoaLumberjackDatasourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayLoggerCocoaLumberjackDatasourceTests.m; sourceTree = "<group>"; };
 		7593D8D31CD399D400EFFA49 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7593D8D41CD399D400EFFA49 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		7593D8D51CD399D400EFFA49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				75A8C7461D0996890055F9E1 /* TBODeveloperOverlayKVDebuggerTests.m */,
 				D9436C2CB08D5E25DAE8E1CE /* Supporting Files */,
 				D94360D0A1643FC8B61E0675 /* TBODeveloperOverlayNSUserDefaultsDatasourceTests.m */,
+				7591746F1D141E1D007A5CBC /* TBODeveloperOverlayLoggerCocoaLumberjackDatasourceTests.m */,
 			);
 			path = TBODeveloperOverlayTests;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				75629A3C1CD351AC00E72F7B /* TBODeveloperOverlayTests.m in Sources */,
+				759174701D141E1D007A5CBC /* TBODeveloperOverlayLoggerCocoaLumberjackDatasourceTests.m in Sources */,
 				75A8C7471D0996890055F9E1 /* TBODeveloperOverlayKVDebuggerTests.m in Sources */,
 				9EC2F9A91D130104002F9E40 /* NSMutableAttributedString+RegexMatchesTests.m in Sources */,
 				9EC2F9AA1D130104002F9E40 /* NSString+RegexMatchesTests.m in Sources */,
