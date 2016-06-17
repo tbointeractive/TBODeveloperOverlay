@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+/**
+ * The TBODeveloperOverlayKVDebuggerReadOnlyKVCell is used by TBODeveloperOverlayKVDebugger in its tableview to display the single key-value pairs.
+ */
 
 @interface TBODeveloperOverlayKVDebuggerReadOnlyKVCell : UITableViewCell
 
