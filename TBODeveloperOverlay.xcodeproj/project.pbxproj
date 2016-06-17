@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1F0E65CA1CEF8BBF007AF08F /* TBOModalNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E65C91CEF8BBF007AF08F /* TBOModalNavigationController.m */; };
+		1F39EF471D14176400EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F39EF451D14176400EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatter.m */; };
+		1F39EF491D14185900EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F39EF481D14185900EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatterTests.m */; };
 		1F51AE881D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F51AE871D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m */; };
 		1F5D922C1CE0915B0017508E /* TBODeveloperOverlayLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5D922B1CE0915B0017508E /* TBODeveloperOverlayLogger.m */; };
 		1F5D92301CE0942F0017508E /* TBODeveloperOverlayLogger.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F5D922F1CE0942F0017508E /* TBODeveloperOverlayLogger.xib */; };
@@ -37,10 +39,12 @@
 		9EC2F9AA1D130104002F9E40 /* NSString+RegexMatchesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2F9A41D130104002F9E40 /* NSString+RegexMatchesTests.m */; };
 		9EC2F9AC1D130104002F9E40 /* TBODeveloperOverlayLogFileReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2F9A81D130104002F9E40 /* TBODeveloperOverlayLogFileReaderTests.m */; };
 		9EC2F9B01D1302EF002F9E40 /* TBODeveloperOverlayLogFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2F9AE1D13012E002F9E40 /* TBODeveloperOverlayLogFileReader.m */; };
+		BB02DBF53F3B5E2BD44C8F99 /* libPods-TBODeveloperOverlayUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DED59154C4C56DB4F2811D /* libPods-TBODeveloperOverlayUITests.a */; };
 		D943645FC2DDAF2C6014DADF /* StubDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D9436179B002E8DA5B8F050E /* StubDatasource.m */; };
 		D94364DD4F909F3EDF092BA3 /* StubDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D9436179B002E8DA5B8F050E /* StubDatasource.m */; };
 		D943695D65FE6BC4173BC606 /* TBODeveloperOverlayNSUserDefaultsDatasourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D94360D0A1643FC8B61E0675 /* TBODeveloperOverlayNSUserDefaultsDatasourceTests.m */; };
 		D9436E507AD9ACA639A77CF8 /* TBODeveloperOverlayNSUserDefaultsDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D943619F6C316203554F70E6 /* TBODeveloperOverlayNSUserDefaultsDatasource.m */; };
+		F2929166B6A7EBA0BC20FD47 /* libPods-TBODeveloperOverlayTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 423C5A1EB74FD2E482E35088 /* libPods-TBODeveloperOverlayTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,9 +65,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03DED59154C4C56DB4F2811D /* libPods-TBODeveloperOverlayUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TBODeveloperOverlayUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1724753FB7883CEAB9AFB0DA /* Pods-TBODeveloperOverlayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBODeveloperOverlayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TBODeveloperOverlayTests/Pods-TBODeveloperOverlayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1B502B768D5284FDD769CD89 /* Pods-TBODeveloperOverlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBODeveloperOverlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay.release.xcconfig"; sourceTree = "<group>"; };
 		1F0E65C81CEF8BBF007AF08F /* TBOModalNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBOModalNavigationController.h; path = TBODeveloperOverlay/TBODeveloperOverlay/TBOModalNavigationController.h; sourceTree = SOURCE_ROOT; };
 		1F0E65C91CEF8BBF007AF08F /* TBOModalNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBOModalNavigationController.m; path = TBODeveloperOverlay/TBODeveloperOverlay/TBOModalNavigationController.m; sourceTree = SOURCE_ROOT; };
+		1F39EF441D14176400EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayCococaLumberjackLogFormatter.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayCococaLumberjackLogFormatter.h; sourceTree = "<group>"; };
+		1F39EF451D14176400EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayCococaLumberjackLogFormatter.m; path = TBODeveloperOverlayLogger/TBODeveloperOverlayCococaLumberjackLogFormatter.m; sourceTree = "<group>"; };
+		1F39EF461D14176400EA4B48 /* TBODeveloperOverlayFilterableLogFormaterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayFilterableLogFormaterProtocol.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayFilterableLogFormaterProtocol.h; sourceTree = "<group>"; };
+		1F39EF481D14185900EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayCococaLumberjackLogFormatterTests.m; sourceTree = "<group>"; };
 		1F51AE861D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h; sourceTree = "<group>"; };
 		1F51AE871D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m; sourceTree = "<group>"; };
 		1F5D922A1CE0915B0017508E /* TBODeveloperOverlayLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayLogger.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLogger.h; sourceTree = "<group>"; };
@@ -76,6 +86,7 @@
 		1F83D1761D0EFA9300DF5198 /* NSMutableAttributedString+RegexMatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableAttributedString+RegexMatches.m"; path = "TBODeveloperOverlayLogger/NSMutableAttributedString+RegexMatches.m"; sourceTree = "<group>"; };
 		1F83D17B1D0F02C500DF5198 /* TBODeveloperOverlayTaglist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayTaglist.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayTaglist.h; sourceTree = "<group>"; };
 		1F83D17C1D0F02C500DF5198 /* TBODeveloperOverlayTaglist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayTaglist.m; path = TBODeveloperOverlayLogger/TBODeveloperOverlayTaglist.m; sourceTree = "<group>"; };
+		423C5A1EB74FD2E482E35088 /* libPods-TBODeveloperOverlayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TBODeveloperOverlayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49339F4923F7F6BCE5A09135 /* Pods-TBODeveloperOverlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBODeveloperOverlay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay.debug.xcconfig"; sourceTree = "<group>"; };
 		750C58A51CD39B6F00D60E6B /* TBODeveloperOverlayKVDebuggerDatasourceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebuggerDatasourceProtocol.h; sourceTree = "<group>"; };
 		7517A83F1CEF1F5F00700CBF /* TBODeveloperOverlayKVDebuggerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebuggerDetailViewController.h; sourceTree = "<group>"; };
@@ -107,6 +118,7 @@
 		7593D8EE1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayKVDebuggerReadOnlyKVCell.m; sourceTree = "<group>"; };
 		7593D8EF1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBODeveloperOverlayKVDebuggerReadOnlyKVCell.xib; sourceTree = "<group>"; };
 		75A8C7461D0996890055F9E1 /* TBODeveloperOverlayKVDebuggerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayKVDebuggerTests.m; sourceTree = "<group>"; };
+		957AA33D99374A8E0091C434 /* Pods-TBODeveloperOverlayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBODeveloperOverlayUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TBODeveloperOverlayUITests/Pods-TBODeveloperOverlayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9EB5B2C81D0ED4EA00942EA4 /* NSString+RegexMatches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+RegexMatches.h"; path = "TBODeveloperOverlayLogger/NSString+RegexMatches.h"; sourceTree = "<group>"; };
 		9EB5B2C91D0ED4EA00942EA4 /* NSString+RegexMatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+RegexMatches.m"; path = "TBODeveloperOverlayLogger/NSString+RegexMatches.m"; sourceTree = "<group>"; };
 		9EC2F9A31D130104002F9E40 /* NSMutableAttributedString+RegexMatchesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+RegexMatchesTests.m"; sourceTree = "<group>"; };
@@ -114,6 +126,8 @@
 		9EC2F9A81D130104002F9E40 /* TBODeveloperOverlayLogFileReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayLogFileReaderTests.m; sourceTree = "<group>"; };
 		9EC2F9AD1D13012D002F9E40 /* TBODeveloperOverlayLogFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayLogFileReader.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLogFileReader.h; sourceTree = "<group>"; };
 		9EC2F9AE1D13012E002F9E40 /* TBODeveloperOverlayLogFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayLogFileReader.m; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLogFileReader.m; sourceTree = "<group>"; };
+		A753B090212C22230D56401C /* Pods-TBODeveloperOverlayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBODeveloperOverlayUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TBODeveloperOverlayUITests/Pods-TBODeveloperOverlayUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B6CE63B9BBB88675FD48D6D5 /* Pods-TBODeveloperOverlayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBODeveloperOverlayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TBODeveloperOverlayTests/Pods-TBODeveloperOverlayTests.release.xcconfig"; sourceTree = "<group>"; };
 		D94360D0A1643FC8B61E0675 /* TBODeveloperOverlayNSUserDefaultsDatasourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayNSUserDefaultsDatasourceTests.m; sourceTree = "<group>"; };
 		D9436179B002E8DA5B8F050E /* StubDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StubDatasource.m; sourceTree = "<group>"; };
 		D943619F6C316203554F70E6 /* TBODeveloperOverlayNSUserDefaultsDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayNSUserDefaultsDatasource.m; sourceTree = "<group>"; };
@@ -135,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2929166B6A7EBA0BC20FD47 /* libPods-TBODeveloperOverlayTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB02DBF53F3B5E2BD44C8F99 /* libPods-TBODeveloperOverlayUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +169,10 @@
 			children = (
 				49339F4923F7F6BCE5A09135 /* Pods-TBODeveloperOverlay.debug.xcconfig */,
 				1B502B768D5284FDD769CD89 /* Pods-TBODeveloperOverlay.release.xcconfig */,
+				1724753FB7883CEAB9AFB0DA /* Pods-TBODeveloperOverlayTests.debug.xcconfig */,
+				B6CE63B9BBB88675FD48D6D5 /* Pods-TBODeveloperOverlayTests.release.xcconfig */,
+				A753B090212C22230D56401C /* Pods-TBODeveloperOverlayUITests.debug.xcconfig */,
+				957AA33D99374A8E0091C434 /* Pods-TBODeveloperOverlayUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -161,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				EB1232FB3035CFBB628DD3A1 /* libPods-TBODeveloperOverlay.a */,
+				423C5A1EB74FD2E482E35088 /* libPods-TBODeveloperOverlayTests.a */,
+				03DED59154C4C56DB4F2811D /* libPods-TBODeveloperOverlayUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -168,6 +190,9 @@
 		1F5D92291CE0913B0017508E /* TBODeveloperOverlayLogger */ = {
 			isa = PBXGroup;
 			children = (
+				1F39EF441D14176400EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatter.h */,
+				1F39EF451D14176400EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatter.m */,
+				1F39EF461D14176400EA4B48 /* TBODeveloperOverlayFilterableLogFormaterProtocol.h */,
 				9EC2F9AD1D13012D002F9E40 /* TBODeveloperOverlayLogFileReader.h */,
 				9EC2F9AE1D13012E002F9E40 /* TBODeveloperOverlayLogFileReader.m */,
 				1F5D922A1CE0915B0017508E /* TBODeveloperOverlayLogger.h */,
@@ -221,6 +246,7 @@
 		75629A3A1CD351AC00E72F7B /* TBODeveloperOverlayTests */ = {
 			isa = PBXGroup;
 			children = (
+				1F39EF481D14185900EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatterTests.m */,
 				9EC2F9A31D130104002F9E40 /* NSMutableAttributedString+RegexMatchesTests.m */,
 				9EC2F9A41D130104002F9E40 /* NSString+RegexMatchesTests.m */,
 				9EC2F9A81D130104002F9E40 /* TBODeveloperOverlayLogFileReaderTests.m */,
@@ -316,12 +342,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75629A4B1CD351AC00E72F7B /* Build configuration list for PBXNativeTarget "TBODeveloperOverlay" */;
 			buildPhases = (
-				F278B313BFDB6525245EB4F7 /* Check Pods Manifest.lock */,
+				F278B313BFDB6525245EB4F7 /* [CP] Check Pods Manifest.lock */,
 				75629A1A1CD351AB00E72F7B /* Sources */,
 				75629A1B1CD351AB00E72F7B /* Frameworks */,
 				75629A1C1CD351AB00E72F7B /* Resources */,
-				10C20EEC53E12FCFDE683C3E /* Embed Pods Frameworks */,
-				7F8B7F60A6FA31233ADF2677 /* Copy Pods Resources */,
+				10C20EEC53E12FCFDE683C3E /* [CP] Embed Pods Frameworks */,
+				7F8B7F60A6FA31233ADF2677 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -336,9 +362,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75629A4E1CD351AC00E72F7B /* Build configuration list for PBXNativeTarget "TBODeveloperOverlayTests" */;
 			buildPhases = (
+				1AD18EECBEB68658AFE52095 /* [CP] Check Pods Manifest.lock */,
 				75629A331CD351AC00E72F7B /* Sources */,
 				75629A341CD351AC00E72F7B /* Frameworks */,
 				75629A351CD351AC00E72F7B /* Resources */,
+				53561B6AD71CDE7E4156F0FC /* [CP] Embed Pods Frameworks */,
+				8DC3ABFD94ED98FB8814575A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -354,9 +383,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75629A511CD351AC00E72F7B /* Build configuration list for PBXNativeTarget "TBODeveloperOverlayUITests" */;
 			buildPhases = (
+				B44F0F577B376FA8054E3B7C /* [CP] Check Pods Manifest.lock */,
 				75629A3E1CD351AC00E72F7B /* Sources */,
 				75629A3F1CD351AC00E72F7B /* Frameworks */,
 				75629A401CD351AC00E72F7B /* Resources */,
+				2E31ECC20C8ABCE859BBE917 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -442,14 +473,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		10C20EEC53E12FCFDE683C3E /* Embed Pods Frameworks */ = {
+		10C20EEC53E12FCFDE683C3E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,14 +488,59 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7F8B7F60A6FA31233ADF2677 /* Copy Pods Resources */ = {
+		1AD18EECBEB68658AFE52095 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2E31ECC20C8ABCE859BBE917 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TBODeveloperOverlayUITests/Pods-TBODeveloperOverlayUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53561B6AD71CDE7E4156F0FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TBODeveloperOverlayTests/Pods-TBODeveloperOverlayTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F8B7F60A6FA31233ADF2677 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,14 +548,44 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F278B313BFDB6525245EB4F7 /* Check Pods Manifest.lock */ = {
+		8DC3ABFD94ED98FB8814575A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TBODeveloperOverlayTests/Pods-TBODeveloperOverlayTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B44F0F577B376FA8054E3B7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F278B313BFDB6525245EB4F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +603,7 @@
 				7593D8F01CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m in Sources */,
 				7593D8E61CD399D400EFFA49 /* TBODebugDatasource.m in Sources */,
 				9EC2F9B01D1302EF002F9E40 /* TBODeveloperOverlayLogFileReader.m in Sources */,
+				1F39EF471D14176400EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatter.m in Sources */,
 				1F51AE881D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m in Sources */,
 				1F5D922C1CE0915B0017508E /* TBODeveloperOverlayLogger.m in Sources */,
 				7593D8E51CD399D400EFFA49 /* main.m in Sources */,
@@ -525,6 +632,7 @@
 				D94364DD4F909F3EDF092BA3 /* StubDatasource.m in Sources */,
 				D943695D65FE6BC4173BC606 /* TBODeveloperOverlayNSUserDefaultsDatasourceTests.m in Sources */,
 				9EC2F9AC1D130104002F9E40 /* TBODeveloperOverlayLogFileReaderTests.m in Sources */,
+				1F39EF491D14185900EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,6 +792,7 @@
 		};
 		75629A4F1CD351AC00E72F7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1724753FB7883CEAB9AFB0DA /* Pods-TBODeveloperOverlayTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TBODeveloperOverlayTests/Info.plist;
@@ -696,6 +805,7 @@
 		};
 		75629A501CD351AC00E72F7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6CE63B9BBB88675FD48D6D5 /* Pods-TBODeveloperOverlayTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TBODeveloperOverlayTests/Info.plist;
@@ -708,6 +818,7 @@
 		};
 		75629A521CD351AC00E72F7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A753B090212C22230D56401C /* Pods-TBODeveloperOverlayUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TBODeveloperOverlayUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -719,6 +830,7 @@
 		};
 		75629A531CD351AC00E72F7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 957AA33D99374A8E0091C434 /* Pods-TBODeveloperOverlayUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = TBODeveloperOverlayUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
