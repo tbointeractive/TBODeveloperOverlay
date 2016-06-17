@@ -32,7 +32,7 @@
     XCTAssertEqualObjects(self.attributes, retrievedAttributes);
 }
 
-- (void)testAttributesNotOnNotMatchingRegex {
+- (void)testNoAttributesOnNotMatchingRegexPart {
     NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:@"attributed string" options:kNilOptions error:nil];
     [self.testString addAttributes:self.attributes toMatchesOfRegex:regularExpression];
     NSRange range = NSMakeRange(0, 10);

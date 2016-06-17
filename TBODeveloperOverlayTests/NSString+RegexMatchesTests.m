@@ -56,6 +56,12 @@ NSString *testString = @"this is a string\nwhich includes a couple\nof newlines"
     XCTAssertEqualObjects(@"", subString);
 }
 
+- (void)testRegexAboveTwoLines {
+    NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:@"string which" options:kNilOptions error:nil];
+    NSString *subString = [testString substringThatMatchesRegex:regularExpression];
+    XCTAssertEqualObjects(@"", subString);
+}
+
 - (void)testLongRegexDescribingTargetStringTwice {
     NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:@"this is a string\nwhich includes a couple\nof newlinesthis is a string\nwhich includes a couple\nof newlines" options:kNilOptions error:nil];
     NSString *subString = [testString substringThatMatchesRegex:regularExpression];
