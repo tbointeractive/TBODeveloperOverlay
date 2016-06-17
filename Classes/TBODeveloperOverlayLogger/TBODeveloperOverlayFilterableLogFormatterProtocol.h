@@ -21,8 +21,7 @@
  *  @return An array of log levels for the LogFormatter
  */
 
-- (NSArray<NSString *> *_Nullable)logLevels;
-
+- (NSOrderedSet<NSString *> *_Nullable)logLevels;
 
 /**
  *

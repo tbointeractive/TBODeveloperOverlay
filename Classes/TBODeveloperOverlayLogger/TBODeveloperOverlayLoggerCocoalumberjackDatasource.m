@@ -47,7 +47,7 @@
 
 #pragma mark logLevels
 
-- (NSArray <NSString *> *_Nullable)existingLogLevels {
+- (NSOrderedSet <NSString *> *_Nullable)existingLogLevels {
     if ([[[self fileLogger] logFormatter] respondsToSelector:@selector(logLevels)]) {
         return [[[self fileLogger] logFormatter] performSelector:@selector(logLevels)];
     }

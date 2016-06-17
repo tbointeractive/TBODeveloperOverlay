@@ -32,7 +32,7 @@
 /**
  * A set of NSStrings representing the tags to be displayed as buttons.
  */
-@property (strong, nonatomic, readwrite) NSSet <NSString *> *tags;
+@property (strong, nonatomic, readwrite) NSOrderedSet <NSString *> *tags;
 
 /**
  * The delegate for the TBODeveloperOverlayTaglist instance.
