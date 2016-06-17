@@ -35,8 +35,8 @@
 }
 
 - (void)testLogMessages {
-    NSSet *logLevels = [NSSet setWithArray:[self.logFormatter logLevels]];
-    NSSet *expectedlogLevels = [NSSet setWithObjects:@"Error", @"Warning", @"Verbose", @"Debug", @"Info", nil];
+    NSOrderedSet *logLevels = [self.logFormatter logLevels];
+    NSOrderedSet *expectedlogLevels = [NSOrderedSet orderedSetWithArray:@[@"Error", @"Warning", @"Info", @"Debug", @"Verbose"]];
     XCTAssertEqualObjects(expectedlogLevels, logLevels);
 }
 
