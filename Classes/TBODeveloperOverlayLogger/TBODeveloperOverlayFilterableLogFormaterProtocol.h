@@ -18,7 +18,7 @@
  *  @return logLevels for the FilterableLogFormatter
  */
 
-- (NSArray *_Nonnull)logLevels;
+- (NSArray<NSString *> *_Nullable)logLevels;
 
 
 /**
@@ -30,7 +30,7 @@
  *  @return logLevels A regular expression describing a line of the given log level.
  */
 
-- (NSRegularExpression *_Nonnull)regularExpressionForLogLevel:(NSString *_Nonnull)logLevel;
+- (NSRegularExpression *_Nullable)regularExpressionForLogLevel:(NSString *_Nonnull)logLevel;
 
 @end
 

@@ -12,17 +12,20 @@
 
 #pragma mark TBODeveloperOverlayFilterableLogFormaterProtocol
 
-- (NSArray *)logLevels {
+- (NSArray<NSString *> *_Nullable)logLevels {
     return [self logLevelDictionary].allKeys;
 }
 
-- (NSRegularExpression *_Nonnull)regularExpressionForLogLevel:(NSString *_Nonnull)logLevel {
+- (NSRegularExpression *_Nullable)regularExpressionForLogLevel:(NSString *_Nonnull)logLevel {
     return [[self logLevelDictionary] objectForKey:logLevel];
 }
 
 #pragma mark DDLogFormatter
 
 - (NSString *)formatLogMessage:(DDLogMessage *)logMessage {
+    if (!logMessage) {
+        return nil;
+    }
     return [NSString stringWithFormat:
             @"%@ [%@] %@:%li %@",
             logMessage.timestamp,
@@ -33,7 +36,7 @@
 }
 
 - (NSString *)shortStringFromFlag:(DDLogFlag)logFlag {
-    switch (logFlag) { 
+    switch (logFlag) {
         case DDLogFlagError: return @"E";
         case DDLogFlagWarning: return @"W";
         case DDLogFlagInfo: return @"I";

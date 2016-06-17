@@ -49,10 +49,13 @@
 }
 
 - (void)setLogLevel:(NSString *_Nonnull)logLevel toOn:(BOOL)on {
-    NSRegularExpression *regularExpression;
-    if ([[[self fileLogger] logFormatter] respondsToSelector:@selector(regularExpressionForLogLevel:)]) {
-        regularExpression = [[[self fileLogger] logFormatter] performSelector:@selector(regularExpressionForLogLevel:) withObject:logLevel];
-    } else {
+    if (![[[self fileLogger] logFormatter] respondsToSelector:@selector(regularExpressionForLogLevel:)]) {
+        NSLog(@"log formatter is not implemented to return regular expressions for log levels");
+        return;
+    }
+    NSRegularExpression *regularExpression = [[[self fileLogger] logFormatter] performSelector:@selector(regularExpressionForLogLevel:) withObject:logLevel];
+    if (!regularExpression) {
+        NSLog(@"there is no regular expression for the requested log level");
         return;
     }
     if (on) {
