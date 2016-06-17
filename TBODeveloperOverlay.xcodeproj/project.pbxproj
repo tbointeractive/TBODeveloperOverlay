@@ -73,7 +73,7 @@
 		1F0E65C91CEF8BBF007AF08F /* TBOModalNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBOModalNavigationController.m; path = TBODeveloperOverlay/TBODeveloperOverlay/TBOModalNavigationController.m; sourceTree = SOURCE_ROOT; };
 		1F39EF441D14176400EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayCococaLumberjackLogFormatter.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayCococaLumberjackLogFormatter.h; sourceTree = "<group>"; };
 		1F39EF451D14176400EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayCococaLumberjackLogFormatter.m; path = TBODeveloperOverlayLogger/TBODeveloperOverlayCococaLumberjackLogFormatter.m; sourceTree = "<group>"; };
-		1F39EF461D14176400EA4B48 /* TBODeveloperOverlayFilterableLogFormaterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayFilterableLogFormaterProtocol.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayFilterableLogFormaterProtocol.h; sourceTree = "<group>"; };
+		1F39EF461D14176400EA4B48 /* TBODeveloperOverlayFilterableLogFormatterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayFilterableLogFormatterProtocol.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayFilterableLogFormatterProtocol.h; sourceTree = "<group>"; };
 		1F39EF481D14185900EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayCococaLumberjackLogFormatterTests.m; sourceTree = "<group>"; };
 		1F51AE861D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h; sourceTree = "<group>"; };
 		1F51AE871D01DC9400281F0F /* TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLoggerCocoaLumberjackDatasource.m; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 			children = (
 				1F39EF441D14176400EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatter.h */,
 				1F39EF451D14176400EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatter.m */,
-				1F39EF461D14176400EA4B48 /* TBODeveloperOverlayFilterableLogFormaterProtocol.h */,
+				1F39EF461D14176400EA4B48 /* TBODeveloperOverlayFilterableLogFormatterProtocol.h */,
 				9EC2F9AD1D13012D002F9E40 /* TBODeveloperOverlayLogFileReader.h */,
 				9EC2F9AE1D13012E002F9E40 /* TBODeveloperOverlayLogFileReader.m */,
 				1F5D922A1CE0915B0017508E /* TBODeveloperOverlayLogger.h */,

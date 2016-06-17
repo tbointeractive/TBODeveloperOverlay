@@ -10,6 +10,9 @@
 
 @class DDFileLogger;
 
+/**
+ * The TBODeveloperOverlayLogFileReader is used by TBODeveloperOverlayLoggerCocoaLumberjackDatasource to retrieve the last log messages.
+ */
 @interface TBODeveloperOverlayLogFileReader : NSObject
 
 /**
