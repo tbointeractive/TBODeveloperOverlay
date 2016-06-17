@@ -18,7 +18,7 @@
 
 @interface TBODeveloperOverlayTaglist : UIView
 
-@property (strong, nonatomic, readwrite) NSSet <NSString *> *tags;
+@property (strong, nonatomic, readwrite) NSOrderedSet <NSString *> *tags;
 @property (weak, nonatomic, readwrite) id <TBODeveloperOverlayTaglistDelegate> delegate;
 
 @end

@@ -12,8 +12,8 @@
 
 #pragma mark TBODeveloperOverlayFilterableLogFormaterProtocol
 
-- (NSArray<NSString *> *_Nullable)logLevels {
-    return [self logLevelDictionary].allKeys;
+- (NSOrderedSet<NSString *> *_Nullable)logLevels {
+    return [NSOrderedSet orderedSetWithArray:@[@"Error", @"Warning", @"Info", @"Debug", @"Verbose"]];
 }
 
 - (NSRegularExpression *_Nullable)regularExpressionForLogLevel:(NSString *_Nonnull)logLevel {

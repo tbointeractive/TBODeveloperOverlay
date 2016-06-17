@@ -16,16 +16,16 @@
 
 @implementation TBODeveloperOverlayTaglist
 
-- (void)setTags:(NSSet<NSString *> *)tags {
+- (void)setTags:(NSOrderedSet<NSString *> *)tags {
     _tags = tags;
     
     [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
     // create all the subview
-    [tags enumerateObjectsUsingBlock:^(NSString *_Nonnull tag, BOOL *_Nonnull stop) {
-        UIButton *button = [self buttonWithTag:tag];
-        [self addSubview:button];
-    }];
+    [tags enumerateObjectsUsingBlock:^(NSString *tagName, NSUInteger idx, BOOL * stop) {
+            UIButton *button = [self buttonWithTag:tagName];
+            [self addSubview:button];
+        }];
     [self setNeedsLayout];
 }
 

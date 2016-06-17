@@ -18,7 +18,7 @@
  *  @return logLevels for the FilterableLogFormatter
  */
 
-- (NSArray<NSString *> *_Nullable)logLevels;
+- (NSOrderedSet<NSString *> *_Nullable)logLevels;
 
 
 /**

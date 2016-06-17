@@ -38,7 +38,7 @@
  *
  *  @return The existing log levels to be displayed
  */
-- (NSSet <NSString *> *_Nullable)existingLogLevels;
+- (NSOrderedSet <NSString *> *_Nullable)existingLogLevels;
 
 /**
  * The Logger Overlay will call this method to enable or disable displaying certain log levels
