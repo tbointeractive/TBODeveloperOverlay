@@ -22,10 +22,10 @@
     [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     
     // create all the subview
-    [tags enumerateObjectsUsingBlock:^(NSString *tagName, NSUInteger idx, BOOL * stop) {
-            UIButton *button = [self buttonWithTag:tagName];
-            [self addSubview:button];
-        }];
+    [tags enumerateObjectsUsingBlock:^(NSString *tagName, NSUInteger idx, BOOL *stop) {
+        UIButton *button = [self buttonWithTag:tagName];
+        [self addSubview:button];
+    }];
     [self setNeedsLayout];
 }
 
