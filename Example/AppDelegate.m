@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "TBODeveloperOverlayKVDebugger.h"
 #import "TBODeveloperOverlayCococaLumberjackLogFormatter.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
+
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose; // everything
 
 @interface AppDelegate ()
 
