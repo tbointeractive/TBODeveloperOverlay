@@ -8,20 +8,28 @@
 
 #ifndef TBODeveloperOverlayLoggerDatasourceProtocol_h
 #define TBODeveloperOverlayLoggerDatasourceProtocol_h
-
+/**
+ * TBODeveloperOverlayLoggerDatasourceProtocol has to be implemented by every custom datasource to use with TBODeveloperOverlayLogger.
+ */
 @protocol TBODeveloperOverlayLoggerDatasourceProtocol <NSObject>
 
+/**
+ * This method has to be implemented to get the last log messages of a FileLogger.
+ *
+ *  @property maxCharacterCount The maximum number of last characters of the log messages.
+ *
+ *  @return Returns a NSString if any log messages are found; Returns nil if there is something wrong with the configuration of the datasource.
+ */
 - (NSString *_Nullable)lastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount;
 
 @optional
 
 /**
- * This method can be implemented to show certain search results and such or
- *    to display some lines of text in a certain way (errors red, ...)
+ * This method can be implemented to get the last log messages of a FileLogger.
  *
- *  @property maxCharacterCount
+ *  @property maxCharacterCount The maximum number of last characters of the log messages.
  *
- *  @return Returns a non-null String if any log messages are found; Returns a nil string if there is something wrong with the configuration of the datasource
+ *  @return Returns a NSAttributedString if any log messages are found; Returns nil if there is something wrong with the configuration of the datasource.
  */
 - (NSAttributedString *_Nullable)attributedLastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount;
 
@@ -32,31 +40,31 @@
 
 /**
  * If this method is implemented the logger-overlay will display a button for each log level
- *  so the user can enable or disable certain log levels
+ *  so the user can enable or disable certain log levels.
  *
- * Per default all log levels are enabled
+ * Per default all log levels are enabled.
  *
- *  @return The existing log levels to be displayed
+ *  @return The existing log levels to be displayed.
  */
 - (NSSet <NSString *> *_Nullable)existingLogLevels;
 
 /**
  * The Logger Overlay will call this method to enable or disable displaying certain log levels
  *  after enabling or disabling the overlay will call -lastLogMessagesLimitedToCharacterCount: to
- *  refresh the interface
+ *  refresh the interface.
  *
- *  @param logLevel The log level to be set
+ *  @param logLevel The log level to be set.
  *
- *  @param on Bool to activate / decctivate the given log level.
+ *  @param on A BOOL to activate (YES) / deactivate (NO) the given log level.
  */
 - (void)setLogLevel:(NSString *_Nonnull)logLevel toOn:(BOOL)on;
 
 /**
  * If implemented, the overlay will display a search field for the user to filter the log
- *  the filter should be applied after the log is filtered by logLevels
+ *  the filter should be applied after the log is filtered by log levels.
  *
  * After calling this method, the overlay will call the -lastLogMessagesLimitedToCharacterCount: method
- *  to refresh the content being displayed
+ *  to refresh the content being displayed.
  *
  *  @param searchString The search string to filter the log.
  */
