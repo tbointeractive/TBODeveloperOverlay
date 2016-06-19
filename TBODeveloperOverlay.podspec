@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "git@github.com:tbointeractive/TBODeveloperOverlay.git", :tag => '1.3.0' }
+  s.source       = { :git => "https://github.com/tbointeractive/TBODeveloperOverlay.git", :tag => '1.3.0' }
 
  # s.source       = { :git => "http://git.tbointeractive.com/root/TBODeveloperOverlay", :tag => s.version.to_s }
 
@@ -53,10 +53,14 @@ Pod::Spec.new do |s|
     sp.source_files = "Classes/TBODeveloperOverlayFileInspector/*.{h,m}"
   end
 
-  s.subspec 'AllHeader' do |sp|
+  s.subspec 'All' do |sp|
     sp.source_files = "Classes/TBODeveloperOverlay.h"
+    sp.dependency 'TBODeveloperOverlay/Core'
+    sp.dependency 'TBODeveloperOverlay/KVDebugger'
+    sp.dependency 'TBODeveloperOverlay/LoggerOverlay'
+    sp.dependency 'TBODeveloperOverlay/FileInspector'
   end
 
-  s.default_subspecs =  'Core', 'AllHeader', 'KVDebugger', 'LoggerOverlay', 'FileInspector'
+  s.default_subspecs =  'All'
 
 end
