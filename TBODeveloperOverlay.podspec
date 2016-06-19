@@ -10,15 +10,15 @@ Pod::Spec.new do |s|
 
   s.name         = "TBODeveloperOverlay"
   s.version      = "1.3.0"
-  s.summary      = "A Developer Overlay for Debugging."
+  s.summary      = "iOS Developer Tools for Debugging."
 
   s.description  = <<-DESC
-                    TBODeveloperOverlay - A Developer Overlay for Debugging
+                    TBODeveloperOverlay - Some developer tools for debugging iOS Apps
                    DESC
 
   s.homepage     = "http://git.tbointeractive.com/root/TBODeveloperOverlay"
 
-  s.license      = "Private"
+  s.license      = "MIT"
 
   s.author      = { "Cornelius Horstmann" => "horstmann@tbointeractive.com", "Thorsten Stark" => "stark@tbointeractive.com", "Bernhard Eiling" => "eiling@tbointeractive.com"  }
 
@@ -53,6 +53,6 @@ Pod::Spec.new do |s|
     sp.source_files = "Classes/TBODeveloperOverlayFileInspector/*.{h,m}"
   end
 
-  s.default_subspecs =  'KVDebugger' ,'Core', 'LoggerOverlay', 'FileInspector'
+  s.default_subspecs =  'Core', 'KVDebugger', 'LoggerOverlay', 'FileInspector'
 
 end
