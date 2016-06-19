@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TBODeveloperOverlayKVDebuggerDatasourceProtocol.h"
+#import "TBODeveloperOverlayNSUserDefaultsDatasource.h"
 
 /**
  * The KVDebugger can be used to inspect system variables and, for some cases, modify them.

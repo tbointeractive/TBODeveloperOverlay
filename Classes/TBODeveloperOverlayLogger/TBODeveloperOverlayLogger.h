@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TBODeveloperOverlayLoggerDatasourceProtocol.h"
+#import "TBODeveloperOverlayLoggerCocoalumberjackDatasource.h"
 
 /**
  *  The logger adds the possibility to display a log.

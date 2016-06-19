@@ -53,6 +53,10 @@ Pod::Spec.new do |s|
     sp.source_files = "Classes/TBODeveloperOverlayFileInspector/*.{h,m}"
   end
 
-  s.default_subspecs =  'Core', 'KVDebugger', 'LoggerOverlay', 'FileInspector'
+  s.subspec 'AllHeader' do |sp|
+    sp.source_files = "Classes/TBODeveloperOverlay.h"
+  end
+
+  s.default_subspecs =  'Core', 'AllHeader', 'KVDebugger', 'LoggerOverlay', 'FileInspector'
 
 end

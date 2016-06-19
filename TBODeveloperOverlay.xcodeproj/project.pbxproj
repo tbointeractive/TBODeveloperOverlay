@@ -71,6 +71,9 @@
 		1B502B768D5284FDD769CD89 /* Pods-TBODeveloperOverlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBODeveloperOverlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-TBODeveloperOverlay/Pods-TBODeveloperOverlay.release.xcconfig"; sourceTree = "<group>"; };
 		1F0E65C81CEF8BBF007AF08F /* TBOModalNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBOModalNavigationController.h; path = TBODeveloperOverlay/TBODeveloperOverlay/TBOModalNavigationController.h; sourceTree = SOURCE_ROOT; };
 		1F0E65C91CEF8BBF007AF08F /* TBOModalNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBOModalNavigationController.m; path = TBODeveloperOverlay/TBODeveloperOverlay/TBOModalNavigationController.m; sourceTree = SOURCE_ROOT; };
+		1F2B1F011D16D57600E2CFA9 /* TBODeveloperOverlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlay.h; sourceTree = "<group>"; };
+		1F2B1F031D16D60200E2CFA9 /* TBODeveloperOverlayFileInspector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayFileInspector.h; path = TBODeveloperOverlayFileInspector/TBODeveloperOverlayFileInspector.h; sourceTree = "<group>"; };
+		1F2B1F051D16D7DB00E2CFA9 /* TBODeveloperOverlayCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayCore.h; path = TBODeveloperOverlay/TBODeveloperOverlay/TBODeveloperOverlayCore.h; sourceTree = SOURCE_ROOT; };
 		1F39EF441D14176400EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayCococaLumberjackLogFormatter.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayCococaLumberjackLogFormatter.h; sourceTree = "<group>"; };
 		1F39EF451D14176400EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayCococaLumberjackLogFormatter.m; path = TBODeveloperOverlayLogger/TBODeveloperOverlayCococaLumberjackLogFormatter.m; sourceTree = "<group>"; };
 		1F39EF461D14176400EA4B48 /* TBODeveloperOverlayFilterableLogFormatterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayFilterableLogFormatterProtocol.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayFilterableLogFormatterProtocol.h; sourceTree = "<group>"; };
@@ -218,6 +221,7 @@
 			children = (
 				1F5D92321CE096EA0017508E /* TBODeveloperOverlayFileInspectorViewController.h */,
 				1F5D92331CE096EA0017508E /* TBODeveloperOverlayFileInspectorViewController.m */,
+				1F2B1F031D16D60200E2CFA9 /* TBODeveloperOverlayFileInspector.h */,
 			);
 			name = TBODeveloperOverlayFileInspector;
 			sourceTree = "<group>";
@@ -296,6 +300,7 @@
 				1F5D92291CE0913B0017508E /* TBODeveloperOverlayLogger */,
 				7593D8E91CD399DD00EFFA49 /* TBODeveloperOverlay */,
 				7593D8EA1CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger */,
+				1F2B1F011D16D57600E2CFA9 /* TBODeveloperOverlay.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 		7593D8E91CD399DD00EFFA49 /* TBODeveloperOverlay */ = {
 			isa = PBXGroup;
 			children = (
+				1F2B1F051D16D7DB00E2CFA9 /* TBODeveloperOverlayCore.h */,
 				1F0E65C81CEF8BBF007AF08F /* TBOModalNavigationController.h */,
 				1F0E65C91CEF8BBF007AF08F /* TBOModalNavigationController.m */,
 				7554B6691CFC7B4500FD6CD3 /* TBODeveloperOverlayPluginListViewController.h */,
