@@ -24,6 +24,13 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose; // everything
     [self setupLogging];
     [[NSUserDefaults standardUserDefaults] setObject:@"testvalue" forKey:@"testkey"];
     [[NSUserDefaults standardUserDefaults] setObject:@[@"testvalue"] forKey:@"testkey"];
+    
+    DDLogDebug(@"DidFinishLaunchingWithOptions:");
+    DDLogVerbose(@"DidFinishLaunchingWithOptions:");
+    DDLogError(@"DidFinishLaunchingWithOptions:");
+    DDLogWarn(@"DidFinishLaunchingWithOptions:");
+    DDLogInfo(@"DidFinishLaunchingWithOptions:");
+    
     return YES;
 }
 
