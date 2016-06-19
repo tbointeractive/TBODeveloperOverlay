@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
                     TBODeveloperOverlay - Some developer tools for debugging iOS Apps
                    DESC
 
-  s.homepage     = "http://git.tbointeractive.com/root/TBODeveloperOverlay"
+  s.homepage     = "https://github.com/tbointeractive/TBODeveloperOverlay"
 
   s.license      = "MIT"
 
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
 
-  s.source       = { :git => "git@git.tbointeractive.com:tbopodspecs/TBODeveloperOverlay.git", :tag => '1.3.0' }
+  s.source       = { :git => "git@github.com:tbointeractive/TBODeveloperOverlay.git", :tag => '1.3.0' }
 
  # s.source       = { :git => "http://git.tbointeractive.com/root/TBODeveloperOverlay", :tag => s.version.to_s }
 
