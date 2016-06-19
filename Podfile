@@ -4,7 +4,6 @@
 # use_frameworks!
 
 source 'https://github.com/CocoaPods/Specs.git'
-source 'git@git.tbointeractive.com:tbopodspecs/tbopodspecs.git'
 
 target 'TBODeveloperOverlay' do
   pod 'CocoaLumberjack', '~> 2.3'

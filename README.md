@@ -14,7 +14,6 @@ Available Plugins are:
 
 ## Installation
 The installation via CocoaPods is recommended.
-Add `git@git.tbointeractive.com:tbopodspecs/tbopodspecs.git` as additional source in your Podfile. 
 Install TBODeveloperOverlay with all Plugins:
 
 ```

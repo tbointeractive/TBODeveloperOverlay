@@ -26,7 +26,6 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/tbointeractive/TBODeveloperOverlay.git", :tag => '1.3.0' }
 
- # s.source       = { :git => "http://git.tbointeractive.com/root/TBODeveloperOverlay", :tag => s.version.to_s }
 
   s.subspec 'Core' do |sp|
     sp.source_files = "TBODeveloperOverlay/TBODeveloperOverlay/*.{h,m}"
