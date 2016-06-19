@@ -76,7 +76,7 @@
     }
     NSString *log = [self.datasource lastLogMessagesLimitedToCharacterCount:self.maxDisplayedCharacters];
     if (!log) {
-        return @"";
+        return @"The datasource is not properly configured.";
     }
     if (![log isKindOfClass:[NSString class]]) {
         return [NSString stringWithFormat:@"Datasource should return NSString, but actual return type is %@", NSStringFromClass(log.class)];
@@ -86,7 +86,7 @@
 
 - (void)refreshText {
     if ([self.datasource respondsToSelector:@selector(attributedLastLogMessagesLimitedToCharacterCount:)]) {
-        self.textView.attributedText = [self.datasource attributedLastLogMessagesLimitedToCharacterCount:self.maxDisplayedCharacters];
+        self.textView.attributedText = [self.datasource attributedLastLogMessagesLimitedToCharacterCount:self.maxDisplayedCharacters] ? : [[NSAttributedString alloc] initWithString:@"The datasource is not properly configured."];
     } else {
         self.textView.text = [self logString];
     }
