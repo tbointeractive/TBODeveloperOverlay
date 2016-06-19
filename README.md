@@ -1,4 +1,4 @@
-## Description
+## TBODeveloperTools
 The TBODeveloperTools is a toolset to integrate a suit of plugins to your application for debugging and development purposes. It can be integrated in any version of your app. Even in your live version. Just make sure that your users won't find it. (think tapping a view seven times to bring it up, etc.)
 
 ## Plugins
@@ -31,7 +31,7 @@ pod 'TBODeveloperOverlay/KVDebugger'
 You can initialize a plugin and present it in a `TBOModalNavigationController` just like that:
 
 ```
-TBODeveloperOverlayLogger *loggerPlugin = [TBODeveloperOverlayLogger new];
+TBODeveloperOverlayLogger *loggerPlugin = [[TBODeveloperOverlayLogger alloc] initWithDatasource:[TBODeveloperOverlayLoggerCocoaLumberjackDatasource new]];
 TBOModalNavigationController *developerOverlay = [[TBOModalNavigationController alloc] 
 initWithRootViewController:loggerPlugin];
 [self presentViewController:developerOverlay animated:YES completion:nil];
@@ -40,10 +40,10 @@ initWithRootViewController:loggerPlugin];
 If you want to integrate more than one plugin you can initialize a `TBODeveloperOverlayPluginListViewController` with an array of plugins this way:
 
 ```
-TBODeveloperOverlayLogger *loggerPlugin = [TBODeveloperOverlayLogger new];
+TBODeveloperOverlayLogger *loggerPlugin = [[TBODeveloperOverlayLogger alloc] initWithDatasource:[TBODeveloperOverlayLoggerCocoaLumberjackDatasource new]];
 TBODeveloperOverlayFileInspectorViewController *fileInspectorPlugin = [[TBODeveloperOverlayFileInspectorViewController alloc] initWithBaseUrl:nil];
 NSArray *plugins = @[loggerPlugin, fileInspectorPlugin];
-TBODeveloperOverlayPluginListViewController pluginListViewController = [[TBODeveloperOverlayPluginListViewController alloc] initWithPlugins:plugins];
+TBODeveloperOverlayPluginListViewController *pluginListViewController = [[TBODeveloperOverlayPluginListViewController alloc] initWithPlugins:plugins];
 TBOModalNavigationController *modalDeveloperOverlay = [[TBOModalNavigationController alloc] initWithRootViewController:containedViewController];
 [self presentViewController:modalDeveloperOverlay animated:YES completion:nil];
 ```
