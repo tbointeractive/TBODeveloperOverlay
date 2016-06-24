@@ -37,7 +37,7 @@ typedef enum {
 @implementation TBODeveloperOverlayKVDebuggerDetailViewController
 
 - (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasourceProtocol>)datasource andIndexPath:(NSIndexPath *)indexPath {
-    self = [super init];
+    self = [super initWithNibName:@"TBODeveloperOverlayKVDebuggerDetailViewController" bundle:[NSBundle bundleForClass:self.class]];
     if (self) {
         self.indexPath = indexPath;
         self.datasource = datasource;
