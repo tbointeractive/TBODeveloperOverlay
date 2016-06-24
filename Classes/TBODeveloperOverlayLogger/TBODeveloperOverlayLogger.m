@@ -27,24 +27,21 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (instancetype)init {
-    self = [super init];
+- (instancetype)initWithDatasource:(id<TBODeveloperOverlayLoggerDatasourceProtocol>)datasource {
+    self = [self initWithNibName:@"TBODeveloperOverlayLogger" bundle:[NSBundle bundleForClass:self.class]];
     if (self) {
-        self.maxDisplayedCharacters = 50000;
-        self.edgesForExtendedLayout = UIRectEdgeNone;
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
+        self.datasource = datasource;
+        [self performSetup];
     }
     return self;
 }
 
-- (instancetype)initWithDatasource:(id<TBODeveloperOverlayLoggerDatasourceProtocol>)datasource {
-    self = [self init];
-    if (self) {
-        self.datasource = datasource;
-    }
-    return self;
+- (void)performSetup {
+    self.maxDisplayedCharacters = 50000;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:) name:UIKeyboardDidHideNotification object:nil];
 }
 
 - (void)viewDidLoad {
