@@ -90,7 +90,7 @@ static Class datasourceClass = nil;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    if (!self.datasource) {
+    if (!self.datasource || ![self.datasource respondsToSelector:@selector(titleForSection:)]) {
         return nil;
     }
     return [self.datasource titleForSection:section];
