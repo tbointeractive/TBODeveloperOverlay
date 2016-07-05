@@ -54,6 +54,8 @@ typedef enum {
     self.titleLabel.text = [self.datasource keyForIndexPath:self.indexPath];
     if ([self.datasource respondsToSelector:@selector(descriptionForIndexPath:)]) {
         self.descriptionLabel.text = [self.datasource descriptionForIndexPath:self.indexPath];
+    } else {
+        self.descriptionLabel.text = @"";
     }
     
     id value = [self.datasource valueForIndexPath:self.indexPath];
