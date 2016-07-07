@@ -89,6 +89,10 @@
     }
 }
 
+- (IBAction)shareButtonTapped {
+    
+}
+
 #pragma mark TBODeveloperOverlayLoggerDatasourceProtocol
 
 - (void)didEnable:(BOOL)on tagWithName:(NSString *)tag {
