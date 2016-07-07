@@ -90,7 +90,9 @@
 }
 
 - (IBAction)shareButtonTapped {
-    
+    NSArray *activityItems = @[self.textView.text];
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    [self presentViewController:activityViewController animated:YES completion:nil];
 }
 
 #pragma mark TBODeveloperOverlayLoggerDatasourceProtocol
