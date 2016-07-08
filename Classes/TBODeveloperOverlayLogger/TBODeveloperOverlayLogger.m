@@ -51,6 +51,7 @@
         self.logLevelTagList.delegate = self;
     }
     self.searchField.enabled = [self.datasource respondsToSelector:@selector(setSearchString:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(shareButtonTapped:)];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

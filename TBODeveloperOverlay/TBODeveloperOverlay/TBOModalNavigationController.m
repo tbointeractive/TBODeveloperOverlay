@@ -18,9 +18,6 @@
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     [super pushViewController:viewController animated:animated];
-    if ([viewController respondsToSelector:@selector(shareButtonTapped:)]) {
-        viewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:viewController action:@selector(shareButtonTapped:)];
-    }
     if (!viewController.navigationItem.rightBarButtonItem) {
         viewController.navigationItem.rightBarButtonItem = self.doneButton;
     }
