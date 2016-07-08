@@ -15,6 +15,7 @@
 #import "TBODeveloperOverlayPluginListViewController.h"
 #import "TBOModalNavigationController.h"
 #import "TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h"
+#import "TBOUserDefaultsDebugDatasource.h"
 
 @interface ViewController ()
 
@@ -38,6 +39,12 @@
     TBODeveloperOverlayKVDebugger *userDefaultsInspector = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:userDefaultsDatasource];
     userDefaultsInspector.title = @"UserDefaults Inspector";
     
+    // init User Defaults Inspector
+    TBOUserDefaultsDebugDatasource *subclassedUserDefaultsDatasource = [TBOUserDefaultsDebugDatasource new];
+    TBODeveloperOverlayKVDebugger *editableUserDefaultsInspector = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:subclassedUserDefaultsDatasource];
+    editableUserDefaultsInspector.title = @"UserDefaults Inspector Editable";
+    
+    
     // init logger
     TBODeveloperOverlayLoggerCocoaLumberjackDatasource *loggerDatasource = [TBODeveloperOverlayLoggerCocoaLumberjackDatasource new];
     TBODeveloperOverlayLogger *logger = [[TBODeveloperOverlayLogger alloc] initWithDatasource:loggerDatasource];
@@ -45,9 +52,9 @@
     // init file inspector
     TBODeveloperOverlayFileInspectorViewController *fileInspector = [[TBODeveloperOverlayFileInspectorViewController alloc] initWithBaseUrl:[[NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject]] URLByDeletingLastPathComponent]];
     fileInspector.title = @"File Inspector";
-
+    
     // init and present developer overlay
-    NSArray *plugins = @[kvDebuggerViewController, userDefaultsInspector, logger, fileInspector];
+    NSArray *plugins = @[kvDebuggerViewController, userDefaultsInspector, editableUserDefaultsInspector, logger, fileInspector];
     UIViewController *containedViewController;
     if (plugins.count == 1) {
         // When there is only one plugin to display it doesn't make sense to use the PluginListViewController.
