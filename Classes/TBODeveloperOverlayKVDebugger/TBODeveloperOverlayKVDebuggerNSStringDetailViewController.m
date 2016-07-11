@@ -51,4 +51,11 @@
     [self recalculateTextViewHeight];
 }
 
+- (void)setValueTextView:(UITextView *)valueTextView {
+    _valueTextView = valueTextView;
+    _valueTextView.layer.borderColor = [UIColor colorWithWhite:0.8 alpha:1.0].CGColor;
+    _valueTextView.layer.borderWidth = 0.5;
+    _valueTextView.layer.cornerRadius = 6.0;
+}
+
 @end
