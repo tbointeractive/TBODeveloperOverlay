@@ -19,7 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.valueTextView.text = self.value;
+    if ([self.value isKindOfClass:[NSString class]]) {
+        self.valueTextView.text = self.value;
+    } else {
+        self.valueTextView.text = [self.value description];
+    }
     self.valueTextView.editable = [self isEditable];
 }
 
