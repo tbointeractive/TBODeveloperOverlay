@@ -56,6 +56,11 @@
     return self.value;
 }
 
++ (BOOL)isSupportingTypeOfValue:(id)value {
+    // implement in subclass
+    return NO;
+}
+
 - (UIBarButtonItem *)saveButton {
     if (!_saveButton) {
         _saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveButtonTapped)];

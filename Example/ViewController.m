@@ -15,6 +15,8 @@
 #import "TBODeveloperOverlayPluginListViewController.h"
 #import "TBOModalNavigationController.h"
 #import "TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h"
+#import "TBODeveloperOverlayKVDebuggerNSStringDetailViewController.h"
+#import "TBODeveloperOverlayKVDebuggerBoolDetailViewController.h"
 
 @interface ViewController ()
 
@@ -31,11 +33,16 @@
     
     // init Key-Value Debugger
     TBODebugDatasource *kvDatasource = [TBODebugDatasource new];
-    TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:kvDatasource];
+    NSArray <Class> *detailViewControllerClasses = @[
+                                         [TBODeveloperOverlayKVDebuggerNSStringDetailViewController class], 
+                                         [TBODeveloperOverlayKVDebuggerBoolDetailViewController class],
+                                         ];
+    
+    TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:kvDatasource andDetailViewControllerClasses:detailViewControllerClasses];
     
     // init User Defaults Inspector
     TBODeveloperOverlayNSUserDefaultsDatasource *userDefaultsDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
-    TBODeveloperOverlayKVDebugger *userDefaultsInspector = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:userDefaultsDatasource];
+    TBODeveloperOverlayKVDebugger *userDefaultsInspector = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:userDefaultsDatasource andDetailViewControllerClasses:detailViewControllerClasses];
     userDefaultsInspector.title = @"UserDefaults Inspector";
     
     // init logger
@@ -45,7 +52,7 @@
     // init file inspector
     TBODeveloperOverlayFileInspectorViewController *fileInspector = [[TBODeveloperOverlayFileInspectorViewController alloc] initWithBaseUrl:[[NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject]] URLByDeletingLastPathComponent]];
     fileInspector.title = @"File Inspector";
-
+    
     // init and present developer overlay
     NSArray *plugins = @[kvDebuggerViewController, userDefaultsInspector, logger, fileInspector];
     UIViewController *containedViewController;

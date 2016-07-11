@@ -13,6 +13,8 @@
 @property (strong, nonatomic, readonly) id value;
 
 - (instancetype)initWithValue:(id)value title:(NSString *)title description:(NSString *)description andEditingBlock:(void (^)(id))editingBlock;
+
 - (BOOL)isEditable;
++ (BOOL)isSupportingTypeOfValue:(id)value;
 
 @end

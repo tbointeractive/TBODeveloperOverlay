@@ -16,10 +16,6 @@
 
 @implementation TBODeveloperOverlayKVDebuggerBoolDetailViewController
 
-- (instancetype)initWithBool:(BOOL)boolean title:(NSString *)title description:(NSString *)description andEditingBlock:(void (^)(id))editingBlock {
-    return [super initWithValue:@(boolean) title:title description:description andEditingBlock:editingBlock];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.valueSwitch setOn:((NSNumber *)self.value).boolValue];
@@ -28,6 +24,13 @@
 
 - (id)currentValueFromInput {
     return @(self.valueSwitch.isOn);
+}
+
++ (BOOL)isSupportingTypeOfValue:(id)value {
+    if (value == (void *)kCFBooleanFalse || value == (void *)kCFBooleanTrue) {
+        return YES;
+    }
+    return NO;
 }
 
 @end

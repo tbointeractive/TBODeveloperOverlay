@@ -9,10 +9,12 @@
 #import "TBODeveloperOverlayKVDebugger.h"
 #import "TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h"
 #import "TBODeveloperOverlayKVDebuggerDetailViewController.h"
+#import "TBODeveloperOverlayKVDebuggerBaseDetailViewController.h"
 
 @interface TBODeveloperOverlayKVDebugger ()
 
 @property (nonatomic, strong) id<TBODeveloperOverlayKVDebuggerDatasourceProtocol> datasource;
+@property (strong, nonatomic, readwrite) NSArray <Class> *detailViewControllerClasses;
 
 @end
 
@@ -20,11 +22,12 @@
 
 static Class datasourceClass = nil;
 
-- (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasourceProtocol>)datasource {
+- (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasourceProtocol>)datasource andDetailViewControllerClasses:(NSArray <Class> *)detailViewControllerClasses {
     self = [self init];
     if (self) {
         self.datasource = datasource;
         self.title = @"Key-Value Inspector";
+        self.detailViewControllerClasses = detailViewControllerClasses;
     }
     return self;
 }
@@ -85,8 +88,25 @@ static Class datasourceClass = nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    TBODeveloperOverlayKVDebuggerDetailViewController *detailViewController = [[TBODeveloperOverlayKVDebuggerDetailViewController alloc] initWithDatasource:self.datasource andIndexPath:indexPath];
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    id value = [self.datasource valueForIndexPath:indexPath];
+    __block UIViewController *detailViewController = nil;
+    [self.detailViewControllerClasses enumerateObjectsUsingBlock:^(Class _Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
+        if ([obj respondsToSelector:@selector(isSupportingTypeOfValue:)] && [obj isSupportingTypeOfValue:value]) {
+            *stop = YES;
+            NSString *title = [self.datasource titleForSection:indexPath.section];
+            NSString *description = [self.datasource descriptionForIndexPath:indexPath];
+            if ([self.datasource isEditableForIndexPath:indexPath]) {
+                detailViewController = [[obj alloc] initWithValue:value title:title description:description andEditingBlock:^(id value) {
+                    [self.datasource didChangeValue:value atIndexPath:indexPath];
+                }];
+            } else {
+                detailViewController = [[obj alloc] initWithValue:value title:title description:description andEditingBlock:nil];
+            }
+        }
+    }];
+    if (detailViewController) {
+        [self.navigationController pushViewController:detailViewController animated:YES];
+    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {

@@ -10,6 +10,4 @@
 
 @interface TBODeveloperOverlayKVDebuggerBoolDetailViewController : TBODeveloperOverlayKVDebuggerBaseDetailViewController
 
-- (instancetype)initWithBool:(BOOL)boolean title:(NSString *)title description:(NSString *)description andEditingBlock:(void (^)(id))editingBlock;
-
 @end

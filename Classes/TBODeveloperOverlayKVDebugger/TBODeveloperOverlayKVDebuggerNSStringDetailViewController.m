@@ -17,10 +17,6 @@
 
 @implementation TBODeveloperOverlayKVDebuggerNSStringDetailViewController
 
-- (instancetype)initWithString:(NSString *)string title:(NSString *)title description:(NSString *)description andEditingBlock:(void (^)(id))editingBlock {
-    return [super initWithValue:string title:title description:description andEditingBlock:editingBlock];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.valueTextView.text = self.value;
@@ -36,6 +32,13 @@
 
 - (id)currentValueFromInput {
     return self.valueTextView.text;
+}
+
++ (BOOL)isSupportingTypeOfValue:(id)value {
+    if ([value isKindOfClass:[NSString class]]) {
+        return YES;
+    }
+    return NO;
 }
 
 #pragma mark UITextViewDelegate

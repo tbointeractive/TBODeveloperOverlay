@@ -35,8 +35,10 @@
  *
  *  @param datasource A Datasource that implements the TBODeveloperOverlayKVDebuggerDatasourceProtocol
  *
+ *  @param detailViewControllerClasses An array of supported ViewController classes for the detail screen of specific types
+ *
  *  @return a TBODeveloperOverlayKVDebugger ViewController
  */
-- (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasourceProtocol>)datasource;
+- (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasourceProtocol>)datasource andDetailViewControllerClasses:(NSArray <Class> *)detailViewControllerClasses;
 
 @end
