@@ -22,7 +22,7 @@
  * To implement a custom DetailViewController please subclass TBODeveloperOverlayKVDebuggerBaseDetailViewController and implement the methods marked with a comment. See the implementation of the DetailViewControllers mentioned above for an example implementation.
  *
  * ## Usage
- * Every subclass of TBODeveloperOverlayKVDebuggerBaseDetailViewController has to be initalized with a value. Title, description and an editing block are optional. If you provide an editing block the value will be editable and the editnig block, with the changed value as the parameter will be called.
+ * Every subclass of TBODeveloperOverlayKVDebuggerBaseDetailViewController has to be initalized with a value. Title, description and an editing block are optional. If you provide an editing block the value will be editable and the editing block, with the changed value as the parameter will be called.
  *
  */
 
@@ -32,7 +32,7 @@
 @property (strong, nonatomic, readonly) id _Nonnull value;
 
 /**
- * Initilaizes the Subclasses of TBODeveloperOverlayKVDebuggerBaseDetailViewController with a value and optional title, description and editing block-
+ * Initalizes the subclasses of TBODeveloperOverlayKVDebuggerBaseDetailViewController with a value and optional title, description and editing block.
  *
  * @param value The value to be displayed and optionaly edited.
  *
@@ -56,7 +56,7 @@
 /**
  * Returns a BOOL indicating if this subclass is supporting the given value.
  *
- * @param value The value the DetailViewController checks for conformity.
+ * @param value The value the BaseDetailViewController subclass checks for conformity.
  *
  * @return A BOOL indicating if this subclass is supporting the given value.
  */

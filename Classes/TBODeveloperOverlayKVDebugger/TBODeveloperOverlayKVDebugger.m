@@ -89,17 +89,13 @@ static Class datasourceClass = nil;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     id value = [self.datasource valueForIndexPath:indexPath];
-    __block UIViewController *detailViewController = nil;
     NSString *title = [self.datasource titleForSection:indexPath.section];
     NSString *description = [self.datasource descriptionForIndexPath:indexPath];
     Class detailViewControllerClass = [self detailViewControllerClassForValue:value];
-    if ([self.datasource isEditableForIndexPath:indexPath]) {
-        detailViewController = [[detailViewControllerClass alloc] initWithValue:value title:title description:description andEditingBlock:^(id value) {
-            [self.datasource didChangeValue:value atIndexPath:indexPath];
-        }];
-    } else {
-        detailViewController = [[detailViewControllerClass alloc] initWithValue:value title:title description:description andEditingBlock:nil];
-    }
+    void (^editingBlock)(id) = [self.datasource isEditableForIndexPath:indexPath] ? ^(id value) {
+        [self.datasource didChangeValue:value atIndexPath:indexPath];
+    } : nil;
+    UIViewController *detailViewController = [[detailViewControllerClass alloc] initWithValue:value title:title description:description andEditingBlock:editingBlock];
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
@@ -110,17 +106,16 @@ static Class datasourceClass = nil;
     return [self.datasource titleForSection:section];
 }
 
+#pragma mark helper
+
 - (Class)detailViewControllerClassForValue:(id)value {
-    __block Class detailViewControllerClass = nil;
+    __block Class detailViewControllerClass = [TBODeveloperOverlayKVDebuggerNSStringDetailViewController class];
     [self.detailViewControllerClasses enumerateObjectsUsingBlock:^(Class _Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
         if ([obj respondsToSelector:@selector(isSupportingTypeOfValue:)] && [obj isSupportingTypeOfValue:value]) {
             *stop = YES;
             detailViewControllerClass = obj;
         }
     }];
-    if (!detailViewControllerClass) {
-        detailViewControllerClass = [TBODeveloperOverlayKVDebuggerNSStringDetailViewController class];
-    }
     return detailViewControllerClass;
 }
 
