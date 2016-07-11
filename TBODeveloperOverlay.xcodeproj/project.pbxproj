@@ -45,6 +45,8 @@
 		9EC2F9AA1D130104002F9E40 /* NSString+RegexMatchesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2F9A41D130104002F9E40 /* NSString+RegexMatchesTests.m */; };
 		9EC2F9AC1D130104002F9E40 /* TBODeveloperOverlayLogFileReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2F9A81D130104002F9E40 /* TBODeveloperOverlayLogFileReaderTests.m */; };
 		9EC2F9B01D1302EF002F9E40 /* TBODeveloperOverlayLogFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2F9AE1D13012E002F9E40 /* TBODeveloperOverlayLogFileReader.m */; };
+		9EE9ACDC1D33D17700D90FA8 /* TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE9ACDB1D33D17700D90FA8 /* TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.m */; };
+		9EE9ACDF1D33D19900D90FA8 /* TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EE9ACDE1D33D19900D90FA8 /* TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.xib */; };
 		BB02DBF53F3B5E2BD44C8F99 /* libPods-TBODeveloperOverlayUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DED59154C4C56DB4F2811D /* libPods-TBODeveloperOverlayUITests.a */; };
 		D943645FC2DDAF2C6014DADF /* StubDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D9436179B002E8DA5B8F050E /* StubDatasource.m */; };
 		D94364DD4F909F3EDF092BA3 /* StubDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = D9436179B002E8DA5B8F050E /* StubDatasource.m */; };
@@ -144,6 +146,9 @@
 		9EC2F9A81D130104002F9E40 /* TBODeveloperOverlayLogFileReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayLogFileReaderTests.m; sourceTree = "<group>"; };
 		9EC2F9AD1D13012D002F9E40 /* TBODeveloperOverlayLogFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayLogFileReader.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLogFileReader.h; sourceTree = "<group>"; };
 		9EC2F9AE1D13012E002F9E40 /* TBODeveloperOverlayLogFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayLogFileReader.m; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLogFileReader.m; sourceTree = "<group>"; };
+		9EE9ACDA1D33D17700D90FA8 /* TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.h; sourceTree = "<group>"; };
+		9EE9ACDB1D33D17700D90FA8 /* TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.m; sourceTree = "<group>"; };
+		9EE9ACDE1D33D19900D90FA8 /* TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.xib; sourceTree = "<group>"; };
 		A753B090212C22230D56401C /* Pods-TBODeveloperOverlayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBODeveloperOverlayUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TBODeveloperOverlayUITests/Pods-TBODeveloperOverlayUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B6CE63B9BBB88675FD48D6D5 /* Pods-TBODeveloperOverlayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TBODeveloperOverlayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TBODeveloperOverlayTests/Pods-TBODeveloperOverlayTests.release.xcconfig"; sourceTree = "<group>"; };
 		D94360D0A1643FC8B61E0675 /* TBODeveloperOverlayNSUserDefaultsDatasourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayNSUserDefaultsDatasourceTests.m; sourceTree = "<group>"; };
@@ -360,6 +365,9 @@
 				9E7392151D2FF4880047B1EB /* TBODeveloperOverlayKVDebuggerBoolDetailViewController.h */,
 				9E7392161D2FF4880047B1EB /* TBODeveloperOverlayKVDebuggerBoolDetailViewController.m */,
 				9E7392171D2FF4880047B1EB /* TBODeveloperOverlayKVDebuggerBoolDetailViewController.xib */,
+				9EE9ACDA1D33D17700D90FA8 /* TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.h */,
+				9EE9ACDB1D33D17700D90FA8 /* TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.m */,
+				9EE9ACDE1D33D19900D90FA8 /* TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.xib */,
 			);
 			name = DetailViewControllers;
 			sourceTree = "<group>";
@@ -485,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7517A8431CEF1F5F00700CBF /* TBODeveloperOverlayKVDebuggerDetailViewController.xib in Resources */,
+				9EE9ACDF1D33D19900D90FA8 /* TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.xib in Resources */,
 				7593D8E41CD399D400EFFA49 /* Info.plist in Resources */,
 				1F5D92301CE0942F0017508E /* TBODeveloperOverlayLogger.xib in Resources */,
 				9E7392141D2FE51F0047B1EB /* TBODeveloperOverlayKVDebuggerNSStringDetailViewController.xib in Resources */,
@@ -641,6 +650,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7593D8F01CD399DD00EFFA49 /* TBODeveloperOverlayKVDebugger.m in Sources */,
+				9EE9ACDC1D33D17700D90FA8 /* TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.m in Sources */,
 				7593D8E61CD399D400EFFA49 /* TBODebugDatasource.m in Sources */,
 				9EC2F9B01D1302EF002F9E40 /* TBODeveloperOverlayLogFileReader.m in Sources */,
 				1F39EF471D14176400EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatter.m in Sources */,
