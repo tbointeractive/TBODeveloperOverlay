@@ -8,7 +8,6 @@
 
 #import "TBODeveloperOverlayKVDebugger.h"
 #import "TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h"
-#import "TBODeveloperOverlayKVDebuggerDetailViewController.h"
 #import "TBODeveloperOverlayKVDebuggerBaseDetailViewController.h"
 #import "TBODeveloperOverlayKVDebuggerNSStringDetailViewController.h"
 

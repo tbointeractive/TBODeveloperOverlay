@@ -11,7 +11,7 @@
 @interface TBODeveloperOverlayKVDebuggerBaseDetailViewController : UIViewController
 
 /**
- * The TBODeveloperOverlayKVDebuggerBaseDetailViewController is used by the TBODeveloperOverlayKVDebugger to display the value data of one key-value pair in full length.
+ * Subclasses of TBODeveloperOverlayKVDebuggerBaseDetailViewController are used by the TBODeveloperOverlayKVDebugger to display the value data of one key-value pair in full length.
  * You have to subclass the BaseDetailViewController to implement specific UI and functionality for the desired type.
  * For the following types there are already DetailViewController implemented:
  *
@@ -29,7 +29,7 @@
 /**
  * The value to be displayed and optionaly edited.
  */
-@property (strong, nonatomic, readonly) id value;
+@property (strong, nonatomic, readonly) id _Nonnull value;
 
 /**
  * Initilaizes the Subclasses of TBODeveloperOverlayKVDebuggerBaseDetailViewController with a value and optional title, description and editing block-
@@ -44,7 +44,7 @@
  *
  * @return An instance of a subclass of TBODeveloperOverlayKVDebuggerBaseDetailViewController.
  */
-- (instancetype)initWithValue:(id)value title:(NSString *)title description:(NSString *)description andEditingBlock:(void (^)(id))editingBlock;
+- (instancetype _Nonnull)initWithValue:(id _Nonnull)value title:(NSString *_Nullable)title description:(NSString *_Nullable)description andEditingBlock:(void (^_Nullable)(id _Nullable))editingBlock;
 
 /**
  * Returns a BOOL indicating if the value is editable.
@@ -60,6 +60,6 @@
  *
  * @return A BOOL indicating if this subclass is supporting the given value.
  */
-+ (BOOL)isSupportingTypeOfValue:(id)value;
++ (BOOL)isSupportingTypeOfValue:(id _Nonnull)value;
 
 @end

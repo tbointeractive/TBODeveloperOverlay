@@ -22,7 +22,7 @@
 
 @implementation TBODeveloperOverlayKVDebuggerBaseDetailViewController
 
-- (instancetype)initWithValue:(id)value title:(NSString *)title description:(NSString *)description andEditingBlock:(void (^)(id))editingBlock {
+- (instancetype _Nonnull)initWithValue:(id _Nonnull)value title:(NSString *_Nullable)title description:(NSString *_Nullable)description andEditingBlock:(void (^_Nullable)(id _Nullable))editingBlock {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         self.value = value;
