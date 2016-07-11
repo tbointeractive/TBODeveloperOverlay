@@ -40,6 +40,7 @@
     if (self.editingBlock) {
         self.navigationItem.rightBarButtonItem = self.saveButton;
     }
+    // implement custom UI logic in subclass
 }
 
 - (BOOL)isEditable {
