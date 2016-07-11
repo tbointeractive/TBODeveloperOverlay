@@ -43,6 +43,10 @@
 }
 
 - (void)didChangeValue:(id)value atIndexPath:(NSIndexPath *)indexPath {
+    NSString *key = [self keyForIndexPath:indexPath];
+    if (key && key.length > 0 && value) {
+        [[NSUserDefaults standardUserDefaults] setValue:value forKey:key];
+    }
 }
 
 - (NSString *)descriptionForIndexPath:(NSIndexPath *)indexPath {
