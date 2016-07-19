@@ -16,6 +16,7 @@
 #import "TBOModalNavigationController.h"
 #import "TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h"
 #import "TBOUserDefaultsDebugDatasource.h"
+#import "TBODeveloperOverlayKVDebuggerDatasource.h"
 
 @interface ViewController ()
 
@@ -30,9 +31,27 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    
     // init Key-Value Debugger
-    TBODebugDatasource *kvDatasource = [TBODebugDatasource new];
-    TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:kvDatasource];
+    TBODeveloperOverlayKeyValueItem *item1 = [TBODeveloperOverlayKeyValueItem withKey:@"Title 0" value:@"first String"];
+    TBODeveloperOverlayKeyValueItem *item2 = [TBODeveloperOverlayKeyValueItem withKey:@"Title 1" value:@YES];
+    TBODeveloperOverlayKeyValueItem *item3 = [TBODeveloperOverlayKeyValueItem withKey:@"Title 2" value:@42 description:@"42 is the Answer to the Ultimate Question of Life, the Universe, and Everything" andChangeBlock:^(id _Nullable newValue) {
+        NSLog(@"42 is not really changeable.");
+    }];
+    TBODeveloperOverlayKVDebuggerDatasource *defaultDatasource = [TBODeveloperOverlayKVDebuggerDatasource withSections:@[
+                                                                                                                         [TBODeveloperOverlayKeyValueSection
+                                                                                                                          withTitle:@"Section 0" andItems:@[item1]],
+                                                                                                                         [TBODeveloperOverlayKeyValueSection
+                                                                                                                          withTitle:@"Section 1" andItems:@[item1, item2]],
+                                                                                                                         [TBODeveloperOverlayKeyValueSection
+                                                                                                                          withTitle:@"Section 2" andItems:@[item1, item2, item3]]
+                                                                                                                         ]];
+    
+    TBODeveloperOverlayKVDebugger *defaultDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:defaultDatasource];
+    
+    // init Key-Value Debugger
+    TBODebugDatasource *customDatasource = [TBODebugDatasource new];
+    TBODeveloperOverlayKVDebugger *customDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:customDatasource];
     
     // init User Defaults Inspector
     TBODeveloperOverlayNSUserDefaultsDatasource *userDefaultsDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
@@ -54,7 +73,7 @@
     fileInspector.title = @"File Inspector";
     
     // init and present developer overlay
-    NSArray *plugins = @[kvDebuggerViewController, userDefaultsInspector, editableUserDefaultsInspector, logger, fileInspector];
+    NSArray *plugins = @[defaultDebuggerViewController, customDebuggerViewController, userDefaultsInspector, editableUserDefaultsInspector, logger, fileInspector];
     UIViewController *containedViewController;
     if (plugins.count == 1) {
         // When there is only one plugin to display it doesn't make sense to use the PluginListViewController.
