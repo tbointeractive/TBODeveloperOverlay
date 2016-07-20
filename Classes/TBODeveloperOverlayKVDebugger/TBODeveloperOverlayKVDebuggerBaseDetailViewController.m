@@ -10,61 +10,83 @@
 
 @interface TBODeveloperOverlayKVDebuggerBaseDetailViewController ()
 
+
 @property (strong, nonatomic, readwrite) id value;
 @property (strong, nonatomic, readwrite) UIBarButtonItem *saveButton;
-@property (strong, nonatomic, readwrite) void (^editingBlock)(id);
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (strong, nonatomic, readwrite) NSString *titleString;
-@property (strong, nonatomic, readwrite) NSString *descriptionString;
 
 @end
 
 @implementation TBODeveloperOverlayKVDebuggerBaseDetailViewController
 
-- (instancetype _Nonnull)initWithValue:(id _Nonnull)value title:(NSString *_Nullable)title description:(NSString *_Nullable)description andEditingBlock:(void (^_Nullable)(id _Nullable))editingBlock {
+@synthesize valueSaveBlock = _valueSaveBlock;
+@synthesize descriptionString = _descriptionString;
+
+- (instancetype _Nonnull)initWithValue:(id _Nonnull)value andTitle:(NSString *_Nonnull)title {
     self = [super initWithNibName:nil bundle:nil];
     if (self) {
         self.value = value;
-        self.editingBlock = editingBlock;
         self.titleString = title;
-        self.descriptionString = description;
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self updateView];
+}
+
+- (void)updateView {
     self.titleLabel.text = self.titleString;
-    self.descriptionLabel.text = self.descriptionString;
-    if (self.editingBlock) {
-        self.navigationItem.rightBarButtonItem = self.saveButton;
+    if (self.descriptionString) {
+        self.descriptionLabel.text = self.descriptionString;
+    } else {
+        self.descriptionLabel.text = @"";
+        self.descriptionLabel.hidden = YES;
     }
-    // override method in subclass to implement custom UI logic
+    if (self.valueSaveBlock) {
+        self.navigationItem.rightBarButtonItem = self.saveButton;
+    } else {
+        self.navigationItem.rightBarButtonItem = nil;
+    }
 }
 
 - (BOOL)isEditable {
-    return self.editingBlock != nil;
+    return self.valueSaveBlock != nil;
 }
 
-- (void)saveButtonTapped {
-    self.editingBlock([self currentValueFromInput]);
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (id)currentValueFromInput {
-    // implement in subclass
+- (id)valueToSave {
     return self.value;
 }
 
-+ (BOOL)isSupportingTypeOfValue:(id)value {
-    // implement in subclass
+- (void)saveButtonTapped:(UIButton *)saveButton {
+    if (self.valueSaveBlock) {
+        self.valueSaveBlock([self valueToSave]);
+    }
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
++ (BOOL)supportsValue:(id _Nonnull)value {
     return NO;
 }
 
+#pragma mark setter / getter
+
+- (void)setValueSaveBlock:(TBOValueSaveBlock)valueSaveBlock {
+    _valueSaveBlock = valueSaveBlock;
+    [self updateView];
+}
+
+- (void)setDescriptionString:(NSString *)descriptionString {
+    _descriptionString = descriptionString;
+    [self updateView];
+}
+
+#pragma mark lazy instantiation
+
 - (UIBarButtonItem *)saveButton {
     if (!_saveButton) {
-        _saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveButtonTapped)];
+        _saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(saveButtonTapped:)];
     }
     return _saveButton;
 }

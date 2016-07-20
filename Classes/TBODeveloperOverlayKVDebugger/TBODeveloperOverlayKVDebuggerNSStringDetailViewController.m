@@ -34,15 +34,12 @@
     [self.valueTextView scrollRangeToVisible:NSMakeRange(0, 1)];
 }
 
-- (id)currentValueFromInput {
+- (id)valueToSave {
     return self.valueTextView.text;
 }
 
-+ (BOOL)isSupportingTypeOfValue:(id)value {
-    if ([value isKindOfClass:[NSString class]]) {
-        return YES;
-    }
-    return NO;
++ (BOOL)supportsValue:(id)value {
+    return [value isKindOfClass:[NSString class]];
 }
 
 #pragma mark UITextViewDelegate

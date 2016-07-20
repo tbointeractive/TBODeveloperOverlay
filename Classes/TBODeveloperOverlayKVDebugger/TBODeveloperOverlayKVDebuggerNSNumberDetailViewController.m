@@ -22,15 +22,12 @@
     self.valueTextField.enabled = [self isEditable];
 }
 
-- (id)currentValueFromInput {
+- (id)valueToSave {
     return self.valueTextField.text;
 }
 
-+ (BOOL)isSupportingTypeOfValue:(id)value {
-    if ([value isKindOfClass:[NSNumber class]]) {
-        return YES;
-    }
-    return NO;
++ (BOOL)supportsValue:(id)value {
+    return [value isKindOfClass:[NSNumber class]];
 }
 
 #pragma mark TextField Delegate

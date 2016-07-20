@@ -9,12 +9,15 @@
 #import "TBODeveloperOverlayKVDebugger.h"
 #import "TBODeveloperOverlayKVDebuggerReadOnlyKVCell.h"
 #import "TBODeveloperOverlayKVDebuggerBaseDetailViewController.h"
+
 #import "TBODeveloperOverlayKVDebuggerNSStringDetailViewController.h"
+#import "TBODeveloperOverlayKVDebuggerBoolDetailViewController.h"
+#import "TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.h"
 
 @interface TBODeveloperOverlayKVDebugger ()
 
 @property (nonatomic, strong) id<TBODeveloperOverlayKVDebuggerDatasourceProtocol> datasource;
-@property (strong, nonatomic, readwrite) NSArray <Class> *detailViewControllerClasses;
+@property (strong, nonatomic, readwrite) NSMutableArray <Class <TBODeveloperOverlayKVDebuggerDetailViewController> > *detailViewControllerClasses;
 
 @end
 
@@ -22,12 +25,11 @@
 
 static Class datasourceClass = nil;
 
-- (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasourceProtocol>)datasource andDetailViewControllerClasses:(NSArray <Class> *)detailViewControllerClasses {
+- (instancetype)initWithDatasource:(id<TBODeveloperOverlayKVDebuggerDatasourceProtocol>)datasource {
     self = [self init];
     if (self) {
         self.datasource = datasource;
         self.title = @"Key-Value Inspector";
-        self.detailViewControllerClasses = detailViewControllerClasses;
     }
     return self;
 }
@@ -46,6 +48,10 @@ static Class datasourceClass = nil;
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
+}
+
+- (void)registerDetailViewController:(Class <TBODeveloperOverlayKVDebuggerDetailViewController>)viewController {
+    [self.detailViewControllerClasses insertObject:viewController atIndex:0];
 }
 
 #pragma mark - Table view data source
@@ -90,12 +96,14 @@ static Class datasourceClass = nil;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     id value = [self.datasource valueForIndexPath:indexPath];
     NSString *title = [self.datasource titleForSection:indexPath.section];
-    NSString *description = [self.datasource descriptionForIndexPath:indexPath];
     Class detailViewControllerClass = [self detailViewControllerClassForValue:value];
-    void (^editingBlock)(id) = [self.datasource isEditableForIndexPath:indexPath] ? ^(id value) {
-        [self.datasource didChangeValue:value atIndexPath:indexPath];
-    } : nil;
-    UIViewController *detailViewController = [[detailViewControllerClass alloc] initWithValue:value title:title description:description andEditingBlock:editingBlock];
+    UIViewController <TBODeveloperOverlayKVDebuggerDetailViewController> *detailViewController = [[detailViewControllerClass alloc] initWithValue:value andTitle:title];
+    detailViewController.descriptionString = [self.datasource descriptionForIndexPath:indexPath];
+    if ([self.datasource isEditableForIndexPath:indexPath]) {
+        detailViewController.valueSaveBlock = ^(id value) {
+            [self.datasource didChangeValue:value atIndexPath:indexPath];
+        };
+    }
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
@@ -109,14 +117,29 @@ static Class datasourceClass = nil;
 #pragma mark helper
 
 - (Class)detailViewControllerClassForValue:(id)value {
-    __block Class detailViewControllerClass = [TBODeveloperOverlayKVDebuggerNSStringDetailViewController class];
-    [self.detailViewControllerClasses enumerateObjectsUsingBlock:^(Class _Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
-        if ([obj respondsToSelector:@selector(isSupportingTypeOfValue:)] && [obj isSupportingTypeOfValue:value]) {
-            *stop = YES;
-            detailViewControllerClass = obj;
+    __block Class detailViewControllerClass = nil;
+    [self.detailViewControllerClasses enumerateObjectsUsingBlock:^(Class < TBODeveloperOverlayKVDebuggerDetailViewController > _Nonnull obj, NSUInteger idx, BOOL *_Nonnull stop) {
+        if ([obj respondsToSelector:@selector(supportsValue:)]) {
+            if ([obj supportsValue:value]) {
+                *stop = YES;
+                detailViewControllerClass = obj;
+            }
         }
     }];
     return detailViewControllerClass;
+}
+
+#pragma mark lazy instantiation
+
+- (NSMutableArray<Class <TBODeveloperOverlayKVDebuggerDetailViewController> > *)detailViewControllerClasses {
+    if (!_detailViewControllerClasses) {
+        _detailViewControllerClasses = [@[
+                                          [TBODeveloperOverlayKVDebuggerNSStringDetailViewController class],
+                                          [TBODeveloperOverlayKVDebuggerBoolDetailViewController class],
+                                          [TBODeveloperOverlayKVDebuggerNSNumberDetailViewController class],
+                                          ] mutableCopy];
+    }
+    return _detailViewControllerClasses;
 }
 
 @end

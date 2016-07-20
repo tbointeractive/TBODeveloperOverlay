@@ -22,15 +22,12 @@
     self.valueSwitch.enabled = [self isEditable];
 }
 
-- (id)currentValueFromInput {
+- (id)valueToSave {
     return @(self.valueSwitch.isOn);
 }
 
-+ (BOOL)isSupportingTypeOfValue:(id)value {
-    if (value == (void *)kCFBooleanFalse || value == (void *)kCFBooleanTrue) {
-        return YES;
-    }
-    return NO;
++ (BOOL)supportsValue:(id)value {
+    return (value == (void *)kCFBooleanFalse || value == (void *)kCFBooleanTrue);
 }
 
 @end
