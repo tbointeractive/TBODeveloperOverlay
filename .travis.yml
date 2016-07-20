@@ -1,0 +1,5 @@
+language: objective-c
+xcode_workspace: TBODeveloperOverlay.xcworkspace
+xcode_scheme: TBODeveloperOverlay
+xcode_sdk: iphonesimulator
+osx_image: xcode7.2
