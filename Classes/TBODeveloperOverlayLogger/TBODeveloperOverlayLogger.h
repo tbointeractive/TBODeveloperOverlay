@@ -44,4 +44,12 @@
  */
 - (instancetype _Nullable)initWithDatasource:(_Nullable id <TBODeveloperOverlayLoggerDatasourceProtocol>)datasource;
 
+/**
+ *
+ * Can be called when a button was tapped to share the content of the currently filtered log.
+ *
+ * @param sender The sender that was tapped.
+ */
+- (IBAction)shareButtonTapped:(_Nonnull id)sender;
+
 @end
