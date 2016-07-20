@@ -27,7 +27,6 @@
 		753E8BA41D2EAD9A004819ED /* TBOUserDefaultsDebugDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = 753E8BA31D2EAD9A004819ED /* TBOUserDefaultsDebugDatasource.m */; };
 		7554B66B1CFC7B4500FD6CD3 /* TBODeveloperOverlayPluginListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7554B66A1CFC7B4500FD6CD3 /* TBODeveloperOverlayPluginListViewController.m */; };
 		75629A3C1CD351AC00E72F7B /* TBODeveloperOverlayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A3B1CD351AC00E72F7B /* TBODeveloperOverlayTests.m */; };
-		75629A471CD351AC00E72F7B /* TBODeveloperOverlayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75629A461CD351AC00E72F7B /* TBODeveloperOverlayUITests.m */; };
 		759174701D141E1D007A5CBC /* TBODeveloperOverlayLoggerCocoaLumberjackDatasourceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7591746F1D141E1D007A5CBC /* TBODeveloperOverlayLoggerCocoaLumberjackDatasourceTests.m */; };
 		7593D8E01CD399D400EFFA49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7593D8D41CD399D400EFFA49 /* AppDelegate.m */; };
 		7593D8E11CD399D400EFFA49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7593D8D51CD399D400EFFA49 /* Assets.xcassets */; };
@@ -119,7 +118,6 @@
 		75629A3B1CD351AC00E72F7B /* TBODeveloperOverlayTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayTests.m; sourceTree = "<group>"; };
 		75629A3D1CD351AC00E72F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75629A421CD351AC00E72F7B /* TBODeveloperOverlayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBODeveloperOverlayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		75629A461CD351AC00E72F7B /* TBODeveloperOverlayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayUITests.m; sourceTree = "<group>"; };
 		75629A481CD351AC00E72F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7591746F1D141E1D007A5CBC /* TBODeveloperOverlayLoggerCocoaLumberjackDatasourceTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayLoggerCocoaLumberjackDatasourceTests.m; sourceTree = "<group>"; };
 		7593D8D31CD399D400EFFA49 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -287,7 +285,6 @@
 		75629A451CD351AC00E72F7B /* TBODeveloperOverlayUITests */ = {
 			isa = PBXGroup;
 			children = (
-				75629A461CD351AC00E72F7B /* TBODeveloperOverlayUITests.m */,
 				75629A481CD351AC00E72F7B /* Info.plist */,
 			);
 			path = TBODeveloperOverlayUITests;
@@ -682,7 +679,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75629A471CD351AC00E72F7B /* TBODeveloperOverlayUITests.m in Sources */,
 				D943645FC2DDAF2C6014DADF /* StubDatasource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

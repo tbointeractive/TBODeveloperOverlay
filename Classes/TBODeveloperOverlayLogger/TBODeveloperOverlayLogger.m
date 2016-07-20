@@ -51,6 +51,7 @@
         self.logLevelTagList.delegate = self;
     }
     self.searchField.enabled = [self.datasource respondsToSelector:@selector(setSearchString:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(shareButtonTapped:)];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -87,6 +88,12 @@
     } else {
         self.textView.text = [self logString];
     }
+}
+
+- (IBAction)shareButtonTapped:(_Nonnull id)sender {
+    NSArray *activityItems = @[self.textView.text];
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    [self presentViewController:activityViewController animated:YES completion:nil];
 }
 
 #pragma mark TBODeveloperOverlayLoggerDatasourceProtocol
