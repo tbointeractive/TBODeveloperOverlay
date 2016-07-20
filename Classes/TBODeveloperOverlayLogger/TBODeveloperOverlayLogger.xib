@@ -10,7 +10,6 @@
                 <outlet property="logLevelTagList" destination="BgU-Et-kzm" id="06a-GS-psJ"/>
                 <outlet property="searchField" destination="sQe-Dc-3N1" id="2fp-fQ-Icx"/>
                 <outlet property="textView" destination="dlC-UW-419" id="iwD-UX-IaZ"/>
-                <outlet property="textViewBottomConstraint" destination="NQw-bw-5Mw" id="ZVq-Kp-SP7"/>
                 <outlet property="view" destination="iN0-l3-epB" id="HTF-l7-gDJ"/>
             </connections>
         </placeholder>
@@ -49,10 +48,10 @@
                 <constraint firstAttribute="trailing" secondItem="BgU-Et-kzm" secondAttribute="trailing" constant="8" id="C6p-SK-peo"/>
                 <constraint firstAttribute="trailing" secondItem="sQe-Dc-3N1" secondAttribute="trailing" constant="8" id="KWx-K4-9tq"/>
                 <constraint firstItem="sQe-Dc-3N1" firstAttribute="top" secondItem="BgU-Et-kzm" secondAttribute="bottom" constant="9" id="NHS-PQ-8ma"/>
-                <constraint firstAttribute="bottom" secondItem="dlC-UW-419" secondAttribute="bottom" id="NQw-bw-5Mw"/>
                 <constraint firstItem="BgU-Et-kzm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Y2l-c6-YpT"/>
                 <constraint firstAttribute="trailing" secondItem="dlC-UW-419" secondAttribute="trailing" constant="4" id="dA7-k5-GZg"/>
                 <constraint firstItem="dlC-UW-419" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="fun-RA-e1I"/>
+                <constraint firstAttribute="bottom" secondItem="dlC-UW-419" secondAttribute="bottom" id="lrK-Rj-Wzn"/>
                 <constraint firstItem="BgU-Et-kzm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ucG-wB-3Vj"/>
                 <constraint firstItem="dlC-UW-419" firstAttribute="top" secondItem="sQe-Dc-3N1" secondAttribute="bottom" constant="8" id="yK2-6b-EWl"/>
             </constraints>
