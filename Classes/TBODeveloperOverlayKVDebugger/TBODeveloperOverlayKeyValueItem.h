@@ -10,9 +10,9 @@
 
 @interface TBODeveloperOverlayKeyValueItem : NSObject
 
-@property (readonly) NSString *_Nonnull key;
-@property (readonly) id _Nullable value;
-@property (readonly) NSString *_Nullable itemDescription;
+@property (copy, nonatomic, readonly) NSString *_Nonnull key;
+@property (copy, nonatomic, readonly) id _Nullable value;
+@property (copy, nonatomic, readonly) NSString *_Nullable itemDescription;
 
 @property (readonly, getter = isEditable) BOOL editable;
 @property (nonatomic, copy, readonly) void (^_Nullable changeBlock)(id _Nullable newValue);

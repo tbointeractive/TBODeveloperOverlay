@@ -12,7 +12,7 @@
 
 @interface TBODeveloperOverlayKeyValueSection : NSObject
 
-@property (readonly) NSString *_Nullable title;
+@property (copy, nonatomic, readonly) NSString *_Nullable title;
 @property (readonly) NSUInteger itemCount;
 - (TBODeveloperOverlayKeyValueItem *_Nullable)itemAtIndex:(NSUInteger)index;
 
