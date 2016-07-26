@@ -15,6 +15,9 @@
 #import "TBODeveloperOverlayPluginListViewController.h"
 #import "TBOModalNavigationController.h"
 #import "TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h"
+#import "TBODeveloperOverlayKVDebuggerNSStringDetailViewController.h"
+#import "TBODeveloperOverlayKVDebuggerBoolDetailViewController.h"
+#import "TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.h"
 #import "TBOUserDefaultsDebugDatasource.h"
 
 @interface ViewController ()
@@ -32,6 +35,12 @@
     
     // init Key-Value Debugger
     TBODebugDatasource *kvDatasource = [TBODebugDatasource new];
+    NSArray <Class> *detailViewControllerClasses = @[
+                                                     [TBODeveloperOverlayKVDebuggerNSStringDetailViewController class],
+                                                     [TBODeveloperOverlayKVDebuggerBoolDetailViewController class],
+                                                     [TBODeveloperOverlayKVDebuggerNSNumberDetailViewController class],
+                                                     ];
+    
     TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:kvDatasource];
     
     // init User Defaults Inspector
