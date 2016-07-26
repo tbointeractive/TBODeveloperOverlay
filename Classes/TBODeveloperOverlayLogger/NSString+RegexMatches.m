@@ -32,6 +32,18 @@
     return NO;
 }
 
+- (BOOL)matchesEveryRegex:(NSArray <NSRegularExpression *> *)regexes {
+    for (NSRegularExpression *regex in regexes) {
+        if (![regex isKindOfClass:[NSRegularExpression class]]) {
+            return NO;
+        }
+        if (![self matchesRegex:regex]) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
 - (NSString *)substringThatMatchesRegex:(NSRegularExpression *)regex {
     NSMutableArray *lines = [NSMutableArray new];
     [self enumerateLinesUsingBlock:^(NSString *line, BOOL *stop) {

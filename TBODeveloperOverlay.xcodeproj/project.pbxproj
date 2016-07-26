@@ -37,7 +37,6 @@
 		75A8C7471D0996890055F9E1 /* TBODeveloperOverlayKVDebuggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A8C7461D0996890055F9E1 /* TBODeveloperOverlayKVDebuggerTests.m */; };
 		9EB5B2CA1D0ED4EA00942EA4 /* NSString+RegexMatches.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5B2C91D0ED4EA00942EA4 /* NSString+RegexMatches.m */; };
 		9EC2F9A91D130104002F9E40 /* NSMutableAttributedString+RegexMatchesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2F9A31D130104002F9E40 /* NSMutableAttributedString+RegexMatchesTests.m */; };
-		9EC2F9AA1D130104002F9E40 /* NSString+RegexMatchesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2F9A41D130104002F9E40 /* NSString+RegexMatchesTests.m */; };
 		9EC2F9AC1D130104002F9E40 /* TBODeveloperOverlayLogFileReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2F9A81D130104002F9E40 /* TBODeveloperOverlayLogFileReaderTests.m */; };
 		9EC2F9B01D1302EF002F9E40 /* TBODeveloperOverlayLogFileReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EC2F9AE1D13012E002F9E40 /* TBODeveloperOverlayLogFileReader.m */; };
 		BB02DBF53F3B5E2BD44C8F99 /* libPods-TBODeveloperOverlayUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03DED59154C4C56DB4F2811D /* libPods-TBODeveloperOverlayUITests.a */; };
@@ -128,7 +127,6 @@
 		9EB5B2C81D0ED4EA00942EA4 /* NSString+RegexMatches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+RegexMatches.h"; path = "TBODeveloperOverlayLogger/NSString+RegexMatches.h"; sourceTree = "<group>"; };
 		9EB5B2C91D0ED4EA00942EA4 /* NSString+RegexMatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+RegexMatches.m"; path = "TBODeveloperOverlayLogger/NSString+RegexMatches.m"; sourceTree = "<group>"; };
 		9EC2F9A31D130104002F9E40 /* NSMutableAttributedString+RegexMatchesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+RegexMatchesTests.m"; sourceTree = "<group>"; };
-		9EC2F9A41D130104002F9E40 /* NSString+RegexMatchesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+RegexMatchesTests.m"; sourceTree = "<group>"; };
 		9EC2F9A81D130104002F9E40 /* TBODeveloperOverlayLogFileReaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBODeveloperOverlayLogFileReaderTests.m; sourceTree = "<group>"; };
 		9EC2F9AD1D13012D002F9E40 /* TBODeveloperOverlayLogFileReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBODeveloperOverlayLogFileReader.h; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLogFileReader.h; sourceTree = "<group>"; };
 		9EC2F9AE1D13012E002F9E40 /* TBODeveloperOverlayLogFileReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBODeveloperOverlayLogFileReader.m; path = TBODeveloperOverlayLogger/TBODeveloperOverlayLogFileReader.m; sourceTree = "<group>"; };
@@ -255,7 +253,6 @@
 			children = (
 				1F39EF481D14185900EA4B48 /* TBODeveloperOverlayCococaLumberjackLogFormatterTests.m */,
 				9EC2F9A31D130104002F9E40 /* NSMutableAttributedString+RegexMatchesTests.m */,
-				9EC2F9A41D130104002F9E40 /* NSString+RegexMatchesTests.m */,
 				9EC2F9A81D130104002F9E40 /* TBODeveloperOverlayLogFileReaderTests.m */,
 				75629A3B1CD351AC00E72F7B /* TBODeveloperOverlayTests.m */,
 				75629A3D1CD351AC00E72F7B /* Info.plist */,
@@ -641,7 +638,6 @@
 				759174701D141E1D007A5CBC /* TBODeveloperOverlayLoggerCocoaLumberjackDatasourceTests.m in Sources */,
 				75A8C7471D0996890055F9E1 /* TBODeveloperOverlayKVDebuggerTests.m in Sources */,
 				9EC2F9A91D130104002F9E40 /* NSMutableAttributedString+RegexMatchesTests.m in Sources */,
-				9EC2F9AA1D130104002F9E40 /* NSString+RegexMatchesTests.m in Sources */,
 				D94364DD4F909F3EDF092BA3 /* StubDatasource.m in Sources */,
 				D943695D65FE6BC4173BC606 /* TBODeveloperOverlayNSUserDefaultsDatasourceTests.m in Sources */,
 				9EC2F9AC1D130104002F9E40 /* TBODeveloperOverlayLogFileReaderTests.m in Sources */,

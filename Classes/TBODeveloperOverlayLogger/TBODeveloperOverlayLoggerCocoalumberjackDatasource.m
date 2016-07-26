@@ -15,6 +15,8 @@
 #import "NSString+RegexMatches.h"
 #import "NSMutableAttributedString+RegexMatches.h"
 
+#import "TBODeveloperOverlayFilterableLogFormatterProtocol.h"
+
 @interface TBODeveloperOverlayLoggerCocoaLumberjackDatasource ()
 
 @property (strong, nonatomic, readwrite) NSMutableSet<NSRegularExpression *> *logLevelRegexes;
@@ -25,7 +27,7 @@
 @implementation TBODeveloperOverlayLoggerCocoaLumberjackDatasource
 
 - (NSString *)lastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount {
-    if (!self.fileLogger){
+    if (!self.fileLogger) {
         return nil;
     }
     NSString *fullLog = [TBODeveloperOverlayLogFileReader lastLogMessagesLimitedToCharacterCount:maxCharacterCount inFilelogger:[self fileLogger]];
@@ -33,7 +35,7 @@
 }
 
 - (NSAttributedString *)attributedLastLogMessagesLimitedToCharacterCount:(NSUInteger)maxCharacterCount {
-    if (!self.fileLogger){
+    if (!self.fileLogger) {
         return nil;
     }
     NSString *filteredLog = [self lastLogMessagesLimitedToCharacterCount:maxCharacterCount];
@@ -71,15 +73,34 @@
     }
 }
 
+- (NSRegularExpression *)singleMessageRegularExpression {
+    NSRegularExpression *singleMessageRegularExpression = nil;
+    if ([[[self fileLogger] logFormatter] respondsToSelector:@selector(logMessageRegularExpression)]) {
+        singleMessageRegularExpression = [[[self fileLogger] logFormatter] performSelector:@selector(logMessageRegularExpression)];
+    }
+    if (!singleMessageRegularExpression) {
+        singleMessageRegularExpression = [NSRegularExpression regularExpressionWithPattern:@"^.*$\n" options:NSRegularExpressionAnchorsMatchLines error:nil];
+    }
+    return singleMessageRegularExpression;
+}
+
 - (NSString *)filteredLog:(NSString *)logString {
-    NSString *filteredString = logString;
-    if (self.logLevelRegexes.count > 0) {
-        filteredString = [logString substringThatMatchesAnyRegex:self.logLevelRegexes.allObjects];
-    }
-    if (self.searchString.length > 0) {
-        NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:[NSString stringWithFormat:@".*%@.*", self.searchString] options:kNilOptions error:nil];
-        filteredString = [filteredString substringThatMatchesRegex:regularExpression];
-    }
+    NSMutableString *filteredString = [NSMutableString new];
+    NSRegularExpression *singleMessageRegularExpression = [self singleMessageRegularExpression];
+    [singleMessageRegularExpression enumerateMatchesInString:[logString stringByAppendingString:@"\n"] options:kNilOptions range:NSMakeRange(0, logString.length) usingBlock:^(NSTextCheckingResult *_Nullable result, NSMatchingFlags flags, BOOL *_Nonnull stop) {
+        NSString *match = [logString substringWithRange:result.range];
+        BOOL matches = true;
+        if (self.logLevelRegexes.count > 0) {
+            matches &= [match matchesEveryRegex:self.logLevelRegexes.allObjects];
+        }
+        if (self.searchString.length > 0) {
+            NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:[NSString stringWithFormat:@".*%@.*", self.searchString] options:kNilOptions error:nil];
+            matches &= [match matchesRegex:regularExpression];
+        }
+        if (matches) {
+            [filteredString appendString:match];
+        }
+    }];
     return filteredString;
 }
 
