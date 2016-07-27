@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TBODeveloperOverlayKVDebuggerNSNumberDetailViewController">
+            <connections>
+                <outlet property="descriptionLabel" destination="zkb-pL-MRj" id="x7R-fR-adh"/>
+                <outlet property="titleLabel" destination="n3A-WE-Frq" id="Rg2-kb-Hbw"/>
+                <outlet property="valueTextField" destination="1y1-ad-qM8" id="7Sw-49-CsB"/>
+                <outlet property="view" destination="iN0-l3-epB" id="HWg-Zv-M61"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3A-WE-Frq" userLabel="Title Label">
+                    <rect key="frame" x="20" y="80" width="560" height="23"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1y1-ad-qM8" userLabel="Number Text Field">
+                    <rect key="frame" x="20" y="123" width="560" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="PzY-Ll-wHL"/>
+                    </connections>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkb-pL-MRj" userLabel="Description Label">
+                    <rect key="frame" x="20" y="173" width="560" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="zkb-pL-MRj" firstAttribute="top" secondItem="1y1-ad-qM8" secondAttribute="bottom" constant="20" id="7UO-HT-aQ0"/>
+                <constraint firstItem="1y1-ad-qM8" firstAttribute="top" secondItem="n3A-WE-Frq" secondAttribute="bottom" constant="20" id="Hug-Je-VzW"/>
+                <constraint firstItem="zkb-pL-MRj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Ks2-QX-MRE"/>
+                <constraint firstItem="n3A-WE-Frq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="Lwa-1F-jlL"/>
+                <constraint firstItem="1y1-ad-qM8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="NUS-Ne-bn5"/>
+                <constraint firstAttribute="trailing" secondItem="zkb-pL-MRj" secondAttribute="trailing" constant="20" id="b9L-CW-F2H"/>
+                <constraint firstItem="n3A-WE-Frq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="fpi-Zl-doz"/>
+                <constraint firstAttribute="trailing" secondItem="n3A-WE-Frq" secondAttribute="trailing" constant="20" id="rzn-ht-YWJ"/>
+                <constraint firstAttribute="trailing" secondItem="1y1-ad-qM8" secondAttribute="trailing" constant="20" id="wke-Y2-nRD"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

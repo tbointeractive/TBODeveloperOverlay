@@ -15,6 +15,9 @@
 #import "TBODeveloperOverlayPluginListViewController.h"
 #import "TBOModalNavigationController.h"
 #import "TBODeveloperOverlayLoggerCocoaLumberjackDatasource.h"
+#import "TBODeveloperOverlayKVDebuggerNSStringDetailViewController.h"
+#import "TBODeveloperOverlayKVDebuggerBoolDetailViewController.h"
+#import "TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.h"
 #import "TBOUserDefaultsDebugDatasource.h"
 #import "TBODeveloperOverlayKVDebuggerDatasource.h"
 
@@ -31,8 +34,21 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    NSArray *plugins = @[[self simpleKeyValueDebuggerWithoutCustomDatasouce], [self keyValueDebuggerWithCustomDatasource], [self nsuserdefaultsKeyValueDebugger], [self editableNsuserdefaultsKeyValueDebugger], [self loggerOverlay], [self fileInspector]];
+    UIViewController *containedViewController;
+    if (plugins.count == 1) {
+        // When there is only one plugin to display it doesn't make sense to use the PluginListViewController.
+        // Instead consider displying the plugin as rootViewController of the NavigationController
+        containedViewController = plugins[0];
+    } else {
+        containedViewController = [[TBODeveloperOverlayPluginListViewController alloc] initWithPlugins:plugins];
+    }
     
-    // init Key-Value Debugger
+    TBOModalNavigationController *developerOverlay = [[TBOModalNavigationController alloc] initWithRootViewController:containedViewController];
+    [self presentViewController:developerOverlay animated:YES completion:nil];
+}
+
+- (TBODeveloperOverlayKVDebugger *)simpleKeyValueDebuggerWithoutCustomDatasouce {
     TBODeveloperOverlayKeyValueItem *item1 = [TBODeveloperOverlayKeyValueItem withKey:@"Title 0" value:@"first String"];
     TBODeveloperOverlayKeyValueItem *item2 = [TBODeveloperOverlayKeyValueItem withKey:@"Title 1" value:@YES];
     TBODeveloperOverlayKeyValueItem *item3 = [TBODeveloperOverlayKeyValueItem withKey:@"Title 2" value:@42 description:@"42 is the Answer to the Ultimate Question of Life, the Universe, and Everything" andChangeBlock:^(id _Nullable newValue) {
@@ -47,44 +63,37 @@
                                                                                                                           withTitle:@"Section 2" andItems:@[item1, item2, item3]]
                                                                                                                          ]];
     
-    TBODeveloperOverlayKVDebugger *defaultDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:defaultDatasource];
-    
-    // init Key-Value Debugger
+    return [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:defaultDatasource];
+}
+
+- (TBODeveloperOverlayKVDebugger *)keyValueDebuggerWithCustomDatasource {
     TBODebugDatasource *customDatasource = [TBODebugDatasource new];
-    TBODeveloperOverlayKVDebugger *customDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:customDatasource];
-    
-    // init User Defaults Inspector
+    return [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:customDatasource];
+}
+
+- (TBODeveloperOverlayKVDebugger *)nsuserdefaultsKeyValueDebugger {
     TBODeveloperOverlayNSUserDefaultsDatasource *userDefaultsDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
     TBODeveloperOverlayKVDebugger *userDefaultsInspector = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:userDefaultsDatasource];
     userDefaultsInspector.title = @"UserDefaults Inspector";
-    
-    // init User Defaults Inspector
+    return userDefaultsInspector;
+}
+
+- (TBODeveloperOverlayKVDebugger *)editableNsuserdefaultsKeyValueDebugger {
     TBOUserDefaultsDebugDatasource *subclassedUserDefaultsDatasource = [TBOUserDefaultsDebugDatasource new];
     TBODeveloperOverlayKVDebugger *editableUserDefaultsInspector = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:subclassedUserDefaultsDatasource];
     editableUserDefaultsInspector.title = @"UserDefaults Inspector Editable";
-    
-    
-    // init logger
+    return editableUserDefaultsInspector;
+}
+
+- (TBODeveloperOverlayLogger *)loggerOverlay {
     TBODeveloperOverlayLoggerCocoaLumberjackDatasource *loggerDatasource = [TBODeveloperOverlayLoggerCocoaLumberjackDatasource new];
-    TBODeveloperOverlayLogger *logger = [[TBODeveloperOverlayLogger alloc] initWithDatasource:loggerDatasource];
-    
-    // init file inspector
+    return [[TBODeveloperOverlayLogger alloc] initWithDatasource:loggerDatasource];
+}
+
+- (TBODeveloperOverlayFileInspectorViewController *)fileInspector {
     TBODeveloperOverlayFileInspectorViewController *fileInspector = [[TBODeveloperOverlayFileInspectorViewController alloc] initWithBaseUrl:[[NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject]] URLByDeletingLastPathComponent]];
     fileInspector.title = @"File Inspector";
-    
-    // init and present developer overlay
-    NSArray *plugins = @[defaultDebuggerViewController, customDebuggerViewController, userDefaultsInspector, editableUserDefaultsInspector, logger, fileInspector];
-    UIViewController *containedViewController;
-    if (plugins.count == 1) {
-        // When there is only one plugin to display it doesn't make sense to use the PluginListViewController.
-        // Instead consider displying the plugin as rootViewController of the NavigationController
-        containedViewController = plugins[0];
-    } else {
-        containedViewController = [[TBODeveloperOverlayPluginListViewController alloc] initWithPlugins:plugins];
-    }
-    
-    TBOModalNavigationController *developerOverlay = [[TBOModalNavigationController alloc] initWithRootViewController:containedViewController];
-    [self presentViewController:developerOverlay animated:YES completion:nil];
+    return fileInspector;
 }
 
 @end
