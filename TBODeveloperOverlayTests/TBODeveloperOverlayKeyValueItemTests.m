@@ -16,10 +16,10 @@
 @implementation TBODeveloperOverlayKeyValueItemTests
 
 - (void)testInitialization {
-    XCTAssertNotNil([[TBODeveloperOverlayKeyValueItem alloc] initWithKey:nil value:nil]);
-    XCTAssertNotNil([[TBODeveloperOverlayKeyValueItem alloc] initWithKey:@"key" value:nil]);
-    XCTAssertNotNil([[TBODeveloperOverlayKeyValueItem alloc] initWithKey:@"key" value:@1]);
-    XCTAssertNotNil([[TBODeveloperOverlayKeyValueItem alloc] initWithKey:nil value:nil description:nil andChangeBlock:nil]);
+    XCTAssertNil([[TBODeveloperOverlayKeyValueItem alloc] initWithKey:nil value:nil description:nil andChangeBlock:nil]);
+    XCTAssertNil([[TBODeveloperOverlayKeyValueItem alloc] initWithKey:@"key" value:nil description:nil andChangeBlock:nil]);
+    XCTAssertNotNil([[TBODeveloperOverlayKeyValueItem alloc] initWithKey:@"key" value:@1 description:nil andChangeBlock:nil]);
+    XCTAssertNil([[TBODeveloperOverlayKeyValueItem alloc] initWithKey:nil value:nil description:nil andChangeBlock:nil]);
 }
 
 - (void)testProperties {

@@ -16,7 +16,10 @@
 @property (readonly) NSUInteger itemCount;
 - (TBODeveloperOverlayKeyValueItem *_Nullable)itemAtIndex:(NSUInteger)index;
 
-+ (instancetype _Nonnull)withTitle:(NSString *_Nullable)title andItems:(NSArray <TBODeveloperOverlayKeyValueItem *> *_Nonnull)items;
++ (instancetype _Nullable)fromDictionary:(NSDictionary *_Nonnull)section;
 - (instancetype _Nonnull)initWithTitle:(NSString *_Nullable)title andItems:(NSArray <TBODeveloperOverlayKeyValueItem *> *_Nonnull)items;
 
 @end
+
+extern NSString *_Nonnull kSectionTitle;
+extern NSString *_Nonnull kSectionItems;

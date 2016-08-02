@@ -15,6 +15,7 @@
 @interface TBODeveloperOverlayKVDebuggerDatasource : NSObject <TBODeveloperOverlayKVDebuggerDatasourceProtocol>
 
 + (instancetype)withSections:(NSArray <TBODeveloperOverlayKeyValueSection *> *)sections;
++ (instancetype)withSectionsFromDictionaries:(NSArray <NSDictionary *> *)sections;
 - (instancetype)initWithSections:(NSArray <TBODeveloperOverlayKeyValueSection *> *)sections;
 
 @end

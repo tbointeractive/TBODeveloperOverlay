@@ -20,20 +20,29 @@
 
 @implementation TBODeveloperOverlayKeyValueItem
 
-
-+ (instancetype _Nonnull)withKey:(NSString *_Nullable)key value:(id _Nullable)value {
-    return [self withKey:key value:value description:nil andChangeBlock:nil];
++ (NSArray <TBODeveloperOverlayKeyValueItem *> *_Nonnull)itemsFromDictionaries:(NSArray <NSDictionary *> *_Nonnull)itemDictionaries {
+    NSMutableArray <TBODeveloperOverlayKeyValueItem *> *items = [NSMutableArray new];
+    for (NSDictionary *itemDictionary in itemDictionaries) {
+        TBODeveloperOverlayKeyValueItem *item = [TBODeveloperOverlayKeyValueItem fromDictionary:itemDictionary];
+        if (item) {
+            [items addObject:item];
+        }
+    }
+    return items;
 }
 
-+ (instancetype _Nonnull)withKey:(NSString *_Nullable)key value:(id _Nullable)value description:(NSString *_Nullable)description {
-    return [self withKey:key value:value description:description andChangeBlock:nil];
++ (instancetype _Nullable)fromDictionary:(NSDictionary *)itemDictionary {
+    return [self withKey:itemDictionary[kItemKey] value:itemDictionary[kItemValue] description:itemDictionary[kItemDescription] andChangeBlock:itemDictionary[kItemChangeBlock]];
 }
 
-+ (instancetype _Nonnull)withKey:(NSString *_Nullable)key value:(id _Nullable)value description:(NSString *_Nullable)description andChangeBlock:(void (^_Nullable)(id _Nullable newValue))changeBlock {
++ (instancetype _Nullable)withKey:(NSString *_Nullable)key value:(id _Nullable)value description:(NSString *_Nullable)description andChangeBlock:(void (^_Nullable)(id _Nullable newValue))changeBlock {
     return [[self alloc] initWithKey:key value:value description:description andChangeBlock:changeBlock];
 }
 
-- (instancetype)initWithKey:(NSString *)key value:(id)value description:(NSString *)description andChangeBlock:(void (^)(id newValue))changeBlock {
+- (instancetype _Nullable)initWithKey:(NSString *)key value:(id)value description:(NSString *)description andChangeBlock:(void (^)(id newValue))changeBlock {
+    if (!key || !value) {
+        return nil;
+    }
     self = [self init];
     if (self) {
         self.key = key;
@@ -44,16 +53,13 @@
     return self;
 }
 
-- (instancetype _Nonnull)initWithKey:(NSString *_Nullable)key value:(id _Nullable)value description:(NSString *_Nullable)description {
-    return [self initWithKey:key value:value description:description andChangeBlock:nil];
-}
-
-- (instancetype _Nonnull)initWithKey:(NSString *_Nullable)key value:(id _Nullable)value {
-    return [self initWithKey:key value:value description:nil andChangeBlock:nil];
-}
-
 - (BOOL)isEditable {
     return self.changeBlock != nil;
 }
 
 @end
+
+NSString *kItemKey = @"key";
+NSString *kItemValue = @"value";
+NSString *kItemDescription = @"description";
+NSString *kItemChangeBlock = @"changeBlock";

@@ -49,20 +49,14 @@
 }
 
 - (TBODeveloperOverlayKVDebugger *)simpleKeyValueDebuggerWithoutCustomDatasouce {
-    TBODeveloperOverlayKeyValueItem *item1 = [TBODeveloperOverlayKeyValueItem withKey:@"Title 0" value:@"first String"];
-    TBODeveloperOverlayKeyValueItem *item2 = [TBODeveloperOverlayKeyValueItem withKey:@"Title 1" value:@YES];
-    TBODeveloperOverlayKeyValueItem *item3 = [TBODeveloperOverlayKeyValueItem withKey:@"Title 2" value:@42 description:@"42 is the Answer to the Ultimate Question of Life, the Universe, and Everything" andChangeBlock:^(id _Nullable newValue) {
-        NSLog(@"42 is not really changeable.");
-    }];
-    TBODeveloperOverlayKVDebuggerDatasource *defaultDatasource = [TBODeveloperOverlayKVDebuggerDatasource withSections:@[
-                                                                                                                         [TBODeveloperOverlayKeyValueSection
-                                                                                                                          withTitle:@"Section 0" andItems:@[item1]],
-                                                                                                                         [TBODeveloperOverlayKeyValueSection
-                                                                                                                          withTitle:@"Section 1" andItems:@[item1, item2]],
-                                                                                                                         [TBODeveloperOverlayKeyValueSection
-                                                                                                                          withTitle:@"Section 2" andItems:@[item1, item2, item3]]
-                                                                                                                         ]];
-    
+    NSArray *sections = @[@{kSectionTitle:@"Section 0", kSectionItems: @[
+                                    @{kItemKey:@"Title 0", kItemValue: @"first String"},
+                                    @{kItemKey:@"Title 1", kItemValue: @YES},
+                                    @{kItemKey:@"Title 2", kItemValue: @42, kItemDescription: @"42 is the Answer to the Ultimate Question of Life, the Universe, and Everything", kItemChangeBlock:^(id _Nullable newValue) {
+                                        NSLog(@"42 is not really changeable.");
+                                    }}
+                                    ]}];
+    TBODeveloperOverlayKVDebuggerDatasource *defaultDatasource = [TBODeveloperOverlayKVDebuggerDatasource withSectionsFromDictionaries:sections];
     return [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:defaultDatasource];
 }
 

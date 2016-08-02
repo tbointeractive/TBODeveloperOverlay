@@ -17,12 +17,13 @@
 @property (readonly, getter = isEditable) BOOL editable;
 @property (nonatomic, copy, readonly) void (^_Nullable changeBlock)(id _Nullable newValue);
 
-+ (instancetype _Nonnull)withKey:(NSString *_Nullable)key value:(id _Nullable)value;
-+ (instancetype _Nonnull)withKey:(NSString *_Nullable)key value:(id _Nullable)value description:(NSString *_Nullable)description;
-+ (instancetype _Nonnull)withKey:(NSString *_Nullable)key value:(id _Nullable)value description:(NSString *_Nullable)description andChangeBlock:(void (^_Nullable)(id _Nullable newValue))changeBlock;
++ (NSArray <TBODeveloperOverlayKeyValueItem *> *_Nonnull)itemsFromDictionaries:(NSArray <NSDictionary *> *_Nonnull)itemDictionaries;
 
-- (instancetype _Nonnull)initWithKey:(NSString *_Nullable)key value:(id _Nullable)value description:(NSString *_Nullable)description;
-- (instancetype _Nonnull)initWithKey:(NSString *_Nullable)key value:(id _Nullable)value;
-- (instancetype _Nonnull)initWithKey:(NSString *_Nullable)key value:(id _Nullable)value description:(NSString *_Nullable)description andChangeBlock:(void (^_Nullable)(id _Nullable newValue))changeBlock;
+- (instancetype _Nullable)initWithKey:(NSString *_Nullable)key value:(id _Nullable)value description:(NSString *_Nullable)description andChangeBlock:(void (^_Nullable)(id _Nullable newValue))changeBlock;
 
 @end
+
+extern NSString *_Nonnull kItemKey;
+extern NSString *_Nonnull kItemValue;
+extern NSString *_Nonnull kItemDescription;
+extern NSString *_Nonnull kItemChangeBlock;

@@ -19,7 +19,7 @@
 - (void)testInitialization {
     XCTAssertNotNil([[TBODeveloperOverlayKeyValueSection alloc] initWithTitle:nil andItems:@[]]);
     XCTAssertNotNil([[TBODeveloperOverlayKeyValueSection alloc] initWithTitle:@"title" andItems:@[]]);
-    XCTAssertNotNil([[TBODeveloperOverlayKeyValueSection alloc] initWithTitle:@"title" andItems:@[[[TBODeveloperOverlayKeyValueItem alloc] initWithKey:@"key" value:@"value"]]]);
+    XCTAssertNotNil([[TBODeveloperOverlayKeyValueSection alloc] initWithTitle:@"title" andItems:@[[[TBODeveloperOverlayKeyValueItem alloc] initWithKey:@"key" value:@"value" description:nil andChangeBlock:nil]]]);
 }
 
 - (void)testProperties {

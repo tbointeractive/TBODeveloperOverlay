@@ -22,6 +22,17 @@
     return [[self alloc] initWithSections:sections];
 }
 
++ (instancetype)withSectionsFromDictionaries:(NSArray <NSDictionary *> *)sectionDictionaries {
+    NSMutableArray *sections = [NSMutableArray new];
+    for (NSDictionary *sectionDictionary in sectionDictionaries) {
+        TBODeveloperOverlayKeyValueSection *section = [TBODeveloperOverlayKeyValueSection fromDictionary:sectionDictionary];
+        if (section) {
+            [sections addObject:section];
+        }
+    }
+    return [[self alloc] initWithSections:sections];
+}
+
 - (instancetype)initWithSections:(NSArray <TBODeveloperOverlayKeyValueSection *> *)sections {
     self = [self init];
     if (self) {
