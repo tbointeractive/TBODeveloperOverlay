@@ -41,7 +41,7 @@
     NSString *filteredLog = [self lastLogMessagesLimitedToCharacterCount:maxCharacterCount];
     NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:filteredLog];
     if (self.searchString) {
-        NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:[NSString stringWithFormat:@"%@", self.searchString] options:NSRegularExpressionDotMatchesLineSeparators error:nil];
+        NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:[NSString stringWithFormat:@"%@", self.searchString] options:NSRegularExpressionDotMatchesLineSeparators|NSRegularExpressionCaseInsensitive error:nil];
         [attributedString addAttributes:@{NSBackgroundColorAttributeName:[UIColor colorWithRed:0.875 green:1.000 blue:0.886 alpha:1.000]} toMatchesOfRegex:regularExpression];
     }
     return attributedString;
@@ -85,7 +85,7 @@
 }
 
 - (NSString *)filteredLog:(NSString *)logString {
-    NSMutableString *filteredString = [NSMutableString new];
+    NSMutableArray *filteredMessages = [NSMutableArray new];
     NSRegularExpression *singleMessageRegularExpression = [self singleMessageRegularExpression];
     [singleMessageRegularExpression enumerateMatchesInString:[logString stringByAppendingString:@"\n"] options:kNilOptions range:NSMakeRange(0, logString.length) usingBlock:^(NSTextCheckingResult *_Nullable result, NSMatchingFlags flags, BOOL *_Nonnull stop) {
         NSString *match = [logString substringWithRange:result.range];
@@ -94,14 +94,14 @@
             matches &= [match matchesEveryRegex:self.logLevelRegexes.allObjects];
         }
         if (self.searchString.length > 0) {
-            NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:[NSString stringWithFormat:@".*%@.*", self.searchString] options:kNilOptions error:nil];
+            NSRegularExpression *regularExpression = [NSRegularExpression regularExpressionWithPattern:[NSString stringWithFormat:@".*%@.*", self.searchString] options:NSRegularExpressionCaseInsensitive error:nil];
             matches &= [match matchesRegex:regularExpression];
         }
         if (matches) {
-            [filteredString appendString:match];
+            [filteredMessages addObject:match];
         }
     }];
-    return filteredString;
+    return [filteredMessages componentsJoinedByString:@"\n"];
 }
 
 #pragma mark helper

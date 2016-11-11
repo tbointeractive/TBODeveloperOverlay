@@ -21,7 +21,7 @@
 }
 
 - (NSRegularExpression *_Nullable)logMessageRegularExpression {
-    return [NSRegularExpression regularExpressionWithPattern:@"^.*?\\[[DEVWI]\\](.(?!^\\d\\d\\d\\d-\\d\\d-\\d\\d \\d\\d:\\d\\d:\\d\\d \\+0000))*$\\n" options:NSRegularExpressionAnchorsMatchLines|NSRegularExpressionDotMatchesLineSeparators error:nil];
+    return [NSRegularExpression regularExpressionWithPattern:@"^.*?\\[[DEVWI]\\](.(?!^\\d\\d\\d\\d-\\d\\d-\\d\\d \\d\\d:\\d\\d:\\d\\d \\+0000))*$" options:NSRegularExpressionAnchorsMatchLines|NSRegularExpressionDotMatchesLineSeparators error:nil];
 }
 
 #pragma mark DDLogFormatter
