@@ -19,6 +19,7 @@
 #import "TBODeveloperOverlayKVDebuggerBoolDetailViewController.h"
 #import "TBODeveloperOverlayKVDebuggerNSNumberDetailViewController.h"
 #import "TBOUserDefaultsDebugDatasource.h"
+#import "TBODeveloperOverlayKVDebuggerDatasource.h"
 
 @interface ViewController ()
 
@@ -33,37 +34,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    // init Key-Value Debugger
-    TBODebugDatasource *kvDatasource = [TBODebugDatasource new];
-    NSArray <Class> *detailViewControllerClasses = @[
-                                                     [TBODeveloperOverlayKVDebuggerNSStringDetailViewController class],
-                                                     [TBODeveloperOverlayKVDebuggerBoolDetailViewController class],
-                                                     [TBODeveloperOverlayKVDebuggerNSNumberDetailViewController class],
-                                                     ];
-    
-    TBODeveloperOverlayKVDebugger *kvDebuggerViewController = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:kvDatasource];
-    
-    // init User Defaults Inspector
-    TBODeveloperOverlayNSUserDefaultsDatasource *userDefaultsDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
-    TBODeveloperOverlayKVDebugger *userDefaultsInspector = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:userDefaultsDatasource];
-    userDefaultsInspector.title = @"UserDefaults Inspector";
-    
-    // init User Defaults Inspector
-    TBOUserDefaultsDebugDatasource *subclassedUserDefaultsDatasource = [TBOUserDefaultsDebugDatasource new];
-    TBODeveloperOverlayKVDebugger *editableUserDefaultsInspector = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:subclassedUserDefaultsDatasource];
-    editableUserDefaultsInspector.title = @"UserDefaults Inspector Editable";
-    
-    
-    // init logger
-    TBODeveloperOverlayLoggerCocoaLumberjackDatasource *loggerDatasource = [TBODeveloperOverlayLoggerCocoaLumberjackDatasource new];
-    TBODeveloperOverlayLogger *logger = [[TBODeveloperOverlayLogger alloc] initWithDatasource:loggerDatasource];
-    
-    // init file inspector
-    TBODeveloperOverlayFileInspectorViewController *fileInspector = [[TBODeveloperOverlayFileInspectorViewController alloc] initWithBaseUrl:[[NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject]] URLByDeletingLastPathComponent]];
-    fileInspector.title = @"File Inspector";
-    
-    // init and present developer overlay
-    NSArray *plugins = @[kvDebuggerViewController, userDefaultsInspector, editableUserDefaultsInspector, logger, fileInspector];
+    NSArray *plugins = @[[self simpleKeyValueDebuggerWithoutCustomDatasouce], [self keyValueDebuggerWithCustomDatasource], [self nsuserdefaultsKeyValueDebugger], [self editableNsuserdefaultsKeyValueDebugger], [self loggerOverlay], [self fileInspector]];
     UIViewController *containedViewController;
     if (plugins.count == 1) {
         // When there is only one plugin to display it doesn't make sense to use the PluginListViewController.
@@ -75,6 +46,48 @@
     
     TBOModalNavigationController *developerOverlay = [[TBOModalNavigationController alloc] initWithRootViewController:containedViewController];
     [self presentViewController:developerOverlay animated:YES completion:nil];
+}
+
+- (TBODeveloperOverlayKVDebugger *)simpleKeyValueDebuggerWithoutCustomDatasouce {
+    NSArray *sections = @[@{kSectionTitle:@"Section 0", kSectionItems: @[
+                                    @{kItemKey:@"Title 0", kItemValue: @"first String"},
+                                    @{kItemKey:@"Title 1", kItemValue: @YES},
+                                    @{kItemKey:@"Title 2", kItemValue: @42, kItemDescription: @"42 is the Answer to the Ultimate Question of Life, the Universe, and Everything", kItemChangeBlock:^(id _Nullable newValue) {
+                                        NSLog(@"42 is not really changeable.");
+                                    }}
+                                    ]}];
+    TBODeveloperOverlayKVDebuggerDatasource *defaultDatasource = [TBODeveloperOverlayKVDebuggerDatasource withSectionsFromDictionaries:sections];
+    return [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:defaultDatasource];
+}
+
+- (TBODeveloperOverlayKVDebugger *)keyValueDebuggerWithCustomDatasource {
+    TBODebugDatasource *customDatasource = [TBODebugDatasource new];
+    return [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:customDatasource];
+}
+
+- (TBODeveloperOverlayKVDebugger *)nsuserdefaultsKeyValueDebugger {
+    TBODeveloperOverlayNSUserDefaultsDatasource *userDefaultsDatasource = [TBODeveloperOverlayNSUserDefaultsDatasource new];
+    TBODeveloperOverlayKVDebugger *userDefaultsInspector = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:userDefaultsDatasource];
+    userDefaultsInspector.title = @"UserDefaults Inspector";
+    return userDefaultsInspector;
+}
+
+- (TBODeveloperOverlayKVDebugger *)editableNsuserdefaultsKeyValueDebugger {
+    TBOUserDefaultsDebugDatasource *subclassedUserDefaultsDatasource = [TBOUserDefaultsDebugDatasource new];
+    TBODeveloperOverlayKVDebugger *editableUserDefaultsInspector = [[TBODeveloperOverlayKVDebugger alloc] initWithDatasource:subclassedUserDefaultsDatasource];
+    editableUserDefaultsInspector.title = @"UserDefaults Inspector Editable";
+    return editableUserDefaultsInspector;
+}
+
+- (TBODeveloperOverlayLogger *)loggerOverlay {
+    TBODeveloperOverlayLoggerCocoaLumberjackDatasource *loggerDatasource = [TBODeveloperOverlayLoggerCocoaLumberjackDatasource new];
+    return [[TBODeveloperOverlayLogger alloc] initWithDatasource:loggerDatasource];
+}
+
+- (TBODeveloperOverlayFileInspectorViewController *)fileInspector {
+    TBODeveloperOverlayFileInspectorViewController *fileInspector = [[TBODeveloperOverlayFileInspectorViewController alloc] initWithBaseUrl:[[NSURL fileURLWithPath:[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject]] URLByDeletingLastPathComponent]];
+    fileInspector.title = @"File Inspector";
+    return fileInspector;
 }
 
 @end
