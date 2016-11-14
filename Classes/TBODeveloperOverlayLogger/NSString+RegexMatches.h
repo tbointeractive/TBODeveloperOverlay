@@ -14,20 +14,20 @@
 
 
 /**
- * Checks if the whole string matches the regex
+ * Checks if the string matches the regex
  *
  *  @param regex A regex describing the searched substring.
  *
- *  @return true if the whole string matches the regex
+ *  @return true if the string (or a substring) matches the regex
  */
 - (BOOL)matchesRegex:(NSRegularExpression *)regex;
 
 /**
- * Checks if the whole string matches every regex
+ * Checks if the string matches every regex
  *
  *  @param regex An array of regular expressions describing the searched substring.
  *
- *  @return true if the whole string matches every regex
+ *  @return true if the string (or a substring) matches every regex
  */
 - (BOOL)matchesEveryRegex:(NSArray <NSRegularExpression *> *)regexes;
 
