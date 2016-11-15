@@ -23,7 +23,7 @@
 @synthesize descriptionString = _descriptionString;
 
 - (instancetype _Nonnull)initWithValue:(id _Nonnull)value andTitle:(NSString *_Nonnull)title {
-    self = [super initWithNibName:nil bundle:nil];
+    self = [super initWithNibName:NSStringFromClass([self class]) bundle:[NSBundle bundleForClass:[self class]]];
     if (self) {
         self.value = value;
         self.titleString = title;
