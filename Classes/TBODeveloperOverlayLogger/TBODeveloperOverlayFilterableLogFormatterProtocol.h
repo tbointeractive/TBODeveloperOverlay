@@ -34,6 +34,17 @@
 
 - (NSRegularExpression *_Nullable)regularExpressionForLogLevel:(NSString *_Nonnull)logLevel;
 
+@optional
+
+/**
+ *  Use this method to define what is a single log message. This way you can have one log message span multiple lines.
+ *  If not defined, one message is expected to be one line.
+ *  Messages should not include a trailing newline.
+ *
+ *  @return the NSRegularExpression that matches exactly one log message.
+ */
+- (NSRegularExpression *_Nullable)logMessageRegularExpression;
+
 @end
 
 #endif /* TBODeveloperOverlayFilterableLogFormatterProtocol_h */

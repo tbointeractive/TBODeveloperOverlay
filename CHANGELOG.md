@@ -4,6 +4,7 @@
 
 * **feature** Overriding `TBODeveloperOverlayNSUserDefaultsDatasource` and `isEditableForIndexPath:` enables editable NSUserDefaults
 * **feature** added with TBODeveloperOverlayKeyValueItem and TBODeveloperOverlayKeyValueItem an easier way to configure a TBODeveloperOverlayKVDebugger
+* **improvement** the `Logger` will no longer only show half of a log message when the message contains a linebreak (check TBODeveloperOverlayFilterableLogFormatterProtocol-logMessageRegularExpression)
 
 ## 1.3.1 (28.06.2016)
 

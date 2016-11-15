@@ -31,6 +31,8 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose; // everything
     DDLogWarn(@"DidFinishLaunchingWithOptions:");
     DDLogInfo(@"DidFinishLaunchingWithOptions:");
     
+    DDLogVerbose(@"Multiline\nLog\nMessage");
+    
     return YES;
 }
 

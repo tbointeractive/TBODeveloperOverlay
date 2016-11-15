@@ -12,22 +12,23 @@
  */
 @interface NSString (RegexMatches)
 
+
 /**
- * Returns a substring if the given regular expression matches.
+ * Checks if the string matches the regex
  *
  *  @param regex A regex describing the searched substring.
  *
- *  @return The substring that matches the regex.
+ *  @return true if the string (or a substring) matches the regex
  */
-- (NSString *_Nonnull)substringThatMatchesRegex:(NSRegularExpression *_Nonnull)regex;
+- (BOOL)matchesRegex:(NSRegularExpression *)regex;
 
 /**
- * Returns a substring if any of the given regular expressions matches.
+ * Checks if the string matches every regex
  *
- *  @param regexes A NSArray of NSRegularExpressions to search for matching substrings.
+ *  @param regex An array of regular expressions describing the searched substring.
  *
- *  @return The substring that matches any of the regexes; If there are more than one match, all matches will be concatenated with a newline.
+ *  @return true if the string (or a substring) matches every regex
  */
-- (NSString *_Nonnull)substringThatMatchesAnyRegex:(NSArray <NSRegularExpression *> *_Nonnull)regexes;
+- (BOOL)matchesEveryRegex:(NSArray <NSRegularExpression *> *)regexes;
 
 @end
