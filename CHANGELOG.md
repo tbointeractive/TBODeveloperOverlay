@@ -1,6 +1,6 @@
 # Changelog
 
-## not released
+## 1.4 (15.11.2016)
 
 * **feature** Overriding `TBODeveloperOverlayNSUserDefaultsDatasource` and `isEditableForIndexPath:` enables editable NSUserDefaults
 * **feature** added with TBODeveloperOverlayKeyValueItem and TBODeveloperOverlayKeyValueItem an easier way to configure a TBODeveloperOverlayKVDebugger
