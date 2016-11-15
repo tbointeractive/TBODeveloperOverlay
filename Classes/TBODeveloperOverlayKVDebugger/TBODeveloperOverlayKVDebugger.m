@@ -98,7 +98,9 @@ static Class datasourceClass = nil;
     NSString *title = [self.datasource titleForSection:indexPath.section];
     Class detailViewControllerClass = [self detailViewControllerClassForValue:value];
     UIViewController <TBODeveloperOverlayKVDebuggerDetailViewController> *detailViewController = [[detailViewControllerClass alloc] initWithValue:value andTitle:title];
-    detailViewController.descriptionString = [self.datasource descriptionForIndexPath:indexPath];
+    if ([self.datasource respondsToSelector:@selector(descriptionForIndexPath:)]) {
+        detailViewController.descriptionString = [self.datasource descriptionForIndexPath:indexPath];
+    }
     if ([self.datasource isEditableForIndexPath:indexPath]) {
         detailViewController.valueSaveBlock = ^(id value) {
             [self.datasource didChangeValue:value atIndexPath:indexPath];
