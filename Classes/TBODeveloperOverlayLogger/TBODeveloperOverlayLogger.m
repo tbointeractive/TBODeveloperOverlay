@@ -90,9 +90,10 @@
     }
 }
 
-- (IBAction)shareButtonTapped:(_Nonnull id)sender {
+- (IBAction)shareButtonTapped:(UIBarButtonItem *_Nonnull)sender {
     NSArray *activityItems = @[self.textView.text];
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    activityViewController.popoverPresentationController.barButtonItem = sender;
     [self presentViewController:activityViewController animated:YES completion:nil];
 }
 

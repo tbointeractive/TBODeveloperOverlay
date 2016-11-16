@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.4.1 (16.11.2016)
+* **bugfix** Fixed a crash when sharing the log on the iPad
+
 ## 1.4 (15.11.2016)
 
 * **feature** Overriding `TBODeveloperOverlayNSUserDefaultsDatasource` and `isEditableForIndexPath:` enables editable NSUserDefaults
