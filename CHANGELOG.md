@@ -1,5 +1,8 @@
 # Changelog
 
+## Unreleased
+* **bugfix** Fixed wrong title in the KV Details Page
+
 ## 1.4.1 (16.11.2016)
 * **bugfix** Fixed a crash when sharing the log on the iPad
 
