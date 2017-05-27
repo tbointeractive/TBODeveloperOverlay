@@ -95,7 +95,7 @@ static Class datasourceClass = nil;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     id value = [self.datasource valueForIndexPath:indexPath];
-    NSString *title = [self.datasource titleForSection:indexPath.section];
+    NSString *title = [self.datasource keyForIndexPath:indexPath];
     Class detailViewControllerClass = [self detailViewControllerClassForValue:value];
     UIViewController <TBODeveloperOverlayKVDebuggerDetailViewController> *detailViewController = [[detailViewControllerClass alloc] initWithValue:value andTitle:title];
     if ([self.datasource respondsToSelector:@selector(descriptionForIndexPath:)]) {
