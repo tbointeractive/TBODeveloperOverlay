@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "TBODeveloperOverlayKVDebugger.h"
-#import "TBODeveloperOverlayCococaLumberjackLogFormatter.h"
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
 static const DDLogLevel ddLogLevel = DDLogLevelVerbose; // everything
@@ -65,11 +64,6 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose; // everything
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     DDFileLogger *fileLogger = [DDFileLogger new];
     [DDLog addLogger:fileLogger];
-    
-    TBODeveloperOverlayCococaLumberjackLogFormatter *logFormatter = [TBODeveloperOverlayCococaLumberjackLogFormatter new];
-    [DDTTYLogger sharedInstance].logFormatter = logFormatter;
-    [DDASLLogger sharedInstance].logFormatter = logFormatter;
-    fileLogger.logFormatter = logFormatter;
 }
 
 @end

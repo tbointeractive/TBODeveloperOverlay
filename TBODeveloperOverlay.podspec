@@ -45,7 +45,6 @@ Pod::Spec.new do |s|
     sp.resource_bundles = {
         'LoggerOverlay' => ['Classes/TBODeveloperOverlayLogger/*.xib']
     }
-    sp.dependency 'CocoaLumberjack', '~> 2.3'
   end
 
   s.subspec 'FileInspector' do |sp|

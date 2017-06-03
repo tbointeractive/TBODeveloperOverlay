@@ -8,17 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "TBODeveloperOverlayLoggerDatasourceProtocol.h"
-#import "TBODeveloperOverlayLoggerCocoalumberjackDatasource.h"
 
 /**
  *  The logger adds the possibility to display a log.
  *
  * ## Usage
- * The logger needs a datasource to access the data to display. The TBODeveloperOverlayLogger plugin offers an existing datasource for [CocoaLumberjack](https://github.com/CocoaLumberjack)
+ * The logger needs a datasource to access the data to display.
  *
  * ```
  * // init logger
- * TBODeveloperOverlayLoggerCocoaLumberjackDatasource *loggerDatasource = [TBODeveloperOverlayLoggerCocoaLumberjackDatasource new];
+ * id <TBODeveloperOverlayLoggerDatasourceProtocol *loggerDatasource = [YourCustomDatasourceClass new];
  * TBODeveloperOverlayLogger *logger = [[TBODeveloperOverlayLogger alloc] initWithDatasource:loggerDatasource];
  * ```
  *
