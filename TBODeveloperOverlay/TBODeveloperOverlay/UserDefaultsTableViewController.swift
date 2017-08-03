@@ -9,8 +9,8 @@
 import Foundation
 
 open class UserDefaultsTableViewController: TableViewController {
-    static let defaultInspectors: [InspectorViewController.Type] = []
-    static let defaultUserDefaultsKeysBlacklist: [String] = ["AppleLanguages", "AppleLocale", "AppleKeyboards", "AppleITunesStoreItemKinds", "AddingEmojiKeybordHandled", "ApplePasscodeKeyboards", "NSInterfaceStyle", "PKKeychainVersionKey", "AppleKeyboardsExpanded", "NSLanguages"]
+    static let defaultInspectors: [InspectorViewController.Type] = [NumberInspectorViewController.self, BoolInspectorViewController.self]
+    static let defaultUserDefaultsKeysBlacklist: [String] = ["AppleLanguages", "AppleLocale", "AppleKeyboards", "AppleITunesStoreItemKinds", "AddingEmojiKeybordHandled", "ApplePasscodeKeyboards", "NSInterfaceStyle", "PKKeychainVersionKey", "AppleKeyboardsExpanded", "NSLanguages", "AppleLanguagesDidMigrate"]
     
     let canEdit: Bool
     let inspectors: [InspectorViewController.Type]
@@ -74,13 +74,13 @@ open class UserDefaultsTableViewController: TableViewController {
     internal func inspector(key: String, value: Any) -> InspectorViewController {
         var viewController: InspectorViewController? = nil
         for inspector in inspectors {
-            guard inspector.canInspect(value) else { break }
-            viewController = inspector.init(coder: NSCoder())
+            guard inspector.canInspect(value) else { continue }
+            viewController = inspector.init()
             if viewController != nil {
                 break
             }
         }
-        let inspectorViewController = viewController ?? FallbackInspector.init(nibName: nil, bundle: nil)
+        let inspectorViewController = viewController ?? FallbackInspectorViewController.init()
         inspectorViewController.inspectable = value
         return inspectorViewController
     }

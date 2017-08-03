@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UserDefaults.standard.set(Date(), forKey: "lastAppStart")
         UserDefaults.standard.set(true, forKey: "appHasBeenStarted")
         UserDefaults.standard.set("simple string", forKey: "simpleString")
+        UserDefaults.standard.set(NSNumber(value: 12.3), forKey: "Number")
+        UserDefaults.standard.set(12, forKey: "Int")
         window = UIWindow(frame: UIScreen.main.bounds)
         
         window?.rootViewController = UINavigationController(rootViewController: rootViewController())

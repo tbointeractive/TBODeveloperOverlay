@@ -1,31 +1,18 @@
 //
-//  Inspector.swift
+//  FallbackInspector.swift
 //  TBODeveloperOverlay
 //
-//  Created by Cornelius Horstmann on 28.07.17.
+//  Created by Cornelius Horstmann on 03.08.17.
 //  Copyright © 2017 TBO Interactive GmbH & CO KG. All rights reserved.
 //
 
 import Foundation
 
-public class InspectorViewController: UIViewController {
-    
-    var didEdit: ((_ newValue: Any) -> ())?
-    
-    var inspectable: Any? = nil
-    
-    class func canInspect(_ inspectable: Any) -> Bool {
-        return false
-    }
-}
-
-final class FallbackInspector: InspectorViewController {
-    
-    static let editableTypes: [Any.Type] = [String.self, NSString.self]
-    
+final class FallbackInspectorViewController: InspectorViewController {
+        
     private static func canEdit(_ inspectable: Any) -> Bool {
         if inspectable is String { return true }
-        if let inspectable = inspectable as? NSString {
+        if inspectable is NSString {
             return true
         }
         return false
@@ -48,7 +35,7 @@ final class FallbackInspector: InspectorViewController {
         if let inspectable = inspectable {
             textView.text = "\(inspectable)"
         }
-        if let inspectable = inspectable, didEdit != nil, FallbackInspector.canEdit(inspectable) {
+        if let inspectable = inspectable, didEdit != nil, FallbackInspectorViewController.canEdit(inspectable) {
             textView.isEditable = true
         } else {
             textView.isEditable = false

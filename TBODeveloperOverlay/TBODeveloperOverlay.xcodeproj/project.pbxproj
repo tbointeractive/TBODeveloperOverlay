@@ -10,7 +10,10 @@
 		1F00AF7E1F2B2B3C00836CB9 /* SectionDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00AF7D1F2B2B3C00836CB9 /* SectionDatasource.swift */; };
 		1F00AF821F2B424E00836CB9 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00AF811F2B424E00836CB9 /* TableViewController.swift */; };
 		1F00AF841F2B557800836CB9 /* UserDefaultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00AF831F2B557800836CB9 /* UserDefaultsTableViewController.swift */; };
-		1F00AF861F2B5ACB00836CB9 /* Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00AF851F2B5ACB00836CB9 /* Inspector.swift */; };
+		1F00AF861F2B5ACB00836CB9 /* InspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F00AF851F2B5ACB00836CB9 /* InspectorViewController.swift */; };
+		1F3785EA1F33ABC900B30D3D /* FallbackInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3785E91F33ABC900B30D3D /* FallbackInspectorViewController.swift */; };
+		1F3785EC1F33AC7A00B30D3D /* NumberInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3785EB1F33AC7A00B30D3D /* NumberInspectorViewController.swift */; };
+		1F3785EE1F33B6D500B30D3D /* BoolInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3785ED1F33B6D500B30D3D /* BoolInspectorViewController.swift */; };
 		1F46293B1F2B1A56003BD1E5 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F46293A1F2B1A56003BD1E5 /* Section.swift */; };
 		1F6D0D661F2A25DA0073EA10 /* TBODeveloperOverlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6D0D5C1F2A25DA0073EA10 /* TBODeveloperOverlay.framework */; };
 		1F6D0D6B1F2A25DA0073EA10 /* TBODeveloperOverlayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6D0D6A1F2A25DA0073EA10 /* TBODeveloperOverlayTests.swift */; };
@@ -31,7 +34,10 @@
 		1F00AF7D1F2B2B3C00836CB9 /* SectionDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionDatasource.swift; sourceTree = "<group>"; };
 		1F00AF811F2B424E00836CB9 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		1F00AF831F2B557800836CB9 /* UserDefaultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsTableViewController.swift; sourceTree = "<group>"; };
-		1F00AF851F2B5ACB00836CB9 /* Inspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inspector.swift; sourceTree = "<group>"; };
+		1F00AF851F2B5ACB00836CB9 /* InspectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorViewController.swift; sourceTree = "<group>"; };
+		1F3785E91F33ABC900B30D3D /* FallbackInspectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FallbackInspectorViewController.swift; sourceTree = "<group>"; };
+		1F3785EB1F33AC7A00B30D3D /* NumberInspectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberInspectorViewController.swift; sourceTree = "<group>"; };
+		1F3785ED1F33B6D500B30D3D /* BoolInspectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolInspectorViewController.swift; sourceTree = "<group>"; };
 		1F46293A1F2B1A56003BD1E5 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		1F6D0D5C1F2A25DA0073EA10 /* TBODeveloperOverlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TBODeveloperOverlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6D0D5F1F2A25DA0073EA10 /* TBODeveloperOverlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBODeveloperOverlay.h; sourceTree = "<group>"; };
@@ -60,11 +66,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F3785E81F33ABB900B30D3D /* Inspector */ = {
+			isa = PBXGroup;
+			children = (
+				1F00AF851F2B5ACB00836CB9 /* InspectorViewController.swift */,
+				1F3785E91F33ABC900B30D3D /* FallbackInspectorViewController.swift */,
+				1F3785EB1F33AC7A00B30D3D /* NumberInspectorViewController.swift */,
+				1F3785ED1F33B6D500B30D3D /* BoolInspectorViewController.swift */,
+			);
+			name = Inspector;
+			sourceTree = "<group>";
+		};
 		1F4629381F2A2C56003BD1E5 /* KeyValue */ = {
 			isa = PBXGroup;
 			children = (
+				1F3785E81F33ABB900B30D3D /* Inspector */,
 				1F00AF831F2B557800836CB9 /* UserDefaultsTableViewController.swift */,
-				1F00AF851F2B5ACB00836CB9 /* Inspector.swift */,
 			);
 			name = KeyValue;
 			sourceTree = "<group>";
@@ -236,9 +253,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F00AF861F2B5ACB00836CB9 /* Inspector.swift in Sources */,
+				1F3785EC1F33AC7A00B30D3D /* NumberInspectorViewController.swift in Sources */,
+				1F00AF861F2B5ACB00836CB9 /* InspectorViewController.swift in Sources */,
+				1F3785EE1F33B6D500B30D3D /* BoolInspectorViewController.swift in Sources */,
 				1F46293B1F2B1A56003BD1E5 /* Section.swift in Sources */,
 				1F00AF7E1F2B2B3C00836CB9 /* SectionDatasource.swift in Sources */,
+				1F3785EA1F33ABC900B30D3D /* FallbackInspectorViewController.swift in Sources */,
 				1F00AF841F2B557800836CB9 /* UserDefaultsTableViewController.swift in Sources */,
 				1F00AF821F2B424E00836CB9 /* TableViewController.swift in Sources */,
 			);
