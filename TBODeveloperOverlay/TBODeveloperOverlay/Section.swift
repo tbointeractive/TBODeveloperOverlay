@@ -23,8 +23,8 @@ public struct Section {
 public extension Section {
     enum Item {
         case info(title: String, detail: String?)
-        case segue(title: String, detail: String?)
-        case action(title: String, detail: String?)
+        case segue(title: String, detail: String?, identifier: String?, viewController: (()->(UIViewController))?)
+        case action(title: String, detail: String?, identifier: String?, action: (()->())?)
         
         var reuseIdentifier: String {
             switch self {

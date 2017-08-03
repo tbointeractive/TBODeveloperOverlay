@@ -35,18 +35,20 @@ public final class Datasource: NSObject, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = self.item(at: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: item.reuseIdentifier) ??
-            UITableViewCell(style: .value1, reuseIdentifier: item.reuseIdentifier)
+            UITableViewCell(style: .subtitle, reuseIdentifier: item.reuseIdentifier)
         
         switch item {
         case .info(let title, let detail):
             cell.textLabel?.text = title
+            cell.textLabel?.numberOfLines = 0
             cell.detailTextLabel?.text = detail
+            cell.detailTextLabel?.numberOfLines = 0
             cell.selectionStyle = .none
-        case .segue(let title, let detail):
+        case .segue(let title, let detail, _, _):
             cell.textLabel?.text = title
             cell.detailTextLabel?.text = detail
             cell.accessoryType = .disclosureIndicator
-        case .action(let title, let detail):
+        case .action(let title, let detail, _, _):
             cell.textLabel?.text = title
             cell.detailTextLabel?.text = detail
         }

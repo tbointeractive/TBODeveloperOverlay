@@ -9,20 +9,30 @@
 import Foundation
 
 open class UserDefaultsTableViewController: TableViewController {
-    static let defaultInspectors: [Inspector.Type] = []
+    static let defaultInspectors: [InspectorViewController.Type] = []
+    static let defaultUserDefaultsKeysBlacklist: [String] = ["AppleLanguages", "AppleLocale", "AppleKeyboards", "AppleITunesStoreItemKinds", "AddingEmojiKeybordHandled", "ApplePasscodeKeyboards", "NSInterfaceStyle", "PKKeychainVersionKey", "AppleKeyboardsExpanded", "NSLanguages"]
     
-    let readOnly: Bool
-    let inspectors: [Inspector.Type]
+    let canEdit: Bool
+    let inspectors: [InspectorViewController.Type]
+    let userDefaults: UserDefaults
+    let blacklist: [String]
+    let whitelist: [String]?
     
-    public init(style: UITableViewStyle, userDefauts: UserDefaults, readOnly: Bool = true, inspectors: [Inspector.Type]? = nil) {
-        self.readOnly = readOnly
+    public init(style: UITableViewStyle, userDefaults: UserDefaults, canEdit: Bool = true, inspectors: [InspectorViewController.Type]? = nil, userDefaultsKeysBlacklist: [String]? = nil, userDefaultsKeysWhitelist: [String]? = nil) {
+        self.userDefaults = userDefaults
+        self.blacklist = userDefaultsKeysBlacklist ?? UserDefaultsTableViewController.defaultUserDefaultsKeysBlacklist
+        self.whitelist = userDefaultsKeysWhitelist
+        self.canEdit = canEdit
         self.inspectors = inspectors ?? UserDefaultsTableViewController.defaultInspectors
-        super.init(style: style, sections: [Section.from(userDefauts)])
+        super.init(style: style, sections: [])
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        self.readOnly = true
+        self.canEdit = false
+        self.blacklist = UserDefaultsTableViewController.defaultUserDefaultsKeysBlacklist
+        self.whitelist = nil
         self.inspectors = []
+        self.userDefaults = UserDefaults.standard
         super.init(coder: aDecoder)
     }
     
@@ -31,59 +41,64 @@ open class UserDefaultsTableViewController: TableViewController {
         tableView.delegate = self
     }
     
-    open func canEditItem(forKey key: String) -> Bool {
-        return !readOnly
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let section = Section.from(userDefaults, blacklist: blacklist, whitelist: whitelist)
+        self.dataSource = Datasource(sections: [section])
     }
     
-    internal func inspector(key: String, value: Any, editable: Bool) -> UIViewController {
-        var viewController: UIViewController? = nil
+    open func canEditItem(forKey key: String) -> Bool {
+        return canEdit
+    }
+    
+    @discardableResult open override func handleDidSelect(_ item: Section.Item) -> Bool {
+        guard !super.handleDidSelect(item) else { return true }
+        switch item {
+        case .segue(let key, _, let identifier, _):
+            guard let identifier = identifier,
+                let value = userDefaults.object(forKey: identifier) else { return false }
+            let canEdit = canEditItem(forKey: identifier)
+            let viewController = inspector(key: identifier, value: value)
+            if canEdit {
+                viewController.didEdit = { [weak self] newValue in
+                    self?.userDefaults.set(newValue, forKey: key)
+                }
+            }
+            viewController.title = key
+            navigationController?.pushViewController(viewController, animated: true)
+            return true
+        default: return false
+        }
+    }
+    
+    internal func inspector(key: String, value: Any) -> InspectorViewController {
+        var viewController: InspectorViewController? = nil
         for inspector in inspectors {
-            viewController = inspector.inspector(for: value)
+            guard inspector.canInspect(value) else { break }
+            viewController = inspector.init(coder: NSCoder())
             if viewController != nil {
                 break
             }
         }
-        let inspector = viewController ?? ReadonlyFallbackInspector(inspectable: value)
-        inspector.title = key
-        
-        return inspector
+        let inspectorViewController = viewController ?? FallbackInspector.init(nibName: nil, bundle: nil)
+        inspectorViewController.inspectable = value
+        return inspectorViewController
     }
     
 }
 
-extension UserDefaultsTableViewController {
-    open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = dataSource.item(at: indexPath)
-        switch item {
-        case .segue(let title, _):
-            guard let value = UserDefaults.standard.object(forKey: title) else { return }
-            let canEdit = canEditItem(forKey: title)
-            let viewController = inspector(key: title, value: value, editable: canEdit)
-            navigationController?.pushViewController(viewController, animated: true)
-        default: return
-        }
-    }
-}
-
-
-
 extension Section {
-    static func from(_ userDefaults: UserDefaults, blacklist: [String] = []) -> Section {
+    static func from(_ userDefaults: UserDefaults, blacklist: [String]? = nil, whitelist: [String]? = nil) -> Section {
         var items: [Item] = []
         for (key, value) in userDefaults.dictionaryRepresentation() {
-            guard !blacklist.contains(key) else { continue }
-            let item = Item.segue(title: key, detail: "\(value)")
+            if let whitelist = whitelist {
+                guard whitelist.contains(key) else { continue }
+            } else if let blacklist = blacklist {
+                guard !blacklist.contains(key) else { continue }
+            }
+            let item = Item.segue(title: key, detail: "\(value)", identifier: key, viewController: nil)
             items.append(item)
         }
         return Section(items: items, title: "UserDefaults")
-    }
-}
-
-extension UIViewController {
-    class func inspector(key: String, value: Any, editable: Bool) -> UIViewController {
-        let viewController = UIViewController()
-        viewController.title = key
-        viewController.view.backgroundColor = UIColor.white
-        return viewController
     }
 }

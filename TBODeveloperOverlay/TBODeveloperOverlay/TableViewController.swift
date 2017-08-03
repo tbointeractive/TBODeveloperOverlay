@@ -11,7 +11,12 @@ import Foundation
 open class TableViewController: UITableViewController {
     
     public private(set) var sections: [Section]
-    public private(set) var dataSource: Datasource
+    public var dataSource: Datasource {
+        didSet {
+            tableView.dataSource = dataSource
+            tableView.reloadData()
+        }
+    }
     
     public init(style: UITableViewStyle, sections: [Section]) {
         self.sections = sections
@@ -28,6 +33,9 @@ open class TableViewController: UITableViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = dataSource
+        tableView.delegate = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 44.0
     }
     
     open override func viewWillAppear(_ animated: Bool) {
@@ -35,4 +43,29 @@ open class TableViewController: UITableViewController {
         tableView.reloadData()
     }
 
+    open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = dataSource.item(at: indexPath)
+        handleDidSelect(item)
+    }
+    
+    @discardableResult open func handleDidSelect(_ item: Section.Item) -> Bool {
+        switch item {
+        case .segue(let title, _, _, let viewController):
+            guard let viewController = viewController?() else { return false }
+            if viewController.title == nil {
+                viewController.title = title
+            }
+            navigationController?.pushViewController(viewController, animated: true)
+            return true
+        case .action(_, _, _, let action):
+            guard let action = action else { return false }
+            action()
+            if let selectedIndex = tableView.indexPathForSelectedRow {
+                tableView.deselectRow(at: selectedIndex, animated: true)
+            }
+            return true
+        default: return false
+        }
+    }
+    
 }
