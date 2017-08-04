@@ -34,7 +34,7 @@ open class UserDefaultsTableViewController: TableViewController {
     
     public init(style: UITableViewStyle, userDefaults: UserDefaults, canEdit: Bool = false, inspectors: [InspectorViewController.Type]? = nil, keys: [String]) {
         self.userDefaults = userDefaults
-        self.keys = keys
+        self.keys = keys.sorted { $0.lowercased() < $1.lowercased() }
         self.canEdit = canEdit
         self.inspectors = inspectors ?? UserDefaultsTableViewController.defaultInspectors
         super.init(style: style, sections: [])
@@ -102,10 +102,11 @@ open class UserDefaultsTableViewController: TableViewController {
 extension Section {
     static func from(_ userDefaults: UserDefaults, whitelist: [String]) -> Section {
         var items: [Item] = []
-        for (key, value) in userDefaults.dictionaryRepresentation() {
-            guard whitelist.contains(key) else { continue }
-            let item = Item.segue(title: key, detail: "\(value)", identifier: key, viewController: nil)
-            items.append(item)
+        for key in whitelist {
+            if let value = UserDefaults.standard.object(forKey: key) {
+                let item = Item.segue(title: key, detail: "\(value)", identifier: key, viewController: nil)
+                items.append(item)
+            }
         }
         return Section(items: items, title: "UserDefaults")
     }
