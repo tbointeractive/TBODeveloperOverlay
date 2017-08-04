@@ -15,13 +15,26 @@ open class UserDefaultsTableViewController: TableViewController {
     let canEdit: Bool
     let inspectors: [InspectorViewController.Type]
     let userDefaults: UserDefaults
-    let blacklist: [String]
-    let whitelist: [String]?
+    let keys: [String]
     
-    public init(style: UITableViewStyle, userDefaults: UserDefaults, canEdit: Bool = true, inspectors: [InspectorViewController.Type]? = nil, userDefaultsKeysBlacklist: [String]? = nil, userDefaultsKeysWhitelist: [String]? = nil) {
+    public convenience init(style: UITableViewStyle, userDefaults: UserDefaults, canEdit: Bool = false, inspectors: [InspectorViewController.Type]? = nil, userDefaultsKeysBlacklist: [String]? = nil, userDefaultsKeysWhitelist: [String]? = nil) {
+        self.init(style: style, userDefaults: userDefaults, canEdit: canEdit, inspectors: inspectors) { key in
+            if let whitelist = userDefaultsKeysWhitelist {
+                return whitelist.contains(key)
+            }
+            let blacklist = userDefaultsKeysBlacklist ?? UserDefaultsTableViewController.defaultUserDefaultsKeysBlacklist
+            return !blacklist.contains(key)
+        }
+    }
+    
+    public convenience init(style: UITableViewStyle, userDefaults: UserDefaults, canEdit: Bool = false, inspectors: [InspectorViewController.Type]? = nil, userDefaultsKeyFilter: (String)->(Bool)) {
+        let keys = userDefaults.dictionaryRepresentation().keys.filter(userDefaultsKeyFilter)
+        self.init(style: style, userDefaults: userDefaults, canEdit: canEdit, inspectors: inspectors, keys: Array(keys))
+    }
+    
+    public init(style: UITableViewStyle, userDefaults: UserDefaults, canEdit: Bool = false, inspectors: [InspectorViewController.Type]? = nil, keys: [String]) {
         self.userDefaults = userDefaults
-        self.blacklist = userDefaultsKeysBlacklist ?? UserDefaultsTableViewController.defaultUserDefaultsKeysBlacklist
-        self.whitelist = userDefaultsKeysWhitelist
+        self.keys = keys
         self.canEdit = canEdit
         self.inspectors = inspectors ?? UserDefaultsTableViewController.defaultInspectors
         super.init(style: style, sections: [])
@@ -29,8 +42,7 @@ open class UserDefaultsTableViewController: TableViewController {
     
     required public init?(coder aDecoder: NSCoder) {
         self.canEdit = false
-        self.blacklist = UserDefaultsTableViewController.defaultUserDefaultsKeysBlacklist
-        self.whitelist = nil
+        self.keys = []
         self.inspectors = []
         self.userDefaults = UserDefaults.standard
         super.init(coder: aDecoder)
@@ -43,7 +55,7 @@ open class UserDefaultsTableViewController: TableViewController {
     
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        let section = Section.from(userDefaults, blacklist: blacklist, whitelist: whitelist)
+        let section = Section.from(userDefaults, whitelist: keys)
         self.dataSource = Datasource(sections: [section])
     }
     
@@ -88,14 +100,10 @@ open class UserDefaultsTableViewController: TableViewController {
 }
 
 extension Section {
-    static func from(_ userDefaults: UserDefaults, blacklist: [String]? = nil, whitelist: [String]? = nil) -> Section {
+    static func from(_ userDefaults: UserDefaults, whitelist: [String]) -> Section {
         var items: [Item] = []
         for (key, value) in userDefaults.dictionaryRepresentation() {
-            if let whitelist = whitelist {
-                guard whitelist.contains(key) else { continue }
-            } else if let blacklist = blacklist {
-                guard !blacklist.contains(key) else { continue }
-            }
+            guard whitelist.contains(key) else { continue }
             let item = Item.segue(title: key, detail: "\(value)", identifier: key, viewController: nil)
             items.append(item)
         }

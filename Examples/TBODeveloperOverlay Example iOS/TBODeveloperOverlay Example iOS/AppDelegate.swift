@@ -42,6 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 Section.Item.segue(title: "User Defaults", detail: "editable User Defaults Debugger", identifier: nil) {
                     return UserDefaultsTableViewController(style: .grouped, userDefaults: UserDefaults.standard, canEdit: true)
                 },
+                Section.Item.segue(title: "User Defaults", detail: "read only with custom filter", identifier: nil) {
+                    return UserDefaultsTableViewController(style: .grouped, userDefaults: UserDefaults.standard, userDefaultsKeyFilter: {
+                        return $0.range(of: "Apple") == nil
+                    })
+                },
                 Section.Item.segue(title: "Custom ViewController", detail: "Displays a Custom ViewController", identifier: nil) {
                     return UIViewController()
                 }
