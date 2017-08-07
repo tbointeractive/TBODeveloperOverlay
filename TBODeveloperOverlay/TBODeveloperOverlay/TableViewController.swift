@@ -45,10 +45,10 @@ open class TableViewController: UITableViewController {
 
     open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = dataSource.item(at: indexPath)
-        handleDidSelect(item)
+        handleDidSelect(item, forItemAt: indexPath)
     }
     
-    @discardableResult open func handleDidSelect(_ item: Section.Item) -> Bool {
+    @discardableResult open func handleDidSelect(_ item: Section.Item, forItemAt indexPath: IndexPath) -> Bool {
         switch item {
         case .segue(let title, _, _, let viewController):
             guard let viewController = viewController?() else { return false }

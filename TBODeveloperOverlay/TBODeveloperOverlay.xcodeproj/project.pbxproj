@@ -18,6 +18,7 @@
 		1F6D0D661F2A25DA0073EA10 /* TBODeveloperOverlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6D0D5C1F2A25DA0073EA10 /* TBODeveloperOverlay.framework */; };
 		1F6D0D6B1F2A25DA0073EA10 /* TBODeveloperOverlayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6D0D6A1F2A25DA0073EA10 /* TBODeveloperOverlayTests.swift */; };
 		1F6D0D6D1F2A25DA0073EA10 /* TBODeveloperOverlay.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F6D0D5F1F2A25DA0073EA10 /* TBODeveloperOverlay.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FD2477E1F34AD1D00B06094 /* FileListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD2477D1F34AD1D00B06094 /* FileListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		1F6D0D651F2A25DA0073EA10 /* TBODeveloperOverlayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TBODeveloperOverlayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F6D0D6A1F2A25DA0073EA10 /* TBODeveloperOverlayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBODeveloperOverlayTests.swift; sourceTree = "<group>"; };
 		1F6D0D6C1F2A25DA0073EA10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FD2477D1F34AD1D00B06094 /* FileListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				1F3785E81F33ABB900B30D3D /* Inspector */,
 				1F00AF831F2B557800836CB9 /* UserDefaultsTableViewController.swift */,
+				1FD2477D1F34AD1D00B06094 /* FileListTableViewController.swift */,
 			);
 			name = KeyValue;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				1F3785EC1F33AC7A00B30D3D /* NumberInspectorViewController.swift in Sources */,
 				1F00AF861F2B5ACB00836CB9 /* InspectorViewController.swift in Sources */,
 				1F3785EE1F33B6D500B30D3D /* BoolInspectorViewController.swift in Sources */,
+				1FD2477E1F34AD1D00B06094 /* FileListTableViewController.swift in Sources */,
 				1F46293B1F2B1A56003BD1E5 /* Section.swift in Sources */,
 				1F00AF7E1F2B2B3C00836CB9 /* SectionDatasource.swift in Sources */,
 				1F3785EA1F33ABC900B30D3D /* FallbackInspectorViewController.swift in Sources */,

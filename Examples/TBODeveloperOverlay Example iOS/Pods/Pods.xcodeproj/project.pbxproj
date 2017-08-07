@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103A7C5E5E13B77442C16E8337C0B81B /* SectionDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A14A3D553A03A737493782B970C3381 /* SectionDatasource.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		12E9B725895C0255A1044B9DB9CC4840 /* InspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39710F1414D520C22C42FC562FEDD0B7 /* InspectorViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		1425229564E20860D68799ECEAECA664 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFDD584ED42DC9CAF1CBD75561724FE /* TableViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		18C554B7EC560061E000D7C4E38FEA8B /* Pods-TBODeveloperOverlay Example iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CEBAFB5ACAC7F6F6DE4F2AA6227D86C0 /* Pods-TBODeveloperOverlay Example iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DCBF41CFD3EEE7FB0F3CA8DAE0B22A9 /* FallbackInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D89284F4EFA184A23346169004BBEE /* FallbackInspectorViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		27956D5C2214C982392EB537828DB946 /* UserDefaultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F29E5EF894D43366003C0721C068A846 /* UserDefaultsTableViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		39B1595266B6A61E7B8E05495E6297F1 /* NumberInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3D46B3CF2EA4D89585DF87D957F79B0 /* NumberInspectorViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		3B7F5C7C945CBB405AD8BA1EBE39F92F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		53EE454BF0FA4B58F10A5112BD3CCACA /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D0E59FCDAB67DE6C3B0AEE56A6CBD3 /* Section.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		595330933ECCE4E58F106A7AD5F6CF70 /* NumberInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB67A28691ACBDEB521B1D51DC73A55 /* NumberInspectorViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		5D4BE0BCE7784195D469B2829A497189 /* SectionDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605E7101789206660EDB7EDD507695EE /* SectionDatasource.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		71BFC2BA0EB8CBDDEAC90D3F2EBE3C29 /* BoolInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8B61178BC304E99F7440E4A766FC2 /* BoolInspectorViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		8255035FC901EFA3DC26A4234689518C /* TBODeveloperOverlay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 624B89A0775B9EAAE7B001AD4A27CE0F /* TBODeveloperOverlay-dummy.m */; };
-		866BEB9EC97B922301A881843C937AA9 /* InspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73BD8DD2CCD615598EF1FDB508BFCB4 /* InspectorViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		6A362C423D3CE3667988D86107AE877B /* FallbackInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED79B1952B27819491EB2D2CFC62B74 /* FallbackInspectorViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		7D0604F5FF7519C33B97D47B617A1B34 /* FileListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1770CFC0A439B276A2AAE370CF8610 /* FileListTableViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A354B32AA4073047FDF2CF7B7E4E618A /* TBODeveloperOverlay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 624B89A0775B9EAAE7B001AD4A27CE0F /* TBODeveloperOverlay-dummy.m */; };
+		A54D3E5973B3EB4F4AD8D3B9F6159856 /* BoolInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A55A952AF5ACA861F3A70FA9E842344 /* BoolInspectorViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		CAE138A598D217ED7D9B576D56E9EE8E /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B156836A5D991478C9FC3DCEA94A78E /* Section.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		D56C1A450CF82C0E9008E0EB9F190A9A /* Pods-TBODeveloperOverlay Example iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C99850947A05FDF69E84E4526EF3E /* Pods-TBODeveloperOverlay Example iOS-dummy.m */; };
 		D7896554A9854B37126FFB01F71668F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		DB318670A9D4225204C7B57B9EC7AADF /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 589F59D8830BDA5F07BEBB0BADC3C345 /* TableViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		E1AD7AF8E9AE378A62420F5D78959FA0 /* UserDefaultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08DCB5558D784F2E5B2F474C68CDCE6 /* UserDefaultsTableViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		ED6A38E50EAD46FEEFC9C1A6E07DD92A /* TBODeveloperOverlay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C04981F67A6FCFF0966748C5B033409B /* TBODeveloperOverlay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -35,13 +36,13 @@
 
 /* Begin PBXFileReference section */
 		091DE93CC1EB8C08B3B8845901E31B72 /* Pods-TBODeveloperOverlay Example iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TBODeveloperOverlay Example iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		31D0E59FCDAB67DE6C3B0AEE56A6CBD3 /* Section.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
-		33B8B61178BC304E99F7440E4A766FC2 /* BoolInspectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BoolInspectorViewController.swift; sourceTree = "<group>"; };
+		0A55A952AF5ACA861F3A70FA9E842344 /* BoolInspectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BoolInspectorViewController.swift; sourceTree = "<group>"; };
+		39710F1414D520C22C42FC562FEDD0B7 /* InspectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InspectorViewController.swift; sourceTree = "<group>"; };
 		3BB94B9AF8FF3F441E22EEFA4FDE8002 /* TBODeveloperOverlay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TBODeveloperOverlay.modulemap; sourceTree = "<group>"; };
-		589F59D8830BDA5F07BEBB0BADC3C345 /* TableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		605E7101789206660EDB7EDD507695EE /* SectionDatasource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SectionDatasource.swift; sourceTree = "<group>"; };
+		4A14A3D553A03A737493782B970C3381 /* SectionDatasource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SectionDatasource.swift; sourceTree = "<group>"; };
 		624B89A0775B9EAAE7B001AD4A27CE0F /* TBODeveloperOverlay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TBODeveloperOverlay-dummy.m"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6B156836A5D991478C9FC3DCEA94A78E /* Section.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		6BEFD312C3CDBB03DE487EBD6E4B514A /* TBODeveloperOverlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TBODeveloperOverlay.framework; path = TBODeveloperOverlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75E333995F15E4BAC1C23E0D5AEE301B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B81BC2DCE9453F013F8958C4C8632DE /* Pods-TBODeveloperOverlay Example iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TBODeveloperOverlay Example iOS-frameworks.sh"; sourceTree = "<group>"; };
@@ -52,15 +53,16 @@
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E50B080EFCF656316AA22CF24820B41 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F2C99850947A05FDF69E84E4526EF3E /* Pods-TBODeveloperOverlay Example iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TBODeveloperOverlay Example iOS-dummy.m"; sourceTree = "<group>"; };
-		A08DCB5558D784F2E5B2F474C68CDCE6 /* UserDefaultsTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserDefaultsTableViewController.swift; sourceTree = "<group>"; };
 		B2DC62990B7B85DCC8575BF01B1AC6B5 /* Pods-TBODeveloperOverlay Example iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TBODeveloperOverlay Example iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		B908B3E26C45210715F18F9D39DE3F97 /* TBODeveloperOverlay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TBODeveloperOverlay-prefix.pch"; sourceTree = "<group>"; };
 		C04981F67A6FCFF0966748C5B033409B /* TBODeveloperOverlay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TBODeveloperOverlay-umbrella.h"; sourceTree = "<group>"; };
-		C6D89284F4EFA184A23346169004BBEE /* FallbackInspectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FallbackInspectorViewController.swift; sourceTree = "<group>"; };
+		CA1770CFC0A439B276A2AAE370CF8610 /* FileListTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FileListTableViewController.swift; sourceTree = "<group>"; };
 		CEBAFB5ACAC7F6F6DE4F2AA6227D86C0 /* Pods-TBODeveloperOverlay Example iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TBODeveloperOverlay Example iOS-umbrella.h"; sourceTree = "<group>"; };
 		D28D5FF72656026C4EA411C7C8A674C9 /* Pods_TBODeveloperOverlay_Example_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TBODeveloperOverlay_Example_iOS.framework; path = "Pods-TBODeveloperOverlay Example iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E73BD8DD2CCD615598EF1FDB508BFCB4 /* InspectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InspectorViewController.swift; sourceTree = "<group>"; };
-		EFB67A28691ACBDEB521B1D51DC73A55 /* NumberInspectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumberInspectorViewController.swift; sourceTree = "<group>"; };
+		DED79B1952B27819491EB2D2CFC62B74 /* FallbackInspectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FallbackInspectorViewController.swift; sourceTree = "<group>"; };
+		EDFDD584ED42DC9CAF1CBD75561724FE /* TableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		F29E5EF894D43366003C0721C068A846 /* UserDefaultsTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserDefaultsTableViewController.swift; sourceTree = "<group>"; };
+		F3D46B3CF2EA4D89585DF87D957F79B0 /* NumberInspectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumberInspectorViewController.swift; sourceTree = "<group>"; };
 		FB679D01AC835679580CDE26EC9DA574 /* Pods-TBODeveloperOverlay Example iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TBODeveloperOverlay Example iOS.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,23 @@
 			path = "Target Support Files/Pods-TBODeveloperOverlay Example iOS";
 			sourceTree = "<group>";
 		};
+		1A5D696C635125681E47966412A27A49 /* TBODeveloperOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				0A55A952AF5ACA861F3A70FA9E842344 /* BoolInspectorViewController.swift */,
+				DED79B1952B27819491EB2D2CFC62B74 /* FallbackInspectorViewController.swift */,
+				CA1770CFC0A439B276A2AAE370CF8610 /* FileListTableViewController.swift */,
+				39710F1414D520C22C42FC562FEDD0B7 /* InspectorViewController.swift */,
+				F3D46B3CF2EA4D89585DF87D957F79B0 /* NumberInspectorViewController.swift */,
+				6B156836A5D991478C9FC3DCEA94A78E /* Section.swift */,
+				4A14A3D553A03A737493782B970C3381 /* SectionDatasource.swift */,
+				EDFDD584ED42DC9CAF1CBD75561724FE /* TableViewController.swift */,
+				F29E5EF894D43366003C0721C068A846 /* UserDefaultsTableViewController.swift */,
+			);
+			name = TBODeveloperOverlay;
+			path = TBODeveloperOverlay;
+			sourceTree = "<group>";
+		};
 		1D124DC4B9D14821FBB95EFBFB15A943 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,36 +130,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		389E37AC78C6636C1548EF2070C537EE /* TBODeveloperOverlay */ = {
-			isa = PBXGroup;
-			children = (
-				33B8B61178BC304E99F7440E4A766FC2 /* BoolInspectorViewController.swift */,
-				C6D89284F4EFA184A23346169004BBEE /* FallbackInspectorViewController.swift */,
-				E73BD8DD2CCD615598EF1FDB508BFCB4 /* InspectorViewController.swift */,
-				EFB67A28691ACBDEB521B1D51DC73A55 /* NumberInspectorViewController.swift */,
-				31D0E59FCDAB67DE6C3B0AEE56A6CBD3 /* Section.swift */,
-				605E7101789206660EDB7EDD507695EE /* SectionDatasource.swift */,
-				589F59D8830BDA5F07BEBB0BADC3C345 /* TableViewController.swift */,
-				A08DCB5558D784F2E5B2F474C68CDCE6 /* UserDefaultsTableViewController.swift */,
-			);
-			name = TBODeveloperOverlay;
-			path = TBODeveloperOverlay;
-			sourceTree = "<group>";
-		};
 		416DC25E90C0FF0742EA4F7A5531C251 /* TBODeveloperOverlay */ = {
 			isa = PBXGroup;
 			children = (
 				C42D0EF17FCF61C90E04B4FFA1867798 /* Support Files */,
-				712719A0FA5D03E882F1E551A1C1C26B /* TBODeveloperOverlay */,
+				57F9FAB68C5B80B650060FCD372178EB /* TBODeveloperOverlay */,
 			);
 			name = TBODeveloperOverlay;
 			path = ../../..;
 			sourceTree = "<group>";
 		};
-		712719A0FA5D03E882F1E551A1C1C26B /* TBODeveloperOverlay */ = {
+		57F9FAB68C5B80B650060FCD372178EB /* TBODeveloperOverlay */ = {
 			isa = PBXGroup;
 			children = (
-				389E37AC78C6636C1548EF2070C537EE /* TBODeveloperOverlay */,
+				1A5D696C635125681E47966412A27A49 /* TBODeveloperOverlay */,
 			);
 			name = TBODeveloperOverlay;
 			path = TBODeveloperOverlay;
@@ -229,7 +232,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0A469ED9B9C15F010A97F088C8788DF3 /* Build configuration list for PBXNativeTarget "TBODeveloperOverlay" */;
 			buildPhases = (
-				B8589133C07A960E658E472523F06E09 /* Sources */,
+				1F26307AFE94E66F21CCD15E674A1F67 /* Sources */,
 				F9020A0989DEFE3BE6641DD5A189F032 /* Frameworks */,
 				B54108216B07906F0D3989A58A85F7D0 /* Headers */,
 			);
@@ -288,27 +291,28 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1F26307AFE94E66F21CCD15E674A1F67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A54D3E5973B3EB4F4AD8D3B9F6159856 /* BoolInspectorViewController.swift in Sources */,
+				6A362C423D3CE3667988D86107AE877B /* FallbackInspectorViewController.swift in Sources */,
+				7D0604F5FF7519C33B97D47B617A1B34 /* FileListTableViewController.swift in Sources */,
+				12E9B725895C0255A1044B9DB9CC4840 /* InspectorViewController.swift in Sources */,
+				39B1595266B6A61E7B8E05495E6297F1 /* NumberInspectorViewController.swift in Sources */,
+				CAE138A598D217ED7D9B576D56E9EE8E /* Section.swift in Sources */,
+				103A7C5E5E13B77442C16E8337C0B81B /* SectionDatasource.swift in Sources */,
+				1425229564E20860D68799ECEAECA664 /* TableViewController.swift in Sources */,
+				A354B32AA4073047FDF2CF7B7E4E618A /* TBODeveloperOverlay-dummy.m in Sources */,
+				27956D5C2214C982392EB537828DB946 /* UserDefaultsTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8F2232309506B9F7759531F609DF5233 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D56C1A450CF82C0E9008E0EB9F190A9A /* Pods-TBODeveloperOverlay Example iOS-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B8589133C07A960E658E472523F06E09 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				71BFC2BA0EB8CBDDEAC90D3F2EBE3C29 /* BoolInspectorViewController.swift in Sources */,
-				1DCBF41CFD3EEE7FB0F3CA8DAE0B22A9 /* FallbackInspectorViewController.swift in Sources */,
-				866BEB9EC97B922301A881843C937AA9 /* InspectorViewController.swift in Sources */,
-				595330933ECCE4E58F106A7AD5F6CF70 /* NumberInspectorViewController.swift in Sources */,
-				53EE454BF0FA4B58F10A5112BD3CCACA /* Section.swift in Sources */,
-				5D4BE0BCE7784195D469B2829A497189 /* SectionDatasource.swift in Sources */,
-				DB318670A9D4225204C7B57B9EC7AADF /* TableViewController.swift in Sources */,
-				8255035FC901EFA3DC26A4234689518C /* TBODeveloperOverlay-dummy.m in Sources */,
-				E1AD7AF8E9AE378A62420F5D78959FA0 /* UserDefaultsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

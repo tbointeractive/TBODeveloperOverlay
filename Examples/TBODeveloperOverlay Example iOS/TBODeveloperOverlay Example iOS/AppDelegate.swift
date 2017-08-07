@@ -20,11 +20,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UserDefaults.standard.set("simple string", forKey: "simpleString")
         UserDefaults.standard.set(NSNumber(value: 12.3), forKey: "Number")
         UserDefaults.standard.set(12, forKey: "Int")
-        window = UIWindow(frame: UIScreen.main.bounds)
         
+        writeExampleFile()
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = UINavigationController(rootViewController: rootViewController())
         window?.makeKeyAndVisible()
         return true
+    }
+    
+    func writeExampleFile() {
+        if let dir = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first {
+            let path = dir.appendingPathComponent("example.txt")
+            try? "Example Text".write(to: path, atomically: false, encoding: .utf8)
+        }
     }
     
     func rootViewController() -> UIViewController {
@@ -49,6 +58,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 },
                 Section.Item.segue(title: "Custom ViewController", detail: "Displays a Custom ViewController", identifier: nil) {
                     return UIViewController()
+                },
+                Section.Item.segue(title: "File Inspector", detail: "", identifier: nil) {
+                    let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                    let url = URL(fileURLWithPath: documentsPath).deletingLastPathComponent()
+                    return FileListTableViewController(style: .grouped, basePath: url)
                 }
                 ], title: "Plugins"),
             Section(items: [

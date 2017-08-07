@@ -63,8 +63,8 @@ open class UserDefaultsTableViewController: TableViewController {
         return canEdit
     }
     
-    @discardableResult open override func handleDidSelect(_ item: Section.Item) -> Bool {
-        guard !super.handleDidSelect(item) else { return true }
+    @discardableResult open override func handleDidSelect(_ item: Section.Item, forItemAt indexPath: IndexPath) -> Bool {
+        guard !super.handleDidSelect(item, forItemAt: indexPath) else { return true }
         switch item {
         case .segue(let key, _, let identifier, _):
             guard let identifier = identifier,
