@@ -70,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     UserDefaults.standard.set(Date(), forKey: "lastReset")
                 }
                 ], title: "Actions")
-            ])
+            ], isSearchEnabled: false)
         viewController.title = "Developer Overlay"
         return viewController
     }

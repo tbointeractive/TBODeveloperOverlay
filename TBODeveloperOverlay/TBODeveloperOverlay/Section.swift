@@ -35,3 +35,13 @@ public extension Section {
         }
     }
 }
+
+internal extension Section.Item {
+    func matches(searchstring: String) -> Bool {
+        switch self {
+        case .info(let title, let detail),
+             .segue(let title, let detail, _, _),
+             .action(let title, let detail, _, _): return title.lowercased().range(of: searchstring) != nil || detail?.lowercased().range(of: searchstring) != nil
+        }
+    }
+}
