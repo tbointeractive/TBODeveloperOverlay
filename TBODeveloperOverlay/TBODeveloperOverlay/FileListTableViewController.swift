@@ -61,9 +61,16 @@ extension FileListTableViewController: UIDocumentInteractionControllerDelegate {
 
 extension Section {
     static func from(paths: [URL], title: String = "Files and Folders") -> Section {
+        let fileManager = FileManager()
+        let bytecountFormatter = ByteCountFormatter()
         var items: [Item] = []
         for path in paths {
-            let item = Item.segue(title: path.lastPathComponent, detail: nil, identifier: path.path, viewController: nil)
+            let attributes = (try? fileManager.attributesOfItem(atPath: path.path)) ?? [:]
+            let size = attributes[FileAttributeKey.size] as? Int64
+            let modified = attributes[FileAttributeKey.modificationDate] as? Date
+            let filesize = bytecountFormatter.string(fromByteCount: size ?? -1)
+            let details = ["size: \(filesize)", "modified: \(modified as Any? ?? "unknown")"]
+            let item = Item.segue(title: path.lastPathComponent, detail: details.joined(separator: ", "), identifier: path.path, viewController: nil)
             items.append(item)
         }
         return Section(items: items, title: title)

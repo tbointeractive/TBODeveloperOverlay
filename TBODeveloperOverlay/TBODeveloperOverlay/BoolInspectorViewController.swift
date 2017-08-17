@@ -34,7 +34,6 @@ final class BoolInspectorViewController: InspectorViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         boolSwitch.center = view.center
-//        boolSwitch.frame = UIEdgeInsetsInsetRect(view.bounds, UIEdgeInsetsMake(20, 20, 20, 20))
     }
     
     override func viewWillDisappear(_ animated: Bool) {
