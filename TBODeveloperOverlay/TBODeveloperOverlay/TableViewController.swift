@@ -81,7 +81,7 @@ open class TableViewController: UITableViewController {
     }
     
     open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = dataSource.item(at: indexPath)
+        let item = searchDataSource?.item(at: indexPath) ?? dataSource.item(at: indexPath)
         handleDidSelect(item, forItemAt: indexPath)
     }
     
