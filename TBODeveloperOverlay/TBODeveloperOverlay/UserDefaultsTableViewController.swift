@@ -9,16 +9,15 @@
 import Foundation
 
 open class UserDefaultsTableViewController: TableViewController {
-    static let defaultInspectors: [InspectorViewController.Type] = [NumberInspectorViewController.self, BoolInspectorViewController.self]
     static let defaultUserDefaultsKeysBlacklist: [String] = ["AppleLanguages", "AppleLocale", "AppleKeyboards", "AppleITunesStoreItemKinds", "AddingEmojiKeybordHandled", "ApplePasscodeKeyboards", "NSInterfaceStyle", "PKKeychainVersionKey", "AppleKeyboardsExpanded", "NSLanguages", "AppleLanguagesDidMigrate"]
     
     let canEdit: Bool
-    let inspectors: [InspectorViewController.Type]
+    let inspectorCollection: InspectorCollection
     let userDefaults: UserDefaults
     let keys: [String]
     
-    public convenience init(style: UITableViewStyle, userDefaults: UserDefaults, canEdit: Bool = false, inspectors: [InspectorViewController.Type]? = nil, userDefaultsKeysBlacklist: [String]? = nil, userDefaultsKeysWhitelist: [String]? = nil) {
-        self.init(style: style, userDefaults: userDefaults, canEdit: canEdit, inspectors: inspectors) { key in
+    public convenience init(style: UITableViewStyle, userDefaults: UserDefaults, canEdit: Bool = false, inspectorCollection: InspectorCollection? = nil, userDefaultsKeysBlacklist: [String]? = nil, userDefaultsKeysWhitelist: [String]? = nil) {
+        self.init(style: style, userDefaults: userDefaults, canEdit: canEdit, inspectorCollection: inspectorCollection) { key in
             if let whitelist = userDefaultsKeysWhitelist {
                 return whitelist.contains(key)
             }
@@ -27,23 +26,23 @@ open class UserDefaultsTableViewController: TableViewController {
         }
     }
     
-    public convenience init(style: UITableViewStyle, userDefaults: UserDefaults, canEdit: Bool = false, inspectors: [InspectorViewController.Type]? = nil, userDefaultsKeyFilter: (String)->(Bool)) {
+    public convenience init(style: UITableViewStyle, userDefaults: UserDefaults, canEdit: Bool = false, inspectorCollection: InspectorCollection? = nil, userDefaultsKeyFilter: (String)->(Bool)) {
         let keys = userDefaults.dictionaryRepresentation().keys.filter(userDefaultsKeyFilter)
-        self.init(style: style, userDefaults: userDefaults, canEdit: canEdit, inspectors: inspectors, keys: Array(keys))
+        self.init(style: style, userDefaults: userDefaults, canEdit: canEdit, inspectorCollection: inspectorCollection, keys: Array(keys))
     }
     
-    public init(style: UITableViewStyle, userDefaults: UserDefaults, canEdit: Bool = false, inspectors: [InspectorViewController.Type]? = nil, keys: [String]) {
+    public init(style: UITableViewStyle, userDefaults: UserDefaults, canEdit: Bool = false, inspectorCollection: InspectorCollection? = nil, keys: [String]) {
         self.userDefaults = userDefaults
         self.keys = keys.sorted { $0.lowercased() < $1.lowercased() }
         self.canEdit = canEdit
-        self.inspectors = inspectors ?? UserDefaultsTableViewController.defaultInspectors
+        self.inspectorCollection = inspectorCollection ?? InspectorCollection.defaultCollection
         super.init(style: style, sections: [])
     }
     
     required public init?(coder aDecoder: NSCoder) {
         self.canEdit = false
         self.keys = []
-        self.inspectors = []
+        self.inspectorCollection = InspectorCollection.defaultCollection
         self.userDefaults = UserDefaults.standard
         super.init(coder: aDecoder)
     }
@@ -84,15 +83,8 @@ open class UserDefaultsTableViewController: TableViewController {
     }
     
     internal func inspector(key: String, value: Any) -> InspectorViewController {
-        var viewController: InspectorViewController? = nil
-        for inspector in inspectors {
-            guard inspector.canInspect(value) else { continue }
-            viewController = inspector.init()
-            if viewController != nil {
-                break
-            }
-        }
-        let inspectorViewController = viewController ?? FallbackInspectorViewController.init()
+        let viewController: InspectorViewController? = inspectorCollection.inspector(for: value)
+        let inspectorViewController = viewController ?? FallbackInspectorViewController()
         inspectorViewController.inspectable = value
         return inspectorViewController
     }
