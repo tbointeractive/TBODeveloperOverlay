@@ -10,7 +10,7 @@ import Foundation
 
 public class InspectorViewController: UIViewController {
     
-    var didEdit: ((_ newValue: Any) -> ())?
+    public var didEdit: ((_ newValue: Any) -> ())?
     
     var inspectable: Any? = nil
     
