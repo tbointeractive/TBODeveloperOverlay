@@ -83,10 +83,7 @@ open class UserDefaultsTableViewController: TableViewController {
     }
     
     internal func inspector(key: String, value: Any) -> InspectorViewController {
-        let viewController: InspectorViewController? = inspectorCollection.inspector(for: value)
-        let inspectorViewController = viewController ?? FallbackInspectorViewController()
-        inspectorViewController.inspectable = value
-        return inspectorViewController
+        return inspectorCollection.inspector(for: value)
     }
     
 }
