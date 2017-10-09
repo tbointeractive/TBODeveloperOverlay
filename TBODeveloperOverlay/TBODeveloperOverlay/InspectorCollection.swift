@@ -17,7 +17,7 @@ public class InspectorCollection {
         self.inspectors = inspectors
     }
     
-    public func inspector(for value: Any) -> InspectorViewController? {
+    public func matchingInspector(for value: Any) -> InspectorViewController? {
         var viewController: InspectorViewController? = nil
         for inspector in inspectors {
             guard inspector.canInspect(value) else { continue }
@@ -29,5 +29,12 @@ public class InspectorCollection {
         
         viewController?.inspectable = value
         return viewController
+    }
+    
+    public func inspector(for value: Any) -> InspectorViewController {
+        let viewController = matchingInspector(for: value)
+        let inspectorViewController = viewController ?? FallbackInspectorViewController()
+        inspectorViewController.inspectable = value
+        return inspectorViewController
     }
 }
