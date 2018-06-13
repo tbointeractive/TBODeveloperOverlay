@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class InspectorViewController: UIViewController {
+open class InspectorViewController: UIViewController {
     
     public var didEdit: ((_ newValue: Any) -> ())?
     
