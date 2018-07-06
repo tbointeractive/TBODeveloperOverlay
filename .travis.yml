@@ -1,15 +1,27 @@
 language: objective-c
-xcode_workspace: TBODeveloperOverlay.xcworkspace
+xcode_project: TBODeveloperOverlay/TBODeveloperOverlay.xcodeproj
 xcode_scheme: TBODeveloperOverlay
 xcode_sdk: iphonesimulator
-osx_image: xcode7.2
+osx_image: xcode9.1
 
-before_install:
-  - 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
+script:
+    - xcodebuild -project $TRAVIS_XCODE_PROJECT -scheme $TRAVIS_XCODE_SCHEME -sdk iphonesimulator build | xcpretty
 
-install:
-  - gem install danger
-
-before_script:
-  - export LANG=en_US.UTF-8
-  - danger
+# before_install:
+#   - 'echo ''gem: --no-ri --no-rdoc'' > ~/.gemrc'
+#
+# # install:
+# #  - gem install danger
+#
+# before_script:
+#   - export LANG=en_US.UTF-8
+# #  - danger
+# env:
+#   matrix:
+#     - TEST_DEVICE="iPhone 6,OS=11.0"
+#     - TEST_DEVICE="iPhone 6,OS=10.3"
+#     - TEST_DEVICE="iPhone 6,OS=9.3"
+#
+# script:
+#   - xcodebuild -project TBODeveloperOverlay/TBODeveloperOverlay.xcodeproj -scheme TBODeveloperOverlay  -destination "platform=iOS Simulator,name=iPhone 6,OS=11.0" build | xcpretty
+#   - xcodebuild -workspace $TRAVIS_XCODE_WORKSPACE -scheme $TRAVIS_XCODE_SCHEME -sdk iphonesimulator11.0  -destination "platform=iOS Simulator,name=$TEST_DEVICE" test | xcpretty
