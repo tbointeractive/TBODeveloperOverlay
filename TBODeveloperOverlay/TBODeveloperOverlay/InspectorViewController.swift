@@ -8,13 +8,13 @@
 
 import Foundation
 
-public class InspectorViewController: UIViewController {
+open class InspectorViewController: UIViewController {
     
-    public var didEdit: ((_ newValue: Any) -> ())?
+    open var didEdit: ((_ newValue: Any) -> ())?
     
-    var inspectable: Any? = nil
+    open var inspectable: Any? = nil
     
-    class func canInspect(_ inspectable: Any) -> Bool {
+    open class func canInspect(_ inspectable: Any) -> Bool {
         return false
     }
     
