@@ -10,13 +10,13 @@ import Foundation
 
 open class FileListTableViewController: TableViewController {
     
-    public init(style: UITableViewStyle, basePath: URL) {
+    public init(style: UITableView.Style, basePath: URL) {
         let fileManager = FileManager()
         let contents = try? fileManager.contentsOfDirectory(at: basePath, includingPropertiesForKeys: nil, options: [])
         super.init(style: style, sections: [Section.from(paths: contents ?? [], title: basePath.path)])
     }
     
-    public init(style: UITableViewStyle, paths: [URL]) {
+    public init(style: UITableView.Style, paths: [URL]) {
         super.init(style: style, sections: [Section.from(paths: paths)])
     }
     
