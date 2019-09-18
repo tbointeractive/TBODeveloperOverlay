@@ -1,0 +1,16 @@
+PODS:
+  - TBODeveloperOverlay (2.0)
+
+DEPENDENCIES:
+  - TBODeveloperOverlay (from `../../`)
+
+EXTERNAL SOURCES:
+  TBODeveloperOverlay:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  TBODeveloperOverlay: a21a1e060c495ecc83696f2461bace57adde5e85
+
+PODFILE CHECKSUM: c54df9c8d674f0efa567a4df8e9f9b6a0618ac6f
+
+COCOAPODS: 1.2.1

@@ -1,0 +1,19 @@
+{
+  "name": "TBODeveloperOverlay",
+  "version": "2.0",
+  "summary": "iOS Developer Tools for Debugging.",
+  "description": "TBODeveloperOverlay - Some developer tools for debugging iOS Apps",
+  "homepage": "https://github.com/tbointeractive/TBODeveloperOverlay",
+  "license": "MIT",
+  "authors": {
+    "Cornelius Horstmann": "horstmann@tbointeractive.com"
+  },
+  "platforms": {
+    "ios": "9.3"
+  },
+  "source": {
+    "git": "https://github.com/tbointeractive/TBODeveloperOverlay.git",
+    "tag": "2.0"
+  },
+  "source_files": "TBODeveloperOverlay/TBODeveloperOverlay/**/*.swift"
+}

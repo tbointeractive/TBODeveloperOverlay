@@ -1,0 +1,6 @@
+framework module Pods_TBODeveloperOverlay_Example_iOS {
+  umbrella header "Pods-TBODeveloperOverlay Example iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

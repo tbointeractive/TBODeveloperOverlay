@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0268347D9905ABC7B1B552048C6791BF /* UserDefaultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A826A5C011DAD39B4D410D8D1CB2BBEB /* UserDefaultsTableViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		18C554B7EC560061E000D7C4E38FEA8B /* Pods-TBODeveloperOverlay Example iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CEBAFB5ACAC7F6F6DE4F2AA6227D86C0 /* Pods-TBODeveloperOverlay Example iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		205B05800DF2B3D6CD609F0860394A95 /* FallbackInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ECEA5D2C74B2EC8ADA4C9C866F9AD1 /* FallbackInspectorViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		269FF473896E57360CEA45FE971A6A1E /* NumberInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A015E7C7A2CBA297382A6E4AA601D7CC /* NumberInspectorViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		3B7F5C7C945CBB405AD8BA1EBE39F92F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		620D73BA6D530C77C0AFD5381AC0F256 /* InspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859FEF91E7DD197007A1A869CA7549BA /* InspectorViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		65326B1CA2D60CC9F47A7E8EFB5E0C28 /* BoolInspectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BCA5B37FAEFBC19E2C12B77CE4E3D4 /* BoolInspectorViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		9B11A65504142282CD46DDF8514D485A /* FileListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2433495FC023AA9A177265D1573F98C9 /* FileListTableViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		B868C4CC647D6E5F39A8A8539E970EB5 /* SectionDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E22A211D73AFD5242ABD2A22EDE448B /* SectionDatasource.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		D295C8B7BA1AFC0F4A69CDEA0117CA9F /* TBODeveloperOverlay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 624B89A0775B9EAAE7B001AD4A27CE0F /* TBODeveloperOverlay-dummy.m */; };
+		D56C1A450CF82C0E9008E0EB9F190A9A /* Pods-TBODeveloperOverlay Example iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2C99850947A05FDF69E84E4526EF3E /* Pods-TBODeveloperOverlay Example iOS-dummy.m */; };
+		D7896554A9854B37126FFB01F71668F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		ED6A38E50EAD46FEEFC9C1A6E07DD92A /* TBODeveloperOverlay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C04981F67A6FCFF0966748C5B033409B /* TBODeveloperOverlay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF031F6544466D7ACFEB4BA6BDA565DB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2666D8CD9E98B570A18FAAE5537954 /* TableViewController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		FABB0A76DCD9C50B1109768FCEE931EE /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EC37002D0EE8831E1CB1DDBD0C54C1 /* Section.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3351C5F285150480569B2D166B4EC071 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C102C29834808B14172D8891690587C;
+			remoteInfo = TBODeveloperOverlay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		091DE93CC1EB8C08B3B8845901E31B72 /* Pods-TBODeveloperOverlay Example iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TBODeveloperOverlay Example iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		2433495FC023AA9A177265D1573F98C9 /* FileListTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FileListTableViewController.swift; sourceTree = "<group>"; };
+		3BB94B9AF8FF3F441E22EEFA4FDE8002 /* TBODeveloperOverlay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = TBODeveloperOverlay.modulemap; sourceTree = "<group>"; };
+		48BCA5B37FAEFBC19E2C12B77CE4E3D4 /* BoolInspectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BoolInspectorViewController.swift; sourceTree = "<group>"; };
+		5E22A211D73AFD5242ABD2A22EDE448B /* SectionDatasource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SectionDatasource.swift; sourceTree = "<group>"; };
+		624B89A0775B9EAAE7B001AD4A27CE0F /* TBODeveloperOverlay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TBODeveloperOverlay-dummy.m"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6BEFD312C3CDBB03DE487EBD6E4B514A /* TBODeveloperOverlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TBODeveloperOverlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73EC37002D0EE8831E1CB1DDBD0C54C1 /* Section.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		75E333995F15E4BAC1C23E0D5AEE301B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B81BC2DCE9453F013F8958C4C8632DE /* Pods-TBODeveloperOverlay Example iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TBODeveloperOverlay Example iOS-frameworks.sh"; sourceTree = "<group>"; };
+		7C666D9B56078D10642353A13D5800DA /* TBODeveloperOverlay.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TBODeveloperOverlay.xcconfig; sourceTree = "<group>"; };
+		810A9AFD8E6155E4666004C9D55E1875 /* Pods-TBODeveloperOverlay Example iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TBODeveloperOverlay Example iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		859FEF91E7DD197007A1A869CA7549BA /* InspectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InspectorViewController.swift; sourceTree = "<group>"; };
+		8A2666D8CD9E98B570A18FAAE5537954 /* TableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		8B890203E0102BF0E9050EBE450F0075 /* Pods-TBODeveloperOverlay Example iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TBODeveloperOverlay Example iOS.release.xcconfig"; sourceTree = "<group>"; };
+		9310507DDC64DDCFD469F4523F5EF9F3 /* Pods-TBODeveloperOverlay Example iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TBODeveloperOverlay Example iOS-resources.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E50B080EFCF656316AA22CF24820B41 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F2C99850947A05FDF69E84E4526EF3E /* Pods-TBODeveloperOverlay Example iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TBODeveloperOverlay Example iOS-dummy.m"; sourceTree = "<group>"; };
+		A015E7C7A2CBA297382A6E4AA601D7CC /* NumberInspectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NumberInspectorViewController.swift; sourceTree = "<group>"; };
+		A826A5C011DAD39B4D410D8D1CB2BBEB /* UserDefaultsTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserDefaultsTableViewController.swift; sourceTree = "<group>"; };
+		B2DC62990B7B85DCC8575BF01B1AC6B5 /* Pods-TBODeveloperOverlay Example iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TBODeveloperOverlay Example iOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		B908B3E26C45210715F18F9D39DE3F97 /* TBODeveloperOverlay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TBODeveloperOverlay-prefix.pch"; sourceTree = "<group>"; };
+		C04981F67A6FCFF0966748C5B033409B /* TBODeveloperOverlay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TBODeveloperOverlay-umbrella.h"; sourceTree = "<group>"; };
+		CEBAFB5ACAC7F6F6DE4F2AA6227D86C0 /* Pods-TBODeveloperOverlay Example iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TBODeveloperOverlay Example iOS-umbrella.h"; sourceTree = "<group>"; };
+		D28D5FF72656026C4EA411C7C8A674C9 /* Pods_TBODeveloperOverlay_Example_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TBODeveloperOverlay_Example_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6ECEA5D2C74B2EC8ADA4C9C866F9AD1 /* FallbackInspectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FallbackInspectorViewController.swift; sourceTree = "<group>"; };
+		FB679D01AC835679580CDE26EC9DA574 /* Pods-TBODeveloperOverlay Example iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TBODeveloperOverlay Example iOS.modulemap"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A8470555610CD0A0F0BE025E2DA4307C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B7F5C7C945CBB405AD8BA1EBE39F92F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9020A0989DEFE3BE6641DD5A189F032 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7896554A9854B37126FFB01F71668F9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0C2FEB7ED5F4FAA4AE22C0FFD93B1B4B /* Pods-TBODeveloperOverlay Example iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9E50B080EFCF656316AA22CF24820B41 /* Info.plist */,
+				FB679D01AC835679580CDE26EC9DA574 /* Pods-TBODeveloperOverlay Example iOS.modulemap */,
+				810A9AFD8E6155E4666004C9D55E1875 /* Pods-TBODeveloperOverlay Example iOS-acknowledgements.markdown */,
+				B2DC62990B7B85DCC8575BF01B1AC6B5 /* Pods-TBODeveloperOverlay Example iOS-acknowledgements.plist */,
+				9F2C99850947A05FDF69E84E4526EF3E /* Pods-TBODeveloperOverlay Example iOS-dummy.m */,
+				7B81BC2DCE9453F013F8958C4C8632DE /* Pods-TBODeveloperOverlay Example iOS-frameworks.sh */,
+				9310507DDC64DDCFD469F4523F5EF9F3 /* Pods-TBODeveloperOverlay Example iOS-resources.sh */,
+				CEBAFB5ACAC7F6F6DE4F2AA6227D86C0 /* Pods-TBODeveloperOverlay Example iOS-umbrella.h */,
+				091DE93CC1EB8C08B3B8845901E31B72 /* Pods-TBODeveloperOverlay Example iOS.debug.xcconfig */,
+				8B890203E0102BF0E9050EBE450F0075 /* Pods-TBODeveloperOverlay Example iOS.release.xcconfig */,
+			);
+			name = "Pods-TBODeveloperOverlay Example iOS";
+			path = "Target Support Files/Pods-TBODeveloperOverlay Example iOS";
+			sourceTree = "<group>";
+		};
+		1D124DC4B9D14821FBB95EFBFB15A943 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D28D5FF72656026C4EA411C7C8A674C9 /* Pods_TBODeveloperOverlay_Example_iOS.framework */,
+				6BEFD312C3CDBB03DE487EBD6E4B514A /* TBODeveloperOverlay.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		416DC25E90C0FF0742EA4F7A5531C251 /* TBODeveloperOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				C42D0EF17FCF61C90E04B4FFA1867798 /* Support Files */,
+				5DADE8E084312EE1F10CFA1D453FDB37 /* TBODeveloperOverlay */,
+			);
+			name = TBODeveloperOverlay;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		5C2313E2BAA9D4BBF2CA375D50D2081A /* TBODeveloperOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				48BCA5B37FAEFBC19E2C12B77CE4E3D4 /* BoolInspectorViewController.swift */,
+				D6ECEA5D2C74B2EC8ADA4C9C866F9AD1 /* FallbackInspectorViewController.swift */,
+				2433495FC023AA9A177265D1573F98C9 /* FileListTableViewController.swift */,
+				859FEF91E7DD197007A1A869CA7549BA /* InspectorViewController.swift */,
+				A015E7C7A2CBA297382A6E4AA601D7CC /* NumberInspectorViewController.swift */,
+				73EC37002D0EE8831E1CB1DDBD0C54C1 /* Section.swift */,
+				5E22A211D73AFD5242ABD2A22EDE448B /* SectionDatasource.swift */,
+				8A2666D8CD9E98B570A18FAAE5537954 /* TableViewController.swift */,
+				A826A5C011DAD39B4D410D8D1CB2BBEB /* UserDefaultsTableViewController.swift */,
+			);
+			path = TBODeveloperOverlay;
+			sourceTree = "<group>";
+		};
+		5DADE8E084312EE1F10CFA1D453FDB37 /* TBODeveloperOverlay */ = {
+			isa = PBXGroup;
+			children = (
+				5C2313E2BAA9D4BBF2CA375D50D2081A /* TBODeveloperOverlay */,
+			);
+			path = TBODeveloperOverlay;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				9F2151B1676CCF0BBC44156BC52179F7 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				1D124DC4B9D14821FBB95EFBFB15A943 /* Products */,
+				BA30C08FFBE4516ABB461BB9582C1809 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9F2151B1676CCF0BBC44156BC52179F7 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				416DC25E90C0FF0742EA4F7A5531C251 /* TBODeveloperOverlay */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		BA30C08FFBE4516ABB461BB9582C1809 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0C2FEB7ED5F4FAA4AE22C0FFD93B1B4B /* Pods-TBODeveloperOverlay Example iOS */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C42D0EF17FCF61C90E04B4FFA1867798 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				75E333995F15E4BAC1C23E0D5AEE301B /* Info.plist */,
+				3BB94B9AF8FF3F441E22EEFA4FDE8002 /* TBODeveloperOverlay.modulemap */,
+				7C666D9B56078D10642353A13D5800DA /* TBODeveloperOverlay.xcconfig */,
+				624B89A0775B9EAAE7B001AD4A27CE0F /* TBODeveloperOverlay-dummy.m */,
+				B908B3E26C45210715F18F9D39DE3F97 /* TBODeveloperOverlay-prefix.pch */,
+				C04981F67A6FCFF0966748C5B033409B /* TBODeveloperOverlay-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Examples/TBODeveloperOverlay Example iOS/Pods/Target Support Files/TBODeveloperOverlay";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B54108216B07906F0D3989A58A85F7D0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED6A38E50EAD46FEEFC9C1A6E07DD92A /* TBODeveloperOverlay-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E77FC0440532037B20624C110826EDA2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18C554B7EC560061E000D7C4E38FEA8B /* Pods-TBODeveloperOverlay Example iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1C102C29834808B14172D8891690587C /* TBODeveloperOverlay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A469ED9B9C15F010A97F088C8788DF3 /* Build configuration list for PBXNativeTarget "TBODeveloperOverlay" */;
+			buildPhases = (
+				10091ABD7C8C2125FD04E39F73848259 /* Sources */,
+				F9020A0989DEFE3BE6641DD5A189F032 /* Frameworks */,
+				B54108216B07906F0D3989A58A85F7D0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TBODeveloperOverlay;
+			productName = TBODeveloperOverlay;
+			productReference = 6BEFD312C3CDBB03DE487EBD6E4B514A /* TBODeveloperOverlay.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A38452EF8C231C882F962E26A2C46BBC /* Pods-TBODeveloperOverlay Example iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5B29AAC60C25D78D97E10B8B1B6061D /* Build configuration list for PBXNativeTarget "Pods-TBODeveloperOverlay Example iOS" */;
+			buildPhases = (
+				8F2232309506B9F7759531F609DF5233 /* Sources */,
+				A8470555610CD0A0F0BE025E2DA4307C /* Frameworks */,
+				E77FC0440532037B20624C110826EDA2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CCAB9EE0AD721A7425102E55A71AB23 /* PBXTargetDependency */,
+			);
+			name = "Pods-TBODeveloperOverlay Example iOS";
+			productName = "Pods-TBODeveloperOverlay Example iOS";
+			productReference = D28D5FF72656026C4EA411C7C8A674C9 /* Pods_TBODeveloperOverlay_Example_iOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1D124DC4B9D14821FBB95EFBFB15A943 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A38452EF8C231C882F962E26A2C46BBC /* Pods-TBODeveloperOverlay Example iOS */,
+				1C102C29834808B14172D8891690587C /* TBODeveloperOverlay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10091ABD7C8C2125FD04E39F73848259 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65326B1CA2D60CC9F47A7E8EFB5E0C28 /* BoolInspectorViewController.swift in Sources */,
+				205B05800DF2B3D6CD609F0860394A95 /* FallbackInspectorViewController.swift in Sources */,
+				9B11A65504142282CD46DDF8514D485A /* FileListTableViewController.swift in Sources */,
+				620D73BA6D530C77C0AFD5381AC0F256 /* InspectorViewController.swift in Sources */,
+				269FF473896E57360CEA45FE971A6A1E /* NumberInspectorViewController.swift in Sources */,
+				FABB0A76DCD9C50B1109768FCEE931EE /* Section.swift in Sources */,
+				B868C4CC647D6E5F39A8A8539E970EB5 /* SectionDatasource.swift in Sources */,
+				EF031F6544466D7ACFEB4BA6BDA565DB /* TableViewController.swift in Sources */,
+				D295C8B7BA1AFC0F4A69CDEA0117CA9F /* TBODeveloperOverlay-dummy.m in Sources */,
+				0268347D9905ABC7B1B552048C6791BF /* UserDefaultsTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F2232309506B9F7759531F609DF5233 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D56C1A450CF82C0E9008E0EB9F190A9A /* Pods-TBODeveloperOverlay Example iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6CCAB9EE0AD721A7425102E55A71AB23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TBODeveloperOverlay;
+			target = 1C102C29834808B14172D8891690587C /* TBODeveloperOverlay */;
+			targetProxy = 3351C5F285150480569B2D166B4EC071 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		05D0834FC99A8B7B8CDF8B862B94496B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C666D9B56078D10642353A13D5800DA /* TBODeveloperOverlay.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TBODeveloperOverlay/TBODeveloperOverlay-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TBODeveloperOverlay/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TBODeveloperOverlay/TBODeveloperOverlay.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TBODeveloperOverlay;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		15C10C2FB35B900FE96D6E64D3C342D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 091DE93CC1EB8C08B3B8845901E31B72 /* Pods-TBODeveloperOverlay Example iOS.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TBODeveloperOverlay Example iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TBODeveloperOverlay Example iOS/Pods-TBODeveloperOverlay Example iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TBODeveloperOverlay_Example_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D7B1487F48E36BAD2CEF0AFCA4908B67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E1D3B95E046AF454307BC9AEC840494D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B890203E0102BF0E9050EBE450F0075 /* Pods-TBODeveloperOverlay Example iOS.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TBODeveloperOverlay Example iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TBODeveloperOverlay Example iOS/Pods-TBODeveloperOverlay Example iOS.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TBODeveloperOverlay_Example_iOS;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EBD06C069E46C4E82EDCA1E8369CD759 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C666D9B56078D10642353A13D5800DA /* TBODeveloperOverlay.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TBODeveloperOverlay/TBODeveloperOverlay-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TBODeveloperOverlay/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TBODeveloperOverlay/TBODeveloperOverlay.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TBODeveloperOverlay;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A469ED9B9C15F010A97F088C8788DF3 /* Build configuration list for PBXNativeTarget "TBODeveloperOverlay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05D0834FC99A8B7B8CDF8B862B94496B /* Debug */,
+				EBD06C069E46C4E82EDCA1E8369CD759 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7B1487F48E36BAD2CEF0AFCA4908B67 /* Debug */,
+				157AF0CD5E5AB2A2E74D3B8ECD865185 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5B29AAC60C25D78D97E10B8B1B6061D /* Build configuration list for PBXNativeTarget "Pods-TBODeveloperOverlay Example iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15C10C2FB35B900FE96D6E64D3C342D2 /* Debug */,
+				E1D3B95E046AF454307BC9AEC840494D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
