@@ -50,7 +50,7 @@ final class FallbackInspectorViewController: InspectorViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if textView.isEditable {
-            didEdit?(textView.text)
+            didEdit?(textView.text as Any)
         }
     }
 }

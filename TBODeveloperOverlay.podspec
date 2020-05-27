@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "TBODeveloperOverlay"
-  s.version      = "2.0"
+  s.version      = "2.1"
   s.summary      = "iOS Developer Tools for Debugging."
 
   s.description  = <<-DESC
@@ -20,13 +20,14 @@ Pod::Spec.new do |s|
 
   s.license      = "MIT"
 
-  s.author      = { "Cornelius Horstmann" => "horstmann@tbointeractive.com" }
+  s.author      = { "Cornelius Horstmann" => "horstmann@tbointeractive.com", "Matthias Gebhardt" => "gedhardt@tbo.de", "Thorsten Stark" => "stark@tbo.de"}
 
   s.platform     = :ios, "9.3"
 
-  s.source       = { :git => "https://github.com/tbointeractive/TBODeveloperOverlay.git", :tag => '2.0' }
+  s.swift_version = '5.0'
+
+  s.source       = { :git => "https://github.com/tbointeractive/TBODeveloperOverlay.git", :tag => '2.1' }
 
   s.source_files = "TBODeveloperOverlay/TBODeveloperOverlay/**/*.swift"
-
 
 end
