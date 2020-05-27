@@ -31,7 +31,7 @@ open class TableViewController: UITableViewController {
         }
     }
     
-    public init(style: UITableViewStyle, sections: [Section], isSearchEnabled: Bool = true) {
+    public init(style: UITableView.Style, sections: [Section], isSearchEnabled: Bool = true) {
         self.sections = sections
         self.dataSource = Datasource(sections: sections)
         if isSearchEnabled {
@@ -53,7 +53,7 @@ open class TableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.dataSource = dataSource
         tableView.delegate = self
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44.0
         
         if let searchController = searchController {

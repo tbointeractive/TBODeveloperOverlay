@@ -16,7 +16,7 @@ open class UserDefaultsTableViewController: TableViewController {
     let userDefaults: UserDefaults
     let keys: [String]
     
-    public convenience init(style: UITableViewStyle, userDefaults: UserDefaults, canEdit: Bool = false, inspectorCollection: InspectorCollection? = nil, userDefaultsKeysBlacklist: [String]? = nil, userDefaultsKeysWhitelist: [String]? = nil) {
+    public convenience init(style: UITableView.Style, userDefaults: UserDefaults, canEdit: Bool = false, inspectorCollection: InspectorCollection? = nil, userDefaultsKeysBlacklist: [String]? = nil, userDefaultsKeysWhitelist: [String]? = nil) {
         self.init(style: style, userDefaults: userDefaults, canEdit: canEdit, inspectorCollection: inspectorCollection) { key in
             if let whitelist = userDefaultsKeysWhitelist {
                 return whitelist.contains(key)
@@ -26,12 +26,12 @@ open class UserDefaultsTableViewController: TableViewController {
         }
     }
     
-    public convenience init(style: UITableViewStyle, userDefaults: UserDefaults, canEdit: Bool = false, inspectorCollection: InspectorCollection? = nil, userDefaultsKeyFilter: (String)->(Bool)) {
+    public convenience init(style: UITableView.Style, userDefaults: UserDefaults, canEdit: Bool = false, inspectorCollection: InspectorCollection? = nil, userDefaultsKeyFilter: (String)->(Bool)) {
         let keys = userDefaults.dictionaryRepresentation().keys.filter(userDefaultsKeyFilter)
         self.init(style: style, userDefaults: userDefaults, canEdit: canEdit, inspectorCollection: inspectorCollection, keys: Array(keys))
     }
     
-    public init(style: UITableViewStyle, userDefaults: UserDefaults, canEdit: Bool = false, inspectorCollection: InspectorCollection? = nil, keys: [String]) {
+    public init(style: UITableView.Style, userDefaults: UserDefaults, canEdit: Bool = false, inspectorCollection: InspectorCollection? = nil, keys: [String]) {
         self.userDefaults = userDefaults
         self.keys = keys.sorted { $0.lowercased() < $1.lowercased() }
         self.canEdit = canEdit

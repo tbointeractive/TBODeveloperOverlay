@@ -44,7 +44,7 @@ final class FallbackInspectorViewController: InspectorViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        textView.frame = UIEdgeInsetsInsetRect(view.bounds, UIEdgeInsetsMake(20, 20, 20, 20))
+        textView.frame = view.bounds.inset(by: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20))
     }
     
     override func viewWillDisappear(_ animated: Bool) {
